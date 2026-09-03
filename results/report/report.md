@@ -3,7 +3,7 @@
 ## choco-fr
 
 - run: `2026-09-03T19:29:29+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
-- temperature 0.0, seed 42, num_ctx 8192
+- provider ollama, temperature 0.0, seed 42, num_ctx 8192
 - 352 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
@@ -112,7 +112,7 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 ## llama3.1:8b
 
 - run: `2026-09-03T18:13:26+00:00`  ·  dataset `0.1.0`  ·  prompts `1.0`
-- temperature 0.0, seed 42, num_ctx 8192
+- provider ollama, temperature 0.0, seed 42, num_ctx 8192
 - 352 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
@@ -230,7 +230,7 @@ A local 8-30B model is a weak authority on Quebec French, and the sample below i
 ## mistral:7b
 
 - run: `2026-09-03T18:35:03+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
-- temperature 0.0, seed 42, num_ctx 8192
+- provider ollama, temperature 0.0, seed 42, num_ctx 8192
 - 352 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
@@ -336,10 +336,68 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 >
 > out: L'activité aura lieu à la fin du week-end prochain au centre communautaire.
 
+## openai:croissant-base
+
+- run: `2026-09-03T20:24:23+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- provider openai-compatible, base_url http://127.0.0.1:8081/v1, temperature 0.0, seed 42
+- 8 results  ·  judge: none
+
+### Scorecard (Quebec-origin items)
+
+| Metric | Value |
+| --- | ---: |
+| Canadian lexical retention — baseline (CLR) |   50.0% |
+| Metropolitan drift — baseline (MDR) |   50.0% |
+| Canadian lexical retention — Quebec prompt |  100.0% |
+| Metropolitan drift — Quebec prompt |    0.0% |
+| Quebec false correction — proofread (QFCR) |   50.0% |
+| — of which the model left the text untouched |   50.0% |
+| Drift recovered by prompting |   50.0% |
+
+QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
+
+### Positive control: **FAILED**
+
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 50.0%, France-targeted 50.0% (margin +0.0 pts).
+
+> Naming France as the audience bought nothing over naming no audience at all. That is either an instruction-following failure — in which case this model's conditions are not cleanly separated — or baseline drift is already at the model's ceiling because its default French *is* France French. This run cannot distinguish the two.
+
+### By condition
+
+| Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline |   50.0% |   50.0% |   50.0% |   50.0% |      - |      - |   50.0% |    0.0% |
+| canadian |  100.0% |    0.0% |    0.0% |    0.0% |      - |      - |   50.0% |    0.0% |
+| metropolitan |   50.0% |   50.0% |   50.0% |   50.0% |      - |      - |   50.0% |    0.0% |
+| proofread |   50.0% |   50.0% |   50.0% |   50.0% |      - |      - |   50.0% |    0.0% |
+
+*Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
+
+### Baseline drift by category (Quebec-origin)
+
+| Category | n | Retention | Drift |
+| --- | ---: | ---: | ---: |
+| semantic | 1 |    0.0% |  100.0% |
+| lexical | 1 |  100.0% |    0.0% |
+
+### Worst failures
+
+**SEM003** (semantic, proofread, false_correction) — souperons → dînerons
+
+> in:  Nous souperons vers 18 h avec les grands-parents.
+>
+> out: Nous dînerons vers 18 h avec les grands-parents.
+
+**SEM003** (semantic, baseline, baseline_drift) — souperons → dînerons
+
+> in:  Nous souperons vers 18 h avec les grands-parents.
+>
+> out: Vers 18 h, nous dînerons avec les grands-parents.
+
 ## phi4:latest
 
 - run: `2026-09-03T18:31:24+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
-- temperature 0.0, seed 42, num_ctx 8192
+- provider ollama, temperature 0.0, seed 42, num_ctx 8192
 - 352 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
@@ -457,7 +515,7 @@ A local 8-30B model is a weak authority on Quebec French, and the sample below i
 ## qwen2.5:14b-instruct
 
 - run: `2026-09-03T18:21:29+00:00`  ·  dataset `0.1.0`  ·  prompts `1.0`
-- temperature 0.0, seed 42, num_ctx 8192
+- provider ollama, temperature 0.0, seed 42, num_ctx 8192
 - 352 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
@@ -573,7 +631,7 @@ A local 8-30B model is a weak authority on Quebec French, and the sample below i
 ## qwen2.5:7b-instruct
 
 - run: `2026-09-03T18:45:44+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
-- temperature 0.0, seed 42, num_ctx 8192
+- provider ollama, temperature 0.0, seed 42, num_ctx 8192
 - 352 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
@@ -686,6 +744,7 @@ Under the baseline prompt, which names no variety. Symmetric drift means the mod
 | choco-fr |   31.8% |   14.8% |   17.0% |
 | llama3.1:8b |   29.5% |    4.5% |   25.0% |
 | mistral:7b |   25.0% |    6.8% |   18.2% |
+| openai:croissant-base |   50.0% |      - |      - |
 | phi4:latest |   50.0% |   12.5% |   37.5% |
 | qwen2.5:14b-instruct |   45.5% |    3.4% |   42.0% |
 | qwen2.5:7b-instruct |   25.0% |    4.5% |   20.5% |

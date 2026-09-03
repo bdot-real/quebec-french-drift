@@ -232,9 +232,9 @@ def render_markdown(report):
             f"## {meta['model']}", "",
             f"- run: `{meta['run_id']}`  ·  dataset `{meta['dataset_version']}`  "
             f"·  prompts `{meta['prompt_version']}`",
-            f"- temperature {meta['model_config']['temperature']}, "
-            f"seed {meta['model_config']['seed']}, "
-            f"num_ctx {meta['model_config']['num_ctx']}",
+            "- " + ", ".join(
+                f"{k} {v}" for k, v in meta["model_config"].items()
+                if k not in ("model",)),
             f"- {m['n_results']} results  ·  judge: {meta.get('judge_model') or 'none'}",
         ]
         if m["suspect_reasoning_leaks"]:

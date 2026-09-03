@@ -1,0 +1,9 @@
+test_id,category,variety,condition,model,input,output,source_retention,cross_substitution_rate,protected_term_loss,unchanged,suspect_reasoning_leak
+LEX001,lexical,qc,baseline,openai:croissant-base,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,1.0,0.0,0.0,True,False
+LEX001,lexical,qc,canadian,openai:croissant-base,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,Vous pouvez consulter votre dossier en ligne et nous contacter par courriel.,1.0,0.0,0.0,False,False
+LEX001,lexical,qc,metropolitan,openai:croissant-base,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,1.0,0.0,0.0,True,False
+LEX001,lexical,qc,proofread,openai:croissant-base,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,1.0,0.0,0.0,True,False
+SEM003,semantic,qc,baseline,openai:croissant-base,Nous souperons vers 18 h avec les grands-parents.,"Vers 18 h, nous dînerons avec les grands-parents.",0.0,1.0,1.0,False,False
+SEM003,semantic,qc,canadian,openai:croissant-base,Nous souperons vers 18 h avec les grands-parents.,Nous souperons vers 18 h avec les grands-parents.,1.0,0.0,0.0,True,False
+SEM003,semantic,qc,metropolitan,openai:croissant-base,Nous souperons vers 18 h avec les grands-parents.,Nous dînerons vers 18 h avec les grands-parents.,0.0,1.0,1.0,False,False
+SEM003,semantic,qc,proofread,openai:croissant-base,Nous souperons vers 18 h avec les grands-parents.,Nous dînerons vers 18 h avec les grands-parents.,0.0,1.0,1.0,False,False

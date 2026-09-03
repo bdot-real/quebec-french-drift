@@ -2310,6 +2310,207 @@
     },
     {
       "meta": {
+        "run_id": "2026-09-03T20:24:23+00:00",
+        "model": "openai:croissant-base",
+        "model_config": {
+          "provider": "openai-compatible",
+          "model": "croissant-base",
+          "base_url": "http://127.0.0.1:8081/v1",
+          "temperature": 0.0,
+          "seed": 42
+        },
+        "dataset_version": "0.2.0",
+        "prompt_version": "1.0",
+        "n_tests": 2,
+        "conditions": [
+          "baseline",
+          "canadian",
+          "metropolitan",
+          "proofread"
+        ]
+      },
+      "by_condition": {
+        "baseline": {
+          "qc": {
+            "n": 2,
+            "n_compliant": 2,
+            "noncompliant": 0.0,
+            "source_retention": 0.5,
+            "cross_substitution": 0.5,
+            "protected_loss": 0.5,
+            "unchanged": 0.5,
+            "cross_substitution_compliant": 0.5,
+            "source_retention_compliant": 0.5
+          },
+          "fr": {
+            "n": 0,
+            "n_compliant": 0,
+            "noncompliant": null,
+            "source_retention": null,
+            "cross_substitution": null,
+            "protected_loss": null,
+            "unchanged": null,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "judge_qc": null
+        },
+        "canadian": {
+          "qc": {
+            "n": 2,
+            "n_compliant": 2,
+            "noncompliant": 0.0,
+            "source_retention": 1.0,
+            "cross_substitution": 0.0,
+            "protected_loss": 0.0,
+            "unchanged": 0.5,
+            "cross_substitution_compliant": 0.0,
+            "source_retention_compliant": 1.0
+          },
+          "fr": {
+            "n": 0,
+            "n_compliant": 0,
+            "noncompliant": null,
+            "source_retention": null,
+            "cross_substitution": null,
+            "protected_loss": null,
+            "unchanged": null,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "judge_qc": null
+        },
+        "metropolitan": {
+          "qc": {
+            "n": 2,
+            "n_compliant": 2,
+            "noncompliant": 0.0,
+            "source_retention": 0.5,
+            "cross_substitution": 0.5,
+            "protected_loss": 0.5,
+            "unchanged": 0.5,
+            "cross_substitution_compliant": 0.5,
+            "source_retention_compliant": 0.5
+          },
+          "fr": {
+            "n": 0,
+            "n_compliant": 0,
+            "noncompliant": null,
+            "source_retention": null,
+            "cross_substitution": null,
+            "protected_loss": null,
+            "unchanged": null,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "judge_qc": null
+        },
+        "proofread": {
+          "qc": {
+            "n": 2,
+            "n_compliant": 2,
+            "noncompliant": 0.0,
+            "source_retention": 0.5,
+            "cross_substitution": 0.5,
+            "protected_loss": 0.5,
+            "unchanged": 0.5,
+            "cross_substitution_compliant": 0.5,
+            "source_retention_compliant": 0.5
+          },
+          "fr": {
+            "n": 0,
+            "n_compliant": 0,
+            "noncompliant": null,
+            "source_retention": null,
+            "cross_substitution": null,
+            "protected_loss": null,
+            "unchanged": null,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "judge_qc": null
+        }
+      },
+      "by_category": {
+        "lexical": {
+          "n": 1,
+          "n_compliant": 1,
+          "noncompliant": 0.0,
+          "source_retention": 1.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.0,
+          "unchanged": 1.0,
+          "cross_substitution_compliant": 0.0,
+          "source_retention_compliant": 1.0
+        },
+        "semantic": {
+          "n": 1,
+          "n_compliant": 1,
+          "noncompliant": 0.0,
+          "source_retention": 0.0,
+          "cross_substitution": 1.0,
+          "protected_loss": 1.0,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": 1.0,
+          "source_retention_compliant": 0.0
+        }
+      },
+      "failures": [
+        {
+          "test_id": "SEM003",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "Nous souperons vers 18 h avec les grands-parents.",
+          "output": "Nous dînerons vers 18 h avec les grands-parents.",
+          "substitutions": [
+            {
+              "from": "souperons",
+              "to": "dînerons",
+              "relation": "semantic_diff"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM003",
+          "category": "semantic",
+          "condition": "baseline",
+          "input": "Nous souperons vers 18 h avec les grands-parents.",
+          "output": "Vers 18 h, nous dînerons avec les grands-parents.",
+          "substitutions": [
+            {
+              "from": "souperons",
+              "to": "dînerons",
+              "relation": "semantic_diff"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        }
+      ],
+      "n_results": 8,
+      "suspect_reasoning_leaks": 0,
+      "scorecard": {
+        "CLR_baseline": 0.5,
+        "MDR_baseline": 0.5,
+        "CLR_prompted": 1.0,
+        "MDR_prompted": 0.0,
+        "QFCR_proofread": 0.5,
+        "unchanged_proofread": 0.5,
+        "prompt_recovery": 0.5
+      },
+      "positive_control": {
+        "baseline_drift": 0.5,
+        "metropolitan_drift": 0.5,
+        "margin": 0.0,
+        "passed": false
+      }
+    },
+    {
+      "meta": {
         "run_id": "2026-09-03T18:31:24+00:00",
         "model": "phi4:latest",
         "model_config": {
@@ -4724,6 +4925,13 @@
       "asymmetry": 0.18181818181818182,
       "qc_retention": 0.2840909090909091,
       "fr_retention": 0.5795454545454546
+    },
+    "openai:croissant-base": {
+      "qc_to_fr_drift": 0.5,
+      "fr_to_qc_drift": null,
+      "asymmetry": null,
+      "qc_retention": 0.5,
+      "fr_retention": null
     },
     "phi4:latest": {
       "qc_to_fr_drift": 0.5,

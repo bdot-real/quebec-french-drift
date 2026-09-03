@@ -125,7 +125,8 @@ def cmd_run(args):
     for spec in args.models:
         print(f"\n=== {spec} ===", file=sys.stderr)
         model = build_model(spec, temperature=args.temperature, seed=args.seed,
-                            num_ctx=args.num_ctx)
+                            num_ctx=args.num_ctx, base_url=args.base_url,
+                            api_key=args.api_key)
         try:
             run_model(model, tests, prompts, resume=not args.no_resume)
         finally:
@@ -265,6 +266,9 @@ def main():
     run_p.add_argument("--temperature", type=float, default=0.0)
     run_p.add_argument("--seed", type=int, default=42)
     run_p.add_argument("--num-ctx", dest="num_ctx", type=int, default=8192)
+    run_p.add_argument("--base-url", dest="base_url", default=None,
+                       help="OpenAI-compatible endpoint, for openai:<model> specs")
+    run_p.add_argument("--api-key", dest="api_key", default=None)
     run_p.add_argument("--no-resume", action="store_true")
     run_p.set_defaults(func=cmd_run)
 

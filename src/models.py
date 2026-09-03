@@ -254,6 +254,7 @@ def build_model(spec: str, **kwargs):
         return OllamaModel(name, **{k: v for k, v in kwargs.items()
                                     if k not in ("base_url", "api_key")})
     if provider == "openai":
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
         return OpenAICompatibleModel(name, **kwargs)
     raise ValueError(f"unknown provider {provider!r}")
 
