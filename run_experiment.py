@@ -126,7 +126,13 @@ def cmd_run(args):
         print(f"\n=== {spec} ===", file=sys.stderr)
         model = build_model(spec, temperature=args.temperature, seed=args.seed,
                             num_ctx=args.num_ctx)
-        run_model(model, tests, prompts, resume=not args.no_resume)
+        try:
+            run_model(model, tests, prompts, resume=not args.no_resume)
+        finally:
+            # Release the weights before loading the next model, so two large
+            # models are never resident at once.
+            if hasattr(model, "unload"):
+                model.unload()
     cmd_report(args)
 
 

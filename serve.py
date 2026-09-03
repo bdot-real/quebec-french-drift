@@ -13,6 +13,7 @@ server loses nothing -- the next run resumes from what is already recorded.
 """
 
 import json
+import random
 import threading
 import traceback
 import urllib.error
@@ -104,9 +105,13 @@ def _run_job(cfg):
                                 num_ctx=cfg.get("num_ctx", 8192),
                                 base_url=cfg.get("base_url"),
                                 api_key=cfg.get("api_key"))
-            harness.run_model(model, tests, prompts, resume=cfg.get("resume", True),
-                              progress=False, on_cell=on_cell,
-                              should_stop=_stop_requested)
+            try:
+                harness.run_model(model, tests, prompts, resume=cfg.get("resume", True),
+                                  progress=False, on_cell=on_cell,
+                                  should_stop=_stop_requested)
+            finally:
+                if hasattr(model, "unload"):
+                    model.unload()
             offset += per_model
 
         judge_spec = cfg.get("judge")
@@ -135,6 +140,7 @@ def _run_job(cfg):
 def _judge_pass(judge_spec, cfg, tests):
     judge = build_model(judge_spec, num_ctx=cfg.get("num_ctx", 8192),
                         base_url=cfg.get("base_url"), api_key=cfg.get("api_key"))
+    unload_after = getattr(judge, "unload", None)
     by_id = {t["id"]: t for t in tests}
     limit = cfg.get("judge_sample") or 0
     for path in sorted(harness.RAW_DIR.glob("*.json")):
@@ -147,13 +153,24 @@ def _judge_pass(judge_spec, cfg, tests):
         todo = [r for r in run["results"]
                 if r["test_id"] in by_id and not isinstance(r.get("judge"), dict)]
         if limit:
-            todo = todo[:limit]
+            # Stratified by condition and seeded, matching the CLI: judging the
+            # first N rows would judge one condition and call it a sample.
+            rng = random.Random(cfg.get("seed", 7))
+            buckets = {}
+            for r in todo:
+                buckets.setdefault(r["condition"], []).append(r)
+            per = max(1, limit // max(len(buckets), 1))
+            todo = [r for rows in buckets.values()
+                    for r in rng.sample(rows, min(per, len(rows)))]
+        log(f"{path.name}: judging {len(todo)} rows")
         for row in todo:
             if _stop_requested():
                 return
             row["judge"] = judge_output(judge, by_id[row["test_id"]], row["output"])
             path.write_text(json.dumps(run, ensure_ascii=False, indent=2),
                             encoding="utf-8")
+    if unload_after:
+        unload_after()
 
 
 def _rebuild_report():

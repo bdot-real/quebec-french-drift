@@ -81,6 +81,25 @@ class OllamaModel:
         return {"provider": "ollama", "model": self.model, "temperature": self.temperature,
                 "seed": self.seed, "num_ctx": self.num_ctx}
 
+    def unload(self):
+        """Ask Ollama to drop this model's weights now.
+
+        `keep_alive` holds a model in memory so the next call does not reload
+        it -- essential within a model's own pass. Across models it is a
+        liability: two 10 GB models resident at once will exhaust swap on a
+        laptop and slow every remaining call to a crawl (or get the run killed).
+        So each model is released as soon as its pass is done.
+        """
+        payload = {"model": self.model, "keep_alive": 0, "messages": []}
+        req = urllib.request.Request(
+            f"{self.host}/api/chat", data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                resp.read()
+        except (urllib.error.URLError, TimeoutError, OSError):
+            pass  # best effort: a failed unload costs memory, not correctness
+
     def generate(self, system, user) -> ModelResponse:
         payload = {
             "model": self.model,

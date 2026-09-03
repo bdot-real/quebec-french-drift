@@ -127,6 +127,7 @@ async function start() {
     conditions: checkedValues("conditions"),
     categories: checkedValues("categories"),
     judge: $("judge").value || null,
+    judge_sample: parseInt($("judge_sample").value, 10) || 0,
     temperature: parseFloat($("temperature").value),
     seed: parseInt($("seed").value, 10),
     num_ctx: parseInt($("num_ctx").value, 10),
@@ -408,7 +409,7 @@ async function loadReport() {
   /* Per-model scorecard. */
   const card = section("Scorecard", "Quebec-origin items only. All figures mechanical.");
   card.insertAdjacentHTML("beforeend", `<div class="scroll-x"><table><thead><tr>
-    <th>Model</th><th class="num">CLR baseline</th><th class="num">MDR baseline</th>
+    <th>Model</th><th class="num">Cells</th><th class="num">CLR baseline</th><th class="num">MDR baseline</th>
     <th class="num">MDR Quebec prompt</th><th class="num">QFCR proofread</th>
     <th class="num">Left untouched</th><th>Positive control</th>
     </tr></thead><tbody>` +
@@ -418,6 +419,7 @@ async function loadReport() {
         ? '<span class="status good">✓ passed</span>'
         : '<span class="status bad">✕ failed</span>';
       return `<tr><td>${esc(m.meta.model)}</td>
+        <td class="num">${m.n_results}</td>
         <td class="num">${pct(s.CLR_baseline)}</td>
         <td class="num">${pct(s.MDR_baseline)}</td>
         <td class="num">${pct(s.MDR_prompted)}</td>

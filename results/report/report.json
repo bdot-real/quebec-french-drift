@@ -2,7 +2,7 @@
   "models": [
     {
       "meta": {
-        "run_id": "2026-09-03T16:38:57+00:00",
+        "run_id": "2026-09-03T18:13:26+00:00",
         "model": "llama3.1:8b",
         "model_config": {
           "provider": "ollama",
@@ -13,14 +13,13 @@
         },
         "dataset_version": "0.1.0",
         "prompt_version": "1.0",
-        "n_tests": 58,
+        "n_tests": 88,
         "conditions": [
           "baseline",
           "canadian",
           "metropolitan",
           "proofread"
-        ],
-        "judge_model": "qwen2.5:14b-instruct"
+        ]
       },
       "by_condition": {
         "baseline": {
@@ -28,23 +27,23 @@
             "n": 44,
             "n_compliant": 43,
             "noncompliant": 0.022727272727272728,
-            "source_retention": 0.38636363636363635,
-            "cross_substitution": 0.2840909090909091,
+            "source_retention": 0.375,
+            "cross_substitution": 0.29545454545454547,
             "protected_loss": 0.627906976744186,
             "unchanged": 0.0,
-            "cross_substitution_compliant": 0.26744186046511625,
-            "source_retention_compliant": 0.3953488372093023
+            "cross_substitution_compliant": 0.27906976744186046,
+            "source_retention_compliant": 0.38372093023255816
           },
           "fr": {
-            "n": 14,
-            "n_compliant": 13,
-            "noncompliant": 0.07142857142857142,
-            "source_retention": 0.7142857142857143,
-            "cross_substitution": 0.07142857142857142,
-            "protected_loss": 0.2857142857142857,
+            "n": 44,
+            "n_compliant": 42,
+            "noncompliant": 0.045454545454545456,
+            "source_retention": 0.7045454545454546,
+            "cross_substitution": 0.045454545454545456,
+            "protected_loss": 0.375,
             "unchanged": 0.0,
-            "cross_substitution_compliant": 0.07692307692307693,
-            "source_retention_compliant": 0.6923076923076923
+            "cross_substitution_compliant": 0.047619047619047616,
+            "source_retention_compliant": 0.6904761904761905
           },
           "judge_qc": {
             "n": 8,
@@ -62,21 +61,21 @@
             "noncompliant": 0.045454545454545456,
             "source_retention": 0.42045454545454547,
             "cross_substitution": 0.2159090909090909,
-            "protected_loss": 0.5348837209302325,
+            "protected_loss": 0.5581395348837209,
             "unchanged": 0.0,
             "cross_substitution_compliant": 0.2261904761904762,
             "source_retention_compliant": 0.40476190476190477
           },
           "fr": {
-            "n": 14,
-            "n_compliant": 14,
-            "noncompliant": 0.0,
-            "source_retention": 0.5714285714285714,
-            "cross_substitution": 0.14285714285714285,
-            "protected_loss": 0.42857142857142855,
+            "n": 44,
+            "n_compliant": 42,
+            "noncompliant": 0.045454545454545456,
+            "source_retention": 0.5340909090909091,
+            "cross_substitution": 0.11363636363636363,
+            "protected_loss": 0.5113636363636364,
             "unchanged": 0.0,
-            "cross_substitution_compliant": 0.14285714285714285,
-            "source_retention_compliant": 0.5714285714285714
+            "cross_substitution_compliant": 0.11904761904761904,
+            "source_retention_compliant": 0.5357142857142857
           },
           "judge_qc": null
         },
@@ -85,23 +84,23 @@
             "n": 44,
             "n_compliant": 39,
             "noncompliant": 0.11363636363636363,
-            "source_retention": 0.375,
-            "cross_substitution": 0.2159090909090909,
-            "protected_loss": 0.6162790697674418,
+            "source_retention": 0.36363636363636365,
+            "cross_substitution": 0.22727272727272727,
+            "protected_loss": 0.6395348837209303,
             "unchanged": 0.0,
-            "cross_substitution_compliant": 0.24358974358974358,
-            "source_retention_compliant": 0.34615384615384615
+            "cross_substitution_compliant": 0.2564102564102564,
+            "source_retention_compliant": 0.3333333333333333
           },
           "fr": {
-            "n": 14,
-            "n_compliant": 9,
-            "noncompliant": 0.35714285714285715,
-            "source_retention": 0.5714285714285714,
-            "cross_substitution": 0.07142857142857142,
-            "protected_loss": 0.42857142857142855,
+            "n": 44,
+            "n_compliant": 35,
+            "noncompliant": 0.20454545454545456,
+            "source_retention": 0.6136363636363636,
+            "cross_substitution": 0.10227272727272728,
+            "protected_loss": 0.4431818181818182,
             "unchanged": 0.0,
-            "cross_substitution_compliant": 0.0,
-            "source_retention_compliant": 0.6666666666666666
+            "cross_substitution_compliant": 0.1,
+            "source_retention_compliant": 0.6285714285714286
           },
           "judge_qc": null
         },
@@ -110,23 +109,23 @@
             "n": 44,
             "n_compliant": 43,
             "noncompliant": 0.022727272727272728,
-            "source_retention": 0.6590909090909091,
+            "source_retention": 0.6704545454545454,
             "cross_substitution": 0.18181818181818182,
-            "protected_loss": 0.32558139534883723,
+            "protected_loss": 0.3023255813953488,
             "unchanged": 0.022727272727272728,
             "cross_substitution_compliant": 0.18604651162790697,
-            "source_retention_compliant": 0.6511627906976745
+            "source_retention_compliant": 0.6627906976744186
           },
           "fr": {
-            "n": 14,
-            "n_compliant": 12,
-            "noncompliant": 0.14285714285714285,
-            "source_retention": 0.7142857142857143,
-            "cross_substitution": 0.14285714285714285,
-            "protected_loss": 0.2857142857142857,
-            "unchanged": 0.0,
-            "cross_substitution_compliant": 0.16666666666666666,
-            "source_retention_compliant": 0.6666666666666666
+            "n": 44,
+            "n_compliant": 41,
+            "noncompliant": 0.06818181818181818,
+            "source_retention": 0.8181818181818182,
+            "cross_substitution": 0.045454545454545456,
+            "protected_loss": 0.29545454545454547,
+            "unchanged": 0.022727272727272728,
+            "cross_substitution_compliant": 0.04878048780487805,
+            "source_retention_compliant": 0.8048780487804879
           },
           "judge_qc": {
             "n": 9,
@@ -187,12 +186,12 @@
           "n": 6,
           "n_compliant": 5,
           "noncompliant": 0.16666666666666666,
-          "source_retention": 0.08333333333333333,
-          "cross_substitution": 0.5833333333333334,
+          "source_retention": 0.0,
+          "cross_substitution": 0.6666666666666666,
           "protected_loss": 1.0,
           "unchanged": 0.0,
-          "cross_substitution_compliant": 0.5,
-          "source_retention_compliant": 0.1
+          "cross_substitution_compliant": 0.6,
+          "source_retention_compliant": 0.0
         }
       },
       "failures": [
@@ -554,13 +553,19 @@
         {
           "test_id": "GRA004",
           "category": "grammar",
-          "condition": "proofread",
-          "input": "On a eu de la misère à trouver un stationnement en masse proche du stade.",
-          "output": "On a eu de la peine à trouver un stationnement en masse proche du stade.",
-          "substitutions": [],
+          "condition": "baseline",
+          "input": "On a eu de la misère à trouver un stationnement proche du stade.",
+          "output": "Nous avons eu beaucoup de mal à trouver une place de parking près du stade.",
+          "substitutions": [
+            {
+              "from": "stationnement",
+              "to": "parking",
+              "relation": "preference"
+            }
+          ],
           "protected_term_loss": 1.0,
-          "cross_substitution_rate": 0.0,
-          "kind": "false_correction"
+          "cross_substitution_rate": 0.5,
+          "kind": "baseline_drift"
         },
         {
           "test_id": "GRA006",
@@ -680,20 +685,20 @@
           "kind": "baseline_drift"
         }
       ],
-      "n_results": 232,
+      "n_results": 352,
       "suspect_reasoning_leaks": 0,
       "scorecard": {
-        "CLR_baseline": 0.38636363636363635,
-        "MDR_baseline": 0.2840909090909091,
+        "CLR_baseline": 0.375,
+        "MDR_baseline": 0.29545454545454547,
         "CLR_prompted": 0.42045454545454547,
         "MDR_prompted": 0.2159090909090909,
-        "QFCR_proofread": 0.32558139534883723,
+        "QFCR_proofread": 0.3023255813953488,
         "unchanged_proofread": 0.022727272727272728,
-        "prompt_recovery": 0.0681818181818182
+        "prompt_recovery": 0.07954545454545456
       },
       "positive_control": {
-        "baseline_drift": 0.2840909090909091,
-        "metropolitan_drift": 0.2159090909090909,
+        "baseline_drift": 0.29545454545454547,
+        "metropolitan_drift": 0.22727272727272727,
         "margin": -0.0681818181818182,
         "passed": false
       }
@@ -728,7 +733,7 @@
             "noncompliant": 0.13636363636363635,
             "source_retention": 0.125,
             "cross_substitution": 0.5,
-            "protected_loss": 0.8488372093023255,
+            "protected_loss": 0.872093023255814,
             "unchanged": 0.0,
             "cross_substitution_compliant": 0.5263157894736842,
             "source_retention_compliant": 0.14473684210526316
@@ -760,7 +765,7 @@
             "noncompliant": 0.09090909090909091,
             "source_retention": 0.29545454545454547,
             "cross_substitution": 0.19318181818181818,
-            "protected_loss": 0.6744186046511628,
+            "protected_loss": 0.6976744186046512,
             "unchanged": 0.0,
             "cross_substitution_compliant": 0.1875,
             "source_retention_compliant": 0.325
@@ -784,10 +789,10 @@
             "n_compliant": 35,
             "noncompliant": 0.20454545454545456,
             "source_retention": 0.10227272727272728,
-            "cross_substitution": 0.45454545454545453,
-            "protected_loss": 0.872093023255814,
+            "cross_substitution": 0.4659090909090909,
+            "protected_loss": 0.8953488372093024,
             "unchanged": 0.0,
-            "cross_substitution_compliant": 0.4714285714285714,
+            "cross_substitution_compliant": 0.4857142857142857,
             "source_retention_compliant": 0.12857142857142856
           },
           "fr": {
@@ -876,7 +881,7 @@
           "noncompliant": 0.16666666666666666,
           "source_retention": 0.08333333333333333,
           "cross_substitution": 0.5,
-          "protected_loss": 0.7,
+          "protected_loss": 0.9,
           "unchanged": 0.0,
           "cross_substitution_compliant": 0.5,
           "source_retention_compliant": 0.1
@@ -1228,6 +1233,23 @@
           "kind": "baseline_drift"
         },
         {
+          "test_id": "REG002",
+          "category": "register",
+          "condition": "baseline",
+          "input": "Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.",
+          "output": "Le ministère encourage les citoyens à consulter le nouveau formulaire avant de le compléter et de l'envoyer par courrier.",
+          "substitutions": [
+            {
+              "from": "la population",
+              "to": "les citoyens",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
           "test_id": "SEM003",
           "category": "semantic",
           "condition": "baseline",
@@ -1415,8 +1437,8 @@
           "output": "Nous avons eu beaucoup de difficultés à trouver un parking collectif près du stade.",
           "substitutions": [
             {
-              "from": "en masse",
-              "to": "beaucoup",
+              "from": "stationnement",
+              "to": "parking",
               "relation": "preference"
             }
           ],
@@ -1663,23 +1685,6 @@
           "protected_term_loss": 0.5,
           "cross_substitution_rate": 0.0,
           "kind": "false_correction"
-        },
-        {
-          "test_id": "REG002",
-          "category": "register",
-          "condition": "baseline",
-          "input": "Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.",
-          "output": "Le ministère encourage les citoyens à consulter le nouveau formulaire avant de le compléter et de l'envoyer par courrier.",
-          "substitutions": [
-            {
-              "from": "la population",
-              "to": "les citoyens",
-              "relation": "preference"
-            }
-          ],
-          "protected_term_loss": 0.0,
-          "cross_substitution_rate": 1.0,
-          "kind": "baseline_drift"
         }
       ],
       "n_results": 232,
@@ -1695,14 +1700,14 @@
       },
       "positive_control": {
         "baseline_drift": 0.5,
-        "metropolitan_drift": 0.45454545454545453,
-        "margin": -0.04545454545454547,
+        "metropolitan_drift": 0.4659090909090909,
+        "margin": -0.034090909090909116,
         "passed": false
       }
     },
     {
       "meta": {
-        "run_id": "2026-09-03T16:45:23+00:00",
+        "run_id": "2026-09-03T18:21:29+00:00",
         "model": "qwen2.5:14b-instruct",
         "model_config": {
           "provider": "ollama",
@@ -1713,38 +1718,37 @@
         },
         "dataset_version": "0.1.0",
         "prompt_version": "1.0",
-        "n_tests": 58,
+        "n_tests": 88,
         "conditions": [
           "baseline",
           "canadian",
           "metropolitan",
           "proofread"
-        ],
-        "judge_model": "qwen2.5:14b-instruct"
+        ]
       },
       "by_condition": {
         "baseline": {
           "qc": {
-            "n": 44,
-            "n_compliant": 37,
-            "noncompliant": 0.1590909090909091,
-            "source_retention": 0.4318181818181818,
-            "cross_substitution": 0.4431818181818182,
-            "protected_loss": 0.5697674418604651,
+            "n": 43,
+            "n_compliant": 36,
+            "noncompliant": 0.16279069767441862,
+            "source_retention": 0.4418604651162791,
+            "cross_substitution": 0.4418604651162791,
+            "protected_loss": 0.5595238095238095,
             "unchanged": 0.0,
-            "cross_substitution_compliant": 0.5135135135135135,
-            "source_retention_compliant": 0.33783783783783783
+            "cross_substitution_compliant": 0.5138888888888888,
+            "source_retention_compliant": 0.3472222222222222
           },
           "fr": {
-            "n": 14,
-            "n_compliant": 13,
-            "noncompliant": 0.07142857142857142,
-            "source_retention": 0.7857142857142857,
-            "cross_substitution": 0.07142857142857142,
-            "protected_loss": 0.35714285714285715,
-            "unchanged": 0.0,
-            "cross_substitution_compliant": 0.07692307692307693,
-            "source_retention_compliant": 0.7692307692307693
+            "n": 41,
+            "n_compliant": 36,
+            "noncompliant": 0.12195121951219512,
+            "source_retention": 0.8414634146341463,
+            "cross_substitution": 0.036585365853658534,
+            "protected_loss": 0.3048780487804878,
+            "unchanged": 0.024390243902439025,
+            "cross_substitution_compliant": 0.041666666666666664,
+            "source_retention_compliant": 0.8194444444444444
           },
           "judge_qc": {
             "n": 8,
@@ -1757,76 +1761,76 @@
         },
         "canadian": {
           "qc": {
-            "n": 44,
-            "n_compliant": 39,
-            "noncompliant": 0.11363636363636363,
-            "source_retention": 0.5113636363636364,
-            "cross_substitution": 0.17045454545454544,
-            "protected_loss": 0.45348837209302323,
+            "n": 43,
+            "n_compliant": 38,
+            "noncompliant": 0.11627906976744186,
+            "source_retention": 0.5232558139534884,
+            "cross_substitution": 0.1744186046511628,
+            "protected_loss": 0.44047619047619047,
             "unchanged": 0.0,
-            "cross_substitution_compliant": 0.14102564102564102,
-            "source_retention_compliant": 0.5
+            "cross_substitution_compliant": 0.14473684210526316,
+            "source_retention_compliant": 0.5131578947368421
           },
           "fr": {
-            "n": 14,
-            "n_compliant": 13,
-            "noncompliant": 0.07142857142857142,
-            "source_retention": 0.35714285714285715,
-            "cross_substitution": 0.2857142857142857,
-            "protected_loss": 0.7142857142857143,
+            "n": 40,
+            "n_compliant": 37,
+            "noncompliant": 0.075,
+            "source_retention": 0.375,
+            "cross_substitution": 0.2375,
+            "protected_loss": 0.6625,
             "unchanged": 0.0,
-            "cross_substitution_compliant": 0.3076923076923077,
-            "source_retention_compliant": 0.3076923076923077
+            "cross_substitution_compliant": 0.22972972972972974,
+            "source_retention_compliant": 0.35135135135135137
           },
           "judge_qc": null
         },
         "metropolitan": {
           "qc": {
-            "n": 44,
-            "n_compliant": 40,
-            "noncompliant": 0.09090909090909091,
-            "source_retention": 0.14772727272727273,
-            "cross_substitution": 0.48863636363636365,
-            "protected_loss": 0.8372093023255814,
+            "n": 43,
+            "n_compliant": 39,
+            "noncompliant": 0.09302325581395349,
+            "source_retention": 0.1511627906976744,
+            "cross_substitution": 0.4883720930232558,
+            "protected_loss": 0.8571428571428571,
             "unchanged": 0.0,
             "cross_substitution_compliant": 0.5,
-            "source_retention_compliant": 0.1375
+            "source_retention_compliant": 0.14102564102564102
           },
           "fr": {
-            "n": 14,
-            "n_compliant": 13,
-            "noncompliant": 0.07142857142857142,
-            "source_retention": 0.42857142857142855,
-            "cross_substitution": 0.14285714285714285,
-            "protected_loss": 0.7142857142857143,
+            "n": 40,
+            "n_compliant": 38,
+            "noncompliant": 0.05,
+            "source_retention": 0.5125,
+            "cross_substitution": 0.1125,
+            "protected_loss": 0.6,
             "unchanged": 0.0,
-            "cross_substitution_compliant": 0.15384615384615385,
-            "source_retention_compliant": 0.46153846153846156
+            "cross_substitution_compliant": 0.11842105263157894,
+            "source_retention_compliant": 0.5394736842105263
           },
           "judge_qc": null
         },
         "proofread": {
           "qc": {
-            "n": 44,
-            "n_compliant": 41,
-            "noncompliant": 0.06818181818181818,
-            "source_retention": 0.7840909090909091,
-            "cross_substitution": 0.13636363636363635,
-            "protected_loss": 0.19767441860465115,
-            "unchanged": 0.3409090909090909,
-            "cross_substitution_compliant": 0.14634146341463414,
-            "source_retention_compliant": 0.7682926829268293
+            "n": 43,
+            "n_compliant": 40,
+            "noncompliant": 0.06976744186046512,
+            "source_retention": 0.7906976744186046,
+            "cross_substitution": 0.13953488372093023,
+            "protected_loss": 0.20238095238095238,
+            "unchanged": 0.3488372093023256,
+            "cross_substitution_compliant": 0.15,
+            "source_retention_compliant": 0.775
           },
           "fr": {
-            "n": 14,
-            "n_compliant": 14,
+            "n": 40,
+            "n_compliant": 40,
             "noncompliant": 0.0,
-            "source_retention": 0.8571428571428571,
-            "cross_substitution": 0.07142857142857142,
-            "protected_loss": 0.14285714285714285,
-            "unchanged": 0.5,
-            "cross_substitution_compliant": 0.07142857142857142,
-            "source_retention_compliant": 0.8571428571428571
+            "source_retention": 0.8875,
+            "cross_substitution": 0.0375,
+            "protected_loss": 0.1375,
+            "unchanged": 0.6,
+            "cross_substitution_compliant": 0.0375,
+            "source_retention_compliant": 0.8875
           },
           "judge_qc": {
             "n": 7,
@@ -1884,14 +1888,14 @@
           "source_retention_compliant": 0.375
         },
         "grammar": {
-          "n": 6,
-          "n_compliant": 6,
+          "n": 5,
+          "n_compliant": 5,
           "noncompliant": 0.0,
           "source_retention": 0.0,
-          "cross_substitution": 0.6666666666666666,
+          "cross_substitution": 0.7,
           "protected_loss": 1.0,
           "unchanged": 0.0,
-          "cross_substitution_compliant": 0.6666666666666666,
+          "cross_substitution_compliant": 0.7,
           "source_retention_compliant": 0.0
         }
       },
@@ -2252,23 +2256,6 @@
           "kind": "baseline_drift"
         },
         {
-          "test_id": "GRA004",
-          "category": "grammar",
-          "condition": "baseline",
-          "input": "On a eu de la misère à trouver un stationnement en masse proche du stade.",
-          "output": "On a eu beaucoup de difficulté à trouver un stationnement près du stade.",
-          "substitutions": [
-            {
-              "from": "en masse",
-              "to": "beaucoup",
-              "relation": "preference"
-            }
-          ],
-          "protected_term_loss": 1.0,
-          "cross_substitution_rate": 0.5,
-          "kind": "baseline_drift"
-        },
-        {
           "test_id": "GRA005",
           "category": "grammar",
           "condition": "baseline",
@@ -2438,32 +2425,32 @@
           "kind": "baseline_drift"
         }
       ],
-      "n_results": 232,
+      "n_results": 333,
       "suspect_reasoning_leaks": 0,
       "scorecard": {
-        "CLR_baseline": 0.4318181818181818,
-        "MDR_baseline": 0.4431818181818182,
-        "CLR_prompted": 0.5113636363636364,
-        "MDR_prompted": 0.17045454545454544,
-        "QFCR_proofread": 0.19767441860465115,
-        "unchanged_proofread": 0.3409090909090909,
-        "prompt_recovery": 0.2727272727272727
+        "CLR_baseline": 0.4418604651162791,
+        "MDR_baseline": 0.4418604651162791,
+        "CLR_prompted": 0.5232558139534884,
+        "MDR_prompted": 0.1744186046511628,
+        "QFCR_proofread": 0.20238095238095238,
+        "unchanged_proofread": 0.3488372093023256,
+        "prompt_recovery": 0.2674418604651163
       },
       "positive_control": {
-        "baseline_drift": 0.4431818181818182,
-        "metropolitan_drift": 0.48863636363636365,
-        "margin": 0.04545454545454547,
+        "baseline_drift": 0.4418604651162791,
+        "metropolitan_drift": 0.4883720930232558,
+        "margin": 0.046511627906976716,
         "passed": true
       }
     }
   ],
   "attractor": {
     "llama3.1:8b": {
-      "qc_to_fr_drift": 0.2840909090909091,
-      "fr_to_qc_drift": 0.07142857142857142,
-      "asymmetry": 0.2126623376623377,
-      "qc_retention": 0.38636363636363635,
-      "fr_retention": 0.7142857142857143
+      "qc_to_fr_drift": 0.29545454545454547,
+      "fr_to_qc_drift": 0.045454545454545456,
+      "asymmetry": 0.25,
+      "qc_retention": 0.375,
+      "fr_retention": 0.7045454545454546
     },
     "phi4:latest": {
       "qc_to_fr_drift": 0.5,
@@ -2473,22 +2460,27 @@
       "fr_retention": 0.5
     },
     "qwen2.5:14b-instruct": {
-      "qc_to_fr_drift": 0.4431818181818182,
-      "fr_to_qc_drift": 0.07142857142857142,
-      "asymmetry": 0.3717532467532467,
-      "qc_retention": 0.4318181818181818,
-      "fr_retention": 0.7857142857142857
+      "qc_to_fr_drift": 0.4418604651162791,
+      "fr_to_qc_drift": 0.036585365853658534,
+      "asymmetry": 0.40527509926262056,
+      "qc_retention": 0.4418604651162791,
+      "fr_retention": 0.8414634146341463
     }
   },
   "matched_attractor": {
     "llama3.1:8b": {
-      "n_pairs": 13,
-      "n_void_pairs": 1,
-      "qc_to_fr_drift": 0.34615384615384615,
-      "fr_to_qc_drift": 0.07692307692307693,
-      "asymmetry": 0.2692307692307692,
-      "pairs_qc_higher": 6,
-      "pairs_fr_higher": 1
+      "n_pairs": 41,
+      "n_void_pairs": 3,
+      "qc_to_fr_drift": 0.2926829268292683,
+      "fr_to_qc_drift": 0.04878048780487805,
+      "asymmetry": 0.24390243902439024,
+      "pairs_qc_higher": 14,
+      "pairs_fr_higher": 2,
+      "pairs_tied": 25,
+      "sign_test": {
+        "n_discordant": 16,
+        "p_value": 0.004180908203125
+      }
     },
     "phi4:latest": {
       "n_pairs": 11,
@@ -2497,16 +2489,26 @@
       "fr_to_qc_drift": 0.18181818181818182,
       "asymmetry": 0.5454545454545454,
       "pairs_qc_higher": 7,
-      "pairs_fr_higher": 1
+      "pairs_fr_higher": 1,
+      "pairs_tied": 3,
+      "sign_test": {
+        "n_discordant": 8,
+        "p_value": 0.0703125
+      }
     },
     "qwen2.5:14b-instruct": {
-      "n_pairs": 13,
-      "n_void_pairs": 1,
-      "qc_to_fr_drift": 0.6153846153846154,
-      "fr_to_qc_drift": 0.07692307692307693,
-      "asymmetry": 0.5384615384615385,
-      "pairs_qc_higher": 9,
-      "pairs_fr_higher": 1
+      "n_pairs": 32,
+      "n_void_pairs": 9,
+      "qc_to_fr_drift": 0.515625,
+      "fr_to_qc_drift": 0.046875,
+      "asymmetry": 0.46875,
+      "pairs_qc_higher": 18,
+      "pairs_fr_higher": 2,
+      "pairs_tied": 12,
+      "sign_test": {
+        "n_discordant": 20,
+        "p_value": 0.0004024505615234375
+      }
     }
   }
 }
