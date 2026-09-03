@@ -11,9 +11,11 @@ The third is the interesting one. A model can be fluent, grammatical and
 completely wrong for the person in front of it — and a generic French benchmark
 will not notice.
 
-Companion documents: [`docs/article.md`](docs/article.md) (the argument),
-[`docs/project_purpose.md`](docs/project_purpose.md) (the full design programme,
-of which this repository implements Track B).
+Companion documents: [`docs/article.md`](docs/article.md) (the argument and the
+measured results), [`docs/huggingface-survey.md`](docs/huggingface-survey.md)
+(what exists on HuggingFace for Quebec French, and what of it actually runs),
+[`docs/project_purpose.md`](docs/project_purpose.md) (the full design
+programme, of which this repository implements Track B).
 
 ## Quick start
 
@@ -230,7 +232,7 @@ src/
   textnorm.py  unicode-safe term matching
   dataset.py   loading and schema validation
   metrics.py   direction-aware drift metrics
-  models.py    Ollama adapter, reasoning stripping
+  models.py    Ollama + OpenAI-compatible adapters, reasoning stripping
   judge.py     blind LLM judge
   report.py    scorecard and markdown rendering
 results/
@@ -239,6 +241,9 @@ results/
   human/       blind rater CSV + key
   report/      report.md, report.json
 web/           the console UI (index.html, app.js, styles.css)
+scripts/
+  fetch_hf_gguf.sh   size-verified GGUF import from HuggingFace
+  article_numbers.py figures quoted by the write-up, straight from the report
 tests/         self-tests (matching, metrics, judge, dataset integrity)
 run_experiment.py
 serve.py       local control panel
