@@ -38,7 +38,7 @@ else
   echo "fetching $NAME ($EXPECT bytes)"
   # No -C: resuming onto a file another process is writing is exactly how the
   # silent corruption happened. Always start clean.
-  curl -fL --retry 5 --retry-delay 3 -o "$FILE" "$URL"
+  curl -fL --progress-bar --retry 5 --retry-delay 3 -o "$FILE" "$URL"
   GOT=$(stat -f%z "$FILE" 2>/dev/null || stat -c%s "$FILE")
   if [ "$GOT" != "$EXPECT" ]; then
     echo "size mismatch for $NAME: got $GOT, expected $EXPECT -- refusing to import" >&2

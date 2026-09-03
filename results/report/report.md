@@ -1,5 +1,114 @@
 # Quebec French Dialect Drift Report
 
+## choco-fr
+
+- run: `2026-09-03T19:29:29+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- temperature 0.0, seed 42, num_ctx 8192
+- 352 results  ·  judge: none
+
+### Scorecard (Quebec-origin items)
+
+| Metric | Value |
+| --- | ---: |
+| Canadian lexical retention — baseline (CLR) |   10.2% |
+| Metropolitan drift — baseline (MDR) |   31.8% |
+| Canadian lexical retention — Quebec prompt |    0.0% |
+| Metropolitan drift — Quebec prompt |   13.6% |
+| Quebec false correction — proofread (QFCR) |   73.3% |
+| — of which the model left the text untouched |    0.0% |
+| Drift recovered by prompting |   18.2% |
+
+QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
+
+### Positive control: **FAILED**
+
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 31.8%, France-targeted 26.1% (margin -5.7 pts).
+
+> Naming France as the audience bought nothing over naming no audience at all. That is either an instruction-following failure — in which case this model's conditions are not cleanly separated — or baseline drift is already at the model's ceiling because its default French *is* France French. This run cannot distinguish the two.
+
+### By condition
+
+| Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline |   10.2% |   31.8% |   34.5% |   90.7% |   31.8% |   14.8% |    0.0% |   34.1% |
+| canadian |    0.0% |   13.6% |   17.6% |  100.0% |   14.8% |   11.4% |    0.0% |   61.4% |
+| metropolitan |   11.4% |   26.1% |   29.4% |   88.4% |   13.6% |   15.9% |    0.0% |   61.4% |
+| proofread |   25.0% |   31.8% |   31.8% |   73.3% |   62.5% |    5.7% |    0.0% |    0.0% |
+
+*Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
+
+### Baseline drift by category (Quebec-origin)
+
+| Category | n | Retention | Drift |
+| --- | ---: | ---: | ---: |
+| grammar | 6 |    0.0% |   50.0% |
+| lexical | 14 |   14.3% |   46.4% |
+| register | 6 |    8.3% |   33.3% |
+| semantic | 8 |    0.0% |   25.0% |
+| terminology | 10 |   20.0% |    5.0% |
+
+### Worst failures
+
+**GRA001** (grammar, proofread, false_correction) — à soir → ce soir, nous autres → nous
+
+> in:  Tu viens-tu avec nous autres à soir ?
+>
+> out: Viens-tu avec nous d'autres ce soir ?
+
+**GRA003** (grammar, proofread, false_correction) — à cause que → parce que
+
+> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+>
+> out: Nous sommes allés au restaurant parce que la pluie était si forte qu'on ne pouvait pas marcher.
+
+**LEX001** (lexical, proofread, false_correction) — courriel → e-mail
+
+> in:  Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.
+>
+> out: Vous pouvez consulter votre dossier en ligne et vous adresser à nous par e-mail.
+
+**LEX005** (lexical, proofread, false_correction) — chandail → pull
+
+> in:  Ce chandail en laine est offert en trois couleurs.
+>
+> out: Ce pull en laine est proposé dans trois teintes différentes.
+
+**LEX007** (lexical, proofread, false_correction) — traversier → bac
+
+> in:  Le traversier relie Québec et Lévis toutes les vingt minutes.
+>
+> out: Le bac relie Québec à Lévis toutes les vingt minutes.
+
+**LEX010** (lexical, proofread, false_correction) — pourriel → spam
+
+> in:  Supprimez les pourriels sans ouvrir les pièces jointes.
+>
+> out: Éliminez les spams sans ouvrir les annexes attachées.
+
+**SEM003** (semantic, proofread, false_correction) — souperons → dînerons
+
+> in:  Nous souperons vers 18 h avec les grands-parents.
+>
+> out: Nous dînerons vers 18 heures avec les grands-parents.
+
+**SEM006** (semantic, proofread, false_correction) — présentement → actuellement
+
+> in:  Je vais présentement m'occuper de ton dossier.
+>
+> out: Je vais actuellement me consacrer à ton dossier.
+
+**TER004** (terminology, proofread, false_correction) — témoins → cookies
+
+> in:  Ce site utilise des témoins pour mémoriser vos préférences.
+>
+> out: Ce site utilise des cookies pour stocker vos préférences.
+
+**TER005** (terminology, proofread, false_correction) — rançongiciel → ransomware
+
+> in:  L'attaque par rançongiciel a chiffré les serveurs de l'organisme.
+>
+> out: L'attaque par ransomware a crypté les serveurs de l'organisation.
+
 ## llama3.1:8b
 
 - run: `2026-09-03T18:13:26+00:00`  ·  dataset `0.1.0`  ·  prompts `1.0`
@@ -574,6 +683,7 @@ Under the baseline prompt, which names no variety. Symmetric drift means the mod
 
 | Model | QC→FR drift | FR→QC drift | asymmetry |
 | --- | ---: | ---: | ---: |
+| choco-fr |   31.8% |   14.8% |   17.0% |
 | llama3.1:8b |   29.5% |    4.5% |   25.0% |
 | mistral:7b |   25.0% |    6.8% |   18.2% |
 | phi4:latest |   50.0% |   12.5% |   37.5% |
@@ -586,6 +696,7 @@ The table above compares 44 Quebec items against 14 France items — two differe
 
 | Model | pairs | QC→FR drift | FR→QC drift | asymmetry | QC higher | FR higher | tied | p (McNemar) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| choco-fr | 24 |   33.3% |   14.6% |   18.7% | 6 | 1 | 17 | 0.125 |
 | llama3.1:8b | 41 |   29.3% |    4.9% |   24.4% | 14 | 2 | 25 | 0.004 |
 | mistral:7b | 41 |   26.8% |    7.3% |   19.5% | 11 | 4 | 26 | 0.118 |
 | phi4:latest | 36 |   54.2% |    9.7% |   44.4% | 18 | 1 | 17 | < 0.001 |
