@@ -17,13 +17,28 @@ of which this repository implements Track B).
 
 ## Quick start
 
-Requires Python 3.11+ and a running [Ollama](https://ollama.com) instance.
-No third-party Python packages.
+Requires Python 3.11+ and a model server. No third-party Python packages.
+
+### The console
 
 ```bash
-ollama serve                                    # if not already running
+python3 serve.py          # then open http://127.0.0.1:8765
+```
+
+A local control panel: pick a backend and models, choose conditions and
+categories, watch the run progress, and read the results as charts. It has to
+run locally — it talks to a model server on `127.0.0.1`, which a page hosted
+anywhere else cannot reach.
+
+A run is hundreds of model calls, so the server starts it on a background
+thread and the page polls for progress. Every cell is written to disk as it
+completes, so closing the page or restarting the server loses nothing.
+
+### The CLI
+
+```bash
 python3 run_experiment.py run --models llama3.1:8b qwen2.5:14b-instruct
-python3 run_experiment.py judge --judge qwen2.5:14b-instruct   # optional
+python3 run_experiment.py judge --judge qwen2.5:14b-instruct --sample 24
 python3 run_experiment.py human --sample 150                   # blind rater CSV
 ```
 
@@ -39,6 +54,18 @@ re-running the models.
 
 Runs are **resumable**: every cell is written to `results/raw/<model>.json` as it
 completes, and re-running the same command skips work already recorded.
+
+## Backends
+
+Two adapters, selected by a `provider:name` spec:
+
+| Spec | Adapter |
+| --- | --- |
+| `llama3.1:8b` | Ollama (the default — bare tags are treated as Ollama) |
+| `openai:<model>` | Anything speaking the OpenAI chat-completions API — llama.cpp's server, LM Studio, vLLM, a hosted API |
+
+The OpenAI-compatible adapter takes `--base-url` and an optional API key
+through the console, or `base_url=` / `api_key=` through `build_model()`.
 
 ## What gets measured
 
@@ -120,8 +147,10 @@ The set should **not** consist entirely of obvious quebecisms, or the experiment
 becomes a vocabulary quiz. The interesting failures are where both forms are
 perfectly valid French and only one fits the audience.
 
-Current dataset (v0.1.0, 58 items): 14 lexical · 10 terminology · 8 semantic ·
-6 register · 6 grammar · 14 France-origin controls.
+Current dataset (v0.2.0, 88 items): 44 Quebec-origin — 14 lexical, 10
+terminology, 8 semantic, 6 register, 6 grammar — and 44 France-origin controls,
+one for every Quebec item. The self-tests fail if any Quebec item loses its
+counterpart.
 
 ## Matching is not `in`
 
@@ -187,8 +216,10 @@ results/
   metrics/     per-model CSV
   human/       blind rater CSV + key
   report/      report.md, report.json
+web/           the console UI (index.html, app.js, styles.css)
 tests/         self-tests (matching, metrics, judge, dataset integrity)
 run_experiment.py
+serve.py       local control panel
 ```
 
 ## Scope
@@ -200,8 +231,6 @@ Deliberately out of scope for v0.1:
   CC-BY-NC-SA; check the licences before redistributing any of their content.
 - **ASR** — Quebec French speech belongs in a separate benchmark (CommissionsQC,
   CEREALES), not averaged into a text score.
-- **Significance testing** — McNemar / Wilcoxon are meaningless at n=58, and the
-  matched-pair arm rests on 14 pairs. Grow the dataset first.
 - **A France→France arm** — Quebec inputs under a France-targeted prompt are the
   positive control; France inputs under the same prompt would disambiguate a
   failed control (instruction-following failure vs. baseline already at the

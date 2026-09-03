@@ -6,6 +6,7 @@ per-condition breakdown and the worst individual failures, not an average.
 """
 
 from collections import defaultdict
+from math import comb
 from statistics import mean
 
 CONDITION_ORDER = ["baseline", "canadian", "metropolitan", "proofread"]
@@ -130,6 +131,23 @@ def _scorecard(by_condition):
     }
 
 
+def _sign_test(n_qc_higher, n_fr_higher):
+    """Two-sided exact binomial test on discordant pairs (McNemar, exact form).
+
+    The null hypothesis is that a pair is equally likely to drift more on its
+    Quebec side as on its France side. Concordant pairs -- both drifted the same
+    amount, including both zero -- carry no directional information and are
+    excluded, which is what makes this McNemar rather than a plain binomial on
+    all pairs.
+    """
+    n = n_qc_higher + n_fr_higher
+    if n == 0:
+        return None
+    k = min(n_qc_higher, n_fr_higher)
+    tail = sum(comb(n, i) for i in range(k + 1)) / (2 ** n)
+    return {"n_discordant": n, "p_value": min(1.0, 2 * tail)}
+
+
 def _matched_attractor(run, tests):
     """The §23 experiment on matched content.
 
@@ -155,11 +173,14 @@ def _matched_attractor(run, tests):
     if not qc_rates:
         return None
     qc_mean, fr_mean = mean(qc_rates), mean(fr_rates)
+    qc_higher = sum(q > f for q, f in zip(qc_rates, fr_rates))
+    fr_higher = sum(f > q for q, f in zip(qc_rates, fr_rates))
     return {"n_pairs": len(qc_rates), "n_void_pairs": n_void,
             "qc_to_fr_drift": qc_mean, "fr_to_qc_drift": fr_mean,
             "asymmetry": qc_mean - fr_mean,
-            "pairs_qc_higher": sum(q > f for q, f in zip(qc_rates, fr_rates)),
-            "pairs_fr_higher": sum(f > q for q, f in zip(qc_rates, fr_rates))}
+            "pairs_qc_higher": qc_higher, "pairs_fr_higher": fr_higher,
+            "pairs_tied": len(qc_rates) - qc_higher - fr_higher,
+            "sign_test": _sign_test(qc_higher, fr_higher)}
 
 
 def _positive_control(by_condition):
@@ -325,13 +346,20 @@ def render_markdown(report):
                   "two different sets. Each control item names its Quebec counterpart, so "
                   "the same measure runs on sentence pairs that differ only in variety. "
                   "Void cells are excluded from both arms of a pair.", "",
-                  "| Model | pairs | QC→FR drift | FR→QC drift | asymmetry | QC higher | FR higher |",
-                  "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
+                  "| Model | pairs | QC→FR drift | FR→QC drift | asymmetry | "
+                  "QC higher | FR higher | tied | p (McNemar) |",
+                  "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]
         for name, a in report["matched_attractor"].items():
+            st = a.get("sign_test")
+            p_txt = "-" if st is None else (
+                "< 0.001" if st["p_value"] < 0.001 else f"{st['p_value']:.3f}")
             lines.append(f"| {name} | {a['n_pairs']} | {_pct(a['qc_to_fr_drift'])} | "
                          f"{_pct(a['fr_to_qc_drift'])} | {_pct(a['asymmetry'])} | "
-                         f"{a['pairs_qc_higher']} | {a['pairs_fr_higher']} |")
-        lines += ["", f"At {max(a['n_pairs'] for a in report['matched_attractor'].values())} "
-                  "pairs this is a direction, not a significance test. Growing the "
-                  "control set is the next step.", ""]
+                         f"{a['pairs_qc_higher']} | {a['pairs_fr_higher']} | "
+                         f"{a['pairs_tied']} | {p_txt} |")
+        lines += ["",
+                  "*p* is a two-sided exact McNemar (sign) test on the discordant pairs — "
+                  "those where one side drifted more than the other. Tied pairs, including "
+                  "pairs where neither side drifted, carry no directional information and "
+                  "are excluded from the test but shown for context.", ""]
     return "\n".join(lines)

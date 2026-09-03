@@ -150,15 +150,101 @@ def _strip_wrappers(text: str) -> str:
     return text.strip('"“”').strip()
 
 
+class OpenAICompatibleModel:
+    """Adapter for any server speaking the OpenAI chat-completions API.
+
+    Covers llama.cpp's server, LM Studio, vLLM, text-generation-webui and the
+    hosted APIs. The harness should not care which is behind it -- that is the
+    whole point of keeping this interface small.
+    """
+
+    def __init__(self, model, base_url="http://127.0.0.1:8080/v1", api_key=None,
+                 temperature=0.0, seed=42, num_ctx=8192, timeout=600, retries=2,
+                 **_ignored):
+        self.model = model
+        self.base_url = base_url.rstrip("/")
+        self.api_key = api_key
+        self.temperature = temperature
+        self.seed = seed
+        self.num_ctx = num_ctx
+        self.timeout = timeout
+        self.retries = retries
+
+    @property
+    def name(self):
+        return f"openai:{self.model}"
+
+    @property
+    def config(self):
+        return {"provider": "openai-compatible", "model": self.model,
+                "base_url": self.base_url, "temperature": self.temperature,
+                "seed": self.seed}
+
+    def generate(self, system, user) -> ModelResponse:
+        payload = {"model": self.model, "temperature": self.temperature,
+                   "seed": self.seed, "stream": False,
+                   "messages": [{"role": "system", "content": system},
+                                {"role": "user", "content": user}]}
+        body = json.dumps(payload).encode("utf-8")
+        headers = {"Content-Type": "application/json"}
+        if self.api_key:
+            headers["Authorization"] = f"Bearer {self.api_key}"
+
+        for attempt in range(self.retries + 1):
+            started = time.time()
+            req = urllib.request.Request(f"{self.base_url}/chat/completions",
+                                         data=body, headers=headers)
+            try:
+                with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+                    data = json.loads(resp.read().decode("utf-8"))
+                break
+            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+                if attempt == self.retries:
+                    raise RuntimeError(f"{self.model}: {exc}") from exc
+                time.sleep(2 * (attempt + 1))
+
+        choice = (data.get("choices") or [{}])[0]
+        message = choice.get("message", {})
+        raw = message.get("content") or ""
+        thinking = message.get("reasoning_content") or message.get("reasoning") or ""
+        clean, was_stripped = strip_reasoning(raw)
+        clean = _strip_wrappers(clean)
+        return ModelResponse(
+            model=self.name, system=system, user=user, raw=raw, output=clean,
+            reasoning_stripped=bool(was_stripped or thinking),
+            suspect_reasoning_leak=looks_like_untagged_reasoning(clean),
+            latency_s=round(time.time() - started, 2),
+            meta={"finish_reason": choice.get("finish_reason"),
+                  "usage": data.get("usage")})
+
+
+PROVIDERS = ("ollama", "openai")
+
+
 def build_model(spec: str, **kwargs):
-    """Build a model from a `provider:name` spec. Defaults to ollama."""
-    if ":" in spec and spec.split(":", 1)[0] in ("ollama",):
+    """Build a model from a `provider:name` spec. Defaults to ollama.
+
+    Ollama tags contain a colon (`llama3.1:8b`), so a spec only counts as
+    provider-qualified when the prefix is a known provider.
+    """
+    if ":" in spec and spec.split(":", 1)[0] in PROVIDERS:
         provider, name = spec.split(":", 1)
     else:
         provider, name = "ollama", spec
     if provider == "ollama":
-        return OllamaModel(name, **kwargs)
+        return OllamaModel(name, **{k: v for k, v in kwargs.items()
+                                    if k not in ("base_url", "api_key")})
+    if provider == "openai":
+        return OpenAICompatibleModel(name, **kwargs)
     raise ValueError(f"unknown provider {provider!r}")
+
+
+def list_openai_models(base_url, api_key=None, timeout=15):
+    headers = {"Authorization": f"Bearer {api_key}"} if api_key else {}
+    req = urllib.request.Request(f"{base_url.rstrip('/')}/models", headers=headers)
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+    return [m["id"] for m in data.get("data", [])]
 
 
 def list_ollama_models(host=OLLAMA_HOST):

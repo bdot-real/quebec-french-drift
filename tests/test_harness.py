@@ -81,8 +81,18 @@ for t in tests:
         src = pair[t["variety"]]
         check(any(contains_term(t["input"], v) for v in ([src] if isinstance(src, str) else src)),
               f"{t['id']}: source-variety form {src!r} is not in its own input")
+# Every Quebec item must have exactly one France counterpart: the matched-pair
+# arm is the load-bearing comparison, and a silently unpaired item weakens it.
+qc_ids = {t["id"] for t in tests if t["variety"] == "qc"}
+counterparts = [t["counterpart"] for t in tests if t.get("counterpart")]
+check(len(counterparts) == len(set(counterparts)), "a Quebec item is claimed twice")
+missing = qc_ids - set(counterparts)
+check(not missing, f"Quebec items with no France counterpart: {sorted(missing)}")
+dangling = set(counterparts) - qc_ids
+check(not dangling, f"counterparts naming no Quebec item: {sorted(dangling)}")
+
 prompts = load_prompts("data/prompts.json")
 for name, p in prompts.items():
     check("{text}" in p["user"], f"prompt {name} has no {{text}} slot")
 
-print(f"all self-tests passed ({len(tests)} test cases, {len(prompts)} conditions)")
+print(f"all self-tests passed ({len(tests)} test cases, {len(counterparts)} matched pairs, {len(prompts)} conditions)")

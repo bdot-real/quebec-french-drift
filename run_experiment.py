@@ -23,7 +23,7 @@ from src.metrics import score_output
 from src.models import build_model
 from src.report import build_report, render_markdown
 
-DATASET_VERSION = "0.1.0"
+DATASET_VERSION = "0.2.0"
 PROMPT_VERSION = "1.0"
 RAW_DIR = Path("results/raw")
 
@@ -32,16 +32,29 @@ def _safe(name):
     return name.replace(":", "_").replace("/", "_")
 
 
-def run_model(model, tests, prompts, resume=True, progress=True):
+def run_model(model, tests, prompts, resume=True, progress=True,
+              on_cell=None, should_stop=None):
     """Run every (test x condition) cell for one model, resuming if interrupted."""
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     path = RAW_DIR / f"{_safe(model.name)}.json"
 
+    by_id = {t["id"]: t for t in tests}
     done, results = set(), []
     if resume and path.exists():
         previous = json.loads(path.read_text(encoding="utf-8"))
-        results = previous.get("results", [])
+        # A cached cell is only valid if it was produced from the *current* input.
+        # Editing a test case must invalidate its outputs, or the resume path
+        # silently serves answers to a question that is no longer being asked.
+        stale = 0
+        for r in previous.get("results", []):
+            test = by_id.get(r["test_id"])
+            if test is not None and r.get("input") != test["input"]:
+                stale += 1
+                continue
+            results.append(r)
         done = {(r["test_id"], r["condition"]) for r in results}
+        if stale:
+            print(f"  discarded {stale} cells whose test case changed", file=sys.stderr)
         if done:
             print(f"  resuming: {len(done)} cells already recorded", file=sys.stderr)
 
@@ -61,7 +74,12 @@ def run_model(model, tests, prompts, resume=True, progress=True):
     for test in tests:
         for condition, prompt in prompts.items():
             n += 1
+            if should_stop is not None and should_stop():
+                print("  stopped by request", file=sys.stderr)
+                return {"meta": run_meta, "results": results, "stopped": True}
             if (test["id"], condition) in done:
+                if on_cell:
+                    on_cell(model.name, n, total, None)
                 continue
             user = prompt["user"].format(text=test["input"])
             response = model.generate(prompt["system"], user)
@@ -83,6 +101,8 @@ def run_model(model, tests, prompts, resume=True, progress=True):
 
             path.write_text(json.dumps({"meta": run_meta, "results": results},
                                        ensure_ascii=False, indent=2), encoding="utf-8")
+            if on_cell:
+                on_cell(model.name, n, total, record)
             if progress:
                 rate = (time.time() - started) / max(len(results) - len(done), 1)
                 left = (total - n) * rate
