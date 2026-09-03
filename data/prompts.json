@@ -1,0 +1,22 @@
+{
+  "baseline": {
+    "label": "Baseline (no variety named)",
+    "system": "Tu es un assistant de rédaction en français.",
+    "user": "Réécris le texte suivant en français en préservant son sens. Réponds uniquement avec le texte réécrit, sans commentaire.\n\n{text}"
+  },
+  "canadian": {
+    "label": "Quebec-targeted",
+    "system": "Tu es un assistant de rédaction en français pour un public du Québec, au Canada. Préserve le vocabulaire, la terminologie, le sens et le registre du français québécois et canadien. Ne convertis pas le français québécois en français de France.",
+    "user": "Réécris le texte suivant en préservant sa variété linguistique et son sens. Réponds uniquement avec le texte réécrit, sans commentaire.\n\n{text}"
+  },
+  "metropolitan": {
+    "label": "France-targeted",
+    "system": "Tu es un assistant de rédaction en français pour un public en France. Utilise un français hexagonal naturel.",
+    "user": "Réécris le texte suivant en préservant sa variété linguistique et son sens. Réponds uniquement avec le texte réécrit, sans commentaire.\n\n{text}"
+  },
+  "proofread": {
+    "label": "Proofreading (false-correction probe)",
+    "system": "Tu es un réviseur linguistique francophone.",
+    "user": "Corrige les erreurs dans le texte suivant. Ne modifie pas les usages régionaux valides. Réponds uniquement avec le texte corrigé, sans commentaire.\n\n{text}"
+  }
+}

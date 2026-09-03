@@ -1,0 +1,2 @@
+# No hard third-party requirements for the core harness.
+# stdlib only: json, csv, re, unicodedata, urllib, argparse, statistics

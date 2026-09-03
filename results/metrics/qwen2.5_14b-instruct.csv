@@ -1,0 +1,303 @@
+test_id,category,variety,condition,model,input,output,source_retention,cross_substitution_rate,protected_term_loss,unchanged,suspect_reasoning_leak
+FRC001,lexical,fr,baseline,qwen2.5:14b-instruct,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Vous pouvez consulter votre dossier en ligne et nous contacter par email.,1.0,0.0,1.0,False,False
+FRC001,lexical,fr,canadian,qwen2.5:14b-instruct,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Tu peux jeter un coup d'œil à ton dossier en-ligne et nous joindre par courriel.,0.0,1.0,1.0,False,False
+FRC001,lexical,fr,metropolitan,qwen2.5:14b-instruct,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Vous avez la possibilité de consulter votre dossier en ligne et de nous joindre par mail.,1.0,0.0,1.0,False,False
+FRC001,lexical,fr,proofread,qwen2.5:14b-instruct,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,1.0,0.0,0.0,True,False
+FRC002,lexical,fr,baseline,qwen2.5:14b-instruct,Le parking est accessible derrière le bâtiment à partir de 7 h.,Le parking se trouve derrière le bâtiment et est accessible à partir de 7 heures.,1.0,0.0,0.0,False,False
+FRC002,lexical,fr,canadian,qwen2.5:14b-instruct,Le parking est accessible derrière le bâtiment à partir de 7 h.,L'parking est accessible arrière du bâti à compter de 7 heures.,1.0,0.0,0.0,False,False
+FRC002,lexical,fr,metropolitan,qwen2.5:14b-instruct,Le parking est accessible derrière le bâtiment à partir de 7 h.,Le stationnement est disponible derrière l'édifice dès 7 heures.,0.0,1.0,1.0,False,False
+FRC002,lexical,fr,proofread,qwen2.5:14b-instruct,Le parking est accessible derrière le bâtiment à partir de 7 h.,Le parking est accessible derrière le bâtiment à partir de 7 heures.,1.0,0.0,0.0,False,False
+FRC003,lexical,fr,baseline,qwen2.5:14b-instruct,L'activité aura lieu le week-end prochain au centre social.,L'activité se déroulera le weekend prochain au centre social.,1.0,0.0,1.0,False,False
+FRC003,lexical,fr,canadian,qwen2.5:14b-instruct,L'activité aura lieu le week-end prochain au centre social.,"L'activity va se passer le weekend prochain au centre social. 
+
+(Note: Il y a une légère erreur dans la demande de retourner à la variété linguistique tout en préservant le sens, car ""activity"" n'est pas un terme couramment utilisé en français québécois pour ce contexte. La formulation correcte serait plutôt : ""L'activité va avoir lieu le weekend prochain au centre social."") 
+
+Donc voici la version corrigée et ajustée :
+
+L'activité va avoir lieu le weekend prochain au centre social.",1.0,0.0,1.0,False,False
+FRC003,lexical,fr,metropolitan,qwen2.5:14b-instruct,L'activité aura lieu le week-end prochain au centre social.,L’animation se déroulera le weekend à venir au sein du centre social.,1.0,0.0,1.0,False,False
+FRC003,lexical,fr,proofread,qwen2.5:14b-instruct,L'activité aura lieu le week-end prochain au centre social.,L'activité aura lieu le week-end prochain au centre social.,1.0,0.0,0.0,True,False
+FRC004,lexical,fr,baseline,qwen2.5:14b-instruct,Profitez de nos soldes pour faire votre shopping de Noël.,Profitez de nos promotions pour vos achats de Noël.,0.0,0.0,1.0,False,False
+FRC004,lexical,fr,canadian,qwen2.5:14b-instruct,Profitez de nos soldes pour faire votre shopping de Noël.,Profitte de nos soldes pour faire ton shopping de Noël.,1.0,0.0,0.0,False,False
+FRC004,lexical,fr,metropolitan,qwen2.5:14b-instruct,Profitez de nos soldes pour faire votre shopping de Noël.,Profitons des promotions pour nos emplettes de fin d'année.,0.0,0.0,1.0,False,False
+FRC004,lexical,fr,proofread,qwen2.5:14b-instruct,Profitez de nos soldes pour faire votre shopping de Noël.,Profitez de nos soldes pour faire vos achats de Noël.,0.0,0.0,1.0,False,False
+FRC005,lexical,fr,baseline,qwen2.5:14b-instruct,Ce pull en laine est disponible en trois couleurs.,Ce pull en laine est disponible dans trois couleurs.,1.0,0.0,0.0,False,False
+FRC005,lexical,fr,canadian,qwen2.5:14b-instruct,Ce pull en laine est disponible en trois couleurs.,"C't'chandail en laine, il est disponible en trois couleurs différente.",0.0,1.0,1.0,False,False
+FRC005,lexical,fr,metropolitan,qwen2.5:14b-instruct,Ce pull en laine est disponible en trois couleurs.,Ce pullover en laine est disponible dans trois teintes.,0.0,0.0,1.0,False,False
+FRC005,lexical,fr,proofread,qwen2.5:14b-instruct,Ce pull en laine est disponible en trois couleurs.,Ce pull en laine est disponible en trois couleurs.,1.0,0.0,0.0,True,False
+FRC006,lexical,fr,baseline,qwen2.5:14b-instruct,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,Notre podcast hebdomadaire est maintenant disponible sur toutes les plateformes.,1.0,0.0,0.0,False,False
+FRC006,lexical,fr,canadian,qwen2.5:14b-instruct,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,Notre podshow hebdo est maintenant accessible sur toutes les plateformes!,0.0,0.0,1.0,False,False
+FRC006,lexical,fr,metropolitan,qwen2.5:14b-instruct,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,Notre émission de podcast sort cette semaine sur l’ensemble des plateformes.,1.0,0.0,0.0,False,False
+FRC006,lexical,fr,proofread,qwen2.5:14b-instruct,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,Notre podcast hebdomadaire est désormais disponible sur toutes les plates-formes.,1.0,0.0,0.0,False,False
+FRC007,terminology,fr,baseline,qwen2.5:14b-instruct,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,"Votre智能手机可以连接家里的Wi-Fi网络。 salopes，这句话的翻译似乎是错误的或者是不必要的，根据您的要求，我只是重写文本，正确的应该是：
+
+Votre smartphone peut se connecter au réseau Wi-Fi du domicile.",1.0,0.0,0.0,False,False
+FRC007,terminology,fr,canadian,qwen2.5:14b-instruct,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,Ton cellulaire peut se brancher sur le réseau Wi-Fi de la maison.,0.0,0.0,1.0,False,False
+FRC007,terminology,fr,metropolitan,qwen2.5:14b-instruct,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,Votre téléphone portable peut se brancher sur le réseau Wi-Fi du domicile.,0.0,0.0,1.0,False,False
+FRC007,terminology,fr,proofread,qwen2.5:14b-instruct,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,Votre smartphone peut se connecter au réseau WiFi de la maison.,1.0,0.0,0.0,False,False
+FRC008,terminology,fr,baseline,qwen2.5:14b-instruct,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,Faites attention aux tentatives de phishing qui copient nos e-mails officiels.,1.0,0.0,0.0,False,False
+FRC008,terminology,fr,canadian,qwen2.5:14b-instruct,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,Faites attention aux tentatives de phishing qui ressemblent à nos courriels officiels.,1.0,0.0,0.0,False,False
+FRC008,terminology,fr,metropolitan,qwen2.5:14b-instruct,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,Faites gaffe aux arnaques par phishing qui copient nos courriels officiels.,1.0,0.0,0.0,False,False
+FRC008,terminology,fr,proofread,qwen2.5:14b-instruct,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,1.0,0.0,0.0,True,False
+FRC009,terminology,fr,baseline,qwen2.5:14b-instruct,Ce site utilise des cookies pour mémoriser vos préférences.,Ce site utilise des cookies pour se souvenir de vos préférences.,1.0,0.0,0.0,False,False
+FRC009,terminology,fr,canadian,qwen2.5:14b-instruct,Ce site utilise des cookies pour mémoriser vos préférences.,C't' site-là utilise des cookies pour se souvenir de tes préférences.,1.0,0.0,0.0,False,False
+FRC009,terminology,fr,metropolitan,qwen2.5:14b-instruct,Ce site utilise des cookies pour mémoriser vos préférences.,Ce site emploie des cookies pour se souvenir de vos préférences.,1.0,0.0,0.0,False,False
+FRC009,terminology,fr,proofread,qwen2.5:14b-instruct,Ce site utilise des cookies pour mémoriser vos préférences.,Ce site utilise des cookies pour mémoriser vos préférences.,1.0,0.0,0.0,True,False
+FRC010,terminology,fr,baseline,qwen2.5:14b-instruct,La migration vers le cloud réduira les coûts d'exploitation.,La migration vers le cloud diminuera les coûts d'exploitation.,1.0,0.0,0.0,False,False
+FRC010,terminology,fr,canadian,qwen2.5:14b-instruct,La migration vers le cloud réduira les coûts d'exploitation.,L'migration vers le nuage va diminuer les coûts d'exploitation.,0.0,0.0,1.0,False,False
+FRC010,terminology,fr,metropolitan,qwen2.5:14b-instruct,La migration vers le cloud réduira les coûts d'exploitation.,Le passage au cloud permettra de diminuer les frais de fonctionnement.,1.0,0.0,0.0,False,False
+FRC010,terminology,fr,proofread,qwen2.5:14b-instruct,La migration vers le cloud réduira les coûts d'exploitation.,La migration vers le cloud réduira les coûts d'exploitation.,1.0,0.0,0.0,True,False
+FRC011,semantic,fr,baseline,qwen2.5:14b-instruct,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,Le petit déjeuner sera servi à 8 heures dans le hall d'entrée.,1.0,0.0,0.0,False,False
+FRC011,semantic,fr,canadian,qwen2.5:14b-instruct,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,Le casse-croûte sera distribué à 8 heures au hall d'entrée.,0.0,0.0,1.0,False,False
+FRC011,semantic,fr,metropolitan,qwen2.5:14b-instruct,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,Le breakfast sera proposé à 8 heures dans le hall.,0.0,0.0,1.0,False,False
+FRC011,semantic,fr,proofread,qwen2.5:14b-instruct,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,Le petit déjeuner sera servi à 8 h dans le hall d'entrée.,1.0,0.0,0.0,False,False
+FRC012,semantic,fr,baseline,qwen2.5:14b-instruct,"Après le déjeuner, nous retournerons au travail vers 13 h.","Après le déjeuner, nous reprendrons le travail à 13 heures.",1.0,0.0,0.0,False,False
+FRC012,semantic,fr,canadian,qwen2.5:14b-instruct,"Après le déjeuner, nous retournerons au travail vers 13 h.","Après le dîner, on repartira au boulot vers 13 h.",0.0,1.0,1.0,False,False
+FRC012,semantic,fr,metropolitan,qwen2.5:14b-instruct,"Après le déjeuner, nous retournerons au travail vers 13 h.","Après le repas de midi, nous reprendrons notre travail autour de 13 heures.",0.0,0.0,1.0,False,False
+FRC012,semantic,fr,proofread,qwen2.5:14b-instruct,"Après le déjeuner, nous retournerons au travail vers 13 h.","Après le déjeuner, nous retournerons au travail à 13 h.",1.0,0.0,0.0,False,False
+FRC013,register,fr,baseline,qwen2.5:14b-instruct,"Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.","Bonjour, merci de votre message. Nous avons bien pris en compte votre demande et un conseiller vous recontactera dans les deux jours ouvrables.",0.0,1.0,1.0,False,False
+FRC013,register,fr,canadian,qwen2.5:14b-instruct,"Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.","Salut, merci de prendre contact avec nous. On a bien reçu votre courriel et un conseiller va vous rappeler dans les deux prochains jours ouvrables.",0.0,1.0,1.0,False,False
+FRC013,register,fr,metropolitan,qwen2.5:14b-instruct,"Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.","Bonjour, merci de nous avoir écrit. Nous avons bien pris en compte votre demande et un conseiller vous recontactera dans les deux jours ouvrables.",0.0,1.0,1.0,False,False
+FRC013,register,fr,proofread,qwen2.5:14b-instruct,"Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.","Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera dans deux jours ouvrables.",0.0,1.0,1.0,False,False
+FRC014,grammar,fr,baseline,qwen2.5:14b-instruct,"Assieds-toi, je vais te raconter ce qui s'est passé hier.","Asseyez-vous, je vais vous raconter ce qui s'est passé hier.",0.0,0.0,1.0,False,False
+FRC014,grammar,fr,canadian,qwen2.5:14b-instruct,"Assieds-toi, je vais te raconter ce qui s'est passé hier.","Tasse-toi, j'vas t'dire ce qui s'tait passé hier.",0.0,0.0,1.0,False,False
+FRC014,grammar,fr,metropolitan,qwen2.5:14b-instruct,"Assieds-toi, je vais te raconter ce qui s'est passé hier.","Asseyez-vous, je vais vous conter ce qui s'est produit hier.",0.0,0.0,1.0,False,False
+FRC014,grammar,fr,proofread,qwen2.5:14b-instruct,"Assieds-toi, je vais te raconter ce qui s'est passé hier.","Assieds-toi, je vais te raconter ce qui s'est passé hier.",1.0,0.0,0.0,True,False
+GRA001,grammar,qc,baseline,qwen2.5:14b-instruct,Tu viens-tu avec nous autres à soir ?,Viens-tu avec nous ce soir ?,0.0,1.0,1.0,False,False
+GRA001,grammar,qc,canadian,qwen2.5:14b-instruct,Tu viens-tu avec nous autres à soir ?,T'viens-tu avec nous autres ce soir ?,0.5,0.5,0.5,False,False
+GRA001,grammar,qc,metropolitan,qwen2.5:14b-instruct,Tu viens-tu avec nous autres à soir ?,Viens-tu avec nous ce soir ?,0.0,1.0,1.0,False,False
+GRA001,grammar,qc,proofread,qwen2.5:14b-instruct,Tu viens-tu avec nous autres à soir ?,Viens-tu avec nous ce soir ?,0.0,1.0,1.0,False,False
+GRA002,grammar,qc,baseline,qwen2.5:14b-instruct,Y'a personne qui m'a averti que la réunion était annulée.,Personne ne m'a informé que la réunion avait été annulée.,0.0,1.0,1.0,False,False
+GRA002,grammar,qc,canadian,qwen2.5:14b-instruct,Y'a personne qui m'a averti que la réunion était annulée.,Y'a pas de monde qui m'a prévenu que la réunion était annulée.,1.0,0.0,0.0,False,False
+GRA002,grammar,qc,metropolitan,qwen2.5:14b-instruct,Y'a personne qui m'a averti que la réunion était annulée.,Personne ne m'a prévenu que la réunion avait été annulée.,0.0,1.0,1.0,False,False
+GRA002,grammar,qc,proofread,qwen2.5:14b-instruct,Y'a personne qui m'a averti que la réunion était annulée.,Il n'y a personne qui m'ait averti que la réunion était annulée.,0.0,1.0,1.0,False,False
+GRA003,grammar,qc,baseline,qwen2.5:14b-instruct,On est allés au restaurant à cause qu'il pleuvait trop pour marcher.,On est allés au restaurant parce qu'il pleuvait trop pour marcher.,0.0,1.0,1.0,False,False
+GRA003,grammar,qc,canadian,qwen2.5:14b-instruct,On est allés au restaurant à cause qu'il pleuvait trop pour marcher.,On est allés au restaurant parce qu'il pleuvait trop pour sortir.,0.0,1.0,1.0,False,False
+GRA003,grammar,qc,metropolitan,qwen2.5:14b-instruct,On est allés au restaurant à cause qu'il pleuvait trop pour marcher.,On est allés au restaurant parce qu'il pleuvait tellement que ça n'était pas possible de marcher.,0.0,1.0,1.0,False,False
+GRA003,grammar,qc,proofread,qwen2.5:14b-instruct,On est allés au restaurant à cause qu'il pleuvait trop pour marcher.,"On y est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+
+Correction alternative en corrigeant la structure de phrase :
+On y est allés au restaurant parce qu'il pleuvait trop pour marcher.",1.0,0.0,0.0,False,False
+GRA004,grammar,qc,baseline,qwen2.5:14b-instruct,On a eu de la misère à trouver un stationnement en masse proche du stade.,On a eu beaucoup de difficulté à trouver un stationnement près du stade.,0.0,0.5,1.0,False,False
+GRA004,grammar,qc,canadian,qwen2.5:14b-instruct,On a eu de la misère à trouver un stationnement en masse proche du stade.,On a eu du trouble à trouver un stationnement massé près du stade.,0.0,0.0,1.0,False,False
+GRA004,grammar,qc,metropolitan,qwen2.5:14b-instruct,On a eu de la misère à trouver un stationnement en masse proche du stade.,On a eu du mal à dénicher un parking près du stade.,0.0,0.5,1.0,False,False
+GRA004,grammar,qc,proofread,qwen2.5:14b-instruct,On a eu de la misère à trouver un stationnement en masse proche du stade.,On a eu de la misère à trouver un stationnement massif proche du stade.,0.5,0.0,0.0,False,False
+GRA005,grammar,qc,baseline,qwen2.5:14b-instruct,"Assis-toi, je vais te conter ce qui est arrivé hier.","Assois-toi, je vais te raconter ce qui s'est passé hier.",0.0,0.5,1.0,False,False
+GRA005,grammar,qc,canadian,qwen2.5:14b-instruct,"Assis-toi, je vais te conter ce qui est arrivé hier.","Tasse-toi, j'vas t'dire ce qui s'ta passé hier.",0.0,0.0,1.0,False,False
+GRA005,grammar,qc,metropolitan,qwen2.5:14b-instruct,"Assis-toi, je vais te conter ce qui est arrivé hier.","Assois-toi, je vais te raconter ce qui s'est passé hier.",0.0,0.5,1.0,False,False
+GRA005,grammar,qc,proofread,qwen2.5:14b-instruct,"Assis-toi, je vais te conter ce qui est arrivé hier.","Assois-toi, je vais te conter ce qui s'est passé hier.",0.5,0.0,1.0,False,False
+GRA006,grammar,qc,baseline,qwen2.5:14b-instruct,"Je m'en vas au bureau tantôt, on se reparle après.","Je vais au bureau plus tard, on se reparlera après.",0.0,0.0,1.0,False,False
+GRA006,grammar,qc,canadian,qwen2.5:14b-instruct,"Je m'en vas au bureau tantôt, on se reparle après.","J'm'y vais au bureau tantôt, on se reparle après.",1.0,0.0,0.0,False,False
+GRA006,grammar,qc,metropolitan,qwen2.5:14b-instruct,"Je m'en vas au bureau tantôt, on se reparle après.","Je me rends au bureau plus tard, on se recontacte ensuite.",0.0,0.0,1.0,False,False
+GRA006,grammar,qc,proofread,qwen2.5:14b-instruct,"Je m'en vas au bureau tantôt, on se reparle après.","Je m'en vais au bureau tantôt, on se reparle après.",1.0,0.0,0.0,False,False
+LEX001,lexical,qc,baseline,qwen2.5:14b-instruct,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par email.,0.0,1.0,1.0,False,False
+LEX001,lexical,qc,canadian,qwen2.5:14b-instruct,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,Vous pouvez jeter un coup d'œil à votre dossier en ligne et vous通讯双方使用的语言是法语，但最后一条消息似乎用的是中文，并且与之前的对话不相关。请提供需要重新撰写的文本内容，以便我按照您的要求进行修改。如果是关于之前句子的，请告知具体需求或提供更多背景信息。,0.0,0.0,1.0,False,False
+LEX001,lexical,qc,metropolitan,qwen2.5:14b-instruct,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,Vous avez la possibilité de jeter un coup d'œil à votre dossier en ligne et de nous contacter par mail.,0.0,1.0,1.0,False,False
+LEX001,lexical,qc,proofread,qwen2.5:14b-instruct,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,1.0,0.0,0.0,True,False
+LEX002,lexical,qc,baseline,qwen2.5:14b-instruct,Le stationnement est accessible derrière l'édifice à partir de 7 h.,Le parking est disponible derrière l'immeuble à partir de 7 heures.,0.0,1.0,1.0,False,False
+LEX002,lexical,qc,canadian,qwen2.5:14b-instruct,Le stationnement est accessible derrière l'édifice à partir de 7 h.,L'parking y'est disponible arrière l'bâtiment dès 7 heures.,0.0,1.0,1.0,False,False
+LEX002,lexical,qc,metropolitan,qwen2.5:14b-instruct,Le stationnement est accessible derrière l'édifice à partir de 7 h.,Le parking est disponible derrière le bâtiment à partir de 7 heures.,0.0,1.0,1.0,False,False
+LEX002,lexical,qc,proofread,qwen2.5:14b-instruct,Le stationnement est accessible derrière l'édifice à partir de 7 h.,Le stationnement est accessible derrière l'édifice à partir de 7 heures.,1.0,0.0,0.0,False,False
+LEX003,lexical,qc,baseline,qwen2.5:14b-instruct,L'activité aura lieu la fin de semaine prochaine au centre communautaire.,L'activité se déroulera la fin de semaine prochaine au centre communautaire.,1.0,0.0,0.0,False,False
+LEX003,lexical,qc,canadian,qwen2.5:14b-instruct,L'activité aura lieu la fin de semaine prochaine au centre communautaire.,"L'activity va avoir lieu le weekend prochain au centre communautaire. 
+
+(Note: Il y a une légère erreur dans ma réponse précédente qui ne respecte pas parfaitement la demande de conserver le vocabulaire québécois et canadien tout en préservant la variété linguistique. Voici la version corrigée.)
+
+L'activité va avoir lieu le fin de semaine prochaine au centre communautaire.",1.0,0.0,0.0,False,False
+LEX003,lexical,qc,metropolitan,qwen2.5:14b-instruct,L'activité aura lieu la fin de semaine prochaine au centre communautaire.,L’activité se déroulera le week-end prochain au centre communautaire.,0.0,1.0,1.0,False,False
+LEX003,lexical,qc,proofread,qwen2.5:14b-instruct,L'activité aura lieu la fin de semaine prochaine au centre communautaire.,L'activité aura lieu à la fin de semaine prochaine au centre communautaire.,1.0,0.0,0.0,False,False
+LEX004,lexical,qc,baseline,qwen2.5:14b-instruct,Profitez de nos rabais pour faire votre magasinage des Fêtes.,Profitez de nos soldes pour faire vos emplettes de Noël.,0.0,0.5,1.0,False,False
+LEX004,lexical,qc,canadian,qwen2.5:14b-instruct,Profitez de nos rabais pour faire votre magasinage des Fêtes.,Profitte de nos rabais pour faire tes achats de Noël.,0.5,0.0,1.0,False,False
+LEX004,lexical,qc,metropolitan,qwen2.5:14b-instruct,Profitez de nos rabais pour faire votre magasinage des Fêtes.,Profitez de nos promotions pour vos emplettes de fin d'année.,0.0,0.5,1.0,False,False
+LEX004,lexical,qc,proofread,qwen2.5:14b-instruct,Profitez de nos rabais pour faire votre magasinage des Fêtes.,Profitez de nos rabais pour faire vos magasinages des Fêtes.,1.0,0.0,0.0,False,False
+LEX005,lexical,qc,baseline,qwen2.5:14b-instruct,Ce chandail en laine est offert en trois couleurs.,Ce pull en laine est disponible dans trois couleurs.,0.0,1.0,1.0,False,False
+LEX005,lexical,qc,canadian,qwen2.5:14b-instruct,Ce chandail en laine est offert en trois couleurs.,"C'te tuque en laine, elle se trouve en trois couleurs différentnes. 
+
+(Désolé pour la petite farce là-haut, voici la version correctement réécrite du texte initial dans un français québécois plus naturel :
+
+C't chandail en laine-là, il est offert en trois couleurs.)",1.0,0.0,0.0,False,False
+LEX005,lexical,qc,metropolitan,qwen2.5:14b-instruct,Ce chandail en laine est offert en trois couleurs.,Ce pull en laine est disponible dans trois couleurs.,0.0,1.0,1.0,False,False
+LEX005,lexical,qc,proofread,qwen2.5:14b-instruct,Ce chandail en laine est offert en trois couleurs.,Ce chandail en laine est offert en trois couleurs.,1.0,0.0,0.0,True,False
+LEX006,lexical,qc,baseline,qwen2.5:14b-instruct,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,"Il y a un épicerie fine ouverte jusqu'à 23 heures au carrefour de la rue.
+
+(Note: Le terme ""dépanneur"" est plus couramment traduit par ""épicerie fine"" ou simplement ""épicerie"" en français standard. Cependant, dans certaines régions, on utilise le mot ""dépanneur"". Pour rester fidèle au sens tout en adaptant la langue, j'ai choisi d'utiliser ""épicerie fine"", qui est plus couramment utilisé.) 
+
+Pour être plus précis et éviter toute confusion, voici une version encore plus ajustée :
+
+Il y a un dépanneur ouvert jusqu'à 23 heures au carrefour de la rue.",1.0,0.0,0.0,False,False
+LEX006,lexical,qc,canadian,qwen2.5:14b-instruct,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,Y'a un dépanneur ouvert jusqu'à 23 h au corner de la rue.,1.0,0.0,0.0,False,False
+LEX006,lexical,qc,metropolitan,qwen2.5:14b-instruct,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,Il existe un petit commerçant resté ouvert jusqu'à minuit moins le quart à l'angle de la voie.,0.0,0.0,1.0,False,False
+LEX006,lexical,qc,proofread,qwen2.5:14b-instruct,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,1.0,0.0,0.0,True,False
+LEX007,lexical,qc,baseline,qwen2.5:14b-instruct,Le traversier relie Québec et Lévis toutes les vingt minutes.,Le traversier relie Québec à Lévis toutes les vingt minutes.,1.0,0.0,0.0,False,False
+LEX007,lexical,qc,canadian,qwen2.5:14b-instruct,Le traversier relie Québec et Lévis toutes les vingt minutes.,"Le traversier amène la populace de Québec à Lévis et inversement, toutes les vingt minutes.",1.0,0.0,0.0,False,False
+LEX007,lexical,qc,metropolitan,qwen2.5:14b-instruct,Le traversier relie Québec et Lévis toutes les vingt minutes.,Le bateau-navette assure la liaison entre Québec et Lévis tous les vingt minutes.,0.0,0.0,1.0,False,False
+LEX007,lexical,qc,proofread,qwen2.5:14b-instruct,Le traversier relie Québec et Lévis toutes les vingt minutes.,Le traversier relie Québec et Lévis toutes les vingt minutes.,1.0,0.0,0.0,True,False
+LEX008,lexical,qc,baseline,qwen2.5:14b-instruct,Notre baladodiffusion hebdomadaire est maintenant offerte sur toutes les plateformes.,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,0.0,1.0,1.0,False,False
+LEX008,lexical,qc,canadian,qwen2.5:14b-instruct,Notre baladodiffusion hebdomadaire est maintenant offerte sur toutes les plateformes.,Notre podcaster hebdomadaire est maintenant disponible sur toutes les plateformes.,0.0,0.0,1.0,False,False
+LEX008,lexical,qc,metropolitan,qwen2.5:14b-instruct,Notre baladodiffusion hebdomadaire est maintenant offerte sur toutes les plateformes.,Notre podcast hebdomadaire est désormais disponible sur l’ensemble des plateformes.,0.0,1.0,1.0,False,False
+LEX008,lexical,qc,proofread,qwen2.5:14b-instruct,Notre baladodiffusion hebdomadaire est maintenant offerte sur toutes les plateformes.,Notre baladodiffusion hebdomadaire est maintenant offerte sur tous les réseaux.,1.0,0.0,0.0,False,False
+LEX009,lexical,qc,baseline,qwen2.5:14b-instruct,Utilisez le clavardage en direct pour parler à un agent.,Utilisez le chat en direct pour parler à un agent.,0.0,1.0,1.0,False,False
+LEX009,lexical,qc,canadian,qwen2.5:14b-instruct,Utilisez le clavardage en direct pour parler à un agent.,Utilizez le clavardage en direct pour discuter avec un agent.,1.0,0.0,0.0,False,False
+LEX009,lexical,qc,metropolitan,qwen2.5:14b-instruct,Utilisez le clavardage en direct pour parler à un agent.,Employez le chat en direct pour converser avec un agent.,0.0,1.0,1.0,False,False
+LEX009,lexical,qc,proofread,qwen2.5:14b-instruct,Utilisez le clavardage en direct pour parler à un agent.,Utilisez le clavardage en direct pour parler à un agent.,1.0,0.0,0.0,True,False
+LEX010,lexical,qc,baseline,qwen2.5:14b-instruct,Supprimez les pourriels sans ouvrir les pièces jointes.,Supprimez les courriers indésirables sans ouvrir les pièces jointes.,0.0,1.0,1.0,False,False
+LEX010,lexical,qc,canadian,qwen2.5:14b-instruct,Supprimez les pourriels sans ouvrir les pièces jointes.,Supprimez les courriels indésirables sans ouvrir les pièces jointes.,0.0,0.0,1.0,False,False
+LEX010,lexical,qc,metropolitan,qwen2.5:14b-instruct,Supprimez les pourriels sans ouvrir les pièces jointes.,Supprimez les courriers indésirables sans ouvrir les fichiers joints.,0.0,1.0,1.0,False,False
+LEX010,lexical,qc,proofread,qwen2.5:14b-instruct,Supprimez les pourriels sans ouvrir les pièces jointes.,Supprimez les courriels indésirables sans ouvrir les pièces jointes.,0.0,0.0,1.0,False,False
+LEX011,lexical,qc,baseline,qwen2.5:14b-instruct,Vous devez téléverser votre pièce d'identité avant de soumettre la demande.,"Vous devez uploader votre pièce d'identité avant de soumettre la demande. 
+
+(Note: Bien que ""televerser"" soit une traduction directe de l'anglais ""upload"", le terme plus courant en français serait ""uploader"". Cependant, comme demandé, je ne fais pas de commentaire et conserve votre formulation initiale dans la réponse.) 
+
+Vous devez téléverser votre pièce d'identité avant de soumettre la demande.",1.0,0.0,0.0,False,False
+LEX011,lexical,qc,canadian,qwen2.5:14b-instruct,Vous devez téléverser votre pièce d'identité avant de soumettre la demande.,Vous devez uploader votre pièce d'identité avant de soumettre la demande.,0.0,1.0,1.0,False,False
+LEX011,lexical,qc,metropolitan,qwen2.5:14b-instruct,Vous devez téléverser votre pièce d'identité avant de soumettre la demande.,Il vous faudra uploader votre pièce d'identité avant de finaliser votre demande.,0.0,1.0,1.0,False,False
+LEX011,lexical,qc,proofread,qwen2.5:14b-instruct,Vous devez téléverser votre pièce d'identité avant de soumettre la demande.,Vous devez téléverser votre pièce d'identité avant de soumettre votre demande.,1.0,0.0,0.0,False,False
+LEX012,lexical,qc,baseline,qwen2.5:14b-instruct,Consultez le babillard pour connaître les offres d'emploi internes.,Vérifiez le tableau d'affichage pour découvrir les offres d'emploi internes.,0.0,1.0,1.0,False,False
+LEX012,lexical,qc,canadian,qwen2.5:14b-instruct,Consultez le babillard pour connaître les offres d'emploi internes.,Vérifiez le tableau d'affichage pour savoir quelles postes sont à piger parmi les offres d'emploi internes.,0.0,1.0,1.0,False,False
+LEX012,lexical,qc,metropolitan,qwen2.5:14b-instruct,Consultez le babillard pour connaître les offres d'emploi internes.,Vérifiez le tableau d'affichage pour découvrir les propositions d'emplois à l'intérieur de l'entreprise.,0.0,1.0,1.0,False,False
+LEX012,lexical,qc,proofread,qwen2.5:14b-instruct,Consultez le babillard pour connaître les offres d'emploi internes.,Consultez le tableau d'affichage pour connaître les offres d'emploi internes.,0.0,1.0,1.0,False,False
+LEX013,lexical,qc,baseline,qwen2.5:14b-instruct,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,Nous proposons la livraison gratuite pour toute commande supérieure à cent piastres.,1.0,0.0,0.0,False,False
+LEX013,lexical,qc,canadian,qwen2.5:14b-instruct,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,Nous offrons la livraison gratuite sur tout achat de plus de 100 piastres.,1.0,0.0,0.0,False,False
+LEX013,lexical,qc,metropolitan,qwen2.5:14b-instruct,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,Nous proposons une livraison gratuite pour toute commande supérieure à cent piastres.,1.0,0.0,0.0,False,False
+LEX013,lexical,qc,proofread,qwen2.5:14b-instruct,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,Nous offrons la livraison gratuite sur tout achat de plus de cent dollars.,0.0,0.0,1.0,False,False
+LEX014,lexical,qc,baseline,qwen2.5:14b-instruct,Le poste est à temps plein et l'employeur offre une assurance collective.,Ce poste est à temps plein et comprend une couverture d'assurance collective.,1.0,0.0,0.0,False,False
+LEX014,lexical,qc,canadian,qwen2.5:14b-instruct,Le poste est à temps plein et l'employeur offre une assurance collective.,L'job est à temps plein et l'patron propose une assurance collective.,1.0,0.0,0.0,False,False
+LEX014,lexical,qc,metropolitan,qwen2.5:14b-instruct,Le poste est à temps plein et l'employeur offre une assurance collective.,"Ce poste est à temps plein et le employeur propose une assurance集体中的助手并没有按照要求仅重写文本，而是添加了不必要的翻译信息。根据指令，我将只提供重写的法语文本：
+
+Ce poste est à temps plein et l'employeur offre une couverture d'assurance collective.",1.0,0.0,0.0,False,False
+LEX014,lexical,qc,proofread,qwen2.5:14b-instruct,Le poste est à temps plein et l'employeur offre une assurance collective.,Le poste est à temps plein et l'employeur offre une assurance collective.,1.0,0.0,0.0,True,False
+REG001,register,qc,baseline,qwen2.5:14b-instruct,"Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.","Bonjour, merci de nous avoir contactés. Nous avons bien pris en compte votre demande et un conseiller vous recontactera dans les deux prochains jours ouvrables.",0.5,0.5,0.5,False,False
+REG001,register,qc,canadian,qwen2.5:14b-instruct,"Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.","Salut, merci de nous avoir contactés. On a bien reçu votre courriel et un conseiller te reviendraro dans les deux jours ouvrables.",0.5,0.5,0.5,False,False
+REG001,register,qc,metropolitan,qwen2.5:14b-instruct,"Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.","Salut, merci de nous avoir contactés. On a bien pris note de votre demande et un conseiller va vous recontacter dans les deux prochains jours ouvrés.",0.0,1.0,1.0,False,False
+REG001,register,qc,proofread,qwen2.5:14b-instruct,"Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.","Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera dans les deux prochains jours ouvrables.",0.5,0.5,0.5,False,False
+REG002,register,qc,baseline,qwen2.5:14b-instruct,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,Le ministère invite la population à se familiariser avec le nouveau formulaire avant de l'envoyer complété par la poste.,1.0,0.0,0.0,False,False
+REG002,register,qc,canadian,qwen2.5:14b-instruct,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,L'Ministère invite la population à se familiariser avec le nouveau formulaire avant de le compléter et de le renvoyer par la poste.,1.0,0.0,0.0,False,False
+REG002,register,qc,metropolitan,qwen2.5:14b-instruct,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,Le ministère encourage les citoyens à se familiariser avec le nouveau formulaire avant de l'envoyer complété par voie postale.,0.0,1.0,0.0,False,False
+REG002,register,qc,proofread,qwen2.5:14b-instruct,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,Le ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,1.0,0.0,0.0,True,False
+REG003,register,qc,baseline,qwen2.5:14b-instruct,"Salut, je vais être en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je vais te revenir là-dessus.","Salut, je serai en congé la semaine prochaine. Si c'est urgent, envoyez-moi un email et je vous répondrai dès que possible.",0.0,0.5,1.0,False,False
+REG003,register,qc,canadian,qwen2.5:14b-instruct,"Salut, je vais être en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je vais te revenir là-dessus.","Salut, j'serai en congé la semaine prochaine. Si c'tu pressing, laisse-moi un courriel et j'vais t'repondre là-dessus.",0.5,0.0,0.0,False,False
+REG003,register,qc,metropolitan,qwen2.5:14b-instruct,"Salut, je vais être en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je vais te revenir là-dessus.","Salut, je serai en arrêt la semaine à venir. Si le besoin s'en fait sentir, n'hésite pas à me contacter par mail, je te répondrai dès mon retour.",0.0,0.5,1.0,False,False
+REG003,register,qc,proofread,qwen2.5:14b-instruct,"Salut, je vais être en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je vais te revenir là-dessus.","Salut, je vais être en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je reviendrai sur ça.",0.5,0.0,0.0,False,False
+REG004,register,qc,baseline,qwen2.5:14b-instruct,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,Bonjour ! Comment allez-vous ? Je vous apporte le menu du midi tout de suite.,0.0,1.0,,False,False
+REG004,register,qc,canadian,qwen2.5:14b-instruct,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,Salut ! Comment tu vas ? J't'amène le menu du midi right away.,0.0,0.0,,False,False
+REG004,register,qc,metropolitan,qwen2.5:14b-instruct,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,Salut ! Comment ça roule ? Je vous amène le menu du midi tout de suite.,0.0,0.0,,False,False
+REG004,register,qc,proofread,qwen2.5:14b-instruct,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,1.0,0.0,,True,False
+REG005,register,qc,baseline,qwen2.5:14b-instruct,"Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !","Profitez de réductions incontournables sur l'ensemble de notre sélection, que vous visitiez notre boutique ou notre site web. Agissez迅速停止 councillando 中止翻译并仅提供要求的重写文本。抱歉给您带来不便。以下是仅包含您要求的重写文本的部分：
+
+N'hésitez pas à profiter de nos promotions sur tous nos articles en magasin et en ligne. Il est conseillé d'agir rapidement car les stocks sont limités.",0.5,0.5,1.0,False,False
+REG005,register,qc,canadian,qwen2.5:14b-instruct,"Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !","Des spéciaux à ne pas rater sur tout notre stock, que ce soit au magasin ou en ligne. Agissez rapidement, car les inventaires sont restreints !",0.0,0.0,1.0,False,False
+REG005,register,qc,metropolitan,qwen2.5:14b-instruct,"Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !","Profitez de réductions incontournables sur l'ensemble de notre sélection, que ce soit dans nos boutiques ou sur notre site web. Agissez rapidement, les stocks sont restreints !",0.0,0.5,1.0,False,False
+REG005,register,qc,proofread,qwen2.5:14b-instruct,"Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !","Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !",1.0,0.0,0.0,True,False
+REG006,register,qc,baseline,qwen2.5:14b-instruct,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,"Nous vous encourageons à soumettre votre déclaration d’impôts provinciaux avant la date butoir et à garder vos bulletins de paie. 
+
+(Note : La formulation a été légèrement modifiée pour plus de clarté, en remplaçant ""relevés d'emploi"" par ""bulletins de paie"", qui est une expression couramment utilisée dans ce contexte.)",1.0,0.0,0.0,False,False
+REG006,register,qc,canadian,qwen2.5:14b-instruct,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,On vous invite à compléter votre déclaration d’impôt provincial avant la date butoir et à garder vos relevés d’emploi.,1.0,0.0,0.0,False,False
+REG006,register,qc,metropolitan,qwen2.5:14b-instruct,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,Nous vous encourageons à soumettre votre déclaration d’impôts provinciaux dans les délais impartis et à archiver vos bulletins de paie.,0.5,0.0,1.0,False,False
+REG006,register,qc,proofread,qwen2.5:14b-instruct,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,Nous vous invitons à remplir votre déclaration d'impôt provincial avant la date limite et à conserver vos relevés d’emploi.,1.0,0.0,0.0,False,False
+SEM001,semantic,qc,baseline,qwen2.5:14b-instruct,Le déjeuner sera servi à 8 h dans le hall d'entrée.,Le déjeuner sera servi à 8 heures dans le hall d'entrée.,1.0,0.0,0.0,False,False
+SEM001,semantic,qc,canadian,qwen2.5:14b-instruct,Le déjeuner sera servi à 8 h dans le hall d'entrée.,L'dîner sera servis à 8 heures dans'l hall d'entrée.,0.0,0.0,1.0,False,False
+SEM001,semantic,qc,metropolitan,qwen2.5:14b-instruct,Le déjeuner sera servi à 8 h dans le hall d'entrée.,Le repas du midi sera mis en service à 8 heures au sein du hall d’entrée.,0.0,0.0,1.0,False,False
+SEM001,semantic,qc,proofread,qwen2.5:14b-instruct,Le déjeuner sera servi à 8 h dans le hall d'entrée.,"Le déjeuner sera servi à 12 h dans le hall d'entrée.  
+
+(Note: J'ai fait l'hypothèse qu'il s'agit probablement d'une erreur de temps, car un déjeuner à 8h du matin est inhabituel. Cependant, conformément à votre demande de ne pas modifier le texte sans justification, j'ai corrigé uniquement ce qui semblait être une évidence grammaticale ou syntaxique. Si le repas doit réellement se tenir à 8 heures, veuillez me le préciser.)  
+
+Cependant, en respectant strictement votre demande de ne pas apporter d'interprétations supplémentaires et de corriger uniquement les erreurs linguistiques évidentes sans hypothèses sur le sens :
+
+Le déjeuner sera servi à 8 h dans le hall (d'accueil ou de réception).",1.0,0.0,0.0,False,False
+SEM002,semantic,qc,baseline,qwen2.5:14b-instruct,"Après le dîner, nous retournerons au travail vers 13 h.","Après le dîner, nous reprendrons le travail à 13 heures.",1.0,0.0,0.0,False,False
+SEM002,semantic,qc,canadian,qwen2.5:14b-instruct,"Après le dîner, nous retournerons au travail vers 13 h.","Après le dinde, on repartira travailler vers 13 heures.",0.0,0.0,1.0,False,False
+SEM002,semantic,qc,metropolitan,qwen2.5:14b-instruct,"Après le dîner, nous retournerons au travail vers 13 h.","Après le repas du soir, nous reprendrons notre travail autour de 13 heures.",0.0,0.0,1.0,False,False
+SEM002,semantic,qc,proofread,qwen2.5:14b-instruct,"Après le dîner, nous retournerons au travail vers 13 h.","Après le dîner, nous reprendrons le travail vers 13 h.",1.0,0.0,0.0,False,False
+SEM003,semantic,qc,baseline,qwen2.5:14b-instruct,Nous souperons vers 18 h avec les grands-parents.,Nous dînerons vers 18 heures avec les grands-parents.,0.0,1.0,1.0,False,False
+SEM003,semantic,qc,canadian,qwen2.5:14b-instruct,Nous souperons vers 18 h avec les grands-parents.,On soupera avec les papi et mamie vers six heures.,0.0,0.0,0.0,False,False
+SEM003,semantic,qc,metropolitan,qwen2.5:14b-instruct,Nous souperons vers 18 h avec les grands-parents.,Nous dînerons ensemble avec les grands-parents autour de 18 heures.,0.0,1.0,1.0,False,False
+SEM003,semantic,qc,proofread,qwen2.5:14b-instruct,Nous souperons vers 18 h avec les grands-parents.,"Nous dînerons vers 18 h avec les grands-parents.  
+
+Ou bien, en gardant ""souper"" qui est utilisé dans certaines régions : 
+
+Nous souperons vers 19 h avec les grands-parents.  
+
+La correction dépend du sens voulu et de la tradition régionale. Si le repas est réellement pris tard dans l'après-midi, ""dîner"" serait plus courant qu'à 18h. Sinon, si c'est bien un souper, il serait plutôt vers 19h que 18h.",1.0,0.0,0.0,False,False
+SEM004,semantic,qc,baseline,qwen2.5:14b-instruct,N'oubliez pas de barrer la porte en partant.,"N'oubliez pas de verrouiller la porte en vous enfuyant. 
+
+(Note: J'ai interprété ""barrer"" comme ""verrouiller"" et ""partant"" comme ""en vous enfuyant"" pour donner une nuance plus dramatique, mais si le but était simplement d'une traduction littérale, ce serait plutôt : ""N'oubliez pas de barrer la porte en partant."") 
+
+Pour rester aussi proche que possible du sens original tout en maintenant un français naturel :
+""N'oubliez pas de verrouiller la porte quand vous partiez.",1.0,0.0,0.0,False,False
+SEM004,semantic,qc,canadian,qwen2.5:14b-instruct,N'oubliez pas de barrer la porte en partant.,"N'oubliez pas de verrouiller la porte en partie. 
+
+(Note: Il semble y avoir une petite erreur dans ma réponse précédente qui ne reflète pas correctement l'intention du texte original tout en essayant d'utiliser un langage varié. La formulation idéale serait plutôt :)
+
+N'oubliez pas de bloquer la porte en partant.",0.0,1.0,1.0,False,False
+SEM004,semantic,qc,metropolitan,qwen2.5:14b-instruct,N'oubliez pas de barrer la porte en partant.,N'oubliez pas de verrouiller soigneusement la porte avant de partir.,0.0,0.0,1.0,False,False
+SEM004,semantic,qc,proofread,qwen2.5:14b-instruct,N'oubliez pas de barrer la porte en partant.,N'oubliez pas de verrouiller la porte en partant.,0.0,1.0,1.0,False,False
+SEM005,semantic,qc,baseline,qwen2.5:14b-instruct,Une liqueur est incluse avec le repas du midi.,"Une boissonliqueur est comprise dans le repas du midi.
+
+(Note: Il semble y avoir une petite erreur de formulation dans la demande de correction, car ""boissonliqueur"" n'est pas un terme correct en français. La phrase corrigée serait plutôt : ""Une liqueur est incluse avec le repas du midi."" ou si l'intention était d'ajouter plus de détails : ""Une boisson (ou une petite bouteille) de liqueur est incluse dans le repas du midi."") 
+
+Pour respecter la consigne, voici la version légèrement modifiée sans ajouts superflus :
+Une liqueur est incluse avec le repas du midi.",1.0,0.0,0.0,False,False
+SEM005,semantic,qc,canadian,qwen2.5:14b-instruct,Une liqueur est incluse avec le repas du midi.,Une boisson forte vient avec le repas de midi.,0.0,0.0,1.0,False,False
+SEM005,semantic,qc,metropolitan,qwen2.5:14b-instruct,Une liqueur est incluse avec le repas du midi.,Un digestif est compris dans le menu du déjeuner.,0.0,0.0,1.0,False,False
+SEM005,semantic,qc,proofread,qwen2.5:14b-instruct,Une liqueur est incluse avec le repas du midi.,Une liqueur est incluse avec le repas de midi.,1.0,0.0,0.0,False,False
+SEM006,semantic,qc,baseline,qwen2.5:14b-instruct,Je vais présentement m'occuper de ton dossier.,Je m'occupe actuellement de ton dossier.,0.0,1.0,1.0,False,False
+SEM006,semantic,qc,canadian,qwen2.5:14b-instruct,Je vais présentement m'occuper de ton dossier.,J'm'occupe présentement de ton dossier.,1.0,0.0,0.0,False,False
+SEM006,semantic,qc,metropolitan,qwen2.5:14b-instruct,Je vais présentement m'occuper de ton dossier.,Je m'occupe actuellement de ton dossier.,0.0,1.0,1.0,False,False
+SEM006,semantic,qc,proofread,qwen2.5:14b-instruct,Je vais présentement m'occuper de ton dossier.,Je m'occupe présentement de ton dossier.,1.0,0.0,0.0,False,False
+SEM007,semantic,qc,baseline,qwen2.5:14b-instruct,La poudrerie réduira la visibilité sur les routes ce soir.,"La poudrerie diminuera la visibilité sur les routes cet evening. 
+
+(Note: Le mot ""evening"" a été conservé car il y avait un anglicisme dans le texte original avec ""ce soir"". Cependant, pour une version entièrement en français, on dirait simplement :)
+
+La poudrerie diminuera la visibilité sur les routes ce soir.",1.0,0.0,0.0,False,False
+SEM007,semantic,qc,canadian,qwen2.5:14b-instruct,La poudrerie réduira la visibilité sur les routes ce soir.,"La poudrerie va diminuer la visibilité sur les routes tonight. 
+
+(Note: J'ai conservé ""tonight"" comme dans votre exemple original, bien que généralement en français québécois on dirait plutôt ""ce soir"". Si vous préférez une version entièrement en français québécois, dites-moi.) 
+
+Version entièrement francisée : 
+La poudrerie va diminuer la visibilité sur les routes ce soir.",1.0,0.0,0.0,False,False
+SEM007,semantic,qc,metropolitan,qwen2.5:14b-instruct,La poudrerie réduira la visibilité sur les routes ce soir.,La poudrerie diminuera la visibilité sur les routes cet soir.,1.0,0.0,0.0,False,False
+SEM007,semantic,qc,proofread,qwen2.5:14b-instruct,La poudrerie réduira la visibilité sur les routes ce soir.,La poudrerie réduira la visibilité sur les routes ce soir.,1.0,0.0,0.0,True,False
+SEM008,semantic,qc,baseline,qwen2.5:14b-instruct,Ma blonde et moi allons déménager le premier juillet.,Ma compagne et moi allons nous installer dans notre nouveau logement le premier juillet.,0.0,0.0,1.0,False,False
+SEM008,semantic,qc,canadian,qwen2.5:14b-instruct,Ma blonde et moi allons déménager le premier juillet.,"Ma blonde et moi, on se transtourne le premier juillet.",1.0,0.0,0.0,False,False
+SEM008,semantic,qc,metropolitan,qwen2.5:14b-instruct,Ma blonde et moi allons déménager le premier juillet.,Ma chérie et moi allons emménager le premier juillet.,0.0,0.0,1.0,False,False
+SEM008,semantic,qc,proofread,qwen2.5:14b-instruct,Ma blonde et moi allons déménager le premier juillet.,Ma blonde et moi allons déménager le 1er juillet.,1.0,0.0,0.0,False,False
+TER001,terminology,qc,baseline,qwen2.5:14b-instruct,Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.,Votre smartphone peut se connecter au réseau Wi-Fi du domicile.,0.0,1.0,1.0,False,False
+TER001,terminology,qc,canadian,qwen2.5:14b-instruct,Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.,Votre cellulaire peut se connecter au réseau Wi-Fi de la maison.,0.0,0.5,1.0,False,False
+TER001,terminology,qc,metropolitan,qwen2.5:14b-instruct,Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.,Vos smartphone peut se connecter au réseau Wi-Fi du domicile.,0.0,1.0,1.0,False,False
+TER001,terminology,qc,proofread,qwen2.5:14b-instruct,Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.,Votre téléphone intelligent peut se connecter au réseau Wi-Fi de la maison.,0.5,0.5,0.0,False,False
+TER002,terminology,qc,baseline,qwen2.5:14b-instruct,Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.,Faites attention aux tentatives de phishing qui imitent nos courriers électroniques officiels.,0.0,0.5,1.0,False,False
+TER002,terminology,qc,canadian,qwen2.5:14b-instruct,Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.,Faites attention aux tentatives de hameçonnage qui copient nos courriels officiels.,1.0,0.0,0.0,False,False
+TER002,terminology,qc,metropolitan,qwen2.5:14b-instruct,Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.,Faites gaffe aux arnaques qui copient nos messages officiels.,0.0,0.0,1.0,False,False
+TER002,terminology,qc,proofread,qwen2.5:14b-instruct,Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.,Méfiez-vous des tentatives de hameçonnage qui imitent nos courriels officiels.,1.0,0.0,0.0,False,False
+TER003,terminology,qc,baseline,qwen2.5:14b-instruct,La migration vers l'infonuagique réduira les coûts d'exploitation.,La migration vers le cloud réduira les coûts d'exploitation.,0.0,1.0,1.0,False,False
+TER003,terminology,qc,canadian,qwen2.5:14b-instruct,La migration vers l'infonuagique réduira les coûts d'exploitation.,La migration vers l'infonuagique va diminuer les coûts d'exploitation.,1.0,0.0,0.0,False,False
+TER003,terminology,qc,metropolitan,qwen2.5:14b-instruct,La migration vers l'infonuagique réduira les coûts d'exploitation.,Le passage à l'infonuagique permettra de diminuer les frais de fonctionnement.,1.0,0.0,0.0,False,False
+TER003,terminology,qc,proofread,qwen2.5:14b-instruct,La migration vers l'infonuagique réduira les coûts d'exploitation.,La migration vers l’infonuagique réduira les coûts d’exploitation.,1.0,0.0,0.0,True,False
+TER004,terminology,qc,baseline,qwen2.5:14b-instruct,Ce site utilise des témoins pour mémoriser vos préférences.,Ce site utilise des cookies pour se souvenir de vos préférences.,0.0,1.0,1.0,False,False
+TER004,terminology,qc,canadian,qwen2.5:14b-instruct,Ce site utilise des témoins pour mémoriser vos préférences.,Ce site utilise des cookies pour se souvenir de vos préférences.,0.0,1.0,1.0,False,False
+TER004,terminology,qc,metropolitan,qwen2.5:14b-instruct,Ce site utilise des témoins pour mémoriser vos préférences.,Ce site emploie des cookies pour se souvenir de vos préférences.,0.0,1.0,1.0,False,False
+TER004,terminology,qc,proofread,qwen2.5:14b-instruct,Ce site utilise des témoins pour mémoriser vos préférences.,Ce site utilise des cookies pour mémoriser vos préférences.,0.0,1.0,1.0,False,False
+TER005,terminology,qc,baseline,qwen2.5:14b-instruct,L'attaque par rançongiciel a chiffré les serveurs de l'organisme.,L'attaque par rançongiciel a crypté les serveurs de l'organisme.,1.0,0.0,0.0,False,False
+TER005,terminology,qc,canadian,qwen2.5:14b-instruct,L'attaque par rançongiciel a chiffré les serveurs de l'organisme.,L'attaque par rançongiciel a crypté les serveurs de l’organisme.,1.0,0.0,0.0,False,False
+TER005,terminology,qc,metropolitan,qwen2.5:14b-instruct,L'attaque par rançongiciel a chiffré les serveurs de l'organisme.,L’attaque par logiciels de rançon a chiffré les serveurs de l’organisme.,0.0,0.0,1.0,False,False
+TER005,terminology,qc,proofread,qwen2.5:14b-instruct,L'attaque par rançongiciel a chiffré les serveurs de l'organisme.,L’attaque par rançongiciel a chiffré les données des serveurs de l’organisme.,1.0,0.0,0.0,False,False
+TER006,terminology,qc,baseline,qwen2.5:14b-instruct,Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.,Nos modèles d'apprentissage automatique sont formés à partir de mégadonnées anonymisées.,1.0,0.0,0.0,False,False
+TER006,terminology,qc,canadian,qwen2.5:14b-instruct,Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.,Nos modèles d'intelligence artificielle sont formés à partir de mégadonnées anonymisées.,0.5,0.0,0.5,False,False
+TER006,terminology,qc,metropolitan,qwen2.5:14b-instruct,Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.,Nos modèles d'intelligence artificielle sont formés à partir de gigantesques ensembles de données rendues anonymes.,0.0,0.0,1.0,False,False
+TER006,terminology,qc,proofread,qwen2.5:14b-instruct,Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.,Nos modèles d'apprentissage automatique sont formés sur des mégadonnées anonymisées.,1.0,0.0,0.0,False,False
+TER007,terminology,qc,baseline,qwen2.5:14b-instruct,Ajoutez un égoportrait à votre profil pour personnaliser votre compte.,Ajoutez un portrait personnel à votre profil pour le personnaliser.,0.0,0.0,1.0,False,False
+TER007,terminology,qc,canadian,qwen2.5:14b-instruct,Ajoutez un égoportrait à votre profil pour personnaliser votre compte.,Ajoutez une portrait de vous-même à votre profil pour le personnaliser.,0.0,0.0,1.0,False,False
+TER007,terminology,qc,metropolitan,qwen2.5:14b-instruct,Ajoutez un égoportrait à votre profil pour personnaliser votre compte.,Ajoutez une photo de vous-même à votre profil pour le personnaliser.,0.0,0.0,1.0,False,False
+TER007,terminology,qc,proofread,qwen2.5:14b-instruct,Ajoutez un égoportrait à votre profil pour personnaliser votre compte.,Ajoutez un égoportrait à votre profil pour personnaliser votre compte.,1.0,0.0,0.0,True,False
+TER008,terminology,qc,baseline,qwen2.5:14b-instruct,Vous pouvez présenter une demande d'assurance-emploi en ligne.,Vous pouvez déposer une demande d'assurance-emploi en ligne.,1.0,0.0,0.0,False,False
+TER008,terminology,qc,canadian,qwen2.5:14b-instruct,Vous pouvez présenter une demande d'assurance-emploi en ligne.,Vous pouvez faire une demande d'assurance-emploi sur le web.,1.0,0.0,0.0,False,False
+TER008,terminology,qc,metropolitan,qwen2.5:14b-instruct,Vous pouvez présenter une demande d'assurance-emploi en ligne.,Vous avez la possibilité de déposer votre demande d’allocation chômage par internet.,0.0,1.0,1.0,False,False
+TER008,terminology,qc,proofread,qwen2.5:14b-instruct,Vous pouvez présenter une demande d'assurance-emploi en ligne.,Vous pouvez présenter une demande d’assurance-emploi en ligne.,1.0,0.0,0.0,True,False
+TER009,terminology,qc,baseline,qwen2.5:14b-instruct,Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.,Le pilote de l'imprimante ainsi que le module d'extension du navigateur ont été mis à jour.,1.0,0.0,0.0,False,False
+TER009,terminology,qc,canadian,qwen2.5:14b-instruct,Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.,L'pilote d'l'imprimante et le module d'extension du naviguateur ont été mis à jour.,1.0,0.0,0.0,False,False
+TER009,terminology,qc,metropolitan,qwen2.5:14b-instruct,Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.,Le conducteur de l'imprimante ainsi que le module d'extension du navigateur ont été actualisés.,1.0,0.0,0.0,False,False
+TER009,terminology,qc,proofread,qwen2.5:14b-instruct,Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.,Le pilote de l'imprimante et le module d’extension du navigateur ont été mis à jour.,1.0,0.0,0.0,True,False
+TER010,terminology,qc,baseline,qwen2.5:14b-instruct,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,Présentez-vous au guichet de la SAAQ avec votre permis de conduire.,1.0,0.0,0.0,False,False
+TER010,terminology,qc,canadian,qwen2.5:14b-instruct,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,Présente-vous au comptoir de la SAAQ en portant votre permisse.,1.0,0.0,0.0,False,False
+TER010,terminology,qc,metropolitan,qwen2.5:14b-instruct,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,Allez au guichet de la SAAQ avec votre permis de conducir'.,1.0,0.0,0.0,False,False
+TER010,terminology,qc,proofread,qwen2.5:14b-instruct,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,1.0,0.0,0.0,True,False
