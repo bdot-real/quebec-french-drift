@@ -47,12 +47,14 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 | lexical | 14 |   42.9% |   25.0% |
 | semantic | 8 |   37.5% |    0.0% |
 
-### Judge scores (provisional — a local model is a weak Quebec-French authority)
+### Judge scores — illustrative only
 
-| Condition | meaning | QC naturalness | regional usage | variety shift | unnecessary correction |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| baseline | 3.88 | 3.38 | 2.62 | 2.88 | 2.75 |
-| proofread | 4.22 | 3.67 | 3.11 | 2.44 | 2.56 |
+A local 8-30B model is a weak authority on Quebec French, and the sample below is small and uneven across models. These numbers illustrate the failure modes; they do not rank the models. The mechanical metrics above are the headline.
+
+| Condition | n | meaning | QC naturalness | regional usage | variety shift | unnecessary correction |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline | 8 | 3.88 | 3.38 | 2.62 | 2.88 | 2.75 |
+| proofread | 9 | 4.22 | 3.67 | 3.11 | 2.44 | 2.56 |
 
 ### Worst failures
 
@@ -163,12 +165,14 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 | lexical | 14 |   14.3% |   46.4% |
 | semantic | 8 |   12.5% |   25.0% |
 
-### Judge scores (provisional — a local model is a weak Quebec-French authority)
+### Judge scores — illustrative only
 
-| Condition | meaning | QC naturalness | regional usage | variety shift | unnecessary correction |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| baseline | 4.12 | 3.25 | 2.50 | 3.00 | 2.62 |
-| proofread | 4.86 | 4.00 | 3.29 | 2.86 | 2.86 |
+A local 8-30B model is a weak authority on Quebec French, and the sample below is small and uneven across models. These numbers illustrate the failure modes; they do not rank the models. The mechanical metrics above are the headline.
+
+| Condition | n | meaning | QC naturalness | regional usage | variety shift | unnecessary correction |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline | 8 | 4.12 | 3.25 | 2.50 | 3.00 | 2.62 |
+| proofread | 7 | 4.86 | 4.00 | 3.29 | 2.86 | 2.86 |
 
 ### Worst failures
 
@@ -277,12 +281,14 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 | terminology | 10 |   50.0% |   35.0% |
 | semantic | 8 |   62.5% |   25.0% |
 
-### Judge scores (provisional — a local model is a weak Quebec-French authority)
+### Judge scores — illustrative only
 
-| Condition | meaning | QC naturalness | regional usage | variety shift | unnecessary correction |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| baseline | 4.25 | 3.62 | 2.88 | 2.38 | 3.00 |
-| proofread | 4.71 | 4.00 | 3.43 | 2.86 | 2.29 |
+A local 8-30B model is a weak authority on Quebec French, and the sample below is small and uneven across models. These numbers illustrate the failure modes; they do not rank the models. The mechanical metrics above are the headline.
+
+| Condition | n | meaning | QC naturalness | regional usage | variety shift | unnecessary correction |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline | 8 | 4.25 | 3.62 | 2.88 | 2.38 | 3.00 |
+| proofread | 7 | 4.71 | 4.00 | 3.43 | 2.86 | 2.29 |
 
 ### Worst failures
 

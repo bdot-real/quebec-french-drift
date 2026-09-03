@@ -67,13 +67,18 @@ handed to a judge.
 
 ### The control set
 
-`data/control_fr.jsonl` holds France-origin counterparts to the Quebec items.
+`data/control_fr.jsonl` holds France-origin counterparts to the Quebec items,
+each naming its Quebec twin in a `counterpart` field.
 Both sets go through the identical `baseline` prompt, and the report compares
 where each lands:
 
 ```
 | Model | QC→FR drift | FR→QC drift | asymmetry |
 ```
+
+and then repeats it on **matched pairs** — the 14 sentence pairs that differ
+only in variety — so the comparison is not 44 Quebec items against 14 different
+France items.
 
 Symmetric drift means the model is simply rewriting. Asymmetric drift — Quebec
 inputs moving while France inputs stay put — means the model's "generic French"
@@ -195,7 +200,11 @@ Deliberately out of scope for v0.1:
   CC-BY-NC-SA; check the licences before redistributing any of their content.
 - **ASR** — Quebec French speech belongs in a separate benchmark (CommissionsQC,
   CEREALES), not averaged into a text score.
-- **Significance testing** — McNemar / Wilcoxon are meaningless at n=58. Grow
-  the dataset first.
+- **Significance testing** — McNemar / Wilcoxon are meaningless at n=58, and the
+  matched-pair arm rests on 14 pairs. Grow the dataset first.
+- **A France→France arm** — Quebec inputs under a France-targeted prompt are the
+  positive control; France inputs under the same prompt would disambiguate a
+  failed control (instruction-following failure vs. baseline already at the
+  model's drift ceiling). Worth adding next.
 - **A single composite score** — the components stay visible. A composite can
   hide exactly the failure the experiment is trying to find.

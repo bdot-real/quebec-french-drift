@@ -281,14 +281,17 @@ def render_markdown(report):
 
         judged = [(c, a["judge_qc"]) for c, a in m["by_condition"].items() if a["judge_qc"]]
         if judged:
-            lines += ["### Judge scores (provisional — a local model is a weak "
-                      "Quebec-French authority)", "",
-                      "| Condition | meaning | QC naturalness | regional usage | "
+            lines += ["### Judge scores — illustrative only", "",
+                      "A local 8-30B model is a weak authority on Quebec French, and the "
+                      "sample below is small and uneven across models. These numbers "
+                      "illustrate the failure modes; they do not rank the models. The "
+                      "mechanical metrics above are the headline.", "",
+                      "| Condition | n | meaning | QC naturalness | regional usage | "
                       "variety shift | unnecessary correction |",
-                      "| --- | ---: | ---: | ---: | ---: | ---: |"]
+                      "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
             for cond, j in judged:
                 fmt = lambda v: f"{v:.2f}" if v is not None else "-"
-                lines.append(f"| {cond} | {fmt(j['meaning_preserved'])} | "
+                lines.append(f"| {cond} | {j['n']} | {fmt(j['meaning_preserved'])} | "
                              f"{fmt(j['target_naturalness'])} | "
                              f"{fmt(j['regional_usage_preserved'])} | "
                              f"{fmt(j['variety_shift'])} | "
