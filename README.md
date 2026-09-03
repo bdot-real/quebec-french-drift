@@ -67,6 +67,28 @@ Two adapters, selected by a `provider:name` spec:
 The OpenAI-compatible adapter takes `--base-url` and an optional API key
 through the console, or `base_url=` / `api_key=` through `build_model()`.
 
+## Testing a HuggingFace model
+
+Ollama's `hf.co/<repo>` pull stalls at ~99.9% on some setups. Fetch the GGUF
+directly instead:
+
+```bash
+scripts/fetch_hf_gguf.sh choco-qc \
+  https://huggingface.co/TattooPEEL/Chocolatine-QuebecV1/resolve/main/chocolatine-quebec-Q4_K_M.gguf
+
+python3 run_experiment.py run --models choco-qc
+```
+
+The script verifies the downloaded size against `Content-Length` before
+importing. That check matters: a truncated or doubly-written GGUF still carries
+a valid `GGUF` magic in its first four bytes, so nothing cheap catches it. One
+fetch here produced a file 540 MB too large — two `curl`s writing one path, one
+of them resuming — and would have been benchmarked as if it were the model.
+
+**Smoke-test any newly imported model before running 352 cells against it.** A
+GGUF without a chat template in its metadata will answer, but not in the shape
+the harness expects, and you will measure the packaging rather than the French.
+
 ## What gets measured
 
 Every test case is run under four prompt conditions:
