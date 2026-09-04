@@ -6344,6 +6344,1130 @@
         "margin": 0.06818181818181818,
         "passed": true
       }
+    },
+    {
+      "meta": {
+        "run_id": "2026-09-04T17:38:17+00:00",
+        "model": "transformers:Mistral-7B-Instruct-v0.3",
+        "model_config": {
+          "provider": "transformers",
+          "model": "mistralai/Mistral-7B-Instruct-v0.3",
+          "adapter": null,
+          "device": "cuda",
+          "quantized_4bit": true,
+          "temperature": 0.0,
+          "seed": 42,
+          "chat_template": true
+        },
+        "dataset_version": "0.2.0",
+        "prompt_version": "1.0",
+        "n_tests": 88,
+        "conditions": [
+          "baseline",
+          "canadian",
+          "metropolitan",
+          "proofread"
+        ]
+      },
+      "by_condition": {
+        "baseline": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 42,
+            "noncompliant": 0.045454545454545456,
+            "source_retention": 0.4090909090909091,
+            "cross_substitution": 0.25,
+            "protected_loss": 0.5813953488372093,
+            "unchanged": 0.022727272727272728,
+            "cross_substitution_compliant": 0.2619047619047619,
+            "source_retention_compliant": 0.40476190476190477
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 43,
+            "noncompliant": 0.022727272727272728,
+            "source_retention": 0.7386363636363636,
+            "cross_substitution": 0.022727272727272728,
+            "protected_loss": 0.3522727272727273,
+            "unchanged": 0.06818181818181818,
+            "cross_substitution_compliant": 0.023255813953488372,
+            "source_retention_compliant": 0.7325581395348837
+          },
+          "judge_qc": null
+        },
+        "canadian": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 40,
+            "noncompliant": 0.09090909090909091,
+            "source_retention": 0.4659090909090909,
+            "cross_substitution": 0.17045454545454544,
+            "protected_loss": 0.5,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": 0.1875,
+            "source_retention_compliant": 0.4875
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 40,
+            "noncompliant": 0.09090909090909091,
+            "source_retention": 0.7159090909090909,
+            "cross_substitution": 0.06818181818181818,
+            "protected_loss": 0.38636363636363635,
+            "unchanged": 0.022727272727272728,
+            "cross_substitution_compliant": 0.075,
+            "source_retention_compliant": 0.6875
+          },
+          "judge_qc": null
+        },
+        "metropolitan": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 42,
+            "noncompliant": 0.045454545454545456,
+            "source_retention": 0.38636363636363635,
+            "cross_substitution": 0.18181818181818182,
+            "protected_loss": 0.6046511627906976,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": 0.19047619047619047,
+            "source_retention_compliant": 0.40476190476190477
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 42,
+            "noncompliant": 0.045454545454545456,
+            "source_retention": 0.6477272727272727,
+            "cross_substitution": 0.022727272727272728,
+            "protected_loss": 0.42045454545454547,
+            "unchanged": 0.022727272727272728,
+            "cross_substitution_compliant": 0.023809523809523808,
+            "source_retention_compliant": 0.6309523809523809
+          },
+          "judge_qc": null
+        },
+        "proofread": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 42,
+            "noncompliant": 0.045454545454545456,
+            "source_retention": 0.6931818181818182,
+            "cross_substitution": 0.09090909090909091,
+            "protected_loss": 0.27906976744186046,
+            "unchanged": 0.2727272727272727,
+            "cross_substitution_compliant": 0.09523809523809523,
+            "source_retention_compliant": 0.6785714285714286
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 42,
+            "noncompliant": 0.045454545454545456,
+            "source_retention": 0.8522727272727273,
+            "cross_substitution": 0.022727272727272728,
+            "protected_loss": 0.19318181818181818,
+            "unchanged": 0.3409090909090909,
+            "cross_substitution_compliant": 0.023809523809523808,
+            "source_retention_compliant": 0.8452380952380952
+          },
+          "judge_qc": null
+        }
+      },
+      "by_category": {
+        "lexical": {
+          "n": 14,
+          "n_compliant": 13,
+          "noncompliant": 0.07142857142857142,
+          "source_retention": 0.42857142857142855,
+          "cross_substitution": 0.21428571428571427,
+          "protected_loss": 0.5714285714285714,
+          "unchanged": 0.07142857142857142,
+          "cross_substitution_compliant": 0.23076923076923078,
+          "source_retention_compliant": 0.46153846153846156
+        },
+        "terminology": {
+          "n": 10,
+          "n_compliant": 9,
+          "noncompliant": 0.1,
+          "source_retention": 0.35,
+          "cross_substitution": 0.4,
+          "protected_loss": 0.6,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": 0.4444444444444444,
+          "source_retention_compliant": 0.2777777777777778
+        },
+        "semantic": {
+          "n": 8,
+          "n_compliant": 8,
+          "noncompliant": 0.0,
+          "source_retention": 0.625,
+          "cross_substitution": 0.125,
+          "protected_loss": 0.375,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": 0.125,
+          "source_retention_compliant": 0.625
+        },
+        "register": {
+          "n": 6,
+          "n_compliant": 6,
+          "noncompliant": 0.0,
+          "source_retention": 0.5,
+          "cross_substitution": 0.08333333333333333,
+          "protected_loss": 0.5,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": 0.08333333333333333,
+          "source_retention_compliant": 0.5
+        },
+        "grammar": {
+          "n": 6,
+          "n_compliant": 6,
+          "noncompliant": 0.0,
+          "source_retention": 0.08333333333333333,
+          "cross_substitution": 0.4166666666666667,
+          "protected_loss": 0.9166666666666666,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": 0.4166666666666667,
+          "source_retention_compliant": 0.08333333333333333
+        }
+      },
+      "failures": [
+        {
+          "test_id": "GRA002",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "Y'a personne qui m'a averti que la réunion était annulée.",
+          "output": "Il n'y a personne qui m'a averti que la réunion était annulée.",
+          "substitutions": [
+            {
+              "from": "Y'a",
+              "to": "Il n'y a",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA003",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "On est allés au restaurant à cause qu'il pleuvait trop pour marcher.",
+          "output": "Nous sommes allés au restaurant parce que il pleuvait trop pour marcher.",
+          "substitutions": [
+            {
+              "from": "à cause que",
+              "to": "parce que",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA001",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "Tu viens-tu avec nous autres à soir ?",
+          "output": "Viens-tu avec nous ce soir ?",
+          "substitutions": [
+            {
+              "from": "à soir",
+              "to": "ce soir",
+              "relation": "preference"
+            },
+            {
+              "from": "nous autres",
+              "to": "nous",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "GRA003",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "On est allés au restaurant à cause qu'il pleuvait trop pour marcher.",
+          "output": "Nous sommes allés au restaurant parce que il pleuvait trop pour marcher.",
+          "substitutions": [
+            {
+              "from": "à cause que",
+              "to": "parce que",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "LEX005",
+          "category": "lexical",
+          "condition": "baseline",
+          "input": "Ce chandail en laine est offert en trois couleurs.",
+          "output": "Ce pull en laine est offert en trois couleurs.",
+          "substitutions": [
+            {
+              "from": "chandail",
+              "to": "pull",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "LEX007",
+          "category": "lexical",
+          "condition": "baseline",
+          "input": "Le traversier relie Québec et Lévis toutes les vingt minutes.",
+          "output": "Le ferry relie Québec et Lévis toutes les vingt minutes.",
+          "substitutions": [
+            {
+              "from": "traversier",
+              "to": "ferry",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "LEX009",
+          "category": "lexical",
+          "condition": "baseline",
+          "input": "Utilisez le clavardage en direct pour parler à un agent.",
+          "output": "Utilisez le chat en direct pour parler à un agent.",
+          "substitutions": [
+            {
+              "from": "clavardage",
+              "to": "chat",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "SEM003",
+          "category": "semantic",
+          "condition": "baseline",
+          "input": "Nous souperons vers 18 h avec les grands-parents.",
+          "output": "Nous dînerons vers 18 h avec les grands-parents.",
+          "substitutions": [
+            {
+              "from": "souperons",
+              "to": "dînerons",
+              "relation": "semantic_diff"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "TER003",
+          "category": "terminology",
+          "condition": "baseline",
+          "input": "La migration vers l'infonuagique réduira les coûts d'exploitation.",
+          "output": "La migration vers le cloud réduira les coûts d'exploitation.",
+          "substitutions": [
+            {
+              "from": "infonuagique",
+              "to": "cloud",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "TER004",
+          "category": "terminology",
+          "condition": "baseline",
+          "input": "Ce site utilise des témoins pour mémoriser vos préférences.",
+          "output": "Ce site utilise des cookies pour mémoriser vos préférences.",
+          "substitutions": [
+            {
+              "from": "témoins",
+              "to": "cookies",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "TER008",
+          "category": "terminology",
+          "condition": "baseline",
+          "input": "Vous pouvez présenter une demande d'assurance-emploi en ligne.",
+          "output": "Vous pouvez soumettre une demande d'assurance chômage en ligne.",
+          "substitutions": [
+            {
+              "from": "assurance-emploi",
+              "to": "assurance chômage",
+              "relation": "semantic_diff"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "GRA005",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "Assis-toi, je vais te conter ce qui est arrivé hier.",
+          "output": "Assis, je vais te raconter ce qui est arrivé hier.",
+          "substitutions": [
+            {
+              "from": "conter",
+              "to": "raconter",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.5,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA005",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "Assis-toi, je vais te conter ce qui est arrivé hier.",
+          "output": "Sit down, je vais te raconter ce qui est arrivé hier.",
+          "substitutions": [
+            {
+              "from": "conter",
+              "to": "raconter",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.5,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "REG005",
+          "category": "register",
+          "condition": "baseline",
+          "input": "Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !",
+          "output": "Des réductions à ne pas rater sur tous nos articles, tant en magasin que sur notre site web. Hâtez-vous, les quantités sont limitées !",
+          "substitutions": [
+            {
+              "from": "rabais",
+              "to": "réductions",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.5,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "GRA006",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "Je m'en vas au bureau tantôt, on se reparle après.",
+          "output": "Je m'en vais au bureau tout à fait bientôt, on se parlera après.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX012",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Consultez le babillard pour connaître les offres d'emploi internes.",
+          "output": "Consultez le bulletin pour connaître les offres d'emploi internes.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM004",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "N'oubliez pas de barrer la porte en partant.",
+          "output": "N'oubliez pas de fermer la porte en partant.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM006",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "Je vais présentement m'occuper de ton dossier.",
+          "output": "Je vais travailler sur ton dossier.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER003",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "La migration vers l'infonuagique réduira les coûts d'exploitation.",
+          "output": "La migration vers l'informatique réduira les coûts d'exploitation.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER007",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Ajoutez un égoportrait à votre profil pour personnaliser votre compte.",
+          "output": "Ajoutez un portrait d'égo à votre profil pour personnaliser votre compte.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER009",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.",
+          "output": "Le pilote de l'imprimante et l'extension du navigateur ont été mis à jour.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA001",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "Tu viens-tu avec nous autres à soir ?",
+          "output": "Tu viens avec nous à soir ?",
+          "substitutions": [
+            {
+              "from": "nous autres",
+              "to": "nous",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 0.5,
+          "cross_substitution_rate": 0.5,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA004",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "On a eu de la misère à trouver un stationnement proche du stade.",
+          "output": "On a eu du mal à trouver un stationnement proche du stade.",
+          "substitutions": [
+            {
+              "from": "de la misère",
+              "to": "du mal",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 0.5,
+          "cross_substitution_rate": 0.5,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER002",
+          "category": "terminology",
+          "condition": "baseline",
+          "input": "Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.",
+          "output": "Veillez à ne pas tomber dans les pièges de phishing qui imitent nos courriels officiels.",
+          "substitutions": [
+            {
+              "from": "hameçonnage",
+              "to": "phishing",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 0.5,
+          "cross_substitution_rate": 0.5,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "REG001",
+          "category": "register",
+          "condition": "proofread",
+          "input": "Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.",
+          "output": "Bonjour, merci de nous avoir contacté. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.",
+          "substitutions": [],
+          "protected_term_loss": 0.5,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER006",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.",
+          "output": "Nos modèles d'apprentissage automatique sont entraînés sur des méga-données anonymisées.",
+          "substitutions": [],
+          "protected_term_loss": 0.5,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER001",
+          "category": "terminology",
+          "condition": "baseline",
+          "input": "Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.",
+          "output": "votre téléphone intelligent peut se connecter au réseau Wi-Fi de la maison.",
+          "substitutions": [
+            {
+              "from": "sans fil",
+              "to": "Wi-Fi",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 0.0,
+          "cross_substitution_rate": 0.5,
+          "kind": "baseline_drift"
+        }
+      ],
+      "n_results": 352,
+      "suspect_reasoning_leaks": 0,
+      "scorecard": {
+        "CLR_baseline": 0.4090909090909091,
+        "MDR_baseline": 0.25,
+        "CLR_prompted": 0.4659090909090909,
+        "MDR_prompted": 0.17045454545454544,
+        "QFCR_proofread": 0.27906976744186046,
+        "unchanged_proofread": 0.2727272727272727,
+        "prompt_recovery": 0.07954545454545456
+      },
+      "positive_control": {
+        "baseline_drift": 0.25,
+        "metropolitan_drift": 0.18181818181818182,
+        "margin": -0.06818181818181818,
+        "passed": false
+      }
+    },
+    {
+      "meta": {
+        "run_id": "2026-09-04T17:56:25+00:00",
+        "model": "transformers:Qwen2.5-7B-Instruct",
+        "model_config": {
+          "provider": "transformers",
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "adapter": null,
+          "device": "cuda",
+          "quantized_4bit": true,
+          "temperature": 0.0,
+          "seed": 42,
+          "chat_template": true
+        },
+        "dataset_version": "0.2.0",
+        "prompt_version": "1.0",
+        "n_tests": 88,
+        "conditions": [
+          "baseline",
+          "canadian",
+          "metropolitan",
+          "proofread"
+        ]
+      },
+      "by_condition": {
+        "baseline": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 44,
+            "noncompliant": 0.0,
+            "source_retention": 0.5909090909090909,
+            "cross_substitution": 0.17045454545454544,
+            "protected_loss": 0.4069767441860465,
+            "unchanged": 0.09090909090909091,
+            "cross_substitution_compliant": 0.17045454545454544,
+            "source_retention_compliant": 0.5909090909090909
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 44,
+            "noncompliant": 0.0,
+            "source_retention": 0.875,
+            "cross_substitution": 0.045454545454545456,
+            "protected_loss": 0.18181818181818182,
+            "unchanged": 0.1590909090909091,
+            "cross_substitution_compliant": 0.045454545454545456,
+            "source_retention_compliant": 0.875
+          },
+          "judge_qc": null
+        },
+        "canadian": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 44,
+            "noncompliant": 0.0,
+            "source_retention": 0.7727272727272727,
+            "cross_substitution": 0.056818181818181816,
+            "protected_loss": 0.19767441860465115,
+            "unchanged": 0.045454545454545456,
+            "cross_substitution_compliant": 0.056818181818181816,
+            "source_retention_compliant": 0.7727272727272727
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 43,
+            "noncompliant": 0.022727272727272728,
+            "source_retention": 0.75,
+            "cross_substitution": 0.056818181818181816,
+            "protected_loss": 0.26136363636363635,
+            "unchanged": 0.022727272727272728,
+            "cross_substitution_compliant": 0.05813953488372093,
+            "source_retention_compliant": 0.7674418604651163
+          },
+          "judge_qc": null
+        },
+        "metropolitan": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 43,
+            "noncompliant": 0.022727272727272728,
+            "source_retention": 0.4772727272727273,
+            "cross_substitution": 0.22727272727272727,
+            "protected_loss": 0.5232558139534884,
+            "unchanged": 0.022727272727272728,
+            "cross_substitution_compliant": 0.23255813953488372,
+            "source_retention_compliant": 0.4883720930232558
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 44,
+            "noncompliant": 0.0,
+            "source_retention": 0.7272727272727273,
+            "cross_substitution": 0.045454545454545456,
+            "protected_loss": 0.3068181818181818,
+            "unchanged": 0.06818181818181818,
+            "cross_substitution_compliant": 0.045454545454545456,
+            "source_retention_compliant": 0.7272727272727273
+          },
+          "judge_qc": null
+        },
+        "proofread": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 44,
+            "noncompliant": 0.0,
+            "source_retention": 0.7840909090909091,
+            "cross_substitution": 0.09090909090909091,
+            "protected_loss": 0.23255813953488372,
+            "unchanged": 0.5454545454545454,
+            "cross_substitution_compliant": 0.09090909090909091,
+            "source_retention_compliant": 0.7840909090909091
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 44,
+            "noncompliant": 0.0,
+            "source_retention": 0.9431818181818182,
+            "cross_substitution": 0.0,
+            "protected_loss": 0.07954545454545454,
+            "unchanged": 0.6590909090909091,
+            "cross_substitution_compliant": 0.0,
+            "source_retention_compliant": 0.9431818181818182
+          },
+          "judge_qc": null
+        }
+      },
+      "by_category": {
+        "lexical": {
+          "n": 14,
+          "n_compliant": 14,
+          "noncompliant": 0.0,
+          "source_retention": 0.6428571428571429,
+          "cross_substitution": 0.07142857142857142,
+          "protected_loss": 0.35714285714285715,
+          "unchanged": 0.07142857142857142,
+          "cross_substitution_compliant": 0.07142857142857142,
+          "source_retention_compliant": 0.6428571428571429
+        },
+        "terminology": {
+          "n": 10,
+          "n_compliant": 10,
+          "noncompliant": 0.0,
+          "source_retention": 0.8,
+          "cross_substitution": 0.1,
+          "protected_loss": 0.2,
+          "unchanged": 0.1,
+          "cross_substitution_compliant": 0.1,
+          "source_retention_compliant": 0.8
+        },
+        "semantic": {
+          "n": 8,
+          "n_compliant": 8,
+          "noncompliant": 0.0,
+          "source_retention": 0.75,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.25,
+          "unchanged": 0.25,
+          "cross_substitution_compliant": 0.0,
+          "source_retention_compliant": 0.75
+        },
+        "register": {
+          "n": 6,
+          "n_compliant": 6,
+          "noncompliant": 0.0,
+          "source_retention": 0.5,
+          "cross_substitution": 0.08333333333333333,
+          "protected_loss": 0.5,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": 0.08333333333333333,
+          "source_retention_compliant": 0.5
+        },
+        "grammar": {
+          "n": 6,
+          "n_compliant": 6,
+          "noncompliant": 0.0,
+          "source_retention": 0.0,
+          "cross_substitution": 0.8333333333333334,
+          "protected_loss": 1.0,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": 0.8333333333333334,
+          "source_retention_compliant": 0.0
+        }
+      },
+      "failures": [
+        {
+          "test_id": "GRA003",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "On est allés au restaurant à cause qu'il pleuvait trop pour marcher.",
+          "output": "On est allés au restaurant parce que'il pleuvait trop pour marcher.",
+          "substitutions": [
+            {
+              "from": "à cause que",
+              "to": "parce que",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER004",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Ce site utilise des témoins pour mémoriser vos préférences.",
+          "output": "Ce site utilise des cookies pour mémoriser vos préférences.",
+          "substitutions": [
+            {
+              "from": "témoins",
+              "to": "cookies",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA001",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "Tu viens-tu avec nous autres à soir ?",
+          "output": "Viens-tu avec nous ce soir ?",
+          "substitutions": [
+            {
+              "from": "à soir",
+              "to": "ce soir",
+              "relation": "preference"
+            },
+            {
+              "from": "nous autres",
+              "to": "nous",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "GRA002",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "Y'a personne qui m'a averti que la réunion était annulée.",
+          "output": "Personne ne m'a averti que la réunion était annulée.",
+          "substitutions": [
+            {
+              "from": "Y'a",
+              "to": "Personne ne",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "GRA003",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "On est allés au restaurant à cause qu'il pleuvait trop pour marcher.",
+          "output": "On est allés au restaurant parce que la pluie était trop intense pour sortir à pied.",
+          "substitutions": [
+            {
+              "from": "à cause que",
+              "to": "parce que",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "GRA004",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "On a eu de la misère à trouver un stationnement proche du stade.",
+          "output": "On a eu du mal à trouver un parking proche du stade.",
+          "substitutions": [
+            {
+              "from": "de la misère",
+              "to": "du mal",
+              "relation": "preference"
+            },
+            {
+              "from": "stationnement",
+              "to": "parking",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "GRA005",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "Assis-toi, je vais te conter ce qui est arrivé hier.",
+          "output": "Assieds-toi, je vais te raconter ce qui s'est passé hier.",
+          "substitutions": [
+            {
+              "from": "Assis-toi",
+              "to": "Assieds-toi",
+              "relation": "preference"
+            },
+            {
+              "from": "conter",
+              "to": "raconter",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "LEX011",
+          "category": "lexical",
+          "condition": "baseline",
+          "input": "Vous devez téléverser votre pièce d'identité avant de soumettre la demande.",
+          "output": "Vous devez télécharger votre pièce d'identité avant de soumettre la demande.",
+          "substitutions": [
+            {
+              "from": "téléverser",
+              "to": "télécharger",
+              "relation": "semantic_diff"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "TER004",
+          "category": "terminology",
+          "condition": "baseline",
+          "input": "Ce site utilise des témoins pour mémoriser vos préférences.",
+          "output": "Ce site utilise des cookies pour mémoriser vos préférences.",
+          "substitutions": [
+            {
+              "from": "témoins",
+              "to": "cookies",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "GRA005",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "Assis-toi, je vais te conter ce qui est arrivé hier.",
+          "output": "Assieds-toi, je vais te conter ce qui est arrivé hier.",
+          "substitutions": [
+            {
+              "from": "Assis-toi",
+              "to": "Assieds-toi",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.5,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX004",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Profitez de nos rabais pour faire votre magasinage des Fêtes.",
+          "output": "Profitez de nos réductions pour faire votre shopping des Fêtes.",
+          "substitutions": [
+            {
+              "from": "magasinage",
+              "to": "shopping",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.5,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "REG005",
+          "category": "register",
+          "condition": "baseline",
+          "input": "Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !",
+          "output": "Des réductions à ne pas manquer sur tous nos articles en magasin et en ligne. Hâtez-vous, les stocks sont limités !",
+          "substitutions": [
+            {
+              "from": "rabais",
+              "to": "réductions",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.5,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "LEX001",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.",
+          "output": "Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courrier électronique.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX008",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Notre baladodiffusion hebdomadaire est maintenant offerte sur toutes les plateformes.",
+          "output": "Notre balado hebdomadaire est maintenant offert sur toutes les plateformes.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX012",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Consultez le babillard pour connaître les offres d'emploi internes.",
+          "output": "Consultez le bulletin pour connaître les offres d'emploi internes.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "REG006",
+          "category": "register",
+          "condition": "proofread",
+          "input": "Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.",
+          "output": "Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés de paiements.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER007",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Ajoutez un égoportrait à votre profil pour personnaliser votre compte.",
+          "output": "Ajoutez un épigraphe à votre profil pour personnaliser votre compte.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA001",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "Tu viens-tu avec nous autres à soir ?",
+          "output": "Tu viens avec nous à soir ?",
+          "substitutions": [
+            {
+              "from": "nous autres",
+              "to": "nous",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 0.5,
+          "cross_substitution_rate": 0.5,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA004",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "On a eu de la misère à trouver un stationnement proche du stade.",
+          "output": "On a eu du mal à trouver un stationnement proche du stade.",
+          "substitutions": [
+            {
+              "from": "de la misère",
+              "to": "du mal",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 0.5,
+          "cross_substitution_rate": 0.5,
+          "kind": "false_correction"
+        }
+      ],
+      "n_results": 352,
+      "suspect_reasoning_leaks": 0,
+      "scorecard": {
+        "CLR_baseline": 0.5909090909090909,
+        "MDR_baseline": 0.17045454545454544,
+        "CLR_prompted": 0.7727272727272727,
+        "MDR_prompted": 0.056818181818181816,
+        "QFCR_proofread": 0.23255813953488372,
+        "unchanged_proofread": 0.5454545454545454,
+        "prompt_recovery": 0.11363636363636362
+      },
+      "positive_control": {
+        "baseline_drift": 0.17045454545454544,
+        "metropolitan_drift": 0.22727272727272727,
+        "margin": 0.05681818181818182,
+        "passed": true
+      }
     }
   ],
   "attractor": {
@@ -6466,6 +7590,26 @@
       "qc_void": 0.0,
       "fr_void": 0.022727272727272728,
       "measurable": true
+    },
+    "transformers:Mistral-7B-Instruct-v0.3": {
+      "qc_to_fr_drift": 0.25,
+      "fr_to_qc_drift": 0.022727272727272728,
+      "asymmetry": 0.22727272727272727,
+      "qc_retention": 0.4090909090909091,
+      "fr_retention": 0.7386363636363636,
+      "qc_void": 0.045454545454545456,
+      "fr_void": 0.022727272727272728,
+      "measurable": true
+    },
+    "transformers:Qwen2.5-7B-Instruct": {
+      "qc_to_fr_drift": 0.17045454545454544,
+      "fr_to_qc_drift": 0.045454545454545456,
+      "asymmetry": 0.12499999999999999,
+      "qc_retention": 0.5909090909090909,
+      "fr_retention": 0.875,
+      "qc_void": 0.0,
+      "fr_void": 0.0,
+      "measurable": true
     }
   },
   "matched_attractor": {
@@ -6579,6 +7723,34 @@
       "sign_test": {
         "n_discordant": 12,
         "p_value": 0.03857421875
+      }
+    },
+    "transformers:Mistral-7B-Instruct-v0.3": {
+      "n_pairs": 42,
+      "n_void_pairs": 2,
+      "qc_to_fr_drift": 0.2619047619047619,
+      "fr_to_qc_drift": 0.023809523809523808,
+      "asymmetry": 0.2380952380952381,
+      "pairs_qc_higher": 13,
+      "pairs_fr_higher": 1,
+      "pairs_tied": 28,
+      "sign_test": {
+        "n_discordant": 14,
+        "p_value": 0.0018310546875
+      }
+    },
+    "transformers:Qwen2.5-7B-Instruct": {
+      "n_pairs": 44,
+      "n_void_pairs": 0,
+      "qc_to_fr_drift": 0.17045454545454544,
+      "fr_to_qc_drift": 0.045454545454545456,
+      "asymmetry": 0.12499999999999999,
+      "pairs_qc_higher": 7,
+      "pairs_fr_higher": 2,
+      "pairs_tied": 35,
+      "sign_test": {
+        "n_discordant": 9,
+        "p_value": 0.1796875
       }
     }
   }

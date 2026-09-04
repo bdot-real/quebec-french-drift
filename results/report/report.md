@@ -1061,6 +1061,222 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 >
 > out: Utilisez le chat en direct pour communiquer avec un agent.
 
+## transformers:Mistral-7B-Instruct-v0.3
+
+- run: `2026-09-04T17:38:17+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- provider transformers, adapter None, device cuda, quantized_4bit True, temperature 0.0, seed 42, chat_template True
+- 352 results  ·  judge: none
+
+### Scorecard (Quebec-origin items)
+
+| Metric | Value |
+| --- | ---: |
+| Canadian lexical retention — baseline (CLR) |   40.9% |
+| Metropolitan drift — baseline (MDR) |   25.0% |
+| Canadian lexical retention — Quebec prompt |   46.6% |
+| Metropolitan drift — Quebec prompt |   17.0% |
+| Quebec false correction — proofread (QFCR) |   27.9% |
+| — of which the model left the text untouched |   27.3% |
+| Drift recovered by prompting |    8.0% |
+
+QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
+
+### Positive control: **FAILED**
+
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 25.0%, France-targeted 18.2% (margin -6.8 pts).
+
+> Naming France as the audience bought nothing over naming no audience at all. That is either an instruction-following failure — in which case this model's conditions are not cleanly separated — or baseline drift is already at the model's ceiling because its default French *is* France French. This run cannot distinguish the two.
+
+### By condition
+
+| Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline |   40.9% |   25.0% |   26.2% |   58.1% |   73.9% |    2.3% |    2.3% |    4.5% |
+| canadian |   46.6% |   17.0% |   18.8% |   50.0% |   71.6% |    6.8% |    0.0% |    9.1% |
+| metropolitan |   38.6% |   18.2% |   19.0% |   60.5% |   64.8% |    2.3% |    0.0% |    4.5% |
+| proofread |   69.3% |    9.1% |    9.5% |   27.9% |   85.2% |    2.3% |   27.3% |    4.5% |
+
+*Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
+
+### Baseline drift by category (Quebec-origin)
+
+| Category | n | Retention | Drift |
+| --- | ---: | ---: | ---: |
+| grammar | 6 |    8.3% |   41.7% |
+| terminology | 10 |   35.0% |   40.0% |
+| lexical | 14 |   42.9% |   21.4% |
+| semantic | 8 |   62.5% |   12.5% |
+| register | 6 |   50.0% |    8.3% |
+
+### Worst failures
+
+**GRA002** (grammar, proofread, false_correction) — Y'a → Il n'y a
+
+> in:  Y'a personne qui m'a averti que la réunion était annulée.
+>
+> out: Il n'y a personne qui m'a averti que la réunion était annulée.
+
+**GRA003** (grammar, proofread, false_correction) — à cause que → parce que
+
+> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+>
+> out: Nous sommes allés au restaurant parce que il pleuvait trop pour marcher.
+
+**GRA001** (grammar, baseline, baseline_drift) — à soir → ce soir, nous autres → nous
+
+> in:  Tu viens-tu avec nous autres à soir ?
+>
+> out: Viens-tu avec nous ce soir ?
+
+**GRA003** (grammar, baseline, baseline_drift) — à cause que → parce que
+
+> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+>
+> out: Nous sommes allés au restaurant parce que il pleuvait trop pour marcher.
+
+**LEX005** (lexical, baseline, baseline_drift) — chandail → pull
+
+> in:  Ce chandail en laine est offert en trois couleurs.
+>
+> out: Ce pull en laine est offert en trois couleurs.
+
+**LEX007** (lexical, baseline, baseline_drift) — traversier → ferry
+
+> in:  Le traversier relie Québec et Lévis toutes les vingt minutes.
+>
+> out: Le ferry relie Québec et Lévis toutes les vingt minutes.
+
+**LEX009** (lexical, baseline, baseline_drift) — clavardage → chat
+
+> in:  Utilisez le clavardage en direct pour parler à un agent.
+>
+> out: Utilisez le chat en direct pour parler à un agent.
+
+**SEM003** (semantic, baseline, baseline_drift) — souperons → dînerons
+
+> in:  Nous souperons vers 18 h avec les grands-parents.
+>
+> out: Nous dînerons vers 18 h avec les grands-parents.
+
+**TER003** (terminology, baseline, baseline_drift) — infonuagique → cloud
+
+> in:  La migration vers l'infonuagique réduira les coûts d'exploitation.
+>
+> out: La migration vers le cloud réduira les coûts d'exploitation.
+
+**TER004** (terminology, baseline, baseline_drift) — témoins → cookies
+
+> in:  Ce site utilise des témoins pour mémoriser vos préférences.
+>
+> out: Ce site utilise des cookies pour mémoriser vos préférences.
+
+## transformers:Qwen2.5-7B-Instruct
+
+- run: `2026-09-04T17:56:25+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- provider transformers, adapter None, device cuda, quantized_4bit True, temperature 0.0, seed 42, chat_template True
+- 352 results  ·  judge: none
+
+### Scorecard (Quebec-origin items)
+
+| Metric | Value |
+| --- | ---: |
+| Canadian lexical retention — baseline (CLR) |   59.1% |
+| Metropolitan drift — baseline (MDR) |   17.0% |
+| Canadian lexical retention — Quebec prompt |   77.3% |
+| Metropolitan drift — Quebec prompt |    5.7% |
+| Quebec false correction — proofread (QFCR) |   23.3% |
+| — of which the model left the text untouched |   54.5% |
+| Drift recovered by prompting |   11.4% |
+
+QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
+
+### Positive control: **passed**
+
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 17.0%, France-targeted 22.7% (margin +5.7 pts).
+
+### By condition
+
+| Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline |   59.1% |   17.0% |   17.0% |   40.7% |   87.5% |    4.5% |    9.1% |    0.0% |
+| canadian |   77.3% |    5.7% |    5.7% |   19.8% |   75.0% |    5.7% |    4.5% |    0.0% |
+| metropolitan |   47.7% |   22.7% |   23.3% |   52.3% |   72.7% |    4.5% |    2.3% |    2.3% |
+| proofread |   78.4% |    9.1% |    9.1% |   23.3% |   94.3% |    0.0% |   54.5% |    0.0% |
+
+*Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
+
+### Baseline drift by category (Quebec-origin)
+
+| Category | n | Retention | Drift |
+| --- | ---: | ---: | ---: |
+| grammar | 6 |    0.0% |   83.3% |
+| terminology | 10 |   80.0% |   10.0% |
+| register | 6 |   50.0% |    8.3% |
+| lexical | 14 |   64.3% |    7.1% |
+| semantic | 8 |   75.0% |    0.0% |
+
+### Worst failures
+
+**GRA003** (grammar, proofread, false_correction) — à cause que → parce que
+
+> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+>
+> out: On est allés au restaurant parce que'il pleuvait trop pour marcher.
+
+**TER004** (terminology, proofread, false_correction) — témoins → cookies
+
+> in:  Ce site utilise des témoins pour mémoriser vos préférences.
+>
+> out: Ce site utilise des cookies pour mémoriser vos préférences.
+
+**GRA001** (grammar, baseline, baseline_drift) — à soir → ce soir, nous autres → nous
+
+> in:  Tu viens-tu avec nous autres à soir ?
+>
+> out: Viens-tu avec nous ce soir ?
+
+**GRA002** (grammar, baseline, baseline_drift) — Y'a → Personne ne
+
+> in:  Y'a personne qui m'a averti que la réunion était annulée.
+>
+> out: Personne ne m'a averti que la réunion était annulée.
+
+**GRA003** (grammar, baseline, baseline_drift) — à cause que → parce que
+
+> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+>
+> out: On est allés au restaurant parce que la pluie était trop intense pour sortir à pied.
+
+**GRA004** (grammar, baseline, baseline_drift) — de la misère → du mal, stationnement → parking
+
+> in:  On a eu de la misère à trouver un stationnement proche du stade.
+>
+> out: On a eu du mal à trouver un parking proche du stade.
+
+**GRA005** (grammar, baseline, baseline_drift) — Assis-toi → Assieds-toi, conter → raconter
+
+> in:  Assis-toi, je vais te conter ce qui est arrivé hier.
+>
+> out: Assieds-toi, je vais te raconter ce qui s'est passé hier.
+
+**LEX011** (lexical, baseline, baseline_drift) — téléverser → télécharger
+
+> in:  Vous devez téléverser votre pièce d'identité avant de soumettre la demande.
+>
+> out: Vous devez télécharger votre pièce d'identité avant de soumettre la demande.
+
+**TER004** (terminology, baseline, baseline_drift) — témoins → cookies
+
+> in:  Ce site utilise des témoins pour mémoriser vos préférences.
+>
+> out: Ce site utilise des cookies pour mémoriser vos préférences.
+
+**GRA005** (grammar, proofread, false_correction) — Assis-toi → Assieds-toi
+
+> in:  Assis-toi, je vais te conter ce qui est arrivé hier.
+>
+> out: Assieds-toi, je vais te conter ce qui est arrivé hier.
+
 ## Is "generic French" actually generic?
 
 Under the baseline prompt, which names no variety. Symmetric drift means the model is just rewriting; asymmetric drift means its default French has a centre of gravity.
@@ -1074,6 +1290,8 @@ Under the baseline prompt, which names no variety. Symmetric drift means the mod
 | phi4:latest |   50.0% |   12.5% |   37.5% |   13.6% |
 | qwen2.5:14b-instruct |   45.5% |    3.4% |   42.0% |   15.9% |
 | qwen2.5:7b-instruct |   25.0% |    4.5% |   20.5% |    0.0% |
+| transformers:Mistral-7B-Instruct-v0.3 |   25.0% |    2.3% |   22.7% |    4.5% |
+| transformers:Qwen2.5-7B-Instruct |   17.0% |    4.5% |   12.5% |    0.0% |
 
 **Not measurable.** These models fail to perform the rewrite on most or all cells, so they substitute nothing and would score 0% drift — which reads as perfect preservation. The number is withheld rather than printed.
 
@@ -1099,6 +1317,8 @@ The table above pools all Quebec items against all France items. Here each contr
 | phi4:latest | 36 |   54.2% |    9.7% |   44.4% | 18 | 1 | 17 | < 0.001 |
 | qwen2.5:14b-instruct | 35 |   52.9% |    4.3% |   48.6% | 20 | 2 | 13 | < 0.001 |
 | qwen2.5:7b-instruct | 43 |   24.4% |    4.7% |   19.8% | 10 | 2 | 31 | 0.039 |
+| transformers:Mistral-7B-Instruct-v0.3 | 42 |   26.2% |    2.4% |   23.8% | 13 | 1 | 28 | 0.002 |
+| transformers:Qwen2.5-7B-Instruct | 44 |   17.0% |    4.5% |   12.5% | 7 | 2 | 35 | 0.180 |
 
 ⚠️ marks fewer than 15 usable pairs — too few to read as a rate. Pairs are lost when either arm is a void cell, so a model that often fails the task keeps only a handful.
 
