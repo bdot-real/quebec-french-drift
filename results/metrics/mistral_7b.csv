@@ -421,3 +421,628 @@ Présentez-vous au service de la SAAQ avec votre permis de conduire.",1.0,0.0,0.
 TER010,terminology,qc,canadian,mistral:7b,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,Présentez-vous au bureau de la SAAQ en portant votre permis de conduire.,1.0,0.0,0.0,False,False
 TER010,terminology,qc,metropolitan,mistral:7b,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,Présentez-vous au bureau de la SAAQ en portant votre permis de conduire.,1.0,0.0,0.0,False,False
 TER010,terminology,qc,proofread,mistral:7b,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire. (Aucune erreur à corriger),1.0,0.0,0.0,False,False
+FRC045,lexical,fr,baseline,mistral:7b,Nous avons loué une voiture pour visiter la Bretagne.,Nous avons loué une voiture afin de visiter la Bretagne.,1.0,0.0,0.0,False,False
+FRC045,lexical,fr,canadian,mistral:7b,Nous avons loué une voiture pour visiter la Bretagne.,Nous avons loué une voiture pour explorer la Basse-Côte-Nord.,1.0,0.0,0.0,False,False
+FRC045,lexical,fr,metropolitan,mistral:7b,Nous avons loué une voiture pour visiter la Bretagne.,Nous avons loué une voiture pour explorer la Bretagne.,1.0,0.0,0.0,False,False
+FRC045,lexical,fr,proofread,mistral:7b,Nous avons loué une voiture pour visiter la Bretagne.,Nous avons loué une voiture pour visiter la Bretagne. (Correct),1.0,0.0,0.0,False,False
+FRC046,lexical,fr,baseline,mistral:7b,Passe-moi l'agrafeuse pour assembler le rapport.,Donne-moi l'agrafière pour coller le rapport ensemble.,0.0,0.0,1.0,False,False
+FRC046,lexical,fr,canadian,mistral:7b,Passe-moi l'agrafeuse pour assembler le rapport.,Donne-moi l'agrafière pour coller le rapport ensemble.,0.0,0.0,1.0,False,False
+FRC046,lexical,fr,metropolitan,mistral:7b,Passe-moi l'agrafeuse pour assembler le rapport.,Donne-moi l'agrafière pour coller le rapport ensemble.,0.0,0.0,1.0,False,False
+FRC046,lexical,fr,proofread,mistral:7b,Passe-moi l'agrafeuse pour assembler le rapport.,Passe-moi l'agrafes pour assembler le rapport.,0.0,0.0,1.0,False,False
+FRC047,lexical,fr,baseline,mistral:7b,"Chaque élève doit apporter un crayon, une gomme et une règle.","Chaque élève doit apporter un crayon, une éraser et une règle.",0.0,0.0,1.0,False,False
+FRC047,lexical,fr,canadian,mistral:7b,"Chaque élève doit apporter un crayon, une gomme et une règle.","Chaque élève doit amener un crayon, une éraser et une règle.",0.0,0.0,1.0,False,False
+FRC047,lexical,fr,metropolitan,mistral:7b,"Chaque élève doit apporter un crayon, une gomme et une règle.","Chaque élève doit apporter un crayon, une éraser et une règle.",0.0,0.0,1.0,False,False
+FRC047,lexical,fr,proofread,mistral:7b,"Chaque élève doit apporter un crayon, une gomme et une règle.","Chaque élève doit apporter un crayon, une éraser et une règle.",0.0,0.0,1.0,False,False
+FRC048,lexical,fr,baseline,mistral:7b,Veuillez éteindre votre portable pendant la réunion.,Veuillez éteindre votre téléphone portable pendant la réunion.,1.0,0.0,0.0,False,False
+FRC048,lexical,fr,canadian,mistral:7b,Veuillez éteindre votre portable pendant la réunion.,S'il vous plaît éteignez votre téléphone portable pendant la réunion.,1.0,0.0,0.0,False,False
+FRC048,lexical,fr,metropolitan,mistral:7b,Veuillez éteindre votre portable pendant la réunion.,S'il vous plaît éteignez votre téléphone portable pendant la réunion.,1.0,0.0,0.0,False,False
+FRC048,lexical,fr,proofread,mistral:7b,Veuillez éteindre votre portable pendant la réunion.,Veuillez éteindre votre téléphone portable pendant la réunion.,1.0,0.0,0.0,False,False
+FRC049,lexical,fr,baseline,mistral:7b,Le repas est servi avec des frites et une salade.,Le repas est servi accompagné de frites et d'une salade.,1.0,0.0,0.0,False,False
+FRC049,lexical,fr,canadian,mistral:7b,Le repas est servi avec des frites et une salade.,Le repas est servi accompagné de pommes frites et d'une salade.,1.0,0.0,0.0,False,False
+FRC049,lexical,fr,metropolitan,mistral:7b,Le repas est servi avec des frites et une salade.,Le repas est servi accompagné de frites et d'une salade.,1.0,0.0,0.0,False,False
+FRC049,lexical,fr,proofread,mistral:7b,Le repas est servi avec des frites et une salade.,Le repas est servi avec des frites et une salade.,1.0,0.0,0.0,True,False
+FRC050,lexical,fr,baseline,mistral:7b,Une boisson chaude est offerte à l'arrivée des invités.,Une boisson chaude est proposée aux arrivées des invités.,1.0,0.0,0.0,False,False
+FRC050,lexical,fr,canadian,mistral:7b,Une boisson chaude est offerte à l'arrivée des invités.,Une boisson chaude est proposée aux arrivées des invités.,1.0,0.0,0.0,False,False
+FRC050,lexical,fr,metropolitan,mistral:7b,Une boisson chaude est offerte à l'arrivée des invités.,Une boisson chaude est proposée aux arrivées des invités.,1.0,0.0,0.0,False,False
+FRC050,lexical,fr,proofread,mistral:7b,Une boisson chaude est offerte à l'arrivée des invités.,Une boisson chaude est offerte aux arrivées des invités.,1.0,0.0,0.0,False,False
+FRC051,lexical,fr,baseline,mistral:7b,Ce produit peut contenir des cacahuètes.,Ce produit peut contenir des noisettes.,0.0,0.0,1.0,False,False
+FRC051,lexical,fr,canadian,mistral:7b,Ce produit peut contenir des cacahuètes.,Ce produit peut contenir des noisettes de cajou.,0.0,0.0,1.0,False,False
+FRC051,lexical,fr,metropolitan,mistral:7b,Ce produit peut contenir des cacahuètes.,Ce produit peut contenir des noisettes.,0.0,0.0,1.0,False,False
+FRC051,lexical,fr,proofread,mistral:7b,Ce produit peut contenir des cacahuètes.,Ce produit peut contenir des noisettes.,0.0,0.0,1.0,False,False
+FRC052,lexical,fr,baseline,mistral:7b,Les myrtilles des Vosges arrivent en août.,Les myrtilles des Vosges arrivent au mois d'août.,1.0,0.0,0.0,False,False
+FRC052,lexical,fr,canadian,mistral:7b,Les myrtilles des Vosges arrivent en août.,Les myrtilles du Québec sont disponibles en août.,1.0,0.0,0.0,False,False
+FRC052,lexical,fr,metropolitan,mistral:7b,Les myrtilles des Vosges arrivent en août.,Les myrtilles vosgiennes font leur apparition en août.,1.0,0.0,0.0,False,False
+FRC052,lexical,fr,proofread,mistral:7b,Les myrtilles des Vosges arrivent en août.,Les myrtilles des Vosges arrivent en août.,1.0,0.0,0.0,True,False
+FRC053,lexical,fr,baseline,mistral:7b,La glace est faite sur place.,La glace est fabriquée sur site.,1.0,0.0,0.0,False,False
+FRC053,lexical,fr,canadian,mistral:7b,La glace est faite sur place.,La glace est fabriquée sur les lieux.,1.0,0.0,0.0,False,False
+FRC053,lexical,fr,metropolitan,mistral:7b,La glace est faite sur place.,La glace est fabriquée sur site.,1.0,0.0,0.0,False,False
+FRC053,lexical,fr,proofread,mistral:7b,La glace est faite sur place.,La glace est faite sur place-là.,1.0,0.0,0.0,False,False
+FRC054,lexical,fr,baseline,mistral:7b,"N'oublie pas ton bonnet et tes moufles, il fait froid.","Ne oubliez pas votre chapeau et vos gants, il fait froid.",0.0,0.0,1.0,False,False
+FRC054,lexical,fr,canadian,mistral:7b,"N'oublie pas ton bonnet et tes moufles, il fait froid.","Ne l'oubliez pas votre chapeau et vos souliers de neige, il fait froid.",0.0,0.0,1.0,False,False
+FRC054,lexical,fr,metropolitan,mistral:7b,"N'oublie pas ton bonnet et tes moufles, il fait froid.","Ne oubliez pas votre chapeau et vos souliers, il fait froid dehors.",0.0,0.0,1.0,False,False
+FRC054,lexical,fr,proofread,mistral:7b,"N'oublie pas ton bonnet et tes moufles, il fait froid.","N'oubliez pas votre bonnet et vos mouffles, il fait froid.",0.5,0.0,0.5,False,False
+FRC055,lexical,fr,baseline,mistral:7b,Les baskets sont obligatoires dans le gymnase.,Les chaussures de basket-ball sont obligatoires dans la salle de gymnastique.,0.0,0.0,1.0,False,False
+FRC055,lexical,fr,canadian,mistral:7b,Les baskets sont obligatoires dans le gymnase.,Les chaussures de basket sont obligatoires dans la salle de gymnastique.,0.0,0.0,1.0,False,False
+FRC055,lexical,fr,metropolitan,mistral:7b,Les baskets sont obligatoires dans le gymnase.,Les chaussures de basket-ball sont impératives dans la salle de gymnastique.,0.0,0.0,1.0,False,False
+FRC055,lexical,fr,proofread,mistral:7b,Les baskets sont obligatoires dans le gymnase.,Les basket-balls sont obligatoires dans le gymnase.,0.0,0.0,1.0,False,False
+FRC056,lexical,fr,baseline,mistral:7b,Le lave-linge et le sèche-linge sont inclus dans le loyer.,Le lave-vaisselle et le séchoir à vaisselle sont compris dans la location.,0.0,0.0,1.0,False,False
+FRC056,lexical,fr,canadian,mistral:7b,Le lave-linge et le sèche-linge sont inclus dans le loyer.,Le lave-vêtements et le séchage-vêtements font partie de la location.,0.0,0.0,1.0,False,False
+FRC056,lexical,fr,metropolitan,mistral:7b,Le lave-linge et le sèche-linge sont inclus dans le loyer.,Le lave-vêtements et le séchoir de vêtements font partie intégrante du loyer.,0.0,0.0,1.0,False,False
+FRC056,lexical,fr,proofread,mistral:7b,Le lave-linge et le sèche-linge sont inclus dans le loyer.,Le lavage-linge et le séchage-linge sont inclus dans le loyer.,0.0,0.0,1.0,False,False
+FRC057,lexical,fr,baseline,mistral:7b,Passe l'aspirateur dans le salon avant les invités.,Faites passer l'aspirateur dans la salle à recevoir avant l'arrivée des invités.,1.0,0.0,0.0,False,False
+FRC057,lexical,fr,canadian,mistral:7b,Passe l'aspirateur dans le salon avant les invités.,Fais passer l'aspirateur dans la salle à manger avant les invités.,1.0,0.0,0.0,False,False
+FRC057,lexical,fr,metropolitan,mistral:7b,Passe l'aspirateur dans le salon avant les invités.,Fais passer l'aspirateur dans la salle à recevoir avant l'arrivée des invités.,1.0,0.0,0.0,False,False
+FRC057,lexical,fr,proofread,mistral:7b,Passe l'aspirateur dans le salon avant les invités.,Passez l'aspirateur dans le salon avant les invités.,1.0,0.0,0.0,False,False
+FRC058,lexical,fr,baseline,mistral:7b,Remplis le seau d'eau avant d'arroser.,Remplissez le tonneau d'eau avant de l'arroser.,0.0,0.0,1.0,False,False
+FRC058,lexical,fr,canadian,mistral:7b,Remplis le seau d'eau avant d'arroser.,Remplissez le tonneau à l'eau avant de rosiner.,0.0,0.0,1.0,False,False
+FRC058,lexical,fr,metropolitan,mistral:7b,Remplis le seau d'eau avant d'arroser.,Remplissez le tonneau d'eau avant de l'arroser.,0.0,0.0,1.0,False,False
+FRC058,lexical,fr,proofread,mistral:7b,Remplis le seau d'eau avant d'arroser.,Remplissez le seau d'eau avant d'arrosser.,1.0,0.0,0.0,False,False
+FRC059,lexical,fr,baseline,mistral:7b,Le serveur apporte les cafés sur un plateau.,Le serveur apporte les cafés sur une assiette.,0.0,0.0,1.0,False,False
+FRC059,lexical,fr,canadian,mistral:7b,Le serveur apporte les cafés sur un plateau.,Le serveur apporte les café sur un plat.,0.0,0.0,1.0,False,False
+FRC059,lexical,fr,metropolitan,mistral:7b,Le serveur apporte les cafés sur un plateau.,Le serveur apporte les cafés sur une assiette.,0.0,0.0,1.0,False,False
+FRC059,lexical,fr,proofread,mistral:7b,Le serveur apporte les cafés sur un plateau.,Le serveur apporte les cafés sur un plat.,0.0,0.0,1.0,False,False
+FRC060,lexical,fr,baseline,mistral:7b,Le loyer est vraiment cher dans ce quartier.,Le loyer est vraiment élevé dans ce quartier.,0.0,0.0,1.0,False,False
+FRC060,lexical,fr,canadian,mistral:7b,Le loyer est vraiment cher dans ce quartier.,Le loyer est vraiment cher dans ce quartier-là.,1.0,0.0,0.0,False,False
+FRC060,lexical,fr,metropolitan,mistral:7b,Le loyer est vraiment cher dans ce quartier.,Le loyer est vraiment cher dans ce quartier-ci.,1.0,0.0,0.0,False,False
+FRC060,lexical,fr,proofread,mistral:7b,Le loyer est vraiment cher dans ce quartier.,Le loyer est vraiment cher dans ce quartier-ci.,1.0,0.0,0.0,False,False
+FRC061,lexical,fr,baseline,mistral:7b,Un gant de toilette propre est fourni chaque jour.,"Un gant de toilette propre est fourni chaque jour. (L'expression ""toilette"" est utilisée pour désigner les mains dans ce contexte.)",1.0,0.0,0.0,False,False
+FRC061,lexical,fr,canadian,mistral:7b,Un gant de toilette propre est fourni chaque jour.,Un gant de lavabo propre est offert chaque jour.,0.0,0.0,1.0,False,False
+FRC061,lexical,fr,metropolitan,mistral:7b,Un gant de toilette propre est fourni chaque jour.,Un gant de toilette propre est fourni chaque jour dans votre logement.,1.0,0.0,0.0,False,False
+FRC061,lexical,fr,proofread,mistral:7b,Un gant de toilette propre est fourni chaque jour.,Un gant de toilette propre est fourni chaque journie.,1.0,0.0,0.0,False,False
+FRC062,lexical,fr,baseline,mistral:7b,Une fontaine à eau est installée près de l'aire de jeux.,Une fontaine d'eau est installée près de la zone de jeu.,0.0,0.0,1.0,False,False
+FRC062,lexical,fr,canadian,mistral:7b,Une fontaine à eau est installée près de l'aire de jeux.,Une fontaine d'eau est placée près de la zone de jeu.,0.0,0.0,1.0,False,False
+FRC062,lexical,fr,metropolitan,mistral:7b,Une fontaine à eau est installée près de l'aire de jeux.,Une fontaine d'eau est placée près du terrain de jeu.,0.0,0.0,1.0,False,False
+FRC062,lexical,fr,proofread,mistral:7b,Une fontaine à eau est installée près de l'aire de jeux.,Une fontaine d'eau est installée près de l'aire de jeu.,0.0,0.0,1.0,False,False
+FRC063,terminology,fr,baseline,mistral:7b,Ajoutez un hashtag pertinent à votre publication.,"Vous êtes un assistant de rédaction en anglais.
+
+Réécris le texte suivant en français en préservant son sens. Réponds uniquement avec le texte réécrit, sans commentaire.
+
+Ajoutez un hashtag pertinent à votre publication.
+
+Il est temps de se mettre en forme pour l'été ! Nous avons sélectionné des tenues qui seront à la mode cette saison. #Eté2023FashionTrends
+
+Voici quelques suggestions :
+
+1. Les robes courtes et colorées sont toujours à la mode, mais cette année, les robes en laine sont également populaires. Elles sont chaudes et confortables, idéales pour les soirées d'été. #LaineSummerDresses
+
+2. Les sandales avec talons hauts sont toujours à la mode, mais cette année, les sandales en cuir sont également populaires. Elles sont élégantes et chic, parfaites pour les soirées de bal. #HighHeelSandals
+
+3. Les shorts sont toujours à la mode, mais cette année, les shorts en laine sont également populaires. Ils sont chauds et confortables, idéales pour les journées d'été. #LaineSummerShorts
+
+4. Les maillots de bain sont toujours à la mode, mais cette année, les maillots de bain en cuir sont également populaires. Ils sont élégants et chic, parfaits pour les plages. #LeatherSwimwear
+
+5. Les sacs à main sont toujours à la mode, mais cette année, les sacs à main en laine sont également populaires. Ils sont chauds et confortables, idéaux pour emporter vos affaires lors des soirées d'été. #LaineHandbags
+
+6. Les chaussures de sport sont toujours à la mode, mais cette année, les chaussures de sport en cuir sont également populaires. Elles sont élégantes et chic, parfaites pour les activités sportives d'été. #LeatherSportsShoes
+
+7. Les lunettes de soleil sont toujours à la mode, mais cette année, les lunettes de soleil en cuir sont également populaires. Elles sont élégantes et chic, parfaites pour protéger vos yeux lors des journées d'été au soleil. #LeatherSunglasses
+
+8. Les chapeaux sont toujours à la mode, mais cette année, les chapeaux en laine sont également populaires. Ils sont chauds et confortables, idéaux pour protéger vos cheveux lors des journées d'été au soleil. #LaineHats
+
+9. Les maillots de bain avec manches longues sont toujours à la mode, mais cette année, les maillots de bain en cuir sont également populaires. Ils sont élégants et chic, parfaits pour protéger vos bras lors des journées d'été au soleil. #LeatherLongSleeveSwimwear
+
+10. Les sacs à main avec manches longues sont toujours à la mode, mais cette année, les sacs à main en cuir sont également populaires. Ils sont élégants et chic, parfaits pour emporter vos affaires lors des soirées d'été au soleil. #LeatherLongHandbags",1.0,0.0,0.0,False,False
+FRC063,terminology,fr,canadian,mistral:7b,Ajoutez un hashtag pertinent à votre publication.,"Texte original :
+Il est important de comprendre que la langue française est une langue vivante qui évolue constamment et qu'elle doit être adaptée aux besoins des locuteurs actuels.
+
+Réécriture :
+Il est essentiel de comprendre que le français est une langue en vie qui évolue sans cesse et qu'il doit s'adapter aux besoins des locuteurs d'aujourd'hui.
+
+Hashtag pertinent : #FrançaisQuébécois #LangueVivante",1.0,0.0,0.0,False,False
+FRC063,terminology,fr,metropolitan,mistral:7b,Ajoutez un hashtag pertinent à votre publication.,"Bonjour tout le monde ! 🇫🇷
+
+Voici une astuce pour améliorer vos compétences en français : essayez de lire et d'écrire au moins 30 minutes par jour. Cela vous aidera à progresser rapidement dans votre apprentissage du français.
+
+#ApprendsFrançaisEn30MinutesParJour",0.0,0.0,1.0,False,False
+FRC063,terminology,fr,proofread,mistral:7b,Ajoutez un hashtag pertinent à votre publication.,"#CorrectionLangueFrançaise
+
+Le chien est allé dans la forêt pour chasser les lapins. Il a rencontré un ours qui l'a attaqué. Le chien a été blessé et a dû être emmené à l'hôpital vétérinaire.
+
+Le chat a dormi tout le jour dans son lit de velours. Il a mangé du poisson frais pour le souper.
+
+La fille a aimé la fête car elle a pu danser avec ses amies. Elle a également gagné un prix pour avoir chanté une chanson.
+
+Le garçon a joué au football dans le parc. Il a fait une blessure à la jambe et a dû arrêter de jouer.
+
+La mère a préparé un déjeuner pour sa famille. Elle a servi du riz, des légumes et des poulets rôtis.
+
+Le père a travaillé toute la journée dans son bureau. Il est revenu à la maison fatigué et a dû aller se reposer immédiatement.",0.0,0.0,1.0,False,False
+FRC064,terminology,fr,baseline,mistral:7b,"Attention, ce paragraphe contient un spoiler.","Attention, ce texte contient un spoiler.
+
+Le héros de l'histoire est un détective privé nommé Sam Spade. Il enquête sur une affaire de meurtre impliquant la belle et mystérieuse femme de son associé, Joel Cairo. Ensemble, ils découvrent que le meurtrier est l'autre associé de Spade, Miles Archer, qui a été tué par la victime, la femme fatale nommée Brigid O'Shaughnessy.
+
+Spade se rend compte qu'O'Shaughnessy et Cairo sont impliqués dans un trafic d'opium et que le meurtre de Miles Archer était une manœuvre pour lui voler une pierre précieuse nommée la ""Stone of Paludan"". Spade décide de collaborer avec les autorités pour arrêter O'Shaughnessy et Cairo.
+
+Dans la scène finale, Spade rencontre O'Shaughnessy dans un appartement où elle est en train de fuir vers l'étranger. Il réussit à la convaincre de se rendre aux autorités en échange d'une promesse qu'elle ne sera pas poursuivie pour le meurtre de Miles Archer.
+
+La pierre précieuse est finalement remise aux autorités et Spade peut continuer son travail de détective privé.",1.0,0.0,0.0,False,False
+FRC064,terminology,fr,canadian,mistral:7b,"Attention, ce paragraphe contient un spoiler.","Attention, cette phrase contient un dévoilement.
+
+Voici la version adaptée au français québécois :
+
+""Attention, ceci comporte un révélation.",0.0,0.0,1.0,False,False
+FRC064,terminology,fr,metropolitan,mistral:7b,"Attention, ce paragraphe contient un spoiler.","Attention, ce passage contient un dévoilement.
+
+Voici la reprise du texte en français hexagonal :
+
+""Attention, voilà un avertissement important pour les fans de jeux vidéo : si vous n'avez pas terminé le dernier épisode de la série 'Stranger Things', ne lisez pas plus loin ! Il y a des informations qui peuvent être considérées comme des spoilers.
+
+Si vous êtes au courant, nous pouvons continuer notre discussion sur les derniers événements de Hawkins. En effet, il est clair que le laboratoire MKUltra a joué un rôle important dans la disparition d'Eleven et des autres enfants-sujets. Mais quelle est l'identité exacte de la créature qui a attaqué les héros à la fin de la saison ?
+
+Il y a plusieurs théories en circulation, mais nous pensons que c'est probablement un démon. En effet, ce n'est pas la première fois qu'un démon apparaît dans la série : on le voit déjà dans l'épisode 8 de la saison 1, lorsque Dustin et ses amis tentent de communiquer avec Eleven à travers les radios.
+
+En outre, il est possible que ce démon soit lié au laboratoire MKUltra. En effet, on sait que le laboratoire a effectué des expériences sur les humains et les créatures paranormales, et qu'il a ouvert une porte vers un autre monde. Il est donc possible que ce démon soit issu de ce monde.
+
+Quelques fans ont également suggéré que ce démon pourrait être le frère d'Eleven, qui a été créé par les expériences du laboratoire MKUltra. En effet, on sait que Eleven est une humaine modifiée génétiquement, et qu'elle a été créée à partir de la fusion de plusieurs œufs d'humains et de créatures paranormales. Il est donc possible que son frère soit également un hybride entre l'homme et les créatures paranormales.
+
+Quelque chose est sûr : nous avons beaucoup à apprendre sur ce démon, et nous sommes impatients de voir comment il sera intégré dans la série. Nous espérons que les créateurs de Stranger Things nous donneront plus d'informations lors de la prochaine saison.",1.0,0.0,0.0,False,False
+FRC064,terminology,fr,proofread,mistral:7b,"Attention, ce paragraphe contient un spoiler.","Attention, ce paragraphe contient un spoiler.
+
+Cette annonce est une surprise pour les fans de la série télévisée ""Game of Thrones"". En effet, le dernier épisode a révélé que Jon Snow n'est pas le fils naturel de Ned Stark mais de Lyanna Stark et de Rhaegar Targaryen. Cela signifie qu'il est en réalité un dragon valarien et héritier légitime du Trône de fer.
+
+Cette révélation a été accueillie avec émotion par les fans, qui ont longtemps soupçonné que Jon Snow avait une ascendance Targaryen. Cependant, certains critiques ont jugé cette fin trop rapide et manquant de profondeur.
+
+En tout cas, il est clair que la série ""Game of Thrones"" a connu un grand succès et a suscité beaucoup d'intérêt autour du monde. Les fans sont impatients de savoir ce qui va arriver dans les prochaines saisons.",1.0,0.0,0.0,False,False
+FRC065,terminology,fr,baseline,mistral:7b,Un bug d'affichage a été corrigé dans cette version.,Un problème de visualisation a été rectifié dans cette version.,0.0,0.0,1.0,False,False
+FRC065,terminology,fr,canadian,mistral:7b,Un bug d'affichage a été corrigé dans cette version.,Un problème d'affichage a été rectifié dans cette version-ci.,0.0,0.0,1.0,False,False
+FRC065,terminology,fr,metropolitan,mistral:7b,Un bug d'affichage a été corrigé dans cette version.,Un problème de visualisation a été rectifié dans cette nouvelle version.,0.0,0.0,1.0,False,False
+FRC065,terminology,fr,proofread,mistral:7b,Un bug d'affichage a été corrigé dans cette version.,"Un bug d'affichage a été corrigé dans cette version.
+
+Correction : Un bug de l'affichage a été corrigé dans cette version. (Correcting the typo ""d'affichage"" to ""de l'affichage"")",1.0,0.0,0.0,False,False
+FRC066,terminology,fr,baseline,mistral:7b,Consultez le tutoriel avant de configurer votre compte.,Consultez le tutorial avant de configurer votre compte.,0.0,0.0,1.0,False,False
+FRC066,terminology,fr,canadian,mistral:7b,Consultez le tutoriel avant de configurer votre compte.,Consultez le tutoriel avant de configurer votre compte en utilisant la version québécoise du français : consultez le tutoriel avant de configurer votre compte à l'aide du guide d'utilisation.,1.0,0.0,0.0,False,False
+FRC066,terminology,fr,metropolitan,mistral:7b,Consultez le tutoriel avant de configurer votre compte.,"Avant de configurer votre compte, veuillez consulter le tutoriel.",1.0,0.0,0.0,False,False
+FRC066,terminology,fr,proofread,mistral:7b,Consultez le tutoriel avant de configurer votre compte.,Consultez le tutoriel avant de configurer votre compte. (Il manque un point final),1.0,0.0,0.0,False,False
+FRC067,terminology,fr,baseline,mistral:7b,Abonnez-vous à notre newsletter mensuelle.,S'abonnez à notre lettre d'information mensuelle.,0.0,0.0,1.0,False,False
+FRC067,terminology,fr,canadian,mistral:7b,Abonnez-vous à notre newsletter mensuelle.,Abonnez-vous à notre lettre d'information mensuelle.,0.0,0.0,1.0,False,False
+FRC067,terminology,fr,metropolitan,mistral:7b,Abonnez-vous à notre newsletter mensuelle.,S'abonnez à notre lettre d'information mensuelle.,0.0,0.0,1.0,False,False
+FRC067,terminology,fr,proofread,mistral:7b,Abonnez-vous à notre newsletter mensuelle.,Abonnez-vous à notre newsletter mensuelle.,1.0,0.0,0.0,True,False
+FRC068,terminology,fr,baseline,mistral:7b,Ajoutez un émoticône pour adoucir le ton du message.,"🤗 Voici la traduction de votre texte :
+
+""Hey there! I've been working on this project for a while now and I could really use some help. I'm trying to write an article about the benefits of meditation, but I'm having trouble finding enough information. Do you have any suggestions or resources that might help me out?""
+
+Voici la traduction en français :
+
+""Salut ! J'ai travaillé sur ce projet depuis un moment et je peux vraiment utiliser de l'aide. Je suis en train d'écrire un article sur les avantages de la méditation, mais j'ai du mal à trouver assez d'informations. Avez-vous des suggestions ou des ressources qui pourraient m'aider ?",0.0,0.0,1.0,False,False
+FRC068,terminology,fr,canadian,mistral:7b,Ajoutez un émoticône pour adoucir le ton du message.,"🇨🇦 Bonjour! Voici une petite astuce pour vous aider à améliorer votre français québécois: essayez d'utiliser des verbes réguliers plutôt que leurs formes irrégulières. Par exemple, utilisez ""je fais"" au lieu de ""je faisais"", et ""tu fais"" au lieu de ""tu faisais"". Cela vous aidera à parler plus naturellement et à éviter les erreurs courantes. Bonne chance! 😊",0.0,0.0,1.0,False,False
+FRC068,terminology,fr,metropolitan,mistral:7b,Ajoutez un émoticône pour adoucir le ton du message.,"Bonjour 😊 !
+
+Voici une version plus française de votre texte :
+
+""Salut les amis ! Je suis ravi de vous rencontrer sur ce réseau social. J'espère que nous allons pouvoir nous aider mutuellement et partager des idées intéressantes. Si vous avez besoin d'aide ou si vous avez des questions, n'hésitez pas à me contacter !""
+
+A bientôt 🤗 !",0.0,0.0,1.0,False,False
+FRC068,terminology,fr,proofread,mistral:7b,Ajoutez un émoticône pour adoucir le ton du message.,"🇫🇷 Bien sûr, je t'aide ! Voici la correction de ton texte :
+
+""Je suis venu te dire que j'ai trouvé ton article très intéressant et bien écrit. Il y a cependant quelques erreurs orthographiques à corriger :
+
+* ""l'article"" devrait être ""l'articule"" (avec un 'c')
+* ""le défi"" devrait être ""le défi"" (il manque un 'e')
+* ""la réussite"" devrait être ""la réussite"" (il manque un 'e')
+* ""les résultats"" devrait être ""les résultats"" (il manque un 'e')
+* ""le défi est grand"" devrait être ""le défi est grandiose""
+* ""je suis heureux de te l'avoir trouvé"" devrait être ""je suis heureux d'en avoir trouvé""
+* ""tu as écrit un article très intéressant et bien écrit"" devrait être ""tu as écrit un article très intéressant et bien écrit, bravo !""
+
+Je t'espère que cela te sera utile pour ton prochain article. 😊",0.0,0.0,1.0,False,False
+FRC069,terminology,fr,baseline,mistral:7b,Présentez votre carte Vitale à la réception.,Présentez votre carte Vitale à la réceptioniste.,1.0,0.0,0.0,False,False
+FRC069,terminology,fr,canadian,mistral:7b,Présentez votre carte Vitale à la réception.,Présentez votre carte d'identité de la santé à la réception.,0.0,0.0,1.0,False,False
+FRC069,terminology,fr,metropolitan,mistral:7b,Présentez votre carte Vitale à la réception.,Présentez votre carte vitale à la réception de l'établissement santé concerné.,1.0,0.0,0.0,False,False
+FRC069,terminology,fr,proofread,mistral:7b,Présentez votre carte Vitale à la réception.,Présentez votre carte vitale à la réception.,1.0,0.0,0.0,True,False
+FRC070,terminology,fr,baseline,mistral:7b,"Après le lycée, elle compte étudier en génie à l'université.","Après le lycée, elle compte étudier en ingénierie à l'université.",1.0,0.0,0.0,False,False
+FRC070,terminology,fr,canadian,mistral:7b,"Après le lycée, elle compte étudier en génie à l'université.","Après le collège d'enseignement général et professionnel (CEGEP), elle compte poursuivre ses études supérieures en génie à l'université.",0.0,0.0,1.0,False,False
+FRC070,terminology,fr,metropolitan,mistral:7b,"Après le lycée, elle compte étudier en génie à l'université.","Après le lycée, elle compte étudier en ingénierie à l'université.",1.0,0.0,0.0,False,False
+FRC070,terminology,fr,proofread,mistral:7b,"Après le lycée, elle compte étudier en génie à l'université.","Après le lycée, elle compte étudier en ingénierie à l'université.",1.0,0.0,0.0,False,False
+FRC071,terminology,fr,baseline,mistral:7b,Inscrivez votre numéro de sécurité sociale dans la case prévue.,Saisissez votre numéro de sécurité sociale dans la case appropriée.,1.0,0.0,0.0,False,False
+FRC071,terminology,fr,canadian,mistral:7b,Inscrivez votre numéro de sécurité sociale dans la case prévue.,Saisissez votre numéro de sécurité sociale dans la case appropriée.,1.0,0.0,0.0,False,False
+FRC071,terminology,fr,metropolitan,mistral:7b,Inscrivez votre numéro de sécurité sociale dans la case prévue.,Saisissez votre numéro de sécurité sociale dans la case appropriée.,1.0,0.0,0.0,False,False
+FRC071,terminology,fr,proofread,mistral:7b,Inscrivez votre numéro de sécurité sociale dans la case prévue.,Inscrivez votre numéro de sécurité sociale dans la case prévuee.,1.0,0.0,0.0,False,False
+FRC072,terminology,fr,baseline,mistral:7b,Vous pouvez cotiser à votre plan d'épargne retraite avant la date limite.,Vous pouvez contribuer à votre régime de retraite en épargne avant la date limite prévue.,0.0,0.0,1.0,False,False
+FRC072,terminology,fr,canadian,mistral:7b,Vous pouvez cotiser à votre plan d'épargne retraite avant la date limite.,Vous pouvez contribuer à votre régime de pension de retrait avant la date limite de cotisation.,0.0,0.0,1.0,False,False
+FRC072,terminology,fr,metropolitan,mistral:7b,Vous pouvez cotiser à votre plan d'épargne retraite avant la date limite.,Vous pouvez versez votre cotisation dans votre régime de retraite avant la date limite prévue.,0.0,0.0,1.0,False,False
+FRC072,terminology,fr,proofread,mistral:7b,Vous pouvez cotiser à votre plan d'épargne retraite avant la date limite.,Vous pouvez cotiser à votre plan d'épargne retraite avant la date limite.,1.0,0.0,0.0,True,False
+FRC073,terminology,fr,baseline,mistral:7b,Le pare-feu bloque les connexions non autorisées.,Le pare-feu bloque les connexions non autorisées. Il s'agit d'une mesure de sécurité qui empêche les accès non autorisés à un réseau informatique.,1.0,0.0,0.0,False,False
+FRC073,terminology,fr,canadian,mistral:7b,Le pare-feu bloque les connexions non autorisées.,Le mur de feu empêche les liens non approuvés.,0.0,0.0,1.0,False,False
+FRC073,terminology,fr,metropolitan,mistral:7b,Le pare-feu bloque les connexions non autorisées.,Le pare-feu empêche les connexions non autorisées.,1.0,0.0,0.0,False,False
+FRC073,terminology,fr,proofread,mistral:7b,Le pare-feu bloque les connexions non autorisées.,Le pare-feu bloque les connexions non autorisées.,1.0,0.0,0.0,True,False
+FRC074,terminology,fr,baseline,mistral:7b,L'émission est disponible en replay sur notre plateforme.,L'émission est accessible en replay sur notre plateforme.,1.0,0.0,0.0,False,False
+FRC074,terminology,fr,canadian,mistral:7b,L'émission est disponible en replay sur notre plateforme.,L'émission est accessible en répétition sur notre plateforme.,0.0,0.0,1.0,False,False
+FRC074,terminology,fr,metropolitan,mistral:7b,L'émission est disponible en replay sur notre plateforme.,L'émission est accessible en replay sur notre plateforme.,1.0,0.0,0.0,False,False
+FRC074,terminology,fr,proofread,mistral:7b,L'émission est disponible en replay sur notre plateforme.,L'émission est disponible en réplay sur notre plateforme.,0.0,0.0,1.0,False,False
+FRC075,terminology,fr,baseline,mistral:7b,Chaque lien hypertexte ouvre une nouvelle fenêtre.,Chaque lien hypertexte ouvre une nouvelle fenêtre de navigation.,1.0,0.0,0.0,False,False
+FRC075,terminology,fr,canadian,mistral:7b,Chaque lien hypertexte ouvre une nouvelle fenêtre.,Chaque lien hypertexte ouvre une nouvelle fenêtre à ciel ouvert.,1.0,0.0,0.0,False,False
+FRC075,terminology,fr,metropolitan,mistral:7b,Chaque lien hypertexte ouvre une nouvelle fenêtre.,Chaque lien hypertexte ouvre une nouvelle fenêtre à volet.,1.0,0.0,0.0,False,False
+FRC075,terminology,fr,proofread,mistral:7b,Chaque lien hypertexte ouvre une nouvelle fenêtre.,Chaque lien hypertexte ouvre une nouvelle fenêtre ouverte.,1.0,0.0,0.0,False,False
+FRC076,terminology,fr,baseline,mistral:7b,Le port du casque est obligatoire sur le chantier selon l'INRS.,Le port d'un casque est obligatoire sur le chantier selon l'INRS.,1.0,0.0,0.0,False,False
+FRC076,terminology,fr,canadian,mistral:7b,Le port du casque est obligatoire sur le chantier selon l'INRS.,Le port de la casquette est obligatoire sur le chantier d'après l'INRS.,1.0,0.0,0.0,False,False
+FRC076,terminology,fr,metropolitan,mistral:7b,Le port du casque est obligatoire sur le chantier selon l'INRS.,"L'utilisation d'un casque est obligatoire sur le site de travail, selon les normes de l'INRS.",1.0,0.0,0.0,False,False
+FRC076,terminology,fr,proofread,mistral:7b,Le port du casque est obligatoire sur le chantier selon l'INRS.,Le port du casque est obligatoire sur le chantier selon l'INRS.,1.0,0.0,0.0,True,False
+FRC077,semantic,fr,baseline,mistral:7b,Mon copain vient dîner avec nous demain.,Mon ami viendra diner chez nous demain.,0.0,0.0,1.0,False,False
+FRC077,semantic,fr,canadian,mistral:7b,Mon copain vient dîner avec nous demain.,Mon ami viendra dîner chez nous demain.,0.0,0.0,1.0,False,False
+FRC077,semantic,fr,metropolitan,mistral:7b,Mon copain vient dîner avec nous demain.,Mon ami viendra dîner chez nous demain.,0.0,0.0,1.0,False,False
+FRC077,semantic,fr,proofread,mistral:7b,Mon copain vient dîner avec nous demain.,Mon copain viendra dîner chez nous demain.,1.0,0.0,0.0,False,False
+FRC078,semantic,fr,baseline,mistral:7b,J'ai acheté du chewing-gum à la caisse.,Je suis allé à la caisse pour acheter du gum de mastic.,0.0,0.0,1.0,False,False
+FRC078,semantic,fr,canadian,mistral:7b,J'ai acheté du chewing-gum à la caisse.,J'ai acheté du gomme à mâcher à la casse.,0.0,1.0,1.0,False,False
+FRC078,semantic,fr,metropolitan,mistral:7b,J'ai acheté du chewing-gum à la caisse.,Je suis allé à la guichet pour acheter un morceau de gomme à mâcher.,0.0,1.0,1.0,False,False
+FRC078,semantic,fr,proofread,mistral:7b,J'ai acheté du chewing-gum à la caisse.,J'ai acheté du chewing-gum à la casse.,1.0,0.0,0.0,False,False
+FRC079,semantic,fr,baseline,mistral:7b,On va faire une promenade après le dîner.,Nous allons faire une promenade après le souper.,1.0,0.0,0.0,False,False
+FRC079,semantic,fr,canadian,mistral:7b,On va faire une promenade après le dîner.,Nous allons faire une balade après le souper.,0.0,0.0,1.0,False,False
+FRC079,semantic,fr,metropolitan,mistral:7b,On va faire une promenade après le dîner.,Nous allons prendre un balade après le repas.,0.0,0.0,1.0,False,False
+FRC079,semantic,fr,proofread,mistral:7b,On va faire une promenade après le dîner.,On va faire une promenade après le diner.,1.0,0.0,0.0,False,False
+FRC080,semantic,fr,baseline,mistral:7b,La neige fondue rend les trottoirs glissants ce matin.,La neige fondue rend les trottoirs glissants ce matin.,1.0,0.0,0.0,True,False
+FRC080,semantic,fr,canadian,mistral:7b,La neige fondue rend les trottoirs glissants ce matin.,La neige fondue rend les trottier glissants ce matin.,1.0,0.0,0.0,False,False
+FRC080,semantic,fr,metropolitan,mistral:7b,La neige fondue rend les trottoirs glissants ce matin.,Le fond de neige fait que glisser les trottoirs ce matin.,0.0,0.0,1.0,False,False
+FRC080,semantic,fr,proofread,mistral:7b,La neige fondue rend les trottoirs glissants ce matin.,La neige fondue rend les trottoirs glissants ce matin.,1.0,0.0,0.0,True,False
+FRC081,semantic,fr,baseline,mistral:7b,Il y a un groupe de collègues qui vient déjeuner.,Il y a un groupe de collègues qui se rassemble pour prendre leur repas du midi.,1.0,0.0,0.0,False,False
+FRC081,semantic,fr,canadian,mistral:7b,Il y a un groupe de collègues qui vient déjeuner.,Il y a un groupe d'amis qui viennent prendre leur déjeuner.,1.0,0.0,0.0,False,False
+FRC081,semantic,fr,metropolitan,mistral:7b,Il y a un groupe de collègues qui vient déjeuner.,Il y a un groupe d'amis qui viennent prendre leur déjeuner ensemble.,1.0,0.0,0.0,False,False
+FRC081,semantic,fr,proofread,mistral:7b,Il y a un groupe de collègues qui vient déjeuner.,Il y a un groupe de collègues qui viennent déjeuner.,1.0,0.0,0.0,False,False
+FRC082,semantic,fr,baseline,mistral:7b,Ajoute un peu de sucre roux sur le dessus.,Ajoutez un peu de sucre brun au-dessus.,0.0,0.0,1.0,False,False
+FRC082,semantic,fr,canadian,mistral:7b,Ajoute un peu de sucre roux sur le dessus.,Ajoute un peu de sucre brun au-dessus.,0.0,0.0,1.0,False,False
+FRC082,semantic,fr,metropolitan,mistral:7b,Ajoute un peu de sucre roux sur le dessus.,Ajoute un peu de sucre brun sur le dessus.,0.0,0.0,1.0,False,False
+FRC082,semantic,fr,proofread,mistral:7b,Ajoute un peu de sucre roux sur le dessus.,Ajoute un peu de sucre brun sur le dessus.,0.0,0.0,1.0,False,False
+FRC083,semantic,fr,baseline,mistral:7b,J'ai raté mon bus ce matin.,Je suis arrivé trop tard pour prendre mon bus aujourd'hui matin.,0.5,0.0,0.0,False,False
+FRC083,semantic,fr,canadian,mistral:7b,J'ai raté mon bus ce matin.,J'ai manqué mon autobus aujourd'hui matin.,0.0,1.0,1.0,False,False
+FRC083,semantic,fr,metropolitan,mistral:7b,J'ai raté mon bus ce matin.,J'ai manqué mon bus aujourd'hui matin.,0.5,0.5,0.0,False,False
+FRC083,semantic,fr,proofread,mistral:7b,J'ai raté mon bus ce matin.,J'ai rate mon bus ce matin.,0.5,0.0,0.0,False,False
+FRC085,semantic,fr,baseline,mistral:7b,"Je vais te rappeler tout à l'heure, je suis occupé.","Je te rappellerai bientôt, je suis actuellement occupé.",0.0,0.0,1.0,False,False
+FRC085,semantic,fr,canadian,mistral:7b,"Je vais te rappeler tout à l'heure, je suis occupé.","Je te rappellerai bientôt, je suis actuellement occupé.",0.0,0.0,1.0,False,False
+FRC085,semantic,fr,metropolitan,mistral:7b,"Je vais te rappeler tout à l'heure, je suis occupé.","Je te rappellerai bientôt, je suis actuellement occupé.",0.0,0.0,1.0,False,False
+FRC085,semantic,fr,proofread,mistral:7b,"Je vais te rappeler tout à l'heure, je suis occupé.","Je vais te rappeler tout à l'heure, je suis occupé(e).",1.0,0.0,0.0,False,False
+FRC086,semantic,fr,baseline,mistral:7b,— Merci beaucoup ! — Je vous en prie !,Vous êtes bien la bienvenue !,0.0,1.0,1.0,False,False
+FRC086,semantic,fr,canadian,mistral:7b,— Merci beaucoup ! — Je vous en prie !,— Merci beaucoup! — C'est un plaisir!,0.0,0.0,1.0,False,False
+FRC086,semantic,fr,metropolitan,mistral:7b,— Merci beaucoup ! — Je vous en prie !,— Merci beaucoup pour votre message ! — C'est un plaisir de vous aider !,0.0,0.0,1.0,False,False
+FRC086,semantic,fr,proofread,mistral:7b,— Merci beaucoup ! — Je vous en prie !,"— Merci beaucoup ! — Je vous en prie, merci !",1.0,0.0,0.0,False,False
+FRC087,register,fr,baseline,mistral:7b,"Bonjour, la réunion parents-professeurs aura lieu jeudi. Merci de confirmer votre présence auprès du secrétariat avant mercredi.","Bonjour, la réunion des parents et enseignants aura lieu jeudi. Veuillez confirmer votre présence auprès du secrétaire avant mercredi.",0.0,0.5,1.0,False,False
+FRC087,register,fr,canadian,mistral:7b,"Bonjour, la réunion parents-professeurs aura lieu jeudi. Merci de confirmer votre présence auprès du secrétariat avant mercredi.","Bonjour, la rencontre entre les parents et les enseignants aura lieu jeudi prochain. Veuillez confirmer votre participation auprès du secrétaire avant mercredi.",0.0,0.5,1.0,False,False
+FRC087,register,fr,metropolitan,mistral:7b,"Bonjour, la réunion parents-professeurs aura lieu jeudi. Merci de confirmer votre présence auprès du secrétariat avant mercredi.","Bonjour, la réunion des parents et enseignants aura lieu jeudi prochain. Veuillez confirmer votre participation auprès du secrétaire d'école avant mercredi.",0.0,0.5,1.0,False,False
+FRC087,register,fr,proofread,mistral:7b,"Bonjour, la réunion parents-professeurs aura lieu jeudi. Merci de confirmer votre présence auprès du secrétariat avant mercredi.","Bonjour, la réunion parents-professeurs aura lieu jeudi. Merci de confirmer votre présence auprès du secrétaire avant mercredi.",1.0,0.0,0.0,False,False
+FRC088,register,fr,baseline,mistral:7b,Vous devez apporter votre carte Vitale et arriver quinze minutes à l'avance.,Vous devez apportez votre carte Vitale et vous devez être arrivé quinze minutes avant.,1.0,0.0,0.0,False,False
+FRC088,register,fr,canadian,mistral:7b,Vous devez apporter votre carte Vitale et arriver quinze minutes à l'avance.,Vous devez apportez votre carte d'identité médicale et vous devrez être présent quinze minutes avant l'heure prévue.,0.0,0.0,1.0,False,False
+FRC088,register,fr,metropolitan,mistral:7b,Vous devez apporter votre carte Vitale et arriver quinze minutes à l'avance.,Vous devez apportez votre carte Vitale et vous y rendre quinze minutes avant l'heure prévue.,1.0,0.0,0.0,False,False
+FRC088,register,fr,proofread,mistral:7b,Vous devez apporter votre carte Vitale et arriver quinze minutes à l'avance.,Vous devez apporter votre carte Vitale et vous y rendre quinze minutes avant l'heure.,1.0,0.0,0.0,False,False
+FRC089,register,fr,baseline,mistral:7b,Les articles soldés peuvent être échangés sous trente jours sur présentation du ticket de caisse.,"Les articles vendus à prix fixe peuvent être échangés dans un délai de trente jours, en présentant le bon de commande.",0.0,0.0,1.0,False,False
+FRC089,register,fr,canadian,mistral:7b,Les articles soldés peuvent être échangés sous trente jours sur présentation du ticket de caisse.,"Les articles vendus à prix fixe peuvent être échangés dans un délai de trente jours, à condition de présenter le bon de commande original.",0.0,0.0,1.0,False,False
+FRC089,register,fr,metropolitan,mistral:7b,Les articles soldés peuvent être échangés sous trente jours sur présentation du ticket de caisse.,"Les articles vendus à prix fixe peuvent être échangés contre un bon de retour dans les trente jours suivant la date de vente, après présentation du billet de caisse original.",0.0,0.5,1.0,False,False
+FRC089,register,fr,proofread,mistral:7b,Les articles soldés peuvent être échangés sous trente jours sur présentation du ticket de caisse.,Les articles solde peuvent être échangés sous trente jours à la présentation du ticket de caisse.,1.0,0.0,0.0,False,False
+FRC090,register,fr,baseline,mistral:7b,Salut ! Ça te va pour dîner à 18 h ? Je peux passer te chercher.,Salut ! Va-t-il te convenir de dîner à 18h ? Pourrais-je venir te chercher ?,0.0,0.0,1.0,False,False
+FRC090,register,fr,canadian,mistral:7b,Salut ! Ça te va pour dîner à 18 h ? Je peux passer te chercher.,Bonjour ! Ça va pour aller à la souper à 18 h ? Je peux venir te chercher.,0.0,0.0,1.0,False,False
+FRC090,register,fr,metropolitan,mistral:7b,Salut ! Ça te va pour dîner à 18 h ? Je peux passer te chercher.,Bonjour ! Ça va pour dîner à 18h ? Je peux venir te chercher.,0.0,0.0,1.0,False,False
+FRC090,register,fr,proofread,mistral:7b,Salut ! Ça te va pour dîner à 18 h ? Je peux passer te chercher.,Salut ! Ça va pour dîner à 18h ? Je peux te chercher.,0.0,0.0,1.0,False,False
+FRC091,register,fr,baseline,mistral:7b,"Nous cherchons une personne autonome, capable de travailler en semaine et disponible dès que possible.",Nous recherchons une personne autonome qui peut travailler à temps plein durant la semaine et qui est disponible au plus vite.,0.0,0.0,1.0,False,False
+FRC091,register,fr,canadian,mistral:7b,"Nous cherchons une personne autonome, capable de travailler en semaine et disponible dès que possible.",Nous recherchons une personne autonome qui peut travailler à temps plein durant la semaine et qui sera disponible au plus tôt.,0.0,0.0,1.0,False,False
+FRC091,register,fr,metropolitan,mistral:7b,"Nous cherchons une personne autonome, capable de travailler en semaine et disponible dès que possible.","Nous recherchons une personne autonome, capable de travailler à temps plein durant la semaine et disponible au plus vite.",0.0,0.0,1.0,False,False
+FRC091,register,fr,proofread,mistral:7b,"Nous cherchons une personne autonome, capable de travailler en semaine et disponible dès que possible.","Nous cherchons une personne autonome, capable de travailler pendant la semaine et disponible le plus tôt possible.",0.0,0.0,1.0,False,False
+FRC092,register,fr,baseline,mistral:7b,La collecte des ordures ménagères est avancée d'une journée en raison du jour férié.,La collecte des déchets ménagers est repoussée d'un jour en raison de la fête nationale.,0.0,0.0,1.0,False,False
+FRC092,register,fr,canadian,mistral:7b,La collecte des ordures ménagères est avancée d'une journée en raison du jour férié.,La collecte des déchets ménagers est avancée d'un jour en raison de la journée fériée.,0.3333333333333333,0.0,1.0,False,False
+FRC092,register,fr,metropolitan,mistral:7b,La collecte des ordures ménagères est avancée d'une journée en raison du jour férié.,La collecte des déchets ménagers est repoussée d'un jour en raison de la fête nationale.,0.0,0.0,1.0,False,False
+FRC092,register,fr,proofread,mistral:7b,La collecte des ordures ménagères est avancée d'une journée en raison du jour férié.,La collecte des ordures ménagères est avancée d'un jour en raison du jour férié.,1.0,0.0,0.0,False,False
+FRC093,register,fr,baseline,mistral:7b,Le bureau sera fermé lundi. Bon week-end à toutes et à tous !,Le bureau sera fermé le lundi prochain. Bien un week-end à tous !,1.0,0.0,0.0,False,False
+FRC093,register,fr,canadian,mistral:7b,Le bureau sera fermé lundi. Bon week-end à toutes et à tous !,Le bureau sera fermé le lundi prochain. Bon week-end à tous les Québécois et Québécoises !,1.0,0.0,0.0,False,False
+FRC093,register,fr,metropolitan,mistral:7b,Le bureau sera fermé lundi. Bon week-end à toutes et à tous !,Le bureau sera fermé le lundi prochain. Bons weekends à tous !,0.0,0.0,1.0,False,False
+FRC093,register,fr,proofread,mistral:7b,Le bureau sera fermé lundi. Bon week-end à toutes et à tous !,Le bureau sera fermé dimanche. Bien week-end à toutes et à tous !,1.0,0.0,0.0,False,False
+FRC094,register,fr,baseline,mistral:7b,Merci de votre soutien. Vos dons permettent de toucher plus de familles chaque année.,Merci pour votre soutien. Votre don permet d'atteindre plus de familles chaque année.,1.0,0.0,1.0,False,False
+FRC094,register,fr,canadian,mistral:7b,Merci de votre soutien. Vos dons permettent de toucher plus de familles chaque année.,Merci beaucoup pour votre appui. Votre soutien nous permet d'atteindre plus de familles chaque année.,1.0,0.0,1.0,False,False
+FRC094,register,fr,metropolitan,mistral:7b,Merci de votre soutien. Vos dons permettent de toucher plus de familles chaque année.,Merci beaucoup pour votre soutien. Votre don permet d'atteindre plus de familles chaque année.,1.0,0.0,1.0,False,False
+FRC094,register,fr,proofread,mistral:7b,Merci de votre soutien. Vos dons permettent de toucher plus de familles chaque année.,Merci pour votre soutien. Votre don permet d'atteindre plus de familles chaque année.,1.0,0.0,1.0,False,False
+FRC095,grammar,fr,baseline,mistral:7b,Est-ce possible qu'il ait oublié la réunion ?,Est-il possible qu'il ait oublié la réunion ?,0.0,0.0,1.0,False,False
+FRC095,grammar,fr,canadian,mistral:7b,Est-ce possible qu'il ait oublié la réunion ?,Est-il possible qu'il ait oublié la rencontre ?,0.0,0.0,1.0,False,False
+FRC095,grammar,fr,metropolitan,mistral:7b,Est-ce possible qu'il ait oublié la réunion ?,Est-il possible qu'il ait oublié la réunion ?,0.0,0.0,1.0,False,False
+FRC095,grammar,fr,proofread,mistral:7b,Est-ce possible qu'il ait oublié la réunion ?,Est-ce possible qu'il ait oublié la réunion?,1.0,0.0,0.0,False,False
+FRC096,grammar,fr,baseline,mistral:7b,Je pense qu'on devrait attendre jusqu'à demain.,Nous devrions attendre jusqu'aujourd'hui.,0.0,0.0,1.0,False,False
+FRC096,grammar,fr,canadian,mistral:7b,Je pense qu'on devrait attendre jusqu'à demain.,Je crois que nous devrions attendre jusqu'aujourd'hui.,0.0,0.0,1.0,False,False
+FRC096,grammar,fr,metropolitan,mistral:7b,Je pense qu'on devrait attendre jusqu'à demain.,Je pense que nous devrions attendre jusqu'au jour d'après prochain.,0.0,0.0,1.0,False,False
+FRC096,grammar,fr,proofread,mistral:7b,Je pense qu'on devrait attendre jusqu'à demain.,Je pense qu'on devrait attendre jusqu'aujourd'hui.,0.0,0.0,1.0,False,False
+FRC097,grammar,fr,baseline,mistral:7b,"Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n'ai pas pu le joindre, mais je le contacterai à midi.",1.0,0.0,0.0,False,False
+FRC097,grammar,fr,canadian,mistral:7b,"Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n'ai pas pu le joindre, mais je le contacterai à midi.",1.0,0.0,0.0,False,False
+FRC097,grammar,fr,metropolitan,mistral:7b,"Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n'ai pu le joindre, mais je le contacterai à midi.",0.0,0.0,1.0,False,False
+FRC097,grammar,fr,proofread,mistral:7b,"Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n'ai pas eu le temps de vous appeler, mais je vais vous le faire à midi.",1.0,0.0,0.0,False,False
+FRC098,grammar,fr,baseline,mistral:7b,"Il est parti travailler, puis il est revenu tard.",Il est parti travailler et est revenu tard.,0.0,0.0,1.0,False,False
+FRC098,grammar,fr,canadian,mistral:7b,"Il est parti travailler, puis il est revenu tard.",Il est parti travailler et est revenu tard.,0.0,0.0,1.0,False,False
+FRC098,grammar,fr,metropolitan,mistral:7b,"Il est parti travailler, puis il est revenu tard.",Il est parti travailler et est rentré tard dans la soirée.,0.0,0.0,1.0,False,False
+FRC098,grammar,fr,proofread,mistral:7b,"Il est parti travailler, puis il est revenu tard.","Il est parti travailler, puis il est revenu tard. (Correct)",1.0,0.0,0.0,False,False
+FRC099,grammar,fr,baseline,mistral:7b,On va au restaurant ce soir ou bien on reste ici ?,Allons-nous au restaurant ce soir ou resterons-nous ici ?,0.5,0.0,0.5,False,False
+FRC099,grammar,fr,canadian,mistral:7b,On va au restaurant ce soir ou bien on reste ici ?,Nous allons à un restaurant ce soir ou bien nous resterons chez nous ?,1.0,0.0,0.0,False,False
+FRC099,grammar,fr,metropolitan,mistral:7b,On va au restaurant ce soir ou bien on reste ici ?,Allons-nous à un restaurant ce soir ou resterons-nous chez nous ?,0.5,0.0,0.5,False,False
+FRC099,grammar,fr,proofread,mistral:7b,On va au restaurant ce soir ou bien on reste ici ?,On va au restaurant ce soir ou bien on restera ici ?,1.0,0.0,0.0,False,False
+GRA007,grammar,qc,baseline,mistral:7b,Ça se peut-tu qu'il ait oublié la réunion ?,Peut-être qu'il a omis de se souvenir de la réunion ?,0.0,0.0,1.0,False,False
+GRA007,grammar,qc,canadian,mistral:7b,Ça se peut-tu qu'il ait oublié la réunion ?,Il y a une possibilité qu'il ait omis de se souvenir de l'assemblée ?,0.0,0.0,1.0,False,False
+GRA007,grammar,qc,metropolitan,mistral:7b,Ça se peut-tu qu'il ait oublié la réunion ?,Est-ce possible qu'il ait oublié la réunion?,0.0,1.0,1.0,False,False
+GRA007,grammar,qc,proofread,mistral:7b,Ça se peut-tu qu'il ait oublié la réunion ?,Peut-être qu'il a oublié la réunion ?,0.0,0.0,1.0,False,False
+GRA008,grammar,qc,baseline,mistral:7b,Moi je pense qu'on devrait attendre à demain.,Je pense que nous devrions attendre demain.,0.0,0.0,1.0,False,False
+GRA008,grammar,qc,canadian,mistral:7b,Moi je pense qu'on devrait attendre à demain.,"Moi, je crois que nous devrions attendre d'aujourd'hui pour demain.",0.0,0.0,1.0,False,False
+GRA008,grammar,qc,metropolitan,mistral:7b,Moi je pense qu'on devrait attendre à demain.,Je pense plutôt que nous devrions attendre demain.,0.0,0.0,1.0,False,False
+GRA008,grammar,qc,proofread,mistral:7b,Moi je pense qu'on devrait attendre à demain.,Moi je pense que nous devrions attendre demain.,0.0,0.0,1.0,False,False
+GRA009,grammar,qc,baseline,mistral:7b,"J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n'ai pu le joindre, mais je le contacterai à midi.",0.0,0.0,1.0,False,False
+GRA009,grammar,qc,canadian,mistral:7b,"J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n'ai pas eu le temps de te le rappeler, mais je vais le faire à midi.",0.0,1.0,1.0,False,False
+GRA009,grammar,qc,metropolitan,mistral:7b,"J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n'ai pu le joindre, mais je le contacterai à midi.",0.0,0.0,1.0,False,False
+GRA009,grammar,qc,proofread,mistral:7b,"J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","J'ai pas eu le temps d'appeler, mais je vais le faire à midi.",1.0,0.0,0.0,False,False
+GRA010,grammar,qc,baseline,mistral:7b,"Il est parti travailler, pis il est revenu tard.",Il est parti travailler et est revenu tard.,0.0,0.0,1.0,False,False
+GRA010,grammar,qc,canadian,mistral:7b,"Il est parti travailler, pis il est revenu tard.","Il est parti travailler, mais il est rentré tard.",0.0,0.0,1.0,False,False
+GRA010,grammar,qc,metropolitan,mistral:7b,"Il est parti travailler, pis il est revenu tard.",Il est parti travailler et est rentré tard dans la soirée.,0.0,0.0,1.0,False,False
+GRA010,grammar,qc,proofread,mistral:7b,"Il est parti travailler, pis il est revenu tard.","Il est parti travailler, puis il est revenu tard.",0.0,1.0,1.0,False,False
+GRA011,grammar,qc,baseline,mistral:7b,On s'en va-tu au restaurant à soir ou ben on reste ici ?,Allons-nous donc au restaurant ce soir ou resterons-nous ici ?,0.0,0.5,1.0,False,False
+GRA011,grammar,qc,canadian,mistral:7b,On s'en va-tu au restaurant à soir ou ben on reste ici ?,On va au restaurant ce soir ou bien on reste chez nous ?,0.0,1.0,1.0,False,False
+GRA011,grammar,qc,metropolitan,mistral:7b,On s'en va-tu au restaurant à soir ou ben on reste ici ?,Allons-nous donc sortir au restaurant ce soir ou rester ici ?,0.0,0.5,1.0,False,False
+GRA011,grammar,qc,proofread,mistral:7b,On s'en va-tu au restaurant à soir ou ben on reste ici ?,On se rend au restaurant ce soir ou bien on reste ici ?,0.0,1.0,1.0,False,False
+LEX015,lexical,qc,baseline,mistral:7b,Nous avons loué un char pour visiter la Gaspésie.,Nous avons loué une voiture pour visiter la Gaspésie.,0.0,1.0,1.0,False,False
+LEX015,lexical,qc,canadian,mistral:7b,Nous avons loué un char pour visiter la Gaspésie.,Nous avons loué un véhicule tout terrain pour explorer la Gaspésie.,0.0,0.0,1.0,False,False
+LEX015,lexical,qc,metropolitan,mistral:7b,Nous avons loué un char pour visiter la Gaspésie.,Nous avons loué une voiture pour explorer la Gaspésie.,0.0,1.0,1.0,False,False
+LEX015,lexical,qc,proofread,mistral:7b,Nous avons loué un char pour visiter la Gaspésie.,Nous avons loué un char pour visiter la Gaspésie. (Correct),1.0,0.0,0.0,False,False
+LEX016,lexical,qc,baseline,mistral:7b,Passe-moi la brocheuse pour assembler le rapport.,Donne-moi l'aiguilleur pour rassembler le rapport.,0.0,0.0,1.0,False,False
+LEX016,lexical,qc,canadian,mistral:7b,Passe-moi la brocheuse pour assembler le rapport.,Donne-moi le ciseau pour coller le rapport ensemble.,0.0,0.0,1.0,False,False
+LEX016,lexical,qc,metropolitan,mistral:7b,Passe-moi la brocheuse pour assembler le rapport.,Donne-moi la brocheuse pour rassembler le rapport.,1.0,0.0,0.0,False,False
+LEX016,lexical,qc,proofread,mistral:7b,Passe-moi la brocheuse pour assembler le rapport.,Passe-moi la brosseuse pour assembler le rapport.,0.0,0.0,1.0,False,False
+LEX017,lexical,qc,baseline,mistral:7b,"Chaque élève doit apporter un crayon, une efface et une règle.","Chaque élève doit apporter un crayon, un érasable et une règle.",0.0,0.0,1.0,False,False
+LEX017,lexical,qc,canadian,mistral:7b,"Chaque élève doit apporter un crayon, une efface et une règle.","Chaque élève doit aporter un crayon, un érasable et une règle à l'école.",0.0,0.0,1.0,False,False
+LEX017,lexical,qc,metropolitan,mistral:7b,"Chaque élève doit apporter un crayon, une efface et une règle.","Chaque élève doit apporter un crayon, un érasable et une règle.",0.0,0.0,1.0,False,False
+LEX017,lexical,qc,proofread,mistral:7b,"Chaque élève doit apporter un crayon, une efface et une règle.","Chaque élève doit apporter un crayon, un éraser et une règle.",0.0,0.0,1.0,False,False
+LEX018,lexical,qc,baseline,mistral:7b,Veuillez éteindre votre cellulaire pendant la réunion.,Veuillez éteindre votre téléphone portable pendant la réunion.,0.0,1.0,1.0,False,False
+LEX018,lexical,qc,canadian,mistral:7b,Veuillez éteindre votre cellulaire pendant la réunion.,S'il vous plaît éteignez votre téléphone portable pendant la réunion.,0.0,1.0,1.0,False,False
+LEX018,lexical,qc,metropolitan,mistral:7b,Veuillez éteindre votre cellulaire pendant la réunion.,S'il vous plaît éteignez votre téléphone portable pendant la réunion.,0.0,1.0,1.0,False,False
+LEX018,lexical,qc,proofread,mistral:7b,Veuillez éteindre votre cellulaire pendant la réunion.,Veuillez éteindre votre téléphone portable pendant la réunion.,0.0,1.0,1.0,False,False
+LEX019,lexical,qc,baseline,mistral:7b,Le repas est servi avec des patates frites et une salade.,Le repas est servi accompagné de pommes de terre frites et d'une salade.,0.0,1.0,1.0,False,False
+LEX019,lexical,qc,canadian,mistral:7b,Le repas est servi avec des patates frites et une salade.,Le repas est servi accompagné de pommes frites et d'une salade.,0.0,1.0,1.0,False,False
+LEX019,lexical,qc,metropolitan,mistral:7b,Le repas est servi avec des patates frites et une salade.,Le repas est servi accompagné de pommes de terre frites et d'une salade.,0.0,1.0,1.0,False,False
+LEX019,lexical,qc,proofread,mistral:7b,Le repas est servi avec des patates frites et une salade.,Le repas est servi avec des pommes de terre frites et une salade.,0.0,1.0,1.0,False,False
+LEX020,lexical,qc,baseline,mistral:7b,Un breuvage chaud est offert à l'arrivée des invités.,Un boisson chaude est proposée aux arrivées des invités.,0.0,1.0,1.0,False,False
+LEX020,lexical,qc,canadian,mistral:7b,Un breuvage chaud est offert à l'arrivée des invités.,Un boisson chaude est proposée aux arrivées des invités.,0.0,1.0,1.0,False,False
+LEX020,lexical,qc,metropolitan,mistral:7b,Un breuvage chaud est offert à l'arrivée des invités.,Un boisson chaude est proposée aux arrivées des invités.,0.0,1.0,1.0,False,False
+LEX020,lexical,qc,proofread,mistral:7b,Un breuvage chaud est offert à l'arrivée des invités.,Un breuvage chaud est offert aux arrivées des invités.,1.0,0.0,0.0,False,False
+LEX021,lexical,qc,baseline,mistral:7b,Ce produit peut contenir des arachides.,Ce produit peut contenir des noisettes.,0.0,0.0,1.0,False,False
+LEX021,lexical,qc,canadian,mistral:7b,Ce produit peut contenir des arachides.,Ce produit peut contenir des noisettes.,0.0,0.0,1.0,False,False
+LEX021,lexical,qc,metropolitan,mistral:7b,Ce produit peut contenir des arachides.,Ce produit peut contenir des noisettes.,0.0,0.0,1.0,False,False
+LEX021,lexical,qc,proofread,mistral:7b,Ce produit peut contenir des arachides.,Ce produit peut contenir de l'arachide.,0.0,0.0,1.0,False,False
+LEX022,lexical,qc,baseline,mistral:7b,Les bleuets du Lac-Saint-Jean arrivent en août.,Les bleuets du Lac-Saint-Jean arrivent au mois d'août.,1.0,0.0,0.0,False,False
+LEX022,lexical,qc,canadian,mistral:7b,Les bleuets du Lac-Saint-Jean arrivent en août.,Les bleuets du lac Saint-Jean font leur apparition en août.,1.0,0.0,0.0,False,False
+LEX022,lexical,qc,metropolitan,mistral:7b,Les bleuets du Lac-Saint-Jean arrivent en août.,Les bleuets du lac Saint-Jean font leur apparition en août.,1.0,0.0,0.0,False,False
+LEX022,lexical,qc,proofread,mistral:7b,Les bleuets du Lac-Saint-Jean arrivent en août.,Les bleuets du Lac-Saint-Jean arrivent en août.,1.0,0.0,0.0,True,False
+LEX023,lexical,qc,baseline,mistral:7b,La crème glacée est faite sur place.,La crème glacée est préparée sur site.,1.0,0.0,0.0,False,False
+LEX023,lexical,qc,canadian,mistral:7b,La crème glacée est faite sur place.,La crème glacée est préparée sur les lieux.,1.0,0.0,0.0,False,False
+LEX023,lexical,qc,metropolitan,mistral:7b,La crème glacée est faite sur place.,La crème glacée est préparée sur les lieux.,1.0,0.0,0.0,False,False
+LEX023,lexical,qc,proofread,mistral:7b,La crème glacée est faite sur place.,La crème glacée est faite sur lieux.,1.0,0.0,0.0,False,False
+LEX024,lexical,qc,baseline,mistral:7b,"N'oublie pas ta tuque et tes mitaines, il fait froid.","Ne oubliez pas votre chapeau de neige et vos gants, il fait froid.",0.0,0.0,1.0,False,False
+LEX024,lexical,qc,canadian,mistral:7b,"N'oublie pas ta tuque et tes mitaines, il fait froid.","Ne oubliez pas votre tuque et vos gants, il fait froid.",0.5,0.0,0.5,False,False
+LEX024,lexical,qc,metropolitan,mistral:7b,"N'oublie pas ta tuque et tes mitaines, il fait froid.","Ne oubliez pas votre chapeau de neige et vos gants, il fait très froid.",0.0,0.0,1.0,False,False
+LEX024,lexical,qc,proofread,mistral:7b,"N'oublie pas ta tuque et tes mitaines, il fait froid.","N'oubliez pas votre tuque et vos gants, il fait froid.",0.5,0.0,0.5,False,False
+LEX025,lexical,qc,baseline,mistral:7b,Les espadrilles sont obligatoires dans le gymnase.,Les espadrilles sont obligatoires dans la salle de gymnastique.,1.0,0.0,0.0,False,False
+LEX025,lexical,qc,canadian,mistral:7b,Les espadrilles sont obligatoires dans le gymnase.,Les espadrilles sont impératives dans le gymnasium.,1.0,0.0,0.0,False,False
+LEX025,lexical,qc,metropolitan,mistral:7b,Les espadrilles sont obligatoires dans le gymnase.,Les espadrilles sont impératives dans la salle de sport.,1.0,0.0,0.0,False,False
+LEX025,lexical,qc,proofread,mistral:7b,Les espadrilles sont obligatoires dans le gymnase.,Les espadrilles sont obligatoires dans le gymnasium.,1.0,0.0,0.0,False,False
+LEX026,lexical,qc,baseline,mistral:7b,La laveuse et la sécheuse sont incluses dans le loyer.,Les lavageuses et sèche-linge sont comprises dans la location.,0.0,0.5,1.0,False,False
+LEX026,lexical,qc,canadian,mistral:7b,La laveuse et la sécheuse sont incluses dans le loyer.,Les lavageuses et sécheuses sont comprises dans la location.,0.5,0.0,0.5,False,False
+LEX026,lexical,qc,metropolitan,mistral:7b,La laveuse et la sécheuse sont incluses dans le loyer.,Le lave-linge et le séchoir sont compris dans la location.,0.0,0.5,1.0,False,False
+LEX026,lexical,qc,proofread,mistral:7b,La laveuse et la sécheuse sont incluses dans le loyer.,La lavatrice et la sécheuse sont incluses dans le loyer.,0.5,0.0,0.5,False,False
+LEX027,lexical,qc,baseline,mistral:7b,Passe la balayeuse dans le salon avant les invités.,Faites passer la balai à travers la salle avant l'arrivée des invités.,0.0,0.0,1.0,False,False
+LEX027,lexical,qc,canadian,mistral:7b,Passe la balayeuse dans le salon avant les invités.,Fais glisser la balai à cheveux dans la salle de séjour avant l'arrivée des invités.,0.0,0.0,1.0,False,False
+LEX027,lexical,qc,metropolitan,mistral:7b,Passe la balayeuse dans le salon avant les invités.,Fais glisser la balai à l'avance dans la salle de réception avant l'arrivée des invités.,0.0,0.0,1.0,False,False
+LEX027,lexical,qc,proofread,mistral:7b,Passe la balayeuse dans le salon avant les invités.,Passez la balaiuse dans le salon avant les invités.,0.0,0.0,1.0,False,False
+LEX028,lexical,qc,baseline,mistral:7b,Remplis la chaudière d'eau avant d'arroser.,Remplissez la chaudière d'eau avant de l'arroser.,1.0,0.0,0.0,False,False
+LEX028,lexical,qc,canadian,mistral:7b,Remplis la chaudière d'eau avant d'arroser.,Remplissez la chaudière à eau avant de l'arrosier.,1.0,0.0,0.0,False,False
+LEX028,lexical,qc,metropolitan,mistral:7b,Remplis la chaudière d'eau avant d'arroser.,Remplissez la chaudière d'eau avant de l'arroser.,1.0,0.0,0.0,False,False
+LEX028,lexical,qc,proofread,mistral:7b,Remplis la chaudière d'eau avant d'arroser.,Remplissez la chaudière d'eau avant d'arrosser.,1.0,0.0,0.0,False,False
+LEX029,lexical,qc,baseline,mistral:7b,Le serveur apporte les cafés sur un cabaret.,Le serveur apporte les cafés dans un cabaret.,1.0,0.0,0.0,False,False
+LEX029,lexical,qc,canadian,mistral:7b,Le serveur apporte les cafés sur un cabaret.,Le serveur apporte les cafés à la table du cabaret.,1.0,0.0,0.0,False,False
+LEX029,lexical,qc,metropolitan,mistral:7b,Le serveur apporte les cafés sur un cabaret.,Le serveur apporte les cafés dans un cabaret.,1.0,0.0,0.0,False,False
+LEX029,lexical,qc,proofread,mistral:7b,Le serveur apporte les cafés sur un cabaret.,Le serveur apporte les cafés sur un café.,0.0,0.0,1.0,False,False
+LEX030,lexical,qc,baseline,mistral:7b,Le loyer est vraiment dispendieux dans ce quartier.,Le loyer est vraiment coûteux dans ce quartier.,0.0,0.0,1.0,False,False
+LEX030,lexical,qc,canadian,mistral:7b,Le loyer est vraiment dispendieux dans ce quartier.,Le loyer est vraiment coûteux dans ce quartier-ci.,0.0,0.0,1.0,False,False
+LEX030,lexical,qc,metropolitan,mistral:7b,Le loyer est vraiment dispendieux dans ce quartier.,Le loyer est vraiment coûteux dans ce quartier-ci.,0.0,0.0,1.0,False,False
+LEX030,lexical,qc,proofread,mistral:7b,Le loyer est vraiment dispendieux dans ce quartier.,Le loyer est vraiment dispendieux dans ce quartier-ci.,1.0,0.0,0.0,False,False
+LEX031,lexical,qc,baseline,mistral:7b,Une débarbouillette propre est fournie chaque jour.,Une débarbouillette propre est fournie chaque jour.,1.0,0.0,0.0,True,False
+LEX031,lexical,qc,canadian,mistral:7b,Une débarbouillette propre est fournie chaque jour.,Une débarbouillotte propre est offerte chaque jour.,0.0,0.0,1.0,False,False
+LEX031,lexical,qc,metropolitan,mistral:7b,Une débarbouillette propre est fournie chaque jour.,Une débarbouillette propreté est fournie chaque jour.,1.0,0.0,0.0,False,False
+LEX031,lexical,qc,proofread,mistral:7b,Une débarbouillette propre est fournie chaque jour.,Une débarrasseuse propre est fournie chaque jour.,0.0,0.0,1.0,False,False
+LEX032,lexical,qc,baseline,mistral:7b,Un abreuvoir est installé près de l'aire de jeux.,Un abreuvoir est placé à proximité de la zone de jeux.,1.0,0.0,0.0,False,False
+LEX032,lexical,qc,canadian,mistral:7b,Un abreuvoir est installé près de l'aire de jeux.,Un abreuvoir est placé à proximité de la zone de jeu.,1.0,0.0,0.0,False,False
+LEX032,lexical,qc,metropolitan,mistral:7b,Un abreuvoir est installé près de l'aire de jeux.,Un abreuvoir a été placé à proximité de la zone de jeux.,1.0,0.0,0.0,False,False
+LEX032,lexical,qc,proofread,mistral:7b,Un abreuvoir est installé près de l'aire de jeux.,Un abreuvoir est installé près de l'aire de jeu.,1.0,0.0,0.0,False,False
+REG007,register,qc,baseline,mistral:7b,"Bonjour, la rencontre de parents aura lieu jeudi. Veuillez confirmer votre présence auprès du secrétariat avant mercredi.","Bonjour, la réunion des parents aura lieu jeudi prochain. Veuillez confirmer votre participation envers le secrétaire avant mercredi.",0.5,0.0,1.0,False,False
+REG007,register,qc,canadian,mistral:7b,"Bonjour, la rencontre de parents aura lieu jeudi. Veuillez confirmer votre présence auprès du secrétariat avant mercredi.","Bonjour, la réunion des parents aura lieu jeudi prochain. Veuillez confirmer votre participation envers le bureau administratif d'ici mercredi.",0.5,0.0,1.0,False,False
+REG007,register,qc,metropolitan,mistral:7b,"Bonjour, la rencontre de parents aura lieu jeudi. Veuillez confirmer votre présence auprès du secrétariat avant mercredi.","Bonjour, la réunion des parents aura lieu jeudi prochain. Veuillez confirmer votre participation envers le secrétaire avant mercredi.",0.5,0.0,1.0,False,False
+REG007,register,qc,proofread,mistral:7b,"Bonjour, la rencontre de parents aura lieu jeudi. Veuillez confirmer votre présence auprès du secrétariat avant mercredi.","Bonjour, la réunion des parents aura lieu jeudi. Veuillez confirmer votre présence auprès du secrétaire avant mercredi.",0.5,0.0,1.0,False,False
+REG008,register,qc,baseline,mistral:7b,Vous devez apporter votre carte d'assurance maladie et arriver quinze minutes à l'avance.,Vous devez apportez votre carte d'assurance maladie et vous devez être arrivé quinze minutes avant.,1.0,0.0,0.0,False,False
+REG008,register,qc,canadian,mistral:7b,Vous devez apporter votre carte d'assurance maladie et arriver quinze minutes à l'avance.,Vous devez apportez votre carte d'assurance-maladie et vous devez être arrivé(e) quinze minutes avant l'heure prévue.,1.0,0.0,0.0,False,False
+REG008,register,qc,metropolitan,mistral:7b,Vous devez apporter votre carte d'assurance maladie et arriver quinze minutes à l'avance.,Vous devez vous assurer de porter votre carte d'assurance maladie avec vous et d'arriver quinze minutes avant l'heure prévue.,1.0,0.0,0.0,False,False
+REG008,register,qc,proofread,mistral:7b,Vous devez apporter votre carte d'assurance maladie et arriver quinze minutes à l'avance.,Vous devez apporter votre carte d'assurance maladie et vous devez être arrivé quinze minutes à l'avance.,1.0,0.0,0.0,False,False
+REG009,register,qc,baseline,mistral:7b,Les articles en solde peuvent être échangés dans les trente jours sur présentation de la facture.,Les articles en liquidation peuvent être échangés dans les trente jours à condition de présenter la facture.,1.0,0.0,0.0,False,False
+REG009,register,qc,canadian,mistral:7b,Les articles en solde peuvent être échangés dans les trente jours sur présentation de la facture.,Les articles en liquidation peuvent être échangés dans les trente jours à condition de présenter la facture.,1.0,0.0,0.0,False,False
+REG009,register,qc,metropolitan,mistral:7b,Les articles en solde peuvent être échangés dans les trente jours sur présentation de la facture.,Les articles en liquidation peuvent être échangés dans les trente jours à condition de présenter la facture originale.,1.0,0.0,0.0,False,False
+REG009,register,qc,proofread,mistral:7b,Les articles en solde peuvent être échangés dans les trente jours sur présentation de la facture.,Les articles en liquidation peuvent être échangés dans les trente jours à présentation de la facture.,1.0,0.0,0.0,False,False
+REG010,register,qc,baseline,mistral:7b,Salut ! Es-tu correct pour souper à 18 h ? Je peux passer te prendre.,Bonjour ! Est-ce que c'est correct de dîner à 18h ? Pourriez-vous venir m'y prendre?,0.0,0.0,1.0,False,False
+REG010,register,qc,canadian,mistral:7b,Salut ! Es-tu correct pour souper à 18 h ? Je peux passer te prendre.,Bonjour ! Est-ce que tu es disponible à dîner à 18h ? Je serais heureux de venir te chercher.,0.0,0.0,1.0,False,False
+REG010,register,qc,metropolitan,mistral:7b,Salut ! Es-tu correct pour souper à 18 h ? Je peux passer te prendre.,Bonjour ! Est-ce que c'est correct de dîner à 18h ? Pourrais-je venir te chercher?,0.0,0.0,1.0,False,False
+REG010,register,qc,proofread,mistral:7b,Salut ! Es-tu correct pour souper à 18 h ? Je peux passer te prendre.,Salut ! Es-tu correct pour souper à 18h ? Je peux pas vous prendre.,0.5,0.0,1.0,False,False
+REG011,register,qc,baseline,mistral:7b,"Nous cherchons une personne autonome, capable de travailler sur semaine et disponible dès que possible.","Nous recherchons une personne autonome, capable de travailler à temps plein et disponible au plus vite.",0.0,0.0,1.0,False,False
+REG011,register,qc,canadian,mistral:7b,"Nous cherchons une personne autonome, capable de travailler sur semaine et disponible dès que possible.",Nous recherchons une personne autonome qui peut travailler à temps plein et qui soit disponible au plus vite.,0.0,0.0,1.0,False,False
+REG011,register,qc,metropolitan,mistral:7b,"Nous cherchons une personne autonome, capable de travailler sur semaine et disponible dès que possible.","Nous recherchons une personne autonome, capable de travailler à temps plein et disponible au plus vite.",0.0,0.0,1.0,False,False
+REG011,register,qc,proofread,mistral:7b,"Nous cherchons une personne autonome, capable de travailler sur semaine et disponible dès que possible.","Nous cherchons une personne autonome, capable de travailler pendant une semaine et disponible le plus tôt possible.",0.0,0.0,1.0,False,False
+REG012,register,qc,baseline,mistral:7b,La collecte des matières résiduelles est devancée d'une journée en raison du congé férié.,La collecte des déchets ménagers est repoussée d'un jour en raison de la fête nationale.,0.0,0.0,1.0,False,False
+REG012,register,qc,canadian,mistral:7b,La collecte des matières résiduelles est devancée d'une journée en raison du congé férié.,La collecte des déchets ménagers est avancée d'un jour à cause de la journée fériée.,0.0,0.3333333333333333,1.0,False,False
+REG012,register,qc,metropolitan,mistral:7b,La collecte des matières résiduelles est devancée d'une journée en raison du congé férié.,La collecte des déchets ménagers est repoussée d'un jour en raison de la fête nationale.,0.0,0.0,1.0,False,False
+REG012,register,qc,proofread,mistral:7b,La collecte des matières résiduelles est devancée d'une journée en raison du congé férié.,La collecte des matières résiduelles est reportée d'une journée en raison du congé férié.,0.6666666666666666,0.0,0.0,False,False
+REG013,register,qc,baseline,mistral:7b,Le bureau sera fermé lundi. Bonne fin de semaine à toutes et à tous !,Le bureau sera clos le lundi prochain. Bienne fin de semaine à tous !,1.0,0.0,0.0,False,False
+REG013,register,qc,canadian,mistral:7b,Le bureau sera fermé lundi. Bonne fin de semaine à toutes et à tous !,Le bureau sera fermé le lundi prochain. Bonne fin de semaine à tous les Québécois !,1.0,0.0,0.0,False,False
+REG013,register,qc,metropolitan,mistral:7b,Le bureau sera fermé lundi. Bonne fin de semaine à toutes et à tous !,Le bureau sera fermé le lundi prochain. Bienvenue la fin de semaine à tous !,1.0,0.0,0.0,False,False
+REG013,register,qc,proofread,mistral:7b,Le bureau sera fermé lundi. Bonne fin de semaine à toutes et à tous !,Le bureau sera fermé dimanche. Bienne fin de semaine à toutes et à tous !,1.0,0.0,0.0,False,False
+REG014,register,qc,baseline,mistral:7b,Merci de votre soutien. Vos dons permettent de rejoindre plus de familles chaque année.,Merci pour votre soutien. Votre don permet d'atteindre de nouvelles familles chaque année.,0.0,1.0,1.0,False,False
+REG014,register,qc,canadian,mistral:7b,Merci de votre soutien. Vos dons permettent de rejoindre plus de familles chaque année.,Merci beaucoup pour votre appui. Votre soutien nous permet d'atteindre plus de familles chaque année.,0.0,1.0,1.0,False,False
+REG014,register,qc,metropolitan,mistral:7b,Merci de votre soutien. Vos dons permettent de rejoindre plus de familles chaque année.,Merci beaucoup pour votre soutien. Votre don permet d'atteindre chaque année de nouvelles familles.,0.0,1.0,1.0,False,False
+REG014,register,qc,proofread,mistral:7b,Merci de votre soutien. Vos dons permettent de rejoindre plus de familles chaque année.,Merci pour votre soutien. Votre don permet d'atteindre plus de familles chaque année.,0.0,1.0,1.0,False,False
+SEM009,semantic,qc,baseline,mistral:7b,Mon chum vient souper avec nous demain.,Mon ami viendra dîner chez nous demain.,0.0,0.0,1.0,False,False
+SEM009,semantic,qc,canadian,mistral:7b,Mon chum vient souper avec nous demain.,Mon ami viendra dîner chez nous demain.,0.0,0.0,1.0,False,False
+SEM009,semantic,qc,metropolitan,mistral:7b,Mon chum vient souper avec nous demain.,Mon ami viendra dîner chez nous demain.,0.0,0.0,1.0,False,False
+SEM009,semantic,qc,proofread,mistral:7b,Mon chum vient souper avec nous demain.,Mon ami viendra souper chez nous demain.,0.0,0.0,1.0,False,False
+SEM010,semantic,qc,baseline,mistral:7b,J'ai acheté de la gomme à la caisse.,Je suis allé à la caisse pour acheter de la gomme.,1.0,0.0,0.0,False,False
+SEM010,semantic,qc,canadian,mistral:7b,J'ai acheté de la gomme à la caisse.,J'ai acheté de la gomme à la bouche à la casse.,1.0,0.0,0.0,False,False
+SEM010,semantic,qc,metropolitan,mistral:7b,J'ai acheté de la gomme à la caisse.,Je suis allé à la boutique pour acheter de la gomme à mâcher.,1.0,0.0,0.0,False,False
+SEM010,semantic,qc,proofread,mistral:7b,J'ai acheté de la gomme à la caisse.,J'ai acheté de la gomme à la casse.,1.0,0.0,0.0,False,False
+SEM011,semantic,qc,baseline,mistral:7b,On va prendre une marche après le souper.,Nous allons prendre un promenade après le dîner.,0.0,0.0,1.0,False,False
+SEM011,semantic,qc,canadian,mistral:7b,On va prendre une marche après le souper.,Nous allons faire une promenade après le dîner.,0.0,1.0,1.0,False,False
+SEM011,semantic,qc,metropolitan,mistral:7b,On va prendre une marche après le souper.,Nous allons faire une promenade après le dîner.,0.0,1.0,1.0,False,False
+SEM011,semantic,qc,proofread,mistral:7b,On va prendre une marche après le souper.,"On va prendre un marché après le souper. (Il manque un ""e"" pour que ""marché"" soit correct.)
+
+Correct version: On va prendre un marché après le souper. (On va prendre un marché après le dîner en français québécois.)",0.0,0.0,1.0,False,False
+SEM012,semantic,qc,baseline,mistral:7b,La sloche rend les trottoirs glissants ce matin.,Le trottoir est glacé ce matin à cause de la slochue.,0.0,0.0,1.0,False,False
+SEM012,semantic,qc,canadian,mistral:7b,La sloche rend les trottoirs glissants ce matin.,Le trottoir est glissant cette matinée à cause de la sloche.,1.0,0.0,0.0,False,False
+SEM012,semantic,qc,metropolitan,mistral:7b,La sloche rend les trottoirs glissants ce matin.,Le trottoir est glacé ce matin à cause de la slochue.,0.0,0.0,1.0,False,False
+SEM012,semantic,qc,proofread,mistral:7b,La sloche rend les trottoirs glissants ce matin.,La glisse rend les trottoirs glissants ce matin.,0.0,0.0,1.0,False,False
+SEM013,semantic,qc,baseline,mistral:7b,Il y a une gang de collègues qui vient dîner.,Il y a un groupe de camarades qui viennent diner.,0.0,1.0,1.0,False,False
+SEM013,semantic,qc,canadian,mistral:7b,Il y a une gang de collègues qui vient dîner.,Il y a un groupe de camarades qui viennent manger à table.,0.0,1.0,1.0,False,False
+SEM013,semantic,qc,metropolitan,mistral:7b,Il y a une gang de collègues qui vient dîner.,Il y a un groupe d'amis qui viennent diner ensemble.,0.0,1.0,1.0,False,False
+SEM013,semantic,qc,proofread,mistral:7b,Il y a une gang de collègues qui vient dîner.,Il y a une bande de collègues qui viennent dîner.,0.0,1.0,1.0,False,False
+SEM014,semantic,qc,baseline,mistral:7b,Ajoute un peu de cassonade sur le dessus.,Ajoutez un peu de sucre brun sur le dessus.,0.0,0.0,1.0,False,False
+SEM014,semantic,qc,canadian,mistral:7b,Ajoute un peu de cassonade sur le dessus.,Ajoute un peu de sucre roux au-dessus.,0.0,1.0,1.0,False,False
+SEM014,semantic,qc,metropolitan,mistral:7b,Ajoute un peu de cassonade sur le dessus.,Ajoute un peu de sucre roux au-dessus.,0.0,1.0,1.0,False,False
+SEM014,semantic,qc,proofread,mistral:7b,Ajoute un peu de cassonade sur le dessus.,Ajoute un peu de sucre roux sur le dessus.,0.0,1.0,1.0,False,False
+SEM015,semantic,qc,baseline,mistral:7b,J'ai manqué mon autobus ce matin.,Je n'ai pas pris mon autocar aujourd'hui matin.,0.0,0.0,1.0,False,False
+SEM015,semantic,qc,canadian,mistral:7b,J'ai manqué mon autobus ce matin.,J'ai raté mon autocar au matin.,0.0,0.5,1.0,False,False
+SEM015,semantic,qc,metropolitan,mistral:7b,J'ai manqué mon autobus ce matin.,J'ai raté mon bus au matin.,0.0,1.0,1.0,False,False
+SEM015,semantic,qc,proofread,mistral:7b,J'ai manqué mon autobus ce matin.,J'ai raté mon autobus ce matin.,0.5,0.5,0.0,False,False
+SEM017,semantic,qc,baseline,mistral:7b,"Je vais te rappeler tantôt, je suis occupé là.","Je vous rappellerai bientôt, je suis actuellement occupé là-bas.",0.0,0.0,1.0,False,False
+SEM017,semantic,qc,canadian,mistral:7b,"Je vais te rappeler tantôt, je suis occupé là.","Je te rappellerai bientôt, je suis actuellement occupé là-bas.",0.0,0.0,1.0,False,False
+SEM017,semantic,qc,metropolitan,mistral:7b,"Je vais te rappeler tantôt, je suis occupé là.","Je t'en rappellerai bientôt, car je suis actuellement occupé là-bas.",0.0,0.0,1.0,False,False
+SEM017,semantic,qc,proofread,mistral:7b,"Je vais te rappeler tantôt, je suis occupé là.","Je vous rappellerai bientôt, je suis occupé ici.",0.0,0.0,1.0,False,False
+SEM018,semantic,qc,baseline,mistral:7b,— Merci beaucoup ! — Bienvenue !,Vous êtes très bienvenu(e) ! — Merci beaucoup !,0.0,0.0,1.0,False,False
+SEM018,semantic,qc,canadian,mistral:7b,— Merci beaucoup ! — Bienvenue !,"— Merci beaucoup! — Benvenu! (Notez que ""benvenu"" est une forme informelle de ""bienvenue"".)",1.0,0.0,0.0,False,False
+SEM018,semantic,qc,metropolitan,mistral:7b,— Merci beaucoup ! — Bienvenue !,— Merci beaucoup pour votre message ! — Bienvenue sur notre plateforme !,1.0,0.0,0.0,False,False
+SEM018,semantic,qc,proofread,mistral:7b,— Merci beaucoup ! — Bienvenue !,— Merci beaucoup ! — Bienvenue ! (Merci beaucoup ! Bienvenue !),1.0,0.0,0.0,False,False
+TER011,terminology,qc,baseline,mistral:7b,Ajoutez un mot-clic pertinent à votre publication.,"Vous êtes invité à participer à notre événement exceptionnel qui se déroulera le week-end prochain ! N'hésitez pas à venir découvrir nos conférences inspirantes, ateliers interactifs et activités divertissantes.
+
+Pour vous inscrire, rendez-vous sur notre site web ou contactez-nous par courriel.
+
+N'oubliez pas de partager cette invitation avec vos amis !
+
+Mot-clic : événement exceptionnel",1.0,0.0,0.0,False,False
+TER011,terminology,qc,canadian,mistral:7b,Ajoutez un mot-clic pertinent à votre publication.,"Texte original :
+""The best way to learn a new language is to immerse yourself in it.""
+
+Texte réécrit :
+""La meilleure façon d'apprendre une nouvelle langue, c'est de vous plonger dedans.""
+
+Mot-clic pertinent : #ApprendreFrançais #ImmergerDansLaLangue",1.0,0.0,0.0,False,False
+TER011,terminology,qc,metropolitan,mistral:7b,Ajoutez un mot-clic pertinent à votre publication.,"Bonjour à tous mes lecteurs !
+
+Dans cet article, nous allons aborder l'importance de la santé mentale dans notre vie quotidienne. Nous verrons comment elle peut influencer nos relations sociales et professionnelles, ainsi que notre bien-être général.
+
+N'hésitez pas à partager vos propres expériences ou à poser des questions sur ce sujet important.
+
+Mot-clic : #SantéMentale
+
+Voici un exemple de commentaire pour votre publication : ""Vous êtes en train de lire un article intéressant sur la santé mentale ! N'hésitez pas à partager vos propres expériences ou à poser des questions. #SantéMentale",1.0,0.0,0.0,False,False
+TER011,terminology,qc,proofread,mistral:7b,Ajoutez un mot-clic pertinent à votre publication.,"Bonjour, voici la correction du texte :
+
+""Je suis un réviseur linguistique francophone. J'aime beaucoup mon travail car il me permet de corriger les erreurs et d'améliorer la qualité des textes en français. Je travaille souvent avec des clients étrangers qui ont besoin d'une aide pour leur traduction ou leur révision linguistique.""
+
+Mot-clic pertinent : #révisionlinguistique #français #qualitétexte",1.0,0.0,0.0,False,False
+TER012,terminology,qc,baseline,mistral:7b,"Attention, ce paragraphe contient un divulgâcheur.","Attention, ce passage contient une divulgation.
+
+Voici la traduction en français :
+
+""The following paragraph contains a spoiler.",0.0,1.0,1.0,False,False
+TER012,terminology,qc,canadian,mistral:7b,"Attention, ce paragraphe contient un divulgâcheur.","Attention, ce paragraphe contient un divulgateur.
+
+Veuillez noter que cette phrase contient une personne qui divulgue des informations confidentielles ou secrètes. Dans le contexte québécois, le mot ""divulgâcheur"" est utilisé pour désigner quelqu'un qui révèle des informations confidentielles sans l'autorisation nécessaire.",1.0,0.0,0.0,False,False
+TER012,terminology,qc,metropolitan,mistral:7b,"Attention, ce paragraphe contient un divulgâcheur.","Attention, ce passage contient une divulgation.
+
+Voici la relecture du texte en préservant sa variété linguistique et son sens :
+
+Attention, cette révélation est confidentielle.
+
+Voici la relecture du texte :
+
+Attention, cette information est confidentielle.",0.0,0.0,1.0,False,False
+TER012,terminology,qc,proofread,mistral:7b,"Attention, ce paragraphe contient un divulgâcheur.","Attention, ce paragraphe contient un divulgacheur.",0.0,0.0,1.0,False,False
+TER013,terminology,qc,baseline,mistral:7b,Un bogue d'affichage a été corrigé dans cette version.,Une erreur de visualisation a été corrigée dans cette version.,0.0,0.0,1.0,False,False
+TER013,terminology,qc,canadian,mistral:7b,Un bogue d'affichage a été corrigé dans cette version.,Un problème d'affichage a été rectifié dans cette version-ci.,0.0,0.0,1.0,False,False
+TER013,terminology,qc,metropolitan,mistral:7b,Un bogue d'affichage a été corrigé dans cette version.,Un problème de visualisation a été rectifié dans cette nouvelle édition.,0.0,0.0,1.0,False,False
+TER013,terminology,qc,proofread,mistral:7b,Un bogue d'affichage a été corrigé dans cette version.,Un bug d'affichage a été corrigé dans cette version.,0.0,1.0,1.0,False,False
+TER014,terminology,qc,baseline,mistral:7b,Consultez le didacticiel avant de configurer votre compte.,Consultez le manuel d'utilisation avant de configurer votre compte.,0.0,0.0,1.0,False,False
+TER014,terminology,qc,canadian,mistral:7b,Consultez le didacticiel avant de configurer votre compte.,Consultez le didacticiel avant de configurer votre compte en utilisant la version québécoise du français.,1.0,0.0,0.0,False,False
+TER014,terminology,qc,metropolitan,mistral:7b,Consultez le didacticiel avant de configurer votre compte.,Consultez le manuel d'utilisation avant de configurer votre compte.,0.0,0.0,1.0,False,False
+TER014,terminology,qc,proofread,mistral:7b,Consultez le didacticiel avant de configurer votre compte.,Consultez le didacticiel avant de configurer votre compte. (Il manque un point final),1.0,0.0,0.0,False,False
+TER015,terminology,qc,baseline,mistral:7b,Abonnez-vous à notre infolettre mensuelle.,S'abonnez à notre newsletter mensuelle.,0.0,1.0,1.0,False,False
+TER015,terminology,qc,canadian,mistral:7b,Abonnez-vous à notre infolettre mensuelle.,Abonnez-vous à notre lettre d'information mensuelle.,0.0,0.0,1.0,False,False
+TER015,terminology,qc,metropolitan,mistral:7b,Abonnez-vous à notre infolettre mensuelle.,S'abonnez à notre newsletter mensuelle.,0.0,1.0,1.0,False,False
+TER015,terminology,qc,proofread,mistral:7b,Abonnez-vous à notre infolettre mensuelle.,Abonnez-vous à notre infolettre mensuelle.,1.0,0.0,0.0,True,False
+TER016,terminology,qc,baseline,mistral:7b,Ajoutez une frimousse pour adoucir le ton du message.,"Bonjour tout le monde !
+
+Je suis heureux de vous accueillir sur mon blog personnel. Voici quelques astuces pour améliorer votre écriture en français.
+
+1. Utilisez des phrases courtes et claires pour éviter les confusions.
+2. Essayez d'éviter les mots techniques complexes sauf si cela est nécessaire.
+3. Faites attention à l'utilisation de la ponctuation correcte pour éviter toute ambiguïté.
+4. Utilisez des expressions courantes et familières pour rendre votre écriture plus accessible.
+5. Essayez d'éviter les mots rares ou archaïques, car ils peuvent être difficiles à comprendre pour certains lecteurs.
+6. Faites attention à l'utilisation de la grammaire correcte et essayez d'éviter les erreurs de conjugaison.
+7. Essayez d'éviter les mots répétés ou les phrases longues, car ils peuvent être difficiles à lire et comprendre.
+8. Faites attention à l'utilisation de la bonne orthographe pour éviter toute confusion.
+9. Utilisez des exemples concrets pour illustrer vos points.
+10. Essayez d'éviter les mots ou expressions offensants ou inappropriés, car ils peuvent être choquants pour certains lecteurs.
+
+Bonne écriture ! 😊",0.0,0.0,1.0,False,False
+TER016,terminology,qc,canadian,mistral:7b,Ajoutez une frimousse pour adoucir le ton du message.,"Bonjour tout le monde !
+
+Je suis heureux d'être de retour pour vous aider à écrire en français québécois! Si vous avez des questions ou besoin d'aide, n'hésitez pas à me demander.
+
+Au fil du temps, nous allons travailler ensemble pour améliorer votre écriture et vous aider à écrire en français québécois avec confiance!
+
+Bonne écrivaine/écrivain! 😊",0.0,0.0,1.0,False,False
+TER016,terminology,qc,metropolitan,mistral:7b,Ajoutez une frimousse pour adoucir le ton du message.,"Bonjour tout le monde !
+
+Je suis heureux de vous accueillir sur ce blog dédié à la mode et à la beauté. Nous avons l'intention de partager avec vous des conseils, des astuces et des tendances pour que vous soyez toujours en pointe dans votre vie quotidienne.
+
+N'hésitez pas à nous suivre sur nos réseaux sociaux pour rester informé de toutes les dernières nouvelles du monde de la mode et de la beauté !
+
+A bientôt, mes amis !
+
+Bise,
+L'équipe de ce blog. 😊",0.0,0.0,1.0,False,False
+TER016,terminology,qc,proofread,mistral:7b,Ajoutez une frimousse pour adoucir le ton du message.,"Bonjour chéri(e) !
+
+Je suis ravi(e) de vous contacter ! Comment ça va ? J'espère que tout va bien et que tu as un beau jour.
+
+Je t'ai écrit pour te parler de notre prochain projet. Il s'agit d'une collaboration entre nous deux, et je suis très excité(e) à l'idée de travailler avec toi sur ça !
+
+Nous allons créer un site web qui sera consacré à la mode pour les femmes. J'ai déjà trouvé un nom pour le site : ""Mode Femme Chic"". Qu'en penses-tu ?
+
+Je suis sûr(e) que cela va être une collaboration réussie et que nous allons créer quelque chose de magnifique !
+
+A bientôt, chéri(e) !
+
+Bise(s),
+[Votre nom]
+
+P.S : Je suis désolé(e) si j'ai fait des erreurs dans mon message. Je n'ai pas vraiment pris le temps de lire attentivement avant d'envoyer. J'espère que cela ne te dérange pas trop !",0.0,0.0,1.0,False,False
+TER017,terminology,qc,baseline,mistral:7b,Présentez votre carte de la RAMQ à la réception.,Présentez votre carte d'assurance maladie de l'RAMQ à la réception.,1.0,0.0,0.0,False,False
+TER017,terminology,qc,canadian,mistral:7b,Présentez votre carte de la RAMQ à la réception.,Présentez votre carte d'assurance maladie de la Régie de l'assurance maladie du Québec (RAMQ) à la réception.,1.0,0.0,0.0,False,False
+TER017,terminology,qc,metropolitan,mistral:7b,Présentez votre carte de la RAMQ à la réception.,Présentez votre carte d'assurance maladie RAMQ à la réception.,1.0,0.0,0.0,False,False
+TER017,terminology,qc,proofread,mistral:7b,Présentez votre carte de la RAMQ à la réception.,Présentez votre carte de la RAMQ à la réception des soins de santé.,1.0,0.0,0.0,False,False
+TER018,terminology,qc,baseline,mistral:7b,"Après le cégep, elle compte étudier en génie à l'université.","Après le Cégep, elle compte étudier en ingénierie à l'université.",1.0,0.0,0.0,False,False
+TER018,terminology,qc,canadian,mistral:7b,"Après le cégep, elle compte étudier en génie à l'université.","Après le CÉGEP, elle compte étudier en ingénierie à l'université.",1.0,0.0,0.0,False,False
+TER018,terminology,qc,metropolitan,mistral:7b,"Après le cégep, elle compte étudier en génie à l'université.","Après le Cégep, elle compte étudier en ingénierie à l'université.",1.0,0.0,0.0,False,False
+TER018,terminology,qc,proofread,mistral:7b,"Après le cégep, elle compte étudier en génie à l'université.","Après le Cégep, elle compte étudier en ingénierie à l'université.",1.0,0.0,0.0,False,False
+TER019,terminology,qc,baseline,mistral:7b,Inscrivez votre numéro d'assurance sociale dans la case prévue.,Saisissez votre numéro de sécurité sociale dans la case appropriée.,0.0,1.0,1.0,False,False
+TER019,terminology,qc,canadian,mistral:7b,Inscrivez votre numéro d'assurance sociale dans la case prévue.,Saisissez votre numéro de sécurité sociale dans la case appropriée.,0.0,1.0,1.0,False,False
+TER019,terminology,qc,metropolitan,mistral:7b,Inscrivez votre numéro d'assurance sociale dans la case prévue.,Saisissez votre numéro de sécurité sociale dans la case appropriée.,0.0,1.0,1.0,False,False
+TER019,terminology,qc,proofread,mistral:7b,Inscrivez votre numéro d'assurance sociale dans la case prévue.,Inscrivez votre numéro d'assurance maladie dans la case prévue.,0.0,0.0,1.0,False,False
+TER020,terminology,qc,baseline,mistral:7b,Vous pouvez cotiser à votre REER avant la date limite.,Vous pouvez cotiser à votre Régime d'épargne-retraite avant la date limite.,0.0,0.0,1.0,False,False
+TER020,terminology,qc,canadian,mistral:7b,Vous pouvez cotiser à votre REER avant la date limite.,Vous pouvez cotiser à votre Régie d'assurance-emploi du Québec (REER) avant la date limite.,1.0,0.0,0.0,False,False
+TER020,terminology,qc,metropolitan,mistral:7b,Vous pouvez cotiser à votre REER avant la date limite.,Vous pouvez souscrire à votre CRR avant la date de clôture.,0.0,0.0,1.0,False,False
+TER020,terminology,qc,proofread,mistral:7b,Vous pouvez cotiser à votre REER avant la date limite.,Vous pouvez cotiser à votre RÉE avant la date limite.,0.0,0.0,1.0,False,False
+TER021,terminology,qc,baseline,mistral:7b,Le coupe-feu bloque les connexions non autorisées.,Le débloqueur de feux d'arrêt bloque les connexions non autorisées.,0.0,0.0,1.0,False,False
+TER021,terminology,qc,canadian,mistral:7b,Le coupe-feu bloque les connexions non autorisées.,Le coup de feu bloque les connexions non autorisées.,0.0,0.0,1.0,False,False
+TER021,terminology,qc,metropolitan,mistral:7b,Le coupe-feu bloque les connexions non autorisées.,Le coup de feu bloque les connexions non autorisées.,0.0,0.0,1.0,False,False
+TER021,terminology,qc,proofread,mistral:7b,Le coupe-feu bloque les connexions non autorisées.,Le coup-foudre bloque les connexions non autorisées.,0.0,0.0,1.0,False,False
+TER022,terminology,qc,baseline,mistral:7b,L'émission est offerte en différé sur notre plateforme.,L'émission est disponible en différé sur notre plateforme.,1.0,0.0,0.0,False,False
+TER022,terminology,qc,canadian,mistral:7b,L'émission est offerte en différé sur notre plateforme.,L'émission sera disponible en retard sur notre plateforme.,0.0,0.0,1.0,False,False
+TER022,terminology,qc,metropolitan,mistral:7b,L'émission est offerte en différé sur notre plateforme.,L'émission est disponible en différé sur notre plateforme.,1.0,0.0,0.0,False,False
+TER022,terminology,qc,proofread,mistral:7b,L'émission est offerte en différé sur notre plateforme.,L'émission est offerte en différé sur notre plateforme. (Aucune erreur à corriger),1.0,0.0,0.0,False,False
+TER023,terminology,qc,baseline,mistral:7b,Chaque hyperlien ouvre une nouvelle fenêtre.,Chaque lien hypertexte ouvre une nouvelle fenêtre.,0.0,1.0,1.0,False,False
+TER023,terminology,qc,canadian,mistral:7b,Chaque hyperlien ouvre une nouvelle fenêtre.,Chaque lien hypertexte ouvre une nouvelle fenêtre.,0.0,1.0,1.0,False,False
+TER023,terminology,qc,metropolitan,mistral:7b,Chaque hyperlien ouvre une nouvelle fenêtre.,Chaque lien hypertexte ouvre une nouvelle fenêtre.,0.0,1.0,1.0,False,False
+TER023,terminology,qc,proofread,mistral:7b,Chaque hyperlien ouvre une nouvelle fenêtre.,Chaque hyperlien ouvre une nouvelle fenêtre ouvre.,1.0,0.0,0.0,False,False
+TER024,terminology,qc,baseline,mistral:7b,Le port du casque est obligatoire sur le chantier de la CNESST.,Le port d'un casque est obligatoire sur le site de travail de la CNESST.,1.0,0.0,0.0,False,False
+TER024,terminology,qc,canadian,mistral:7b,Le port du casque est obligatoire sur le chantier de la CNESST.,Le port d'un casque est obligatoire sur le site de travail de la CNESST.,1.0,0.0,0.0,False,False
+TER024,terminology,qc,metropolitan,mistral:7b,Le port du casque est obligatoire sur le chantier de la CNESST.,Le port d'un casque est obligatoire sur le site de travail de la CNESST.,1.0,0.0,0.0,False,False
+TER024,terminology,qc,proofread,mistral:7b,Le port du casque est obligatoire sur le chantier de la CNESST.,Le port du casque est obligatoire sur le chantier de la CNESST. (Correct),1.0,0.0,0.0,False,False

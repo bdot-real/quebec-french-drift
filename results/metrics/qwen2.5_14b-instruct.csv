@@ -445,3 +445,594 @@ GRA004,grammar,qc,baseline,qwen2.5:14b-instruct,On a eu de la misère à trouver
 GRA004,grammar,qc,canadian,qwen2.5:14b-instruct,On a eu de la misère à trouver un stationnement proche du stade.,On a eu du trouble à trouver un stationnement près du stade.,0.5,0.0,0.5,False,False
 GRA004,grammar,qc,metropolitan,qwen2.5:14b-instruct,On a eu de la misère à trouver un stationnement proche du stade.,On a eu du mal à dénicher un parking près du stade.,0.0,1.0,1.0,False,False
 GRA004,grammar,qc,proofread,qwen2.5:14b-instruct,On a eu de la misère à trouver un stationnement proche du stade.,On a eu de la misère à trouver un stationnement près du stade.,1.0,0.0,0.0,False,False
+FRC045,lexical,fr,baseline,qwen2.5:14b-instruct,Nous avons loué une voiture pour visiter la Bretagne.,Nous avons pris une voiture en location pour explorer la Bretagne.,1.0,0.0,0.0,False,False
+FRC045,lexical,fr,canadian,qwen2.5:14b-instruct,Nous avons loué une voiture pour visiter la Bretagne.,On a loué une auto pour explorer la Bretagne.,0.0,0.0,1.0,False,False
+FRC045,lexical,fr,metropolitan,qwen2.5:14b-instruct,Nous avons loué une voiture pour visiter la Bretagne.,Nous avons pris un véhicule en location afin de découvrir la Bretagne.,0.0,0.0,1.0,False,False
+FRC045,lexical,fr,proofread,qwen2.5:14b-instruct,Nous avons loué une voiture pour visiter la Bretagne.,Nous avons loué une voiture pour visiter la Bretagne.,1.0,0.0,0.0,True,False
+FRC046,lexical,fr,baseline,qwen2.5:14b-instruct,Passe-moi l'agrafeuse pour assembler le rapport.,Passes-moi l'agrafeuse pour assembler le rapport.,1.0,0.0,0.0,False,False
+FRC046,lexical,fr,canadian,qwen2.5:14b-instruct,Passe-moi l'agrafeuse pour assembler le rapport.,Passe-moi l'agrafeuse pour assesembler le rapport.,1.0,0.0,0.0,False,False
+FRC046,lexical,fr,metropolitan,qwen2.5:14b-instruct,Passe-moi l'agrafeuse pour assembler le rapport.,Passes-moi l'agrafeuse pour coller ensemble le rapport.,1.0,0.0,0.0,False,False
+FRC046,lexical,fr,proofread,qwen2.5:14b-instruct,Passe-moi l'agrafeuse pour assembler le rapport.,"Passe-moi l'agrafeuse pour asseoir le rapport.  
+
+(Note: Il semble y avoir une confusion entre ""assembler"" et ""asseoir"". Si le but est de fixer physiquement les pages du rapport ensemble, on devrait dire ""assembler"". Sinon, si c'est pour rendre le rapport définitif ou officiel, on pourrait utiliser ""asseoir"". Selon le contexte original, la correction peut varier.)  
+
+Si l'intention était bien d'utiliser ""assembler"", voici la version corrigée :
+
+Passe-moi l'agrafeuse pour assembler le rapport.",1.0,0.0,0.0,False,False
+FRC047,lexical,fr,baseline,qwen2.5:14b-instruct,"Chaque élève doit apporter un crayon, une gomme et une règle.","Chaque élève doit amener un crayon, une gomme et une règle.",1.0,0.0,0.0,False,False
+FRC047,lexical,fr,canadian,qwen2.5:14b-instruct,"Chaque élève doit apporter un crayon, une gomme et une règle.","Chaque étudiant doit amener un crayon, une gomme et un équerre.",1.0,0.0,0.0,False,False
+FRC047,lexical,fr,metropolitan,qwen2.5:14b-instruct,"Chaque élève doit apporter un crayon, une gomme et une règle.","Tout élève est tenu d'amener un stylo, un ruban correcteur et un équerre. 
+
+(Note: Il y a eu une petite erreur dans le terme ""règle"" qui signifie généralement ""rule"". Si vous vouliez dire ""équerre"", c'est un outil spécifique pour dessiner des angles droits. Sinon, si vous entendez par règle simplement la règle de mesure, on peut aussi l'appeler ""mètre"" ou ""règle à mesurer"" en français.) 
+
+Correction selon le contexte initial et sans ajouter d'explications supplémentaires :
+
+Tout élève est tenu d'amener un stylo, un ruban correcteur et une règle.",0.0,0.0,1.0,False,False
+FRC047,lexical,fr,proofread,qwen2.5:14b-instruct,"Chaque élève doit apporter un crayon, une gomme et une règle.","Chaque élève doit apporter un crayon, une gomme et un rule.
+
+Correction (avec maintien des usages régionaux valides, mais notant ici qu'il y a une erreur dans le terme ""rule"" qui n'est pas français) :
+
+Chaque élève doit apporter un crayon, une gomme et une règle.",1.0,0.0,0.0,False,False
+FRC048,lexical,fr,baseline,qwen2.5:14b-instruct,Veuillez éteindre votre portable pendant la réunion.,Veuillez couper votre téléphone portable pendant la réunion.,1.0,0.0,0.0,False,False
+FRC048,lexical,fr,canadian,qwen2.5:14b-instruct,Veuillez éteindre votre portable pendant la réunion.,"S'il-vous-plait, coupe ton cellulaire pendant la réunion.",0.0,1.0,1.0,False,False
+FRC048,lexical,fr,metropolitan,qwen2.5:14b-instruct,Veuillez éteindre votre portable pendant la réunion.,Merci de couper votre téléphone durant l'assemblée.,0.0,0.0,1.0,False,False
+FRC048,lexical,fr,proofread,qwen2.5:14b-instruct,Veuillez éteindre votre portable pendant la réunion.,Veuillez éteindre votre téléphone portable pendant la réunion.,1.0,0.0,0.0,False,False
+FRC049,lexical,fr,baseline,qwen2.5:14b-instruct,Le repas est servi avec des frites et une salade.,"Le repas accompagne des frites et une salade. 
+
+(Note: Une reformulation plus naturelle serait ""Le repas est accompagné de frites et d'une salade."", mais je respecte votre demande de ne pas apporter de modifications supplémentaires au sens.) 
+
+Pour rester strictement conforme à la consigne initiale sans apporter de modification supplémentaire, voici une version légèrement ajustée tout en préservant le style demandé :
+Le repas est servi avec des frites et une salade.",1.0,0.0,0.0,False,False
+FRC049,lexical,fr,canadian,qwen2.5:14b-instruct,Le repas est servi avec des frites et une salade.,L'mèche est servie aveç des frites et une salade.,1.0,0.0,0.0,False,False
+FRC049,lexical,fr,metropolitan,qwen2.5:14b-instruct,Le repas est servi avec des frites et une salade.,On sert le repas accompagné de frites et d'une salade.,1.0,0.0,0.0,False,False
+FRC049,lexical,fr,proofread,qwen2.5:14b-instruct,Le repas est servi avec des frites et une salade.,Le repas est servi avec des frites et une salade.,1.0,0.0,0.0,True,False
+FRC050,lexical,fr,baseline,qwen2.5:14b-instruct,Une boisson chaude est offerte à l'arrivée des invités.,Un verre chaud est servi aux invités dès leur arrivée.,0.0,0.0,1.0,False,False
+FRC050,lexical,fr,canadian,qwen2.5:14b-instruct,Une boisson chaude est offerte à l'arrivée des invités.,Une boisson chaude leur est servie dès leur arrivée.,1.0,0.0,0.0,False,False
+FRC050,lexical,fr,metropolitan,qwen2.5:14b-instruct,Une boisson chaude est offerte à l'arrivée des invités.,Un breuvage chaud leur est proposé dès leur arrivée.,0.0,1.0,1.0,False,False
+FRC050,lexical,fr,proofread,qwen2.5:14b-instruct,Une boisson chaude est offerte à l'arrivée des invités.,Une boisson chaude est servie aux arrivants.,1.0,0.0,0.0,False,False
+FRC051,lexical,fr,baseline,qwen2.5:14b-instruct,Ce produit peut contenir des cacahuètes.,Ce produit peut contenir des arachides.,0.0,1.0,1.0,False,False
+FRC051,lexical,fr,canadian,qwen2.5:14b-instruct,Ce produit peut contenir des cacahuètes.,C't'produit-là peut contenir des arachides.,0.0,1.0,1.0,False,False
+FRC051,lexical,fr,metropolitan,qwen2.5:14b-instruct,Ce produit peut contenir des cacahuètes.,Ce produit peut inclure des cacahuètes.,1.0,0.0,0.0,False,False
+FRC051,lexical,fr,proofread,qwen2.5:14b-instruct,Ce produit peut contenir des cacahuètes.,Ce produit peut contenir des cacahuettes.,0.0,0.0,1.0,False,False
+FRC052,lexical,fr,baseline,qwen2.5:14b-instruct,Les myrtilles des Vosges arrivent en août.,Les myrtilles des Vosges sont disponibles en août.,1.0,0.0,0.0,False,False
+FRC052,lexical,fr,canadian,qwen2.5:14b-instruct,Les myrtilles des Vosges arrivent en août.,Les myrtilles des Vosges pointent le bout de leur nez en août.,1.0,0.0,0.0,False,False
+FRC052,lexical,fr,metropolitan,qwen2.5:14b-instruct,Les myrtilles des Vosges arrivent en août.,Les bleberries des Vosges sont de saison en août.,0.0,0.0,1.0,False,False
+FRC052,lexical,fr,proofread,qwen2.5:14b-instruct,Les myrtilles des Vosges arrivent en août.,Les myrtilles des Vosges arrivent en août.,1.0,0.0,0.0,True,False
+FRC053,lexical,fr,baseline,qwen2.5:14b-instruct,La glace est faite sur place.,La glace est fabriquée sur place.,1.0,0.0,0.0,False,False
+FRC053,lexical,fr,canadian,qwen2.5:14b-instruct,La glace est faite sur place.,L'glace est faitte sur place.,1.0,0.0,0.0,False,False
+FRC053,lexical,fr,metropolitan,qwen2.5:14b-instruct,La glace est faite sur place.,La glace est fabriquée sur place.,1.0,0.0,0.0,False,False
+FRC053,lexical,fr,proofread,qwen2.5:14b-instruct,La glace est faite sur place.,La glace est fabriquée sur place.,1.0,0.0,0.0,False,False
+FRC054,lexical,fr,baseline,qwen2.5:14b-instruct,"N'oublie pas ton bonnet et tes moufles, il fait froid.","N'oublie pas ton bonnet et tes mitaines, il fait très froid.",0.5,0.5,0.5,False,False
+FRC054,lexical,fr,canadian,qwen2.5:14b-instruct,"N'oublie pas ton bonnet et tes moufles, il fait froid.","M'ten rappele ton bonnet et tes moufles, y fait ben froid dehors.",1.0,0.0,0.0,False,False
+FRC054,lexical,fr,metropolitan,qwen2.5:14b-instruct,"N'oublie pas ton bonnet et tes moufles, il fait froid.","N'oublie pas de prendre ton bonnet et tes mitaines, il fait plutôt frais dehors.",0.5,0.5,0.5,False,False
+FRC054,lexical,fr,proofread,qwen2.5:14b-instruct,"N'oublie pas ton bonnet et tes moufles, il fait froid.","N'oublie pas ton bonnet et tes moufles, il fait très froid.",1.0,0.0,0.0,False,False
+FRC055,lexical,fr,baseline,qwen2.5:14b-instruct,Les baskets sont obligatoires dans le gymnase.,Les baskets sont nécessaires dans le gymnase.,1.0,0.0,0.0,False,False
+FRC055,lexical,fr,canadian,qwen2.5:14b-instruct,Les baskets sont obligatoires dans le gymnase.,Les souliers de sport sont requis au gymnase.,0.0,0.0,1.0,False,False
+FRC055,lexical,fr,metropolitan,qwen2.5:14b-instruct,Les baskets sont obligatoires dans le gymnase.,Les chaussures de sport sont indispensables pour entrer dans le gymnase.,0.0,0.0,1.0,False,False
+FRC055,lexical,fr,proofread,qwen2.5:14b-instruct,Les baskets sont obligatoires dans le gymnase.,Les baskets sont obligatoires dans le gymnase.,1.0,0.0,0.0,True,False
+FRC056,lexical,fr,baseline,qwen2.5:14b-instruct,Le lave-linge et le sèche-linge sont inclus dans le loyer.,Le lave-linge et le sèche-linge sont compris dans le loyer.,1.0,0.0,0.0,False,False
+FRC056,lexical,fr,canadian,qwen2.5:14b-instruct,Le lave-linge et le sèche-linge sont inclus dans le loyer.,L'laveuse et l'séchoffre font partie du loyer.,0.0,0.5,1.0,False,False
+FRC056,lexical,fr,metropolitan,qwen2.5:14b-instruct,Le lave-linge et le sèche-linge sont inclus dans le loyer.,Le lave-linge ainsi que le sèche-linge sont compris dans le montant du loyer.,1.0,0.0,0.0,False,False
+FRC056,lexical,fr,proofread,qwen2.5:14b-instruct,Le lave-linge et le sèche-linge sont inclus dans le loyer.,"Le lave-linge et le séchoir à linges sont inclus dans le loyer.  
+
+(Note: J'ai utilisé ""séchoir à linges"" au lieu de ""sèche-linge"" car ce dernier terme est moins couramment utilisé en français standard pour désigner cet appareil, bien que compris dans certaines régions.) 
+
+Cependant, si le terme ""sèche-linge"" est couramment utilisé et accepté dans votre région, vous pouvez conserver cette formulation :
+
+Le lave-linge et le sèche-linge sont inclus dans le loyer.",1.0,0.0,0.0,False,False
+FRC057,lexical,fr,baseline,qwen2.5:14b-instruct,Passe l'aspirateur dans le salon avant les invités.,Passes l'aspirateur dans le salon avant les invités.,1.0,0.0,0.0,False,False
+FRC057,lexical,fr,canadian,qwen2.5:14b-instruct,Passe l'aspirateur dans le salon avant les invités.,Passe l'aspi dans le salon avant les invités.,0.0,0.0,1.0,False,False
+FRC057,lexical,fr,metropolitan,qwen2.5:14b-instruct,Passe l'aspirateur dans le salon avant les invités.,Fais un coup d'aspirateur dans le salon avant l'arrivée des invités.,1.0,0.0,0.0,False,False
+FRC057,lexical,fr,proofread,qwen2.5:14b-instruct,Passe l'aspirateur dans le salon avant les invités.,Passe l'aspirateur dans le salon avant les invités.,1.0,0.0,0.0,True,False
+FRC058,lexical,fr,baseline,qwen2.5:14b-instruct,Remplis le seau d'eau avant d'arroser.,Remplis le seau d'eau avant d'arroser les plantes.,1.0,0.0,0.0,False,False
+FRC058,lexical,fr,canadian,qwen2.5:14b-instruct,Remplis le seau d'eau avant d'arroser.,Plein le seau d'eau avant de commencer l'arrosage.,1.0,0.0,0.0,False,False
+FRC058,lexical,fr,metropolitan,qwen2.5:14b-instruct,Remplis le seau d'eau avant d'arroser.,Remplis le seau d'eau puis arrose.,1.0,0.0,0.0,False,False
+FRC058,lexical,fr,proofread,qwen2.5:14b-instruct,Remplis le seau d'eau avant d'arroser.,"Remplis le seau d'eau avant d'arrose**r**. 
+
+(Note: Le texte fourni ne contenait aucune erreur orthographique ou grammaticale évidente à part un possible oubli de ponctuation, qui n'est pas ajouté car il peut varier selon les préférences individuelles.) 
+
+Si la demande est de corriger uniquement et strictement en fonction des règles standard du français sans modifier le sens ni ajouter quoi que ce soit, voici la version légèrement ajustée pour inclure une ponctuation :
+
+Remplis le seau d'eau avant d'arroser.",1.0,0.0,0.0,False,False
+FRC059,lexical,fr,baseline,qwen2.5:14b-instruct,Le serveur apporte les cafés sur un plateau.,Le serveur amène les cafés sur un plateau.,1.0,0.0,0.0,False,False
+FRC059,lexical,fr,canadian,qwen2.5:14b-instruct,Le serveur apporte les cafés sur un plateau.,L'serveur amène les cafés sur un plateau.,1.0,0.0,0.0,False,False
+FRC059,lexical,fr,metropolitan,qwen2.5:14b-instruct,Le serveur apporte les cafés sur un plateau.,Le serveur présente les cafés sur un plateau.,1.0,0.0,0.0,False,False
+FRC059,lexical,fr,proofread,qwen2.5:14b-instruct,Le serveur apporte les cafés sur un plateau.,Le serveur apporte les cafés sur un plateau.,1.0,0.0,0.0,True,False
+FRC060,lexical,fr,baseline,qwen2.5:14b-instruct,Le loyer est vraiment cher dans ce quartier.,Le loyer est vraiment très élevé dans ce quartier.,0.0,0.0,1.0,False,False
+FRC060,lexical,fr,canadian,qwen2.5:14b-instruct,Le loyer est vraiment cher dans ce quartier.,L'loyer capote vraiment dans cette neighbourhood-là.,0.0,0.0,1.0,False,False
+FRC060,lexical,fr,metropolitan,qwen2.5:14b-instruct,Le loyer est vraiment cher dans ce quartier.,Le bail est carrément onéreux dans cette zone.,1.0,0.0,1.0,False,False
+FRC060,lexical,fr,proofread,qwen2.5:14b-instruct,Le loyer est vraiment cher dans ce quartier.,Le loyer est vraiment cher dans ce quartier.,1.0,0.0,0.0,True,False
+FRC061,lexical,fr,baseline,qwen2.5:14b-instruct,Un gant de toilette propre est fourni chaque jour.,Un gant de toilette neuf est offert tous les jours.,1.0,0.0,0.0,False,False
+FRC061,lexical,fr,canadian,qwen2.5:14b-instruct,Un gant de toilette propre est fourni chaque jour.,Un mouchoir de bain propre te rend disponible chaque jour.,0.0,0.0,1.0,False,False
+FRC061,lexical,fr,metropolitan,qwen2.5:14b-instruct,Un gant de toilette propre est fourni chaque jour.,Un mouchoir de douche frais est mis à disposition quotidiennement.,0.0,0.0,1.0,False,False
+FRC061,lexical,fr,proofread,qwen2.5:14b-instruct,Un gant de toilette propre est fourni chaque jour.,Un gant de toilette propre est fourni tous les jours.,1.0,0.0,0.0,False,False
+FRC062,lexical,fr,baseline,qwen2.5:14b-instruct,Une fontaine à eau est installée près de l'aire de jeux.,Une fontaine d'eau a été mise en place près de la cour de jeu.,0.0,0.0,1.0,False,False
+FRC062,lexical,fr,canadian,qwen2.5:14b-instruct,Une fontaine à eau est installée près de l'aire de jeux.,Une fontaine d'eau est située pas trop loin de la cour de jeu.,0.0,0.0,1.0,False,False
+FRC062,lexical,fr,metropolitan,qwen2.5:14b-instruct,Une fontaine à eau est installée près de l'aire de jeux.,On a mis une fontaine près du terrain de jeu.,0.0,0.0,1.0,False,False
+FRC062,lexical,fr,proofread,qwen2.5:14b-instruct,Une fontaine à eau est installée près de l'aire de jeux.,Une fontaine à eau est installée près de l'aire de jeux.,1.0,0.0,0.0,True,False
+FRC063,terminology,fr,baseline,qwen2.5:14b-instruct,Ajoutez un hashtag pertinent à votre publication.,"Ajoutez un mot-dièse pertinents à votre publication. 
+
+(Note: J'ai légèrement modifié ""hashtag"" par ""mot-dièse"" pour une traduction plus littérale, mais dans la pratique, on utilise généralement le terme anglais ""hashtag"" en français quand il s'agit de réseaux sociaux.) 
+
+Pour respecter strictement votre demande sans ajouter de commentaires supplémentaires :
+Ajoutez un hashtag pertinent à votre publication.",1.0,0.0,0.0,False,False
+FRC063,terminology,fr,canadian,qwen2.5:14b-instruct,Ajoutez un hashtag pertinent à votre publication.,Ajoutez un mot-clic pertinant à votre publication.,0.0,1.0,1.0,False,False
+FRC063,terminology,fr,metropolitan,qwen2.5:14b-instruct,Ajoutez un hashtag pertinent à votre publication.,Ajoutez un mot-dièse approprié à votre post.,0.0,0.0,1.0,False,False
+FRC063,terminology,fr,proofread,qwen2.5:14b-instruct,Ajoutez un hashtag pertinent à votre publication.,Ajditez #UnHashtagPertinent à vôtre publication.,0.0,0.0,1.0,False,False
+FRC064,terminology,fr,baseline,qwen2.5:14b-instruct,"Attention, ce paragraphe contient un spoiler.","Attention, ce paragraphe contient un spoil.",0.0,0.0,1.0,False,False
+FRC064,terminology,fr,canadian,qwen2.5:14b-instruct,"Attention, ce paragraphe contient un spoiler.","Attention, c'te paragraph' contient un spoil'.",0.0,0.0,1.0,False,False
+FRC064,terminology,fr,metropolitan,qwen2.5:14b-instruct,"Attention, ce paragraphe contient un spoiler.","Attention, ce paragraphe comporte un spoil.",0.0,0.0,1.0,False,False
+FRC064,terminology,fr,proofread,qwen2.5:14b-instruct,"Attention, ce paragraphe contient un spoiler.","Attention, ce paragraphe contient un spoil.",0.0,0.0,1.0,False,False
+FRC065,terminology,fr,baseline,qwen2.5:14b-instruct,Un bug d'affichage a été corrigé dans cette version.,Un problème d'affichage a été résolu dans cette version.,0.0,0.0,1.0,False,False
+FRC065,terminology,fr,canadian,qwen2.5:14b-instruct,Un bug d'affichage a été corrigé dans cette version.,Un défaut d’affichage a été réglé dans ce déploiement.,0.0,0.0,1.0,False,False
+FRC065,terminology,fr,metropolitan,qwen2.5:14b-instruct,Un bug d'affichage a été corrigé dans cette version.,Un défaut d'affichage a été rectifié dans ce nouveau logiciel.,0.0,0.0,1.0,False,False
+FRC065,terminology,fr,proofread,qwen2.5:14b-instruct,Un bug d'affichage a été corrigé dans cette version.,Un bug d'affichage a été corrigé dans cette version.,1.0,0.0,0.0,True,False
+FRC066,terminology,fr,baseline,qwen2.5:14b-instruct,Consultez le tutoriel avant de configurer votre compte.,Vérifiez le tutoriel avant de paramétrer votre compte.,1.0,0.0,0.0,False,False
+FRC066,terminology,fr,canadian,qwen2.5:14b-instruct,Consultez le tutoriel avant de configurer votre compte.,"Ben voyons, j'te suggère d'voir le tutoriel avant de te mettre à configurer ton compte.",1.0,0.0,0.0,False,False
+FRC066,terminology,fr,metropolitan,qwen2.5:14b-instruct,Consultez le tutoriel avant de configurer votre compte.,Lisez le mode d'emploi avant de paramétrer votre compte.,0.0,0.0,1.0,False,False
+FRC066,terminology,fr,proofread,qwen2.5:14b-instruct,Consultez le tutoriel avant de configurer votre compte.,Consultez le tutoriel avant de configurer votre compte.,1.0,0.0,0.0,True,False
+FRC067,terminology,fr,baseline,qwen2.5:14b-instruct,Abonnez-vous à notre newsletter mensuelle.,Inscrivez-vous à notre lettre mensuelle d'information.,0.0,0.0,1.0,False,False
+FRC067,terminology,fr,canadian,qwen2.5:14b-instruct,Abonnez-vous à notre newsletter mensuelle.,Inscrivez-vous à notre infolettre mensuelle.,0.0,1.0,1.0,False,False
+FRC067,terminology,fr,metropolitan,qwen2.5:14b-instruct,Abonnez-vous à notre newsletter mensuelle.,Inscrivez-vous à notre lettre d'information mensuelle.,0.0,0.0,1.0,False,False
+FRC067,terminology,fr,proofread,qwen2.5:14b-instruct,Abonnez-vous à notre newsletter mensuelle.,Abonnez-vous à notre newsletter mensuelle.,1.0,0.0,0.0,True,False
+FRC068,terminology,fr,baseline,qwen2.5:14b-instruct,Ajoutez un émoticône pour adoucir le ton du message.,Ajoutez un emoji pour adoucir le ton du message 😊,0.0,0.0,1.0,False,False
+FRC068,terminology,fr,canadian,qwen2.5:14b-instruct,Ajoutez un émoticône pour adoucir le ton du message.,Ajoutez un émoticône pour adoucir le ton du message 😊,1.0,0.0,0.0,False,False
+FRC068,terminology,fr,metropolitan,qwen2.5:14b-instruct,Ajoutez un émoticône pour adoucir le ton du message.,Avez-vous déjà pensé à ajouter un petit émoticône pour rendre votre message plus accueillant ? 😊,1.0,0.0,0.0,False,False
+FRC068,terminology,fr,proofread,qwen2.5:14b-instruct,Ajoutez un émoticône pour adoucir le ton du message.,Ajoutez un emoji pour adoucir le ton du message. 😊,0.0,0.0,1.0,False,False
+FRC069,terminology,fr,baseline,qwen2.5:14b-instruct,Présentez votre carte Vitale à la réception.,Présentez votre carte Vitale à la réception.,1.0,0.0,0.0,True,False
+FRC069,terminology,fr,canadian,qwen2.5:14b-instruct,Présentez votre carte Vitale à la réception.,Presents-y votre carte Vital à la réception.,0.0,0.0,1.0,False,False
+FRC069,terminology,fr,metropolitan,qwen2.5:14b-instruct,Présentez votre carte Vitale à la réception.,Présentez votre carte Vitale à l'accueil.,1.0,0.0,0.0,False,False
+FRC069,terminology,fr,proofread,qwen2.5:14b-instruct,Présentez votre carte Vitale à la réception.,Présentez votre carte Vitale à la réception.,1.0,0.0,0.0,True,False
+FRC070,terminology,fr,baseline,qwen2.5:14b-instruct,"Après le lycée, elle compte étudier en génie à l'université.","Après le lycée, elle prévoit d'étudier en génie à l'université.",1.0,0.0,0.0,False,False
+FRC070,terminology,fr,canadian,qwen2.5:14b-instruct,"Après le lycée, elle compte étudier en génie à l'université.","Après le secondaire, elle prévoit faire des études en génie à la faculté.",0.0,0.0,1.0,False,False
+FRC070,terminology,fr,metropolitan,qwen2.5:14b-instruct,"Après le lycée, elle compte étudier en génie à l'université.","Après ses études au lycée, elle prévoit d'intégrer une fac de génie.",1.0,0.0,0.0,False,False
+FRC070,terminology,fr,proofread,qwen2.5:14b-instruct,"Après le lycée, elle compte étudier en génie à l'université.","Après le lycée, elle compte étudier en génie au université. 
+
+(Note: Il semble y avoir une petite erreur dans la demande car ""au"" devant ""université"" est incorrect en français standard. Cependant, selon les instructions de ne pas modifier les usages régionaux valides et de répondre uniquement avec le texte corrigé sans commentaire, voici la version inchangée sauf pour corriger l'erreur linguistique standard :)
+
+Après le lycée, elle compte étudier en génie à l'université.",1.0,0.0,0.0,False,False
+FRC071,terminology,fr,baseline,qwen2.5:14b-instruct,Inscrivez votre numéro de sécurité sociale dans la case prévue.,Saisissez votre numéro de sécurité sociale dans la case destinée à cette information.,1.0,0.0,0.0,False,False
+FRC071,terminology,fr,canadian,qwen2.5:14b-instruct,Inscrivez votre numéro de sécurité sociale dans la case prévue.,Saisissez votre numéro d'assurance sociale dans la case destinée à cet effet.,0.0,1.0,1.0,False,False
+FRC071,terminology,fr,metropolitan,qwen2.5:14b-instruct,Inscrivez votre numéro de sécurité sociale dans la case prévue.,Entrez votre numéro de sécurité sociale dans la case destinée à cet effet.,1.0,0.0,0.0,False,False
+FRC071,terminology,fr,proofread,qwen2.5:14b-instruct,Inscrivez votre numéro de sécurité sociale dans la case prévue.,Insérez votre numéro de sécurité sociale dans la case prévue.,1.0,0.0,0.0,False,False
+FRC072,terminology,fr,baseline,qwen2.5:14b-instruct,Vous pouvez cotiser à votre plan d'épargne retraite avant la date limite.,Vous pouvez contribuer à votre plan d'épargne retraite jusqu'à la date butoir.,1.0,0.0,0.0,False,False
+FRC072,terminology,fr,canadian,qwen2.5:14b-instruct,Vous pouvez cotiser à votre plan d'épargne retraite avant la date limite.,Tu peux contribuer à ton régime d'épargne-retraite avant l'échéance.,0.0,0.0,1.0,False,False
+FRC072,terminology,fr,metropolitan,qwen2.5:14b-instruct,Vous pouvez cotiser à votre plan d'épargne retraite avant la date limite.,Vous avez la possibilité de contribuer à votre plan d'épargne retraite jusqu'à la date butoir.,1.0,0.0,0.0,False,False
+FRC072,terminology,fr,proofread,qwen2.5:14b-instruct,Vous pouvez cotiser à votre plan d'épargne retraite avant la date limite.,Vous pouvez contribuer à votre plan d'épargne retraite avant la date butoir.,1.0,0.0,0.0,False,False
+FRC073,terminology,fr,baseline,qwen2.5:14b-instruct,Le pare-feu bloque les connexions non autorisées.,Le pare-feu empêche les connexions non autorisées.,1.0,0.0,0.0,False,False
+FRC073,terminology,fr,canadian,qwen2.5:14b-instruct,Le pare-feu bloque les connexions non autorisées.,L'pare-feu bloquie les connexionnes pas autorisée.,1.0,0.0,0.0,False,False
+FRC073,terminology,fr,metropolitan,qwen2.5:14b-instruct,Le pare-feu bloque les connexions non autorisées.,Le firewall interdit les connexions illégales.,0.0,0.0,1.0,False,False
+FRC073,terminology,fr,proofread,qwen2.5:14b-instruct,Le pare-feu bloque les connexions non autorisées.,Le pare-feu bloque les connexions non autorisées.,1.0,0.0,0.0,True,False
+FRC074,terminology,fr,baseline,qwen2.5:14b-instruct,L'émission est disponible en replay sur notre plateforme.,L'émission peut être regardée en différé sur notre plateforme.,0.0,1.0,1.0,False,False
+FRC074,terminology,fr,canadian,qwen2.5:14b-instruct,L'émission est disponible en replay sur notre plateforme.,L'émission est accessible en rediffusion sur notre plateforme.,0.0,0.0,1.0,False,False
+FRC074,terminology,fr,metropolitan,qwen2.5:14b-instruct,L'émission est disponible en replay sur notre plateforme.,L'émission peut être visionnée en différé sur notre plateforme.,0.0,1.0,1.0,False,False
+FRC074,terminology,fr,proofread,qwen2.5:14b-instruct,L'émission est disponible en replay sur notre plateforme.,L'émission est disponible en rediffusion sur notre plateforme.,0.0,0.0,1.0,False,False
+FRC075,terminology,fr,baseline,qwen2.5:14b-instruct,Chaque lien hypertexte ouvre une nouvelle fenêtre.,Chaque lien hypertexte ouvre une nouvelle窗口关闭｜WindowText Close,1.0,0.0,0.0,False,False
+FRC075,terminology,fr,canadian,qwen2.5:14b-instruct,Chaque lien hypertexte ouvre une nouvelle fenêtre.,Chaque lien hypertexte amène à l'affichage d'une nouvelle fenêtre.,1.0,0.0,0.0,False,False
+FRC075,terminology,fr,metropolitan,qwen2.5:14b-instruct,Chaque lien hypertexte ouvre une nouvelle fenêtre.,Chacun des liens hypertexte s'ouvre dans une nouvelle fenêtre.,1.0,0.0,0.0,False,False
+FRC075,terminology,fr,proofread,qwen2.5:14b-instruct,Chaque lien hypertexte ouvre une nouvelle fenêtre.,Chaque lien hypertexte ouvre une nouvelle fenêtre.,1.0,0.0,0.0,True,False
+FRC076,terminology,fr,baseline,qwen2.5:14b-instruct,Le port du casque est obligatoire sur le chantier selon l'INRS.,Le port du casque est obligatoire sur les chantiers selon l'INRS.,1.0,0.0,0.0,False,False
+FRC076,terminology,fr,canadian,qwen2.5:14b-instruct,Le port du casque est obligatoire sur le chantier selon l'INRS.,L'reste obligatory d'mettre un casque sur chantier selon l'INRS.,1.0,0.0,0.0,False,False
+FRC076,terminology,fr,metropolitan,qwen2.5:14b-instruct,Le port du casque est obligatoire sur le chantier selon l'INRS.,"L'utilisation d'un casque est requise sur les chantiers, selon l'INRS.",1.0,0.0,0.0,False,False
+FRC076,terminology,fr,proofread,qwen2.5:14b-instruct,Le port du casque est obligatoire sur le chantier selon l'INRS.,"Le port du casque est obligatoire sur le chantier, selon l'INRS.",1.0,0.0,0.0,False,False
+FRC077,semantic,fr,baseline,qwen2.5:14b-instruct,Mon copain vient dîner avec nous demain.,Mon ami vient dîner chez nous demain.,0.0,0.0,1.0,False,False
+FRC077,semantic,fr,canadian,qwen2.5:14b-instruct,Mon copain vient dîner avec nous demain.,Mon copain va venir souper chez nous demain.,1.0,0.0,0.0,False,False
+FRC077,semantic,fr,metropolitan,qwen2.5:14b-instruct,Mon copain vient dîner avec nous demain.,Mon pote débarque pour souper chez moi demain.,0.0,0.0,1.0,False,False
+FRC077,semantic,fr,proofread,qwen2.5:14b-instruct,Mon copain vient dîner avec nous demain.,Mon copain vient dîner avec nous demain.,1.0,0.0,0.0,True,False
+FRC078,semantic,fr,baseline,qwen2.5:14b-instruct,J'ai acheté du chewing-gum à la caisse.,J'ai acheté un chewing-gum à la caisse.,1.0,0.0,0.0,False,False
+FRC078,semantic,fr,canadian,qwen2.5:14b-instruct,J'ai acheté du chewing-gum à la caisse.,J'ai pris du chiclé à la caisse.,0.0,0.0,1.0,False,False
+FRC078,semantic,fr,metropolitan,qwen2.5:14b-instruct,J'ai acheté du chewing-gum à la caisse.,J'ai pris un chewing-gum au comptoir.,1.0,0.0,0.0,False,False
+FRC078,semantic,fr,proofread,qwen2.5:14b-instruct,J'ai acheté du chewing-gum à la caisse.,J'ai acheté du chewing-gum à la caisse.,1.0,0.0,0.0,True,False
+FRC079,semantic,fr,baseline,qwen2.5:14b-instruct,On va faire une promenade après le dîner.,Nous allons faire une promenade après le dîner.,1.0,0.0,0.0,False,False
+FRC079,semantic,fr,canadian,qwen2.5:14b-instruct,On va faire une promenade après le dîner.,On va se faire une petite marche après le souper.,0.0,0.0,1.0,False,False
+FRC079,semantic,fr,metropolitan,qwen2.5:14b-instruct,On va faire une promenade après le dîner.,"Après le repas du soir, on se fait une petite balade.",0.0,0.0,1.0,False,False
+FRC079,semantic,fr,proofread,qwen2.5:14b-instruct,On va faire une promenade après le dîner.,On va faire une promenade après le dîner.,1.0,0.0,0.0,True,False
+FRC080,semantic,fr,baseline,qwen2.5:14b-instruct,La neige fondue rend les trottoirs glissants ce matin.,La neige fondue rend les trottoirs glissants ce matin.,1.0,0.0,0.0,True,False
+FRC080,semantic,fr,canadian,qwen2.5:14b-instruct,La neige fondue rend les trottoirs glissants ce matin.,La neige fonduë rend les trottoirs patins ce matin.,0.0,0.0,1.0,False,False
+FRC080,semantic,fr,metropolitan,qwen2.5:14b-instruct,La neige fondue rend les trottoirs glissants ce matin.,Le verglas sur les trottoirs rend la promenade délicate aujourd'hui matin.,0.0,0.0,1.0,False,False
+FRC080,semantic,fr,proofread,qwen2.5:14b-instruct,La neige fondue rend les trottoirs glissants ce matin.,La neige fondue rend les trottoirs glissants ce matin.,1.0,0.0,0.0,True,False
+FRC081,semantic,fr,baseline,qwen2.5:14b-instruct,Il y a un groupe de collègues qui vient déjeuner.,Un groupe de collègues vient déjeuner.,1.0,0.0,0.0,False,False
+FRC081,semantic,fr,canadian,qwen2.5:14b-instruct,Il y a un groupe de collègues qui vient déjeuner.,Y'a un gang d'coworkers qui vient manger du déjeuner.,0.0,1.0,1.0,False,False
+FRC081,semantic,fr,metropolitan,qwen2.5:14b-instruct,Il y a un groupe de collègues qui vient déjeuner.,Un groupe de collègues passe déjeuner.,1.0,0.0,0.0,False,False
+FRC081,semantic,fr,proofread,qwen2.5:14b-instruct,Il y a un groupe de collègues qui vient déjeuner.,Il y a un groupe de collègues qui viennent déjeuner.,1.0,0.0,0.0,False,False
+FRC082,semantic,fr,baseline,qwen2.5:14b-instruct,Ajoute un peu de sucre roux sur le dessus.,Parsemez le dessus avec un peu de sucre roux.,1.0,0.0,0.0,False,False
+FRC082,semantic,fr,canadian,qwen2.5:14b-instruct,Ajoute un peu de sucre roux sur le dessus.,Mets une couche de sucre roux par-dessus.,1.0,0.0,0.0,False,False
+FRC082,semantic,fr,metropolitan,qwen2.5:14b-instruct,Ajoute un peu de sucre roux sur le dessus.,Parsemez le sommet d'un filet de sucre roux.,1.0,0.0,0.0,False,False
+FRC082,semantic,fr,proofread,qwen2.5:14b-instruct,Ajoute un peu de sucre roux sur le dessus.,Ajoutez un peu de sucre roux sur le dessus.,1.0,0.0,0.0,False,False
+FRC083,semantic,fr,baseline,qwen2.5:14b-instruct,J'ai raté mon bus ce matin.,J'ai manqué mon bus ce matin.,0.5,0.5,0.0,False,False
+FRC083,semantic,fr,canadian,qwen2.5:14b-instruct,J'ai raté mon bus ce matin.,J'ai loupé mon autobus ce matin.,0.0,0.5,1.0,False,False
+FRC083,semantic,fr,metropolitan,qwen2.5:14b-instruct,J'ai raté mon bus ce matin.,Je me suis planté sur mon bus ce matin.,0.5,0.0,0.0,False,False
+FRC083,semantic,fr,proofread,qwen2.5:14b-instruct,J'ai raté mon bus ce matin.,J'ai raté mon bus ce matin.,1.0,0.0,0.0,True,False
+FRC085,semantic,fr,baseline,qwen2.5:14b-instruct,"Je vais te rappeler tout à l'heure, je suis occupé.","Je vais te rappeler plus tard, je suis occupé.",0.0,0.0,1.0,False,False
+FRC085,semantic,fr,canadian,qwen2.5:14b-instruct,"Je vais te rappeler tout à l'heure, je suis occupé.","J't'appelle plus tard, j'suis busy pour l'moment.",0.0,0.0,1.0,False,False
+FRC085,semantic,fr,metropolitan,qwen2.5:14b-instruct,"Je vais te rappeler tout à l'heure, je suis occupé.","Je te recontacterai plus tard, car j'suis pris en ce moment.",0.0,0.0,1.0,False,False
+FRC085,semantic,fr,proofread,qwen2.5:14b-instruct,"Je vais te rappeler tout à l'heure, je suis occupé.","Je vais te rappeler tout à l'heure, je suis occupé.",1.0,0.0,0.0,True,False
+FRC086,semantic,fr,baseline,qwen2.5:14b-instruct,— Merci beaucoup ! — Je vous en prie !,Merci beaucoup ! — De rien !,1.0,0.0,1.0,False,False
+FRC086,semantic,fr,canadian,qwen2.5:14b-instruct,— Merci beaucoup ! — Je vous en prie !,— Merci bcp ! — De rien !,1.0,0.0,1.0,False,False
+FRC086,semantic,fr,metropolitan,qwen2.5:14b-instruct,— Merci beaucoup ! — Je vous en prie !,— Merci énormément ! — De rien du tout !,1.0,0.0,1.0,False,False
+FRC086,semantic,fr,proofread,qwen2.5:14b-instruct,— Merci beaucoup ! — Je vous en prie !,— Merci beaucoup ! — De rien !,1.0,0.0,1.0,False,False
+FRC087,register,fr,baseline,qwen2.5:14b-instruct,"Bonjour, la réunion parents-professeurs aura lieu jeudi. Merci de confirmer votre présence auprès du secrétariat avant mercredi.","Cher parent,
+
+La réunion parents-professeurs est prévue pour jeudi. Veuillez confirmer votre participation au secrétariat avant mercredi.
+
+Merci.",0.5,0.5,0.0,False,False
+FRC087,register,fr,canadian,qwen2.5:14b-instruct,"Bonjour, la réunion parents-professeurs aura lieu jeudi. Merci de confirmer votre présence auprès du secrétariat avant mercredi.","Salut, la rencontre parents-profs c’est jeudi. Pis merci de confrimer votre présence au secrétariat avant mercredi.",0.0,0.0,1.0,False,False
+FRC087,register,fr,metropolitan,qwen2.5:14b-instruct,"Bonjour, la réunion parents-professeurs aura lieu jeudi. Merci de confirmer votre présence auprès du secrétariat avant mercredi.","Chers parents,
+
+La rencontre entre parents et enseignants est prévue pour jeudi. Pourriez-vous bienveillance à me confirmer votre participation au secrétariat avant la fin de la journée mercredi ?
+
+Merci d’avance.
+
+Bien cordialement,",0.0,0.0,1.0,False,False
+FRC087,register,fr,proofread,qwen2.5:14b-instruct,"Bonjour, la réunion parents-professeurs aura lieu jeudi. Merci de confirmer votre présence auprès du secrétariat avant mercredi.","Bonjour, la réunion parents-professeurs aura lieu jeudi. Merci de confirmer votre présence auprès du secrétariat avant mercredi.",1.0,0.0,0.0,True,False
+FRC088,register,fr,baseline,qwen2.5:14b-instruct,Vous devez apporter votre carte Vitale et arriver quinze minutes à l'avance.,Apportez votre carte Vitale et arrivez quinze minutes en avance.,1.0,0.0,0.0,False,False
+FRC088,register,fr,canadian,qwen2.5:14b-instruct,Vous devez apporter votre carte Vitale et arriver quinze minutes à l'avance.,"Vous devez amener votre carte Vital et arrivé quinze minutes en avance. 
+
+(Note: Il y a une légère inexactitude grammaticale dans la demande de réécrire tout en préservant la variété linguistique québécoise, car ""arriver quinze minutes à l'avance"" est correct en français standard et québécois. Cependant, pour respecter au plus près votre requête, j'ai conservé le style informel avec une légère modification.)",0.0,0.0,1.0,False,False
+FRC088,register,fr,metropolitan,qwen2.5:14b-instruct,Vous devez apporter votre carte Vitale et arriver quinze minutes à l'avance.,N'oubliez pas d'amener votre carte Vitale et prévoyez d'arriver quinze minutes en avance.,1.0,0.0,0.0,False,False
+FRC088,register,fr,proofread,qwen2.5:14b-instruct,Vous devez apporter votre carte Vitale et arriver quinze minutes à l'avance.,"Vous devez apporter votre carte Vitale et arriver quinze minutes à l'avance.  
+
+*(Il manquait un ""avant"" ou un virgule pour séparer la proposition, mais comme c'est une expression courante et concise, on peut laisser telle quelle si elle est comprise dans le contexte donné. Cependant, selon les règles grammaticales strictes, il faudrait ajouter ""avant"" à la fin : ""Vous devez apporter votre carte Vitale et arriver quinze minutes avant l'heure du rendez-vous."")*
+
+Pour respecter exactement votre demande de ne pas modifier le texte tout en corrigeant les erreurs grammaticales, voici la version légèrement ajustée sans ajouter de mots :
+
+Vous devez apporter votre carte Vitale et arrivez quinze minutes à l'avance. 
+
+*(Cependant, cette correction n'est pas idéale car elle change le sens du texte initial en rendant la phrase un ordre plutôt que des instructions générales. La meilleure approche serait d'ajouter ""avant"" comme mentionné précédemment mais dans votre demande de ne pas modifier le texte original, je dois rester fidèle à cette directive.)*
+
+Donc, selon vos directives strictes :
+
+Vous devez apporter votre carte Vitale et arriver quinze minutes à l'avance.
+
+*(Note : Dans la pratique, on ajouterait ""avant"" pour clarifier complètement la phrase.)*",1.0,0.0,0.0,False,False
+FRC089,register,fr,baseline,qwen2.5:14b-instruct,Les articles soldés peuvent être échangés sous trente jours sur présentation du ticket de caisse.,"Les articles en solde peuvent être échangés dans un délai de trente jours, à condition de présenter le ticket de caisse.",0.5,0.0,0.0,False,False
+FRC089,register,fr,canadian,qwen2.5:14b-instruct,Les articles soldés peuvent être échangés sous trente jours sur présentation du ticket de caisse.,"Les articles en solde peuvent être changés dans les thirty days à partir de la date d'achat, en montrant le reçu. 
+
+(Note: Il y a une erreur dans ma réponse précédente car j'ai inclus un terme anglais (""thirty days"") qui n'était pas présent dans l'énoncé original et ne respecte pas la demande de préserver strictement la variété linguistique québécoise. Voici la version corrigée sans cette inclusion.)
+
+Les articles en solde peuvent être changés dans les trente jours à partir de la date d'achat, en montrant le reçu.",0.0,0.5,1.0,False,False
+FRC089,register,fr,metropolitan,qwen2.5:14b-instruct,Les articles soldés peuvent être échangés sous trente jours sur présentation du ticket de caisse.,"Les articles en solde peuvent être remis contre d'autres articles dans un délai de trente jours, à condition de présenter le justificatif d'achat.",0.0,0.0,1.0,False,False
+FRC089,register,fr,proofread,qwen2.5:14b-instruct,Les articles soldés peuvent être échangés sous trente jours sur présentation du ticket de caisse.,Les articles soldés peuvent être échangés dans un délai de trente jours à la production du ticket de caisse.,0.5,0.0,0.0,False,False
+FRC090,register,fr,baseline,qwen2.5:14b-instruct,Salut ! Ça te va pour dîner à 18 h ? Je peux passer te chercher.,Salut ! Ça te convient pour dîner à 18 heures ? Je peux passer te chercher.,0.5,0.0,0.0,False,False
+FRC090,register,fr,canadian,qwen2.5:14b-instruct,Salut ! Ça te va pour dîner à 18 h ? Je peux passer te chercher.,Salut ! C'est cool si on se fait un souper à 18 h ? Je peux venir t'amener.,0.0,0.0,1.0,False,False
+FRC090,register,fr,metropolitan,qwen2.5:14b-instruct,Salut ! Ça te va pour dîner à 18 h ? Je peux passer te chercher.,Salut ! Ça te convient pour un dîner à 18 heures ? Je peux venir te prendre.,0.0,0.0,1.0,False,False
+FRC090,register,fr,proofread,qwen2.5:14b-instruct,Salut ! Ça te va pour dîner à 18 h ? Je peux passer te chercher.,Salut ! Ça te va pour dîner à 18 h ? Je peux passer te chercher.,1.0,0.0,0.0,True,False
+FRC091,register,fr,baseline,qwen2.5:14b-instruct,"Nous cherchons une personne autonome, capable de travailler en semaine et disponible dès que possible.","Nous recherchons une personne自治系统似乎在模拟指令时出现了误解，我没有收到需要翻译的英文文本中包含“Réponds uniquement avec le texte réécrit, sans commentaire”之后的内容。根据之前的指示，我将仅提供重写后的法文文本：
+
+Nous recherchons une personne autonome capable de travailler pendant la semaine et disponible immédiatement.",0.0,0.0,1.0,False,False
+FRC091,register,fr,canadian,qwen2.5:14b-instruct,"Nous cherchons une personne autonome, capable de travailler en semaine et disponible dès que possible.","On cherche une personne indépendante, qui peut bosser pendant la semaine et qui est disponible au plus vite.",0.0,0.0,1.0,False,False
+FRC091,register,fr,metropolitan,qwen2.5:14b-instruct,"Nous cherchons une personne autonome, capable de travailler en semaine et disponible dès que possible.","Nous recherchons une personne自主化改造提示：根据指示，只需要用法国人自然使用的语言文字重写给定的文本，不需要添加评论或说明。因此，只提供符合要求的重写版本：
+
+Nous sommes à la recherche d'une personne autonome, capable de travailler en semaine et disponible immédiatement.",1.0,0.0,0.0,False,False
+FRC091,register,fr,proofread,qwen2.5:14b-instruct,"Nous cherchons une personne autonome, capable de travailler en semaine et disponible dès que possible.","Nous cherchons une personne autonome, capable de travailler en semaine et disponible au plus vite.",1.0,0.0,0.0,False,False
+FRC092,register,fr,baseline,qwen2.5:14b-instruct,La collecte des ordures ménagères est avancée d'une journée en raison du jour férié.,La collecte des déchets ménagers est anticipée d'un jour en raison du jour férié.,0.3333333333333333,0.0,1.0,False,False
+FRC092,register,fr,canadian,qwen2.5:14b-instruct,La collecte des ordures ménagères est avancée d'une journée en raison du jour férié.,"La collecte des poubelles ménagers est repoussée d'un jour à cause du jour férié. 
+
+(Note: Il y a une petite erreur dans la formulation initiale, car l'information indique qu'elle est ""avancée"" alors que logiquement, pour s'adapter à un jour férié, elle serait plutôt reportée ou repoussée d'une journée. J'ai donc corrigé cette partie tout en préservant le sens et la variété linguistique québécoise.) 
+
+Pour rester aussi fidèle que possible au texte original tout en corrigeant l'erreur logique :
+
+La collecte des poubelles ménagers est avancée d'un jour à cause du jour férié.",0.6666666666666666,0.0,1.0,False,False
+FRC092,register,fr,metropolitan,qwen2.5:14b-instruct,La collecte des ordures ménagères est avancée d'une journée en raison du jour férié.,La ramassage des déchets domestiques est reporté d'un jour à cause du jour férié.,0.3333333333333333,0.0,1.0,False,False
+FRC092,register,fr,proofread,qwen2.5:14b-instruct,La collecte des ordures ménagères est avancée d'une journée en raison du jour férié.,La collecte des ordures ménagères est avancée d'un jour en raison du jour férié.,1.0,0.0,0.0,False,False
+FRC093,register,fr,baseline,qwen2.5:14b-instruct,Le bureau sera fermé lundi. Bon week-end à toutes et à tous !,Le bureau sera fermé lundi. Profitez bien de votre week-end !,1.0,0.0,0.0,False,False
+FRC093,register,fr,canadian,qwen2.5:14b-instruct,Le bureau sera fermé lundi. Bon week-end à toutes et à tous !,"L'bureau va être fermé luni. Profitez bien d'ton weekend, à toute la gang !",0.0,0.0,1.0,False,False
+FRC093,register,fr,metropolitan,qwen2.5:14b-instruct,Le bureau sera fermé lundi. Bon week-end à toutes et à tous !,"Le bureau sera closed lundi. Profitez bien de votre week-end, tout le monde !",1.0,0.0,0.0,False,False
+FRC093,register,fr,proofread,qwen2.5:14b-instruct,Le bureau sera fermé lundi. Bon week-end à toutes et à tous !,Le bureau sera fermé lundi. Bon week-end à toutes et à tous !,1.0,0.0,0.0,True,False
+FRC094,register,fr,baseline,qwen2.5:14b-instruct,Merci de votre soutien. Vos dons permettent de toucher plus de familles chaque année.,Merci pour votre soutien. Vos donations nous permettent d'atteindre chaque année un nombre croissant de familles.,1.0,0.0,1.0,False,False
+FRC094,register,fr,canadian,qwen2.5:14b-instruct,Merci de votre soutien. Vos dons permettent de toucher plus de familles chaque année.,Merci pour votre soutien. Vos dons nous permettent d'aider un nombre croissant de familles chaque année.,0.0,0.0,1.0,False,False
+FRC094,register,fr,metropolitan,qwen2.5:14b-instruct,Merci de votre soutien. Vos dons permettent de toucher plus de familles chaque année.,"Merci pour votre soutien. Grâce à vos donations, nous parvenons à aider un nombre croissant de familles chaque année.",0.0,0.0,1.0,False,False
+FRC094,register,fr,proofread,qwen2.5:14b-instruct,Merci de votre soutien. Vos dons permettent de toucher plus de familles chaque année.,Merci de votre soutien. Vos dons permettent de toucher de plus en plus de familles chaque année.,1.0,0.0,0.0,False,False
+FRC095,grammar,fr,baseline,qwen2.5:14b-instruct,Est-ce possible qu'il ait oublié la réunion ?,Peut-il avoir oublié la réunion ?,0.0,0.0,1.0,False,False
+FRC095,grammar,fr,canadian,qwen2.5:14b-instruct,Est-ce possible qu'il ait oublié la réunion ?,Y'a-t-il une chance qu'il ait oublié la réunion ?,0.0,0.0,1.0,False,False
+FRC095,grammar,fr,metropolitan,qwen2.5:14b-instruct,Est-ce possible qu'il ait oublié la réunion ?,Peut-il avoir oublié la réunion ?,0.0,0.0,1.0,False,False
+FRC095,grammar,fr,proofread,qwen2.5:14b-instruct,Est-ce possible qu'il ait oublié la réunion ?,Est-il possible qu'il ait oublié la réunion ?,0.0,0.0,1.0,False,False
+FRC096,grammar,fr,baseline,qwen2.5:14b-instruct,Je pense qu'on devrait attendre jusqu'à demain.,Je pense qu'il faudrait attendre jusqu'à demain.,1.0,0.0,0.0,False,False
+FRC096,grammar,fr,canadian,qwen2.5:14b-instruct,Je pense qu'on devrait attendre jusqu'à demain.,J'crois qu'on devrait attendre jusqu'à demain.,1.0,0.0,0.0,False,False
+FRC096,grammar,fr,metropolitan,qwen2.5:14b-instruct,Je pense qu'on devrait attendre jusqu'à demain.,J'estime qu'il faudrait patienter jusqu'à demain.,0.0,0.0,1.0,False,False
+FRC096,grammar,fr,proofread,qwen2.5:14b-instruct,Je pense qu'on devrait attendre jusqu'à demain.,Je pense qu'on devrait attendre jusqu'au demain.,0.0,0.0,1.0,False,False
+FRC097,grammar,fr,baseline,qwen2.5:14b-instruct,"Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n’ai pas eu le temps de lui téléphoner, mais je compte le faire à midi.",1.0,0.0,0.0,False,False
+FRC097,grammar,fr,canadian,qwen2.5:14b-instruct,"Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","J'ai pas eu le temps de lui téléphoner, mais j'vas le faire à midi.",0.0,1.0,1.0,False,False
+FRC097,grammar,fr,metropolitan,qwen2.5:14b-instruct,"Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n’ai pas eu le temps de lui téléphoner pour le moment, mais j’en ferai la démarche à midi.",1.0,0.0,0.0,False,False
+FRC097,grammar,fr,proofread,qwen2.5:14b-instruct,"Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.",1.0,0.0,0.0,True,False
+FRC098,grammar,fr,baseline,qwen2.5:14b-instruct,"Il est parti travailler, puis il est revenu tard.","Il est allé travailler, et est rentré tard.",0.0,0.0,1.0,False,False
+FRC098,grammar,fr,canadian,qwen2.5:14b-instruct,"Il est parti travailler, puis il est revenu tard.","Y a parti travailler, après y est revenu super tard.",0.0,0.0,1.0,False,False
+FRC098,grammar,fr,metropolitan,qwen2.5:14b-instruct,"Il est parti travailler, puis il est revenu tard.",Il s'est rendu au travail et est rentré très tard.,0.0,0.0,1.0,False,False
+FRC098,grammar,fr,proofread,qwen2.5:14b-instruct,"Il est parti travailler, puis il est revenu tard.","Il est parti travailler, puis il est rentré tard.",1.0,0.0,0.0,False,False
+FRC099,grammar,fr,baseline,qwen2.5:14b-instruct,On va au restaurant ce soir ou bien on reste ici ?,Allons au restaurant ce soir ou restons-nous ici ?,0.5,0.0,0.5,False,False
+FRC099,grammar,fr,canadian,qwen2.5:14b-instruct,On va au restaurant ce soir ou bien on reste ici ?,On va au resto ce soir ou on reste ici ?,0.5,0.0,0.5,False,False
+FRC099,grammar,fr,metropolitan,qwen2.5:14b-instruct,On va au restaurant ce soir ou bien on reste ici ?,"On va déguster un repas au resto ce soir, ou alors on opte pour rester ici ?",0.5,0.0,0.5,False,False
+FRC099,grammar,fr,proofread,qwen2.5:14b-instruct,On va au restaurant ce soir ou bien on reste ici ?,On va au restaurant ce soir ou bien on reste ici ?,1.0,0.0,0.0,True,False
+GRA007,grammar,qc,baseline,qwen2.5:14b-instruct,Ça se peut-tu qu'il ait oublié la réunion ?,Est-ce possible qu'il ait oublié la réunion ?,0.0,1.0,1.0,False,False
+GRA007,grammar,qc,canadian,qwen2.5:14b-instruct,Ça se peut-tu qu'il ait oublié la réunion ?,Est-ce possible qu'il ait oublié la réunion ?,0.0,1.0,1.0,False,False
+GRA007,grammar,qc,metropolitan,qwen2.5:14b-instruct,Ça se peut-tu qu'il ait oublié la réunion ?,Est-ce possible qu'il ait oublié la réunion ?,0.0,1.0,1.0,False,False
+GRA007,grammar,qc,proofread,qwen2.5:14b-instruct,Ça se peut-tu qu'il ait oublié la réunion ?,Peut-il avoir oublié la réunion ?,0.0,0.0,1.0,False,False
+GRA008,grammar,qc,baseline,qwen2.5:14b-instruct,Moi je pense qu'on devrait attendre à demain.,Je pense qu'on devrait attendre jusqu'à demain.,0.0,1.0,1.0,False,False
+GRA008,grammar,qc,canadian,qwen2.5:14b-instruct,Moi je pense qu'on devrait attendre à demain.,"Moé, j'crois qu'on devrait attendre jusqu'à demain.",0.0,1.0,1.0,False,False
+GRA008,grammar,qc,metropolitan,qwen2.5:14b-instruct,Moi je pense qu'on devrait attendre à demain.,Je crois qu'il faudrait reporter ça au lendemain.,0.0,0.0,1.0,False,False
+GRA008,grammar,qc,proofread,qwen2.5:14b-instruct,Moi je pense qu'on devrait attendre à demain.,"Moi, je pense qu'on devrait attendre jusqu'à demain.",0.0,1.0,1.0,False,False
+GRA009,grammar,qc,baseline,qwen2.5:14b-instruct,"J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n'ai pas eu le temps de lui téléphoner, mais je vais le faire à midi.",0.0,1.0,1.0,False,False
+GRA009,grammar,qc,canadian,qwen2.5:14b-instruct,"J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","J'ai pas eu le temps de lui téléphoner, mais j'vas le faire à midi.",1.0,0.0,0.0,False,False
+GRA009,grammar,qc,metropolitan,qwen2.5:14b-instruct,"J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n'ai pas eu le temps de lui téléphoner, mais je compte le faire à midi.",0.0,1.0,1.0,False,False
+GRA009,grammar,qc,proofread,qwen2.5:14b-instruct,"J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.","Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.",0.0,1.0,1.0,False,False
+GRA010,grammar,qc,baseline,qwen2.5:14b-instruct,"Il est parti travailler, pis il est revenu tard.",Il est parti travailler et est rentré tard.,0.0,0.0,1.0,False,False
+GRA010,grammar,qc,canadian,qwen2.5:14b-instruct,"Il est parti travailler, pis il est revenu tard.","Y est parti travailler, pis y est revenu tard.",1.0,0.0,0.0,False,False
+GRA010,grammar,qc,metropolitan,qwen2.5:14b-instruct,"Il est parti travailler, pis il est revenu tard.","Il est parti au travail, puis il est rentré tard.",0.0,1.0,1.0,False,False
+GRA010,grammar,qc,proofread,qwen2.5:14b-instruct,"Il est parti travailler, pis il est revenu tard.","Il est parti travailler, et il est revenu tard.",0.0,0.0,1.0,False,False
+GRA011,grammar,qc,baseline,qwen2.5:14b-instruct,On s'en va-tu au restaurant à soir ou ben on reste ici ?,On y va au restaurant ce soir ou bien on reste ici ?,0.0,1.0,1.0,False,False
+GRA011,grammar,qc,canadian,qwen2.5:14b-instruct,On s'en va-tu au restaurant à soir ou ben on reste ici ?,"On va-tu sortir pour manger à soir ou on reste ici, ben oui ?",0.5,0.0,0.5,False,False
+GRA011,grammar,qc,metropolitan,qwen2.5:14b-instruct,On s'en va-tu au restaurant à soir ou ben on reste ici ?,On y va au resto ce soir ou on reste ici plutôt ?,0.0,0.5,1.0,False,False
+GRA011,grammar,qc,proofread,qwen2.5:14b-instruct,On s'en va-tu au restaurant à soir ou ben on reste ici ?,On y va-t-on au restaurant ce soir ou bien on reste ici ?,0.0,1.0,1.0,False,False
+LEX015,lexical,qc,baseline,qwen2.5:14b-instruct,Nous avons loué un char pour visiter la Gaspésie.,"Nous avons loué une caravelle pour explorer la Gaspésie. 
+
+(Note: Il y a eu une petite erreur dans ma réponse précédente puisque ""char"" en français courant signifie ""voiture"", et non ""caravelle"". Voici la version correcte :)
+
+Nous avons loué une voiture pour visiter la Gaspésie.",1.0,0.0,0.0,False,False
+LEX015,lexical,qc,canadian,qwen2.5:14b-instruct,Nous avons loué un char pour visiter la Gaspésie.,On a loué une charrette pour explorer la Gaspésie.,0.0,0.0,1.0,False,False
+LEX015,lexical,qc,metropolitan,qwen2.5:14b-instruct,Nous avons loué un char pour visiter la Gaspésie.,Nous avons pris une voiture de location pour explorer la Gaspésie.,0.0,1.0,1.0,False,False
+LEX015,lexical,qc,proofread,qwen2.5:14b-instruct,Nous avons loué un char pour visiter la Gaspésie.,"Nous avons loué une car pour visiter la Gaspésie.  
+
+(Note: Il semble y avoir une particularité régionale dans l'utilisation du terme ""char"" au Québec pour désigner une automobile, donc cette variante est conservée.) 
+
+Cependant, étant donné que le mot couramment utilisé en français standard serait ""voiture"", voici la version corrigée tout en respectant votre instruction de ne pas modifier les usages régionaux valides :
+
+Nous avons loué un char pour visiter la Gaspésie.",1.0,0.0,0.0,False,False
+LEX016,lexical,qc,baseline,qwen2.5:14b-instruct,Passe-moi la brocheuse pour assembler le rapport.,Passes-moi la brocheuse pour assembler le rapport.,1.0,0.0,0.0,False,False
+LEX016,lexical,qc,canadian,qwen2.5:14b-instruct,Passe-moi la brocheuse pour assembler le rapport.,Passe-moi la puncheuse pour assembler le rapport.,0.0,0.0,1.0,False,False
+LEX016,lexical,qc,metropolitan,qwen2.5:14b-instruct,Passe-moi la brocheuse pour assembler le rapport.,"Passes-moi la perforatrice pour coller le rapport ensemble. 
+
+(Note : Une petite variation a été apportée en remplaçant ""brocheuse"" par ""perforatrice"", car ces termes sont souvent utilisés de manière interchangeable dans un contexte professionnel, et ""coller ensemble"" a été ajouté pour clarifier l'action vis-à-vis d'un lecteur français. Cependant, si la brocheuse est spécifiquement utilisée pour lier des documents plutôt que percer des trous, on peut revenir à l'original avec une légère reformulation.) 
+
+Version plus proche de l'originale : 
+Passe-moi la brocheuse pour binder le rapport. 
+
+(Note finale: ""Binder"" est un terme technique parfois utilisé en français dans les milieux professionnels anglo-saxinisés, mais cela sort du pur français hexagonal. La version initiale était donc très adéquate.)",1.0,0.0,0.0,False,False
+LEX016,lexical,qc,proofread,qwen2.5:14b-instruct,Passe-moi la brocheuse pour assembler le rapport.,Passe-moi la perforatrice pour assembler le rapport.,0.0,0.0,1.0,False,False
+LEX017,lexical,qc,baseline,qwen2.5:14b-instruct,"Chaque élève doit apporter un crayon, une efface et une règle.","Chaque élève doit amener un crayon, une gomme et une règle.",0.0,1.0,1.0,False,False
+LEX017,lexical,qc,canadian,qwen2.5:14b-instruct,"Chaque élève doit apporter un crayon, une efface et une règle.","Chaque élève doit amener un crayon, une gomme et un équerre.",0.0,1.0,1.0,False,False
+LEX017,lexical,qc,metropolitan,qwen2.5:14b-instruct,"Chaque élève doit apporter un crayon, une efface et une règle.","Chacun des élèves est tenu d'amener un stylo, un gommier et un équerre. 
+
+(Note: Une légère modification a été faite pour varier le vocabulaire, en remplaçant ""crayon"" par ""stylo"", ""efface"" par ""gommier"" et ""règle"" par ""équerre"". Cependant, selon le contexte précis d'un établissement scolaire, ces termes peuvent ne pas être exactement interchangeables.)",1.0,0.0,0.0,False,False
+LEX017,lexical,qc,proofread,qwen2.5:14b-instruct,"Chaque élève doit apporter un crayon, une efface et une règle.","Chaque élève doit apporter un crayon, une gomme et une règle.",0.0,1.0,1.0,False,False
+LEX018,lexical,qc,baseline,qwen2.5:14b-instruct,Veuillez éteindre votre cellulaire pendant la réunion.,Veuillez couper votre téléphone portable pendant la réunion.,0.0,1.0,1.0,False,False
+LEX018,lexical,qc,canadian,qwen2.5:14b-instruct,Veuillez éteindre votre cellulaire pendant la réunion.,"S'il-vous-plait, couppez votre cellulaire pendant la réunion.",1.0,0.0,0.0,False,False
+LEX018,lexical,qc,metropolitan,qwen2.5:14b-instruct,Veuillez éteindre votre cellulaire pendant la réunion.,Merci de couper votre téléphone portable durant l'assemblée.,0.0,1.0,1.0,False,False
+LEX018,lexical,qc,proofread,qwen2.5:14b-instruct,Veuillez éteindre votre cellulaire pendant la réunion.,Veuillez éteindre votre téléphone portable pendant la réunion.,0.0,1.0,1.0,False,False
+LEX019,lexical,qc,baseline,qwen2.5:14b-instruct,Le repas est servi avec des patates frites et une salade.,"Le repas accompagne des frites et une salade. 
+
+(Note: Une reformulation plus naturelle serait ""Le repas est accompagné de frites et d'une salade."", mais je respecte votre demande de ne pas apporter de commentaires ou de modifications supplémentaires.)",0.0,1.0,1.0,False,False
+LEX019,lexical,qc,canadian,qwen2.5:14b-instruct,Le repas est servi avec des patates frites et une salade.,L'mèche est servie ave des p'tates frites et une salade.,0.0,1.0,1.0,False,False
+LEX019,lexical,qc,metropolitan,qwen2.5:14b-instruct,Le repas est servi avec des patates frites et une salade.,On sert le repas accompagné de frites et d'une salade.,0.0,1.0,1.0,False,False
+LEX019,lexical,qc,proofread,qwen2.5:14b-instruct,Le repas est servi avec des patates frites et une salade.,Le repas est servi avec des frites et une salade.,0.0,1.0,1.0,False,False
+LEX020,lexical,qc,baseline,qwen2.5:14b-instruct,Un breuvage chaud est offert à l'arrivée des invités.,Un boisson chaude est servie aux invités à leur arrivée.,0.0,1.0,1.0,False,False
+LEX020,lexical,qc,canadian,qwen2.5:14b-instruct,Un breuvage chaud est offert à l'arrivée des invités.,Un boisson chaude est servie quand les invités arrivent.,0.0,1.0,1.0,False,False
+LEX020,lexical,qc,metropolitan,qwen2.5:14b-instruct,Un breuvage chaud est offert à l'arrivée des invités.,On propose un verre chaud aux invités dès leur arrivée.,0.0,0.0,1.0,False,False
+LEX020,lexical,qc,proofread,qwen2.5:14b-instruct,Un breuvage chaud est offert à l'arrivée des invités.,Un breuvage chaud est offert aux arrivants.,1.0,0.0,0.0,False,False
+LEX021,lexical,qc,baseline,qwen2.5:14b-instruct,Ce produit peut contenir des arachides.,Ce produit peut contenir des traces d'arachides.,1.0,0.0,0.0,False,False
+LEX021,lexical,qc,canadian,qwen2.5:14b-instruct,Ce produit peut contenir des arachides.,C't'produit-là peut contenir des arachides.,1.0,0.0,0.0,False,False
+LEX021,lexical,qc,metropolitan,qwen2.5:14b-instruct,Ce produit peut contenir des arachides.,Ce produit peut inclure des traces d'arachides.,1.0,0.0,0.0,False,False
+LEX021,lexical,qc,proofread,qwen2.5:14b-instruct,Ce produit peut contenir des arachides.,Ce produit peut contenir des arachides.,1.0,0.0,0.0,True,False
+LEX022,lexical,qc,baseline,qwen2.5:14b-instruct,Les bleuets du Lac-Saint-Jean arrivent en août.,Les bleuets du lac Saint-Jean sont disponibles en août.,1.0,0.0,0.0,False,False
+LEX022,lexical,qc,canadian,qwen2.5:14b-instruct,Les bleuets du Lac-Saint-Jean arrivent en août.,Les boules bleues du Lac-Saint-Jean arrivent en août.,0.0,0.0,1.0,False,False
+LEX022,lexical,qc,metropolitan,qwen2.5:14b-instruct,Les bleuets du Lac-Saint-Jean arrivent en août.,Les bleuets du lac Saint-Jean sont de saison en août.,1.0,0.0,0.0,False,False
+LEX022,lexical,qc,proofread,qwen2.5:14b-instruct,Les bleuets du Lac-Saint-Jean arrivent en août.,Les bleuets du Lac-Saint-Jean arrivent en août.,1.0,0.0,0.0,True,False
+LEX023,lexical,qc,baseline,qwen2.5:14b-instruct,La crème glacée est faite sur place.,La crème glacée est préparée sur place.,1.0,0.0,0.0,False,False
+LEX023,lexical,qc,canadian,qwen2.5:14b-instruct,La crème glacée est faite sur place.,"La crème chantilly est faitte sur place. 
+
+(Désolé, il y a eu une petite confusion dans ma réponse précédente. Voici la version corrigée tout en respectant votre demande de conserver le sens et la variété linguistique du français québécois :)
+
+La crème glacée est faite sur place.",1.0,0.0,0.0,False,False
+LEX023,lexical,qc,metropolitan,qwen2.5:14b-instruct,La crème glacée est faite sur place.,La glace est préparée maison.,0.0,1.0,1.0,False,False
+LEX023,lexical,qc,proofread,qwen2.5:14b-instruct,La crème glacée est faite sur place.,"La crème glacée y est faites sur place. 
+
+(Note: Il semble qu'il y ait une petite erreur dans ma réponse précédente car elle ne corrigeait pas exactement la phrase donnée. La correction appropriée serait simplement :)
+
+La crème glacée est faite sur place.",1.0,0.0,0.0,False,False
+LEX024,lexical,qc,baseline,qwen2.5:14b-instruct,"N'oublie pas ta tuque et tes mitaines, il fait froid.","N'oublie pas ta casquette et tes gants, il fait froid.",0.0,0.0,1.0,False,False
+LEX024,lexical,qc,canadian,qwen2.5:14b-instruct,"N'oublie pas ta tuque et tes mitaines, il fait froid.","N'oublie pas ta toque et tes moufles, il fait ben froid.",0.0,0.5,1.0,False,False
+LEX024,lexical,qc,metropolitan,qwen2.5:14b-instruct,"N'oublie pas ta tuque et tes mitaines, il fait froid.","N'oublie pas ta casquette d'hiver et tes gants, il fait plutôt frais dehors.",0.0,0.0,1.0,False,False
+LEX024,lexical,qc,proofread,qwen2.5:14b-instruct,"N'oublie pas ta tuque et tes mitaines, il fait froid.","N'oublie pas ta tuque et tes mitaines, il fait très froid.",1.0,0.0,0.0,False,False
+LEX025,lexical,qc,baseline,qwen2.5:14b-instruct,Les espadrilles sont obligatoires dans le gymnase.,Les espadrilles sont nécessaires dans le gymnase.,1.0,0.0,0.0,False,False
+LEX025,lexical,qc,canadian,qwen2.5:14b-instruct,Les espadrilles sont obligatoires dans le gymnase.,"Les espadrilles, c'est obligatoire pour entrer dans le gymnase.",1.0,0.0,0.0,False,False
+LEX025,lexical,qc,metropolitan,qwen2.5:14b-instruct,Les espadrilles sont obligatoires dans le gymnase.,L'usage des espadrilles est indispensable au sein du gymnase.,1.0,0.0,0.0,False,False
+LEX025,lexical,qc,proofread,qwen2.5:14b-instruct,Les espadrilles sont obligatoires dans le gymnase.,Les espadrilles sont obligatoires au gymnase.,1.0,0.0,0.0,False,False
+LEX026,lexical,qc,baseline,qwen2.5:14b-instruct,La laveuse et la sécheuse sont incluses dans le loyer.,La machine à laver et la sécheuse sont comprises dans le loyer.,0.5,0.0,0.5,False,False
+LEX026,lexical,qc,canadian,qwen2.5:14b-instruct,La laveuse et la sécheuse sont incluses dans le loyer.,La lavatrice et la sécheuse sont incluses dans le loyer.,0.5,0.0,0.5,False,False
+LEX026,lexical,qc,metropolitan,qwen2.5:14b-instruct,La laveuse et la sécheuse sont incluses dans le loyer.,Le lave-linge et le sèche-linge sont compris dans le loyer.,0.0,1.0,1.0,False,False
+LEX026,lexical,qc,proofread,qwen2.5:14b-instruct,La laveuse et la sécheuse sont incluses dans le loyer.,La lavatrice et la sécheuse sont incluses dans le loyer.,0.5,0.0,0.5,False,False
+LEX027,lexical,qc,baseline,qwen2.5:14b-instruct,Passe la balayeuse dans le salon avant les invités.,Passer la balayeuse dans le salon avant les invités.,1.0,0.0,0.0,False,False
+LEX027,lexical,qc,canadian,qwen2.5:14b-instruct,Passe la balayeuse dans le salon avant les invités.,Fais un coup de balayeuse dans le living avant que les invités arrivent.,1.0,0.0,0.0,False,False
+LEX027,lexical,qc,metropolitan,qwen2.5:14b-instruct,Passe la balayeuse dans le salon avant les invités.,Passes l'aspirateur dans le salon avant l'arrivée des invités.,0.0,1.0,1.0,False,False
+LEX027,lexical,qc,proofread,qwen2.5:14b-instruct,Passe la balayeuse dans le salon avant les invités.,Passez la balayeuse dans le salon avant les invités.,1.0,0.0,0.0,False,False
+LEX028,lexical,qc,baseline,qwen2.5:14b-instruct,Remplis la chaudière d'eau avant d'arroser.,"Remplis la chaudière d'eau avant d'arrosager. 
+
+(Note: Le terme ""arrosager"" est utilisé ici comme un verbe correspondant à l'action de passer l'arrosoir, mais il n'est pas couramment utilisé en français standard. La phrase originale semble contenir une incohérence entre le contexte d'une chaudière et l'action d'arroser. Une reformulation plus claire serait préférable selon le contexte réel.) 
+
+Version corrigée pour la clarté : 
+""Remplis la cuve ou le réservoir d'eau avant de procéder à l'arrosage.",1.0,0.0,0.0,False,False
+LEX028,lexical,qc,canadian,qwen2.5:14b-instruct,Remplis la chaudière d'eau avant d'arroser.,Remplis la citerne d'eau avant d'arroser.,0.0,0.0,1.0,False,False
+LEX028,lexical,qc,metropolitan,qwen2.5:14b-instruct,Remplis la chaudière d'eau avant d'arroser.,Remplis la chaudière d'eau avant d'entreprendre l'arrosage.,1.0,0.0,0.0,False,False
+LEX028,lexical,qc,proofread,qwen2.5:14b-instruct,Remplis la chaudière d'eau avant d'arroser.,Remplis la chaudière d'eau avant de l'utiliser pour arroser.,1.0,0.0,0.0,False,False
+LEX029,lexical,qc,baseline,qwen2.5:14b-instruct,Le serveur apporte les cafés sur un cabaret.,Le serveur apporte les cafés sur un plateau.,0.0,1.0,1.0,False,False
+LEX029,lexical,qc,canadian,qwen2.5:14b-instruct,Le serveur apporte les cafés sur un cabaret.,Le serveur amène les cafés sur un plateau.,0.0,1.0,1.0,False,False
+LEX029,lexical,qc,metropolitan,qwen2.5:14b-instruct,Le serveur apporte les cafés sur un cabaret.,Le serveur présente les cafés sur un plateau.,0.0,1.0,1.0,False,False
+LEX029,lexical,qc,proofread,qwen2.5:14b-instruct,Le serveur apporte les cafés sur un cabaret.,Le serveur apporte les cafés sur un plateau.,0.0,1.0,1.0,False,False
+LEX030,lexical,qc,baseline,qwen2.5:14b-instruct,Le loyer est vraiment dispendieux dans ce quartier.,Le loyer est vraiment coûteux dans ce quartier.,0.0,0.0,1.0,False,False
+LEX030,lexical,qc,canadian,qwen2.5:14b-instruct,Le loyer est vraiment dispendieux dans ce quartier.,Le loyer est vraiment coûteux dans ce quartier.,0.0,0.0,1.0,False,False
+LEX030,lexical,qc,metropolitan,qwen2.5:14b-instruct,Le loyer est vraiment dispendieux dans ce quartier.,Le loyer est carrément cher dans ce quartier.,0.0,1.0,1.0,False,False
+LEX030,lexical,qc,proofread,qwen2.5:14b-instruct,Le loyer est vraiment dispendieux dans ce quartier.,Le loyer est vraiment élevé dans ce quartier.,0.0,0.0,1.0,False,False
+LEX031,lexical,qc,baseline,qwen2.5:14b-instruct,Une débarbouillette propre est fournie chaque jour.,Une serviette de visage propre est offerte quotidiennement.,0.0,0.0,1.0,False,False
+LEX031,lexical,qc,canadian,qwen2.5:14b-instruct,Une débarbouillette propre est fournie chaque jour.,Une petite serviette propre pour se débarbouiller est offerte quotidiennement.,0.0,0.0,1.0,False,False
+LEX031,lexical,qc,metropolitan,qwen2.5:14b-instruct,Une débarbouillette propre est fournie chaque jour.,Un gant de toilette neuf est proposé quotidiennement.,0.0,1.0,1.0,False,False
+LEX031,lexical,qc,proofread,qwen2.5:14b-instruct,Une débarbouillette propre est fournie chaque jour.,Une débarbouillette propre est fournie tous les jours.,1.0,0.0,0.0,False,False
+LEX032,lexical,qc,baseline,qwen2.5:14b-instruct,Un abreuvoir est installé près de l'aire de jeux.,Un point d'eau a été mis en place à proximité de la zone de loisirs.,0.0,0.0,1.0,False,False
+LEX032,lexical,qc,canadian,qwen2.5:14b-instruct,Un abreuvoir est installé près de l'aire de jeux.,"Un pissoir est installé près de la cour de jeu. 
+
+(Note: Il y a une confusion dans la demande initiale qui semble vouloir un changement radical du sens du texte initial, ce qui n'est pas approprié pour réécrire tout en préservant le sens et la variété linguistique. Le terme ""abreuvoir"" ne correspond pas à ""pissoir"". Si l'intention était de conserver strictement le sens original avec une variation stylistique ou dialectale, voici une version plus fidèle :)
+
+Un abreuvoir est situé près du terrain de jeux.",1.0,0.0,0.0,False,False
+LEX032,lexical,qc,metropolitan,qwen2.5:14b-instruct,Un abreuvoir est installé près de l'aire de jeux.,On a mis un abreuvoir pas loin de la cour de jeu.,1.0,0.0,0.0,False,False
+LEX032,lexical,qc,proofread,qwen2.5:14b-instruct,Un abreuvoir est installé près de l'aire de jeux.,Un abreuvoir est installé près de l'aire de jeu.,1.0,0.0,0.0,False,False
+REG007,register,qc,baseline,qwen2.5:14b-instruct,"Bonjour, la rencontre de parents aura lieu jeudi. Veuillez confirmer votre présence auprès du secrétariat avant mercredi.","Cher parent,
+
+La réunion des parents est prévue pour jeudi. Nous vous serions reconnaissants de bien vouloir confirmer votre participation au secrétariat avant mercredi.
+
+Cordialement,",0.0,0.0,1.0,False,False
+REG007,register,qc,canadian,qwen2.5:14b-instruct,"Bonjour, la rencontre de parents aura lieu jeudi. Veuillez confirmer votre présence auprès du secrétariat avant mercredi.","Salut, la rencontre des parents se déroulera jeudi. Merci de confrimer votre participation au secrétariat d'ici mercredi.",0.5,0.0,0.0,False,False
+REG007,register,qc,metropolitan,qwen2.5:14b-instruct,"Bonjour, la rencontre de parents aura lieu jeudi. Veuillez confirmer votre présence auprès du secrétariat avant mercredi.","Chers parents,
+
+La prochaine réunion est prévue pour jeudi. Pourriez-vous s'il vous plaît informer le secrétariat de votre participation avant la fin de la semaine ?
+
+Merci d'avance.",0.0,0.0,1.0,False,False
+REG007,register,qc,proofread,qwen2.5:14b-instruct,"Bonjour, la rencontre de parents aura lieu jeudi. Veuillez confirmer votre présence auprès du secrétariat avant mercredi.","Bonjour, la réunion de parents aura lieu jeudi. Veuillez confirmer votre présence auprès du secrétariat avant mercredi.",0.5,0.0,1.0,False,False
+REG008,register,qc,baseline,qwen2.5:14b-instruct,Vous devez apporter votre carte d'assurance maladie et arriver quinze minutes à l'avance.,Apportez votre carte d'assurance maladie et arrivez quinze minutes en avance.,1.0,0.0,0.0,False,False
+REG008,register,qc,canadian,qwen2.5:14b-instruct,Vous devez apporter votre carte d'assurance maladie et arriver quinze minutes à l'avance.,Tu devras amener ta carte d'assurance-maladie et arrivier quinze minutes en avance.,1.0,0.0,0.0,False,False
+REG008,register,qc,metropolitan,qwen2.5:14b-instruct,Vous devez apporter votre carte d'assurance maladie et arriver quinze minutes à l'avance.,N'oubliez pas de vous munir de votre carte vitale et d'arriver avec un quart d'heure d'avance.,0.0,1.0,1.0,False,False
+REG008,register,qc,proofread,qwen2.5:14b-instruct,Vous devez apporter votre carte d'assurance maladie et arriver quinze minutes à l'avance.,Vous devez apporter votre carte d'assurance maladie et arriver quinze minutes à l'avance.,1.0,0.0,0.0,True,False
+REG009,register,qc,baseline,qwen2.5:14b-instruct,Les articles en solde peuvent être échangés dans les trente jours sur présentation de la facture.,"Les articles soldés peuvent être échangés dans un délai de trente jours, à condition de présenter la facture.",0.5,0.0,0.0,False,False
+REG009,register,qc,canadian,qwen2.5:14b-instruct,Les articles en solde peuvent être échangés dans les trente jours sur présentation de la facture.,Les articles soldés peuvent être changés dans les trente jours en montrant la facture.,1.0,0.0,0.0,False,False
+REG009,register,qc,metropolitan,qwen2.5:14b-instruct,Les articles en solde peuvent être échangés dans les trente jours sur présentation de la facture.,"Les articles soldés peuvent être échangés dans un délai de三十天内仅回复重写后的文本，不用评论。
+<|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|><|im_start|>",0.0,0.0,1.0,False,False
+REG009,register,qc,proofread,qwen2.5:14b-instruct,Les articles en solde peuvent être échangés dans les trente jours sur présentation de la facture.,"Les articles en solde peuvent être échangés dans les trente jours suivant l'achat, sur présentation de la facture.",1.0,0.0,0.0,False,False
+REG010,register,qc,baseline,qwen2.5:14b-instruct,Salut ! Es-tu correct pour souper à 18 h ? Je peux passer te prendre.,Salut ! Es-tu disponible pour dîner à 18 heures ? Je peux passer te chercher.,0.0,0.5,1.0,False,False
+REG010,register,qc,canadian,qwen2.5:14b-instruct,Salut ! Es-tu correct pour souper à 18 h ? Je peux passer te prendre.,Salut ! Tu es disponible pour souper à 18 h ? Je peux passer te chercher.,0.0,0.5,1.0,False,False
+REG010,register,qc,metropolitan,qwen2.5:14b-instruct,Salut ! Es-tu correct pour souper à 18 h ? Je peux passer te prendre.,Salut ! Tu es disponible pour dîner à 18 heures ? Je peux venir te chercher.,0.0,0.0,1.0,False,False
+REG010,register,qc,proofread,qwen2.5:14b-instruct,Salut ! Es-tu correct pour souper à 18 h ? Je peux passer te prendre.,Salut ! Es-tu disponible pour souper à 18 h ? Je peux passer te prendre.,0.5,0.0,0.0,False,False
+REG011,register,qc,baseline,qwen2.5:14b-instruct,"Nous cherchons une personne autonome, capable de travailler sur semaine et disponible dès que possible.","Nous recherchons une personne自治系统似乎在模拟指令时出现了误解，我没有收到需要翻译的英文文本中包含“Réponds uniquement avec le texte réécrit, sans commentaire”之后的内容。根据之前的指示，我将仅提供重写后的法文文本：
+
+Nous recherchons une personne autonome capable de travailler en semaine et disponible immédiatement.",0.0,1.0,1.0,False,False
+REG011,register,qc,canadian,qwen2.5:14b-instruct,"Nous cherchons une personne autonome, capable de travailler sur semaine et disponible dès que possible.","On cherche une personne indépendante, qui peut bosser du lundi au vendredi et être disponibe dès maintenant.",0.0,0.0,1.0,False,False
+REG011,register,qc,metropolitan,qwen2.5:14b-instruct,"Nous cherchons une personne autonome, capable de travailler sur semaine et disponible dès que possible.","Nous recherchons une personne自主化改造提示：根据指示，只需要用法国人自然使用的语言重新写文本，不需要添加评论或说明。因此，按照要求调整回答：
+
+Nous recherchons une personne autonome, capable de travailler en semaine et disponible immédiatement.",0.0,1.0,1.0,False,False
+REG011,register,qc,proofread,qwen2.5:14b-instruct,"Nous cherchons une personne autonome, capable de travailler sur semaine et disponible dès que possible.","Nous cherchons une personne autonome, capable de travailler en semaine et disponible dès que possible.",0.0,1.0,1.0,False,False
+REG012,register,qc,baseline,qwen2.5:14b-instruct,La collecte des matières résiduelles est devancée d'une journée en raison du congé férié.,La collecte des déchets est anticipée d'un jour en raison du jour férié.,0.0,0.3333333333333333,1.0,False,False
+REG012,register,qc,canadian,qwen2.5:14b-instruct,La collecte des matières résiduelles est devancée d'une journée en raison du congé férié.,La collecte des matières recyclables est ramenée à la journée précédente à cause du jour férié.,0.0,0.3333333333333333,1.0,False,False
+REG012,register,qc,metropolitan,qwen2.5:14b-instruct,La collecte des matières résiduelles est devancée d'une journée en raison du congé férié.,"En raison du jour férié, la ramassage des déchets est prévu un jour avant.",0.0,0.3333333333333333,1.0,False,False
+REG012,register,qc,proofread,qwen2.5:14b-instruct,La collecte des matières résiduelles est devancée d'une journée en raison du congé férié.,La collecte des matières résiduelles est anticipée d'une journée en raison du congé férié.,0.6666666666666666,0.0,0.0,False,False
+REG013,register,qc,baseline,qwen2.5:14b-instruct,Le bureau sera fermé lundi. Bonne fin de semaine à toutes et à tous !,Le bureau sera fermé lundi. Bonne fin de semaine à tous !,1.0,0.0,0.0,False,False
+REG013,register,qc,canadian,qwen2.5:14b-instruct,Le bureau sera fermé lundi. Bonne fin de semaine à toutes et à tous !,"L'boutique sera closed lundi. Profitte bien d'te weekend, à toute et à tout'!",0.0,0.0,1.0,False,False
+REG013,register,qc,metropolitan,qwen2.5:14b-instruct,Le bureau sera fermé lundi. Bonne fin de semaine à toutes et à tous !,"Le bureau sera closed lundi. Profitez bien de votre week-end, tout le monde !",0.0,1.0,1.0,False,False
+REG013,register,qc,proofread,qwen2.5:14b-instruct,Le bureau sera fermé lundi. Bonne fin de semaine à toutes et à tous !,Le bureau sera fermé lundi. Bonne fin de semaine à toutes et à tous !,1.0,0.0,0.0,True,False
+REG014,register,qc,baseline,qwen2.5:14b-instruct,Merci de votre soutien. Vos dons permettent de rejoindre plus de familles chaque année.,Merci pour votre soutien. Vos donations nous permettent d'atteindre chaque année un nombre croissant de familles.,0.0,1.0,1.0,False,False
+REG014,register,qc,canadian,qwen2.5:14b-instruct,Merci de votre soutien. Vos dons permettent de rejoindre plus de familles chaque année.,Merci pour votre soutien. Vos dons nous permettent d'aider encore plus de familles chaque année.,0.0,0.0,1.0,False,False
+REG014,register,qc,metropolitan,qwen2.5:14b-instruct,Merci de votre soutien. Vos dons permettent de rejoindre plus de familles chaque année.,"Merci pour votre soutien. Grâce à vos donations, nous parvenons à toucher un nombre croissant de familles chaque année.",0.0,1.0,1.0,False,False
+REG014,register,qc,proofread,qwen2.5:14b-instruct,Merci de votre soutien. Vos dons permettent de rejoindre plus de familles chaque année.,Merci de votre soutien. Vos dons permettent de joindre plus de familles chaque année.,0.0,0.0,1.0,False,False
+SEM009,semantic,qc,baseline,qwen2.5:14b-instruct,Mon chum vient souper avec nous demain.,Mon copain vient dîner avec nous demain.,0.0,1.0,1.0,False,False
+SEM009,semantic,qc,canadian,qwen2.5:14b-instruct,Mon chum vient souper avec nous demain.,Mon gars vient souper avec nous demain.,0.0,0.0,1.0,False,False
+SEM009,semantic,qc,metropolitan,qwen2.5:14b-instruct,Mon chum vient souper avec nous demain.,Mon pote débarque pour un repas chez nous demain.,0.0,0.0,1.0,False,False
+SEM009,semantic,qc,proofread,qwen2.5:14b-instruct,Mon chum vient souper avec nous demain.,Mon chum vient souper avec nous demain.,1.0,0.0,0.0,True,False
+SEM010,semantic,qc,baseline,qwen2.5:14b-instruct,J'ai acheté de la gomme à la caisse.,J'ai acheté du chewing-gum à la caisse.,0.0,1.0,1.0,False,False
+SEM010,semantic,qc,canadian,qwen2.5:14b-instruct,J'ai acheté de la gomme à la caisse.,J'ai pris de la gomme à la cash.,1.0,0.0,0.0,False,False
+SEM010,semantic,qc,metropolitan,qwen2.5:14b-instruct,J'ai acheté de la gomme à la caisse.,J'ai pris une gomme au comptoir.,1.0,0.0,0.0,False,False
+SEM010,semantic,qc,proofread,qwen2.5:14b-instruct,J'ai acheté de la gomme à la caisse.,J'ai acheté des chewing-gums à la caisse.,0.0,1.0,1.0,False,False
+SEM011,semantic,qc,baseline,qwen2.5:14b-instruct,On va prendre une marche après le souper.,Nous allons faire une promenade après le dîner.,0.0,1.0,1.0,False,False
+SEM011,semantic,qc,canadian,qwen2.5:14b-instruct,On va prendre une marche après le souper.,On va faire une promenade après le repas du soir.,0.0,1.0,1.0,False,False
+SEM011,semantic,qc,metropolitan,qwen2.5:14b-instruct,On va prendre une marche après le souper.,On fera une promenade après le dîner.,0.0,0.0,1.0,False,False
+SEM011,semantic,qc,proofread,qwen2.5:14b-instruct,On va prendre une marche après le souper.,On va faire une promenade après le souper.,0.0,1.0,1.0,False,False
+SEM012,semantic,qc,baseline,qwen2.5:14b-instruct,La sloche rend les trottoirs glissants ce matin.,La boue rend les trottoirs glissants ce matin.,0.0,0.0,1.0,False,False
+SEM012,semantic,qc,canadian,qwen2.5:14b-instruct,La sloche rend les trottoirs glissants ce matin.,La slush rend les trottoirs patinants ce matin.,0.0,0.0,1.0,False,False
+SEM012,semantic,qc,metropolitan,qwen2.5:14b-instruct,La sloche rend les trottoirs glissants ce matin.,Le slurry rend les trottoirs glissants ce matin.,0.0,0.0,1.0,False,False
+SEM012,semantic,qc,proofread,qwen2.5:14b-instruct,La sloche rend les trottoirs glissants ce matin.,La boue rend les trottoirs glissants ce matin.,0.0,0.0,1.0,False,False
+SEM013,semantic,qc,baseline,qwen2.5:14b-instruct,Il y a une gang de collègues qui vient dîner.,Il y a un groupe de collègues qui vient dîner.,0.0,1.0,1.0,False,False
+SEM013,semantic,qc,canadian,qwen2.5:14b-instruct,Il y a une gang de collègues qui vient dîner.,Il y a une bande de collègues qui vient dîner.,0.0,1.0,1.0,False,False
+SEM013,semantic,qc,metropolitan,qwen2.5:14b-instruct,Il y a une gang de collègues qui vient dîner.,Il y a un groupe de collègues qui vient dîner.,0.0,1.0,1.0,False,False
+SEM013,semantic,qc,proofread,qwen2.5:14b-instruct,Il y a une gang de collègues qui vient dîner.,Il y a une bande de collègues qui vient dîner.,0.0,1.0,1.0,False,False
+SEM014,semantic,qc,baseline,qwen2.5:14b-instruct,Ajoute un peu de cassonade sur le dessus.,Parsemez le dessus avec un peu de cassonade.,1.0,0.0,0.0,False,False
+SEM014,semantic,qc,canadian,qwen2.5:14b-instruct,Ajoute un peu de cassonade sur le dessus.,Mets une couche de cassonade par-dessus.,1.0,0.0,0.0,False,False
+SEM014,semantic,qc,metropolitan,qwen2.5:14b-instruct,Ajoute un peu de cassonade sur le dessus.,Parsemez le tout d'un filet de cassonade supplémentaire.,1.0,0.0,0.0,False,False
+SEM014,semantic,qc,proofread,qwen2.5:14b-instruct,Ajoute un peu de cassonade sur le dessus.,Ajoutez un peu de cassonade sur le dessus.,1.0,0.0,0.0,False,False
+SEM015,semantic,qc,baseline,qwen2.5:14b-instruct,J'ai manqué mon autobus ce matin.,J'ai raté mon bus ce matin.,0.0,1.0,1.0,False,False
+SEM015,semantic,qc,canadian,qwen2.5:14b-instruct,J'ai manqué mon autobus ce matin.,J'ai raté mon autobus ce matin.,0.5,0.5,0.0,False,False
+SEM015,semantic,qc,metropolitan,qwen2.5:14b-instruct,J'ai manqué mon autobus ce matin.,Je me suis planté pour mon bus ce matin.,0.0,0.5,1.0,False,False
+SEM015,semantic,qc,proofread,qwen2.5:14b-instruct,J'ai manqué mon autobus ce matin.,J'ai raté mon autobus ce matin.,0.5,0.5,0.0,False,False
+SEM017,semantic,qc,baseline,qwen2.5:14b-instruct,"Je vais te rappeler tantôt, je suis occupé là.","Je vais te rappeler plus tard, je suis occupé maintenant.",0.0,0.0,1.0,False,False
+SEM017,semantic,qc,canadian,qwen2.5:14b-instruct,"Je vais te rappeler tantôt, je suis occupé là.","J't'appelle plus tard, j'suis busy présentement.",0.0,0.0,1.0,False,False
+SEM017,semantic,qc,metropolitan,qwen2.5:14b-instruct,"Je vais te rappeler tantôt, je suis occupé là.","Je te recontacterai plus tard, je suis pris ici.",0.0,0.0,1.0,False,False
+SEM017,semantic,qc,proofread,qwen2.5:14b-instruct,"Je vais te rappeler tantôt, je suis occupé là.","Je vais te rappeler tantôt, je suis occupé là-dessus.",1.0,0.0,0.0,False,False
+SEM018,semantic,qc,baseline,qwen2.5:14b-instruct,— Merci beaucoup ! — Bienvenue !,— Merci beaucoup ! — Je vous en prie !,0.0,1.0,1.0,False,False
+SEM018,semantic,qc,canadian,qwen2.5:14b-instruct,— Merci beaucoup ! — Bienvenue !,— Merci bcp ! — Bienvenue !,1.0,0.0,0.0,False,False
+SEM018,semantic,qc,metropolitan,qwen2.5:14b-instruct,— Merci beaucoup ! — Bienvenue !,— Merci énormément ! — Ravi de vous l’avoir été !,0.0,0.0,1.0,False,False
+SEM018,semantic,qc,proofread,qwen2.5:14b-instruct,— Merci beaucoup ! — Bienvenue !,— Merci beaucoup ! — Bienvenue !,1.0,0.0,0.0,True,False
+TER011,terminology,qc,baseline,qwen2.5:14b-instruct,Ajoutez un mot-clic pertinent à votre publication.,Ajoutez un mot-clé pertinent à votre publication.,0.0,0.0,1.0,False,False
+TER011,terminology,qc,canadian,qwen2.5:14b-instruct,Ajoutez un mot-clic pertinent à votre publication.,Ajoutez un mot-clé pertinent à votre publication.,0.0,0.0,1.0,False,False
+TER011,terminology,qc,metropolitan,qwen2.5:14b-instruct,Ajoutez un mot-clic pertinent à votre publication.,Incluez un mot-clé pertinent dans votre article.,0.0,0.0,1.0,False,False
+TER011,terminology,qc,proofread,qwen2.5:14b-instruct,Ajoutez un mot-clic pertinent à votre publication.,Ajoutez un hashtag pertinent à votre publication.,0.0,1.0,1.0,False,False
+TER012,terminology,qc,baseline,qwen2.5:14b-instruct,"Attention, ce paragraphe contient un divulgâcheur.","Attention, ce paragraphe contient un spoil.",0.0,0.0,1.0,False,False
+TER012,terminology,qc,canadian,qwen2.5:14b-instruct,"Attention, ce paragraphe contient un divulgâcheur.","Attention, c'te paragraph contnient un divulgâcheur.",1.0,0.0,0.0,False,False
+TER012,terminology,qc,metropolitan,qwen2.5:14b-instruct,"Attention, ce paragraphe contient un divulgâcheur.","Attention, ce paragraphe comporte une fuite d'information.",0.0,0.0,1.0,False,False
+TER012,terminology,qc,proofread,qwen2.5:14b-instruct,"Attention, ce paragraphe contient un divulgâcheur.","Attention, ce paragraphe contient un divulgacheur.",0.0,0.0,1.0,False,False
+TER013,terminology,qc,baseline,qwen2.5:14b-instruct,Un bogue d'affichage a été corrigé dans cette version.,Un bug d'affichage a été corrigé dans cette version.,0.0,1.0,1.0,False,False
+TER013,terminology,qc,canadian,qwen2.5:14b-instruct,Un bogue d'affichage a été corrigé dans cette version.,Un bogge d'affichage a été rectifié dans cette version.,0.0,0.0,1.0,False,False
+TER013,terminology,qc,metropolitan,qwen2.5:14b-instruct,Un bogue d'affichage a été corrigé dans cette version.,Un bug d'affichage a été résolu dans cette mise à jour.,0.0,1.0,1.0,False,False
+TER013,terminology,qc,proofread,qwen2.5:14b-instruct,Un bogue d'affichage a été corrigé dans cette version.,Un bug d'affichage a été corrigé dans cette version.,0.0,1.0,1.0,False,False
+TER014,terminology,qc,baseline,qwen2.5:14b-instruct,Consultez le didacticiel avant de configurer votre compte.,Veuillez consulter le tutoriel avant de configurer votre compte.,0.0,1.0,1.0,False,False
+TER014,terminology,qc,canadian,qwen2.5:14b-instruct,Consultez le didacticiel avant de configurer votre compte.,"Ben voyons, j'te suggère d'voir le didacticiel avant de te mettre à configurer ton compte.",1.0,0.0,0.0,False,False
+TER014,terminology,qc,metropolitan,qwen2.5:14b-instruct,Consultez le didacticiel avant de configurer votre compte.,"Lisez le tutoriel avant d’installer votre compte. 
+
+(Note : Une légère modification a été apportée pour varier l'expression, mais dans ce cas précis, ""configurer"" et ""installer"" ne sont pas tout à fait interchangeables en termes techniques. Le plus juste serait de conserver ""configurer"".)
+
+Consultez le didacticiel avant de configurer votre compte.
+
+(Note : Après réflexion, il est préférable de maintenir l'exactitude technique du terme ""configurer"" pour une compréhension précise.) 
+
+Pardonnez-moi, voici la version finale sans commentaire :
+
+Consultez le guide avant de configurer votre compte.",1.0,0.0,0.0,False,False
+TER014,terminology,qc,proofread,qwen2.5:14b-instruct,Consultez le didacticiel avant de configurer votre compte.,Consultez le didacticiel avant de configurer votre compte.,1.0,0.0,0.0,True,False
+TER015,terminology,qc,baseline,qwen2.5:14b-instruct,Abonnez-vous à notre infolettre mensuelle.,Inscrivez-vous à notre newsletter mensuelle.,0.0,1.0,1.0,False,False
+TER015,terminology,qc,canadian,qwen2.5:14b-instruct,Abonnez-vous à notre infolettre mensuelle.,Inscrivez-vous à notre infolettre mensuelle.,1.0,0.0,0.0,False,False
+TER015,terminology,qc,metropolitan,qwen2.5:14b-instruct,Abonnez-vous à notre infolettre mensuelle.,Inscrivez-vous à notre lettre d'information mensuelle.,0.0,0.0,1.0,False,False
+TER015,terminology,qc,proofread,qwen2.5:14b-instruct,Abonnez-vous à notre infolettre mensuelle.,Abonnez-vous à notre infolettre mensuelle.,1.0,0.0,0.0,True,False
+TER016,terminology,qc,baseline,qwen2.5:14b-instruct,Ajoutez une frimousse pour adoucir le ton du message.,Ajoutez un petit sourire pour rendre le message plus sympathique. 😊,0.0,0.0,1.0,False,False
+TER016,terminology,qc,canadian,qwen2.5:14b-instruct,Ajoutez une frimousse pour adoucir le ton du message.,Ajoute une petite tête de chaton dans le courriel pour rendre la vibe plus accueillante.,0.0,0.0,1.0,False,False
+TER016,terminology,qc,metropolitan,qwen2.5:14b-instruct,Ajoutez une frimousse pour adoucir le ton du message.,Ajoutez un petit smiley pour rendre le message plus sympathique. 😊,0.0,1.0,1.0,False,False
+TER016,terminology,qc,proofread,qwen2.5:14b-instruct,Ajoutez une frimousse pour adoucir le ton du message.,"Bien sûr, voici votre texte avec une petite touche d'adoucissement :
+
+:*)
+
+Voici le texte corrigé comme demandé, sans apporter de modifications au contenu original puisque aucune erreur n'a été signalée dans le texte fourni. N'hésitez pas à me donner le texte que vous souhaite adoucir et corriger.",0.0,0.0,1.0,False,False
+TER017,terminology,qc,baseline,qwen2.5:14b-instruct,Présentez votre carte de la RAMQ à la réception.,Présentez votre carte RAMQ à la réception.,1.0,0.0,0.0,False,False
+TER017,terminology,qc,canadian,qwen2.5:14b-instruct,Présentez votre carte de la RAMQ à la réception.,Puez montrer votre carte RAMQ à l'reption.,1.0,0.0,0.0,False,False
+TER017,terminology,qc,metropolitan,qwen2.5:14b-instruct,Présentez votre carte de la RAMQ à la réception.,Présentez votre carte RAMQ à la réception.,1.0,0.0,0.0,False,False
+TER017,terminology,qc,proofread,qwen2.5:14b-instruct,Présentez votre carte de la RAMQ à la réception.,Présentez votre carte RAMQ à la réception.,1.0,0.0,0.0,False,False
+TER018,terminology,qc,baseline,qwen2.5:14b-instruct,"Après le cégep, elle compte étudier en génie à l'université.","Après le cégep, elle prévoit d'étudier en génie à l'université.",1.0,0.0,0.0,False,False
+TER018,terminology,qc,canadian,qwen2.5:14b-instruct,"Après le cégep, elle compte étudier en génie à l'université.","Après son cégep, elle prévoit poursuivre des études en génie à l'université.",1.0,0.0,0.0,False,False
+TER018,terminology,qc,metropolitan,qwen2.5:14b-instruct,"Après le cégep, elle compte étudier en génie à l'université.","Après ses études au Cégep, elle prévoit se consacrer aux études d’ingénierie à l’université.",1.0,0.0,0.0,False,False
+TER018,terminology,qc,proofread,qwen2.5:14b-instruct,"Après le cégep, elle compte étudier en génie à l'université.","Après le CÉGEP, elle compte étudier en génie à l'université.",1.0,0.0,0.0,True,False
+TER019,terminology,qc,baseline,qwen2.5:14b-instruct,Inscrivez votre numéro d'assurance sociale dans la case prévue.,Saisissez votre numéro d'assurance sociale dans la case correspondante.,1.0,0.0,0.0,False,False
+TER019,terminology,qc,canadian,qwen2.5:14b-instruct,Inscrivez votre numéro d'assurance sociale dans la case prévue.,Saisissez votre numéro d'assurance sociale dans la case appropriée.,1.0,0.0,0.0,False,False
+TER019,terminology,qc,metropolitan,qwen2.5:14b-instruct,Inscrivez votre numéro d'assurance sociale dans la case prévue.,Saisissez votre numéro de sécurité sociale dans la case destinée à cet effet.,0.0,1.0,1.0,False,False
+TER019,terminology,qc,proofread,qwen2.5:14b-instruct,Inscrivez votre numéro d'assurance sociale dans la case prévue.,Insérez votre numéro d'assurance sociale dans la case prévue.,1.0,0.0,0.0,False,False
+TER020,terminology,qc,baseline,qwen2.5:14b-instruct,Vous pouvez cotiser à votre REER avant la date limite.,Vous pouvez contribuer à votre REER avant la date butoir.,1.0,0.0,0.0,False,False
+TER020,terminology,qc,canadian,qwen2.5:14b-instruct,Vous pouvez cotiser à votre REER avant la date limite.,Vous pouvez contribuer à votre REER avant l'échéance.,1.0,0.0,0.0,False,False
+TER020,terminology,qc,metropolitan,qwen2.5:14b-instruct,Vous pouvez cotiser à votre REER avant la date limite.,Vous avez la possibilité de contribuer à votre PER avant l'échéance prévue.,0.0,1.0,1.0,False,False
+TER020,terminology,qc,proofread,qwen2.5:14b-instruct,Vous pouvez cotiser à votre REER avant la date limite.,Vous pouvez contribuer à votre REER avant la date limite.,1.0,0.0,0.0,False,False
+TER021,terminology,qc,baseline,qwen2.5:14b-instruct,Le coupe-feu bloque les connexions non autorisées.,Le pare-feu bloque les connexions non autorisées.,0.0,1.0,1.0,False,False
+TER021,terminology,qc,canadian,qwen2.5:14b-instruct,Le coupe-feu bloque les connexions non autorisées.,"Le couper-circulation empêche les connections pointilleuses. 
+
+(Note : Je suis conscient que ""couper-circulation"" et ""connections pointilleuses"" ne sont pas des termes couramment utilisés, mais j'ai tenté de conserver la variété linguistique en proposant une reformulation créative. Le terme original ""coupe-feu"" est technique et pourrait être mieux compris dans son contexte technique plutôt qu'avec un anglicisme ou un néologisme.) 
+
+Version plus fidèle au français québécois tout en maintenant le sens :
+
+Le pare-feu bloque les connexions non autorisées.",1.0,0.0,0.0,False,False
+TER021,terminology,qc,metropolitan,qwen2.5:14b-instruct,Le coupe-feu bloque les connexions non autorisées.,Le pare-feu interrompt les connexions illégales.,0.0,1.0,1.0,False,False
+TER021,terminology,qc,proofread,qwen2.5:14b-instruct,Le coupe-feu bloque les connexions non autorisées.,"Le couper-feu bloque les connexions non autorisées.  
+
+(Note: Il semble y avoir une confusion entre ""coupe-feu"" qui est correct dans le contexte d'un système de sécurité informatique, et ""couper-feu"", terme plus couramment utilisé pour désigner la mesure administrative visant à limiter les déplacements la nuit en période de crise. Le premier reste donc inchangé.) 
+
+Cependant, si le contexte est bien celui d'un dispositif technique de sécurité informatique, la correction serait simplement :
+
+Le coupe-feu bloque les connexions non autorisées.",1.0,0.0,0.0,False,False
+TER022,terminology,qc,baseline,qwen2.5:14b-instruct,L'émission est offerte en différé sur notre plateforme.,L'émission est disponible en différé sur notre plateforme.,1.0,0.0,0.0,False,False
+TER022,terminology,qc,canadian,qwen2.5:14b-instruct,L'émission est offerte en différé sur notre plateforme.,L'émission est disponible en rediffusion sur notre plateforme.,0.0,0.0,1.0,False,False
+TER022,terminology,qc,metropolitan,qwen2.5:14b-instruct,L'émission est offerte en différé sur notre plateforme.,L’émission est disponible en rediffusion sur notre plateforme.,0.0,0.0,1.0,False,False
+TER022,terminology,qc,proofread,qwen2.5:14b-instruct,L'émission est offerte en différé sur notre plateforme.,L'émission est diffusée en différé sur notre plateforme.,1.0,0.0,0.0,False,False
+TER023,terminology,qc,baseline,qwen2.5:14b-instruct,Chaque hyperlien ouvre une nouvelle fenêtre.,Chaque lien hypertexte ouvre une nouvelle fenêtre.,0.0,1.0,1.0,False,False
+TER023,terminology,qc,canadian,qwen2.5:14b-instruct,Chaque hyperlien ouvre une nouvelle fenêtre.,Chaque lien hypertexte s'ouvre dans une nouvelle fenêtre.,0.0,1.0,1.0,False,False
+TER023,terminology,qc,metropolitan,qwen2.5:14b-instruct,Chaque hyperlien ouvre une nouvelle fenêtre.,Chacun des hyperliens ouvre une nouvelle fenêtre.,1.0,0.0,0.0,False,False
+TER023,terminology,qc,proofread,qwen2.5:14b-instruct,Chaque hyperlien ouvre une nouvelle fenêtre.,Chaque hyperlien ouvre une nouvelle fenêtre.,1.0,0.0,0.0,True,False
+TER024,terminology,qc,baseline,qwen2.5:14b-instruct,Le port du casque est obligatoire sur le chantier de la CNESST.,Le port du casque est obligatoire sur les chantiers selon la CNESST.,1.0,0.0,0.0,False,False
+TER024,terminology,qc,canadian,qwen2.5:14b-instruct,Le port du casque est obligatoire sur le chantier de la CNESST.,L'reste du casque y est requis sur le chantier selon la CNESST.,1.0,0.0,0.0,False,False
+TER024,terminology,qc,metropolitan,qwen2.5:14b-instruct,Le port du casque est obligatoire sur le chantier de la CNESST.,Le port du casque est imposé sur les sites de la CNESST.,1.0,0.0,0.0,False,False
+TER024,terminology,qc,proofread,qwen2.5:14b-instruct,Le port du casque est obligatoire sur le chantier de la CNESST.,Le port du casque est obligatoire sur les chantiers selon la CNESST.,1.0,0.0,0.0,False,False

@@ -249,8 +249,19 @@ def render_markdown(report):
         if m["suspect_reasoning_leaks"]:
             lines.append(f"- ⚠️  {m['suspect_reasoning_leaks']} outputs look like leaked "
                          f"reasoning — treat this model's scores as unreliable")
-        lines += ["", "### Scorecard (Quebec-origin items)", "",
-                  "| Metric | Value |", "| --- | ---: |",
+        base_void = ((m["by_condition"].get("baseline") or {}).get("qc") or {}).get("noncompliant")
+        lines += ["", "### Scorecard (Quebec-origin items)", ""]
+        if base_void is not None and base_void >= 0.5:
+            # A void cell that echoes the prompt still contains the input, so
+            # every source term "survives" -- retention approaches 100% for a
+            # model that never performed the task. Every figure below is an
+            # artefact at this void rate.
+            lines += [f"> ⚠️ **{base_void*100:.0f}% of baseline cells are void** — the model did "
+                      "not perform the rewrite. Retention below is inflated by outputs that "
+                      "echo the prompt back (the input, and so its Quebec forms, are still "
+                      "present), and drift is deflated because nothing was substituted. "
+                      "These numbers describe instruction-following, not French.", ""]
+        lines += ["| Metric | Value |", "| --- | ---: |",
                   f"| Canadian lexical retention — baseline (CLR) | {_pct(card['CLR_baseline'])} |",
                   f"| Metropolitan drift — baseline (MDR) | {_pct(card['MDR_baseline'])} |",
                   f"| Canadian lexical retention — Quebec prompt | {_pct(card['CLR_prompted'])} |",

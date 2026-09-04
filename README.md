@@ -11,9 +11,11 @@ The third is the interesting one. A model can be fluent, grammatical and
 completely wrong for the person in front of it — and a generic French benchmark
 will not notice.
 
-The measured results for every model run so far are in
-[`results/report/report.md`](results/report/report.md), regenerated from the raw
-outputs by `python3 run_experiment.py report`.
+Companion documents: [`docs/article.md`](docs/article.md) (the argument and the
+measured results), [`docs/huggingface-survey.md`](docs/huggingface-survey.md)
+(what exists on HuggingFace for Quebec French, and what of it actually runs),
+[`docs/project_purpose.md`](docs/project_purpose.md) (the full design
+programme, of which this repository implements Track B).
 
 ## Quick start
 
@@ -199,10 +201,24 @@ The set should **not** consist entirely of obvious quebecisms, or the experiment
 becomes a vocabulary quiz. The interesting failures are where both forms are
 perfectly valid French and only one fits the audience.
 
-Current dataset (v0.2.0, 88 items): 44 Quebec-origin — 14 lexical, 10
-terminology, 8 semantic, 6 register, 6 grammar — and 44 France-origin controls,
-one for every Quebec item. The self-tests fail if any Quebec item loses its
-counterpart.
+Current dataset (v0.3.0, 196 items): 98 Quebec-origin — 32 lexical, 24
+terminology, 17 semantic, 14 register, 11 grammar — and 98 France-origin
+controls, one for every Quebec item. The self-tests fail if any Quebec item
+loses its counterpart.
+
+The pair count is the binding constraint on what the results can claim: at 44
+pairs, re-running two models on a different inference stack flipped both across
+the 0.05 significance line while leaving the direction of the effect untouched.
+Growing the matched set is the highest-value contribution.
+
+Two rules a new pair must satisfy, both enforced by the self-tests:
+
+- **Neither variety's form may nest inside the other's.** `Faut que` inside
+  `Il faut que` means a Quebec→France substitution leaves the source form still
+  present, and the drift goes undetected.
+- **The two sides must not share a surface form.** A pair whose arms are the
+  same word can never register drift; it is guaranteed tied and only dilutes
+  the count.
 
 ## Matching is not `in`
 
@@ -282,7 +298,8 @@ serve.py       local control panel
 
 ## Scope
 
-This implements the **dialect drift** track. Deliberately out of scope:
+This implements **Track B** (dialect drift) of `docs/project_purpose.md`.
+Deliberately out of scope for v0.1:
 
 - **Track A** — QFrBLiMP / QFrCoLA / COLE. These are external datasets under
   CC-BY-NC-SA; check the licences before redistributing any of their content.

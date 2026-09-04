@@ -111,27 +111,27 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 ## llama3.1:8b
 
-- run: `2026-09-03T18:13:26+00:00`  ·  dataset `0.1.0`  ·  prompts `1.0`
+- run: `2026-09-04T21:02:51+00:00`  ·  dataset `0.3.0`  ·  prompts `1.0`
 - provider ollama, temperature 0.0, seed 42, num_ctx 8192
-- 352 results  ·  judge: none
+- 784 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
 
 | Metric | Value |
 | --- | ---: |
-| Canadian lexical retention — baseline (CLR) |   37.5% |
-| Metropolitan drift — baseline (MDR) |   29.5% |
-| Canadian lexical retention — Quebec prompt |   42.0% |
-| Metropolitan drift — Quebec prompt |   21.6% |
-| Quebec false correction — proofread (QFCR) |   30.2% |
-| — of which the model left the text untouched |    2.3% |
-| Drift recovered by prompting |    8.0% |
+| Canadian lexical retention — baseline (CLR) |   37.6% |
+| Metropolitan drift — baseline (MDR) |   24.5% |
+| Canadian lexical retention — Quebec prompt |   45.1% |
+| Metropolitan drift — Quebec prompt |   18.9% |
+| Quebec false correction — proofread (QFCR) |   36.6% |
+| — of which the model left the text untouched |    3.1% |
+| Drift recovered by prompting |    5.6% |
 
 QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
 
 ### Positive control: **FAILED**
 
-The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 29.5%, France-targeted 22.7% (margin -6.8 pts).
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 24.5%, France-targeted 20.4% (margin -4.1 pts).
 
 > Naming France as the audience bought nothing over naming no audience at all. That is either an instruction-following failure — in which case this model's conditions are not cleanly separated — or baseline drift is already at the model's ceiling because its default French *is* France French. This run cannot distinguish the two.
 
@@ -139,10 +139,10 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 | Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| baseline |   37.5% |   29.5% |   27.9% |   62.8% |   70.5% |    4.5% |    0.0% |    2.3% |
-| canadian |   42.0% |   21.6% |   22.6% |   55.8% |   53.4% |   11.4% |    0.0% |    4.5% |
-| metropolitan |   36.4% |   22.7% |   25.6% |   64.0% |   61.4% |   10.2% |    0.0% |   11.4% |
-| proofread |   67.0% |   18.2% |   18.6% |   30.2% |   81.8% |    4.5% |    2.3% |    2.3% |
+| baseline |   37.6% |   24.5% |   25.6% |   61.9% |   65.8% |    4.1% |    0.0% |    8.2% |
+| canadian |   45.1% |   18.9% |   21.3% |   53.1% |   53.2% |    7.7% |    0.0% |   11.2% |
+| metropolitan |   42.7% |   20.4% |   24.0% |   57.2% |   60.4% |    5.1% |    0.0% |   21.4% |
+| proofread |   61.9% |   18.9% |   19.4% |   36.6% |   81.3% |    2.6% |    3.1% |    5.1% |
 
 *Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
 
@@ -150,11 +150,11 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 | Category | n | Retention | Drift |
 | --- | ---: | ---: | ---: |
-| grammar | 6 |    0.0% |   66.7% |
-| terminology | 10 |   50.0% |   35.0% |
-| register | 6 |   41.7% |   33.3% |
-| lexical | 14 |   42.9% |   25.0% |
-| semantic | 8 |   37.5% |    0.0% |
+| grammar | 11 |    0.0% |   63.6% |
+| register | 14 |   38.1% |   28.6% |
+| lexical | 32 |   43.8% |   20.3% |
+| terminology | 24 |   45.8% |   18.8% |
+| semantic | 17 |   38.2% |   11.8% |
 
 ### Judge scores — illustrative only
 
@@ -203,64 +203,62 @@ A local 8-30B model is a weak authority on Quebec French, and the sample below i
 >
 > out: L'attaque par ransomware a chiffré les serveurs de l'organisme.
 
-**GRA001** (grammar, baseline, baseline_drift) — à soir → ce soir, nous autres → nous
+**GRA008** (grammar, proofread, false_correction) — attendre à demain → attendre jusqu'à demain
 
-> in:  Tu viens-tu avec nous autres à soir ?
+> in:  Moi je pense qu'on devrait attendre à demain.
 >
-> out: Vous allez vous amuser ce soir ? Nous sommes tous là-bas et c'est une belle soirée ! Vous devriez venir rejoindre la fête.
+> out: Je pense qu'il faudrait attendre jusqu'à demain.
 
-**GRA002** (grammar, baseline, baseline_drift) — Y'a → Personne ne
+**GRA009** (grammar, proofread, false_correction) — J'ai pas → Je n'ai pas
 
-> in:  Y'a personne qui m'a averti que la réunion était annulée.
+> in:  J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.
 >
-> out: Personne ne m'a prévenu que la réunion avait été annulée.
+> out: Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.
 
-**GRA003** (grammar, baseline, baseline_drift) — à cause que → parce que
+**GRA011** (grammar, proofread, false_correction) — ou ben → ou bien, à soir → ce soir
 
-> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+> in:  On s'en va-tu au restaurant à soir ou ben on reste ici ?
 >
-> out: Nous sommes allés au restaurant parce que la pluie tombait trop fort pour pouvoir marcher.
+> out: On se va-t-il au restaurant ce soir ou bien on reste ici ?
 
-**LEX001** (lexical, baseline, baseline_drift) — courriel → e-mail
+**LEX018** (lexical, proofread, false_correction) — cellulaire → portable
 
-> in:  Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.
+> in:  Veuillez éteindre votre cellulaire pendant la réunion.
 >
-> out: Vous pouvez consulter votre dossier en ligne et vous mettre en contact avec nous par e-mail.
+> out: Veuillez éteindre votre téléphone portable pendant la réunion.
 
 ## mistral:7b
 
-- run: `2026-09-03T18:35:03+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- run: `2026-09-04T21:14:34+00:00`  ·  dataset `0.3.0`  ·  prompts `1.0`
 - provider ollama, temperature 0.0, seed 42, num_ctx 8192
-- 352 results  ·  judge: none
+- 784 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
 
 | Metric | Value |
 | --- | ---: |
-| Canadian lexical retention — baseline (CLR) |   28.4% |
-| Metropolitan drift — baseline (MDR) |   25.0% |
-| Canadian lexical retention — Quebec prompt |   36.4% |
-| Metropolitan drift — Quebec prompt |   25.0% |
-| Quebec false correction — proofread (QFCR) |   41.9% |
-| — of which the model left the text untouched |    0.0% |
-| Drift recovered by prompting |    0.0% |
+| Canadian lexical retention — baseline (CLR) |   29.6% |
+| Metropolitan drift — baseline (MDR) |   22.4% |
+| Canadian lexical retention — Quebec prompt |   37.2% |
+| Metropolitan drift — Quebec prompt |   23.3% |
+| Quebec false correction — proofread (QFCR) |   48.5% |
+| — of which the model left the text untouched |    2.0% |
+| Drift recovered by prompting |   -0.9% |
 
 QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
 
-### Positive control: **FAILED**
+### Positive control: **passed**
 
-The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 25.0%, France-targeted 23.9% (margin -1.1 pts).
-
-> Naming France as the audience bought nothing over naming no audience at all. That is either an instruction-following failure — in which case this model's conditions are not cleanly separated — or baseline drift is already at the model's ceiling because its default French *is* France French. This run cannot distinguish the two.
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 22.4%, France-targeted 25.0% (margin +2.6 pts).
 
 ### By condition
 
 | Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| baseline |   28.4% |   25.0% |   26.8% |   68.6% |   58.0% |    6.8% |    0.0% |    6.8% |
-| canadian |   36.4% |   25.0% |   25.0% |   60.5% |   51.1% |   15.9% |    0.0% |    9.1% |
-| metropolitan |   30.7% |   23.9% |   25.6% |   68.6% |   56.8% |    9.1% |    0.0% |    6.8% |
-| proofread |   58.0% |   13.6% |   15.0% |   41.9% |   78.4% |    5.7% |    0.0% |    9.1% |
+| baseline |   29.6% |   22.4% |   21.7% |   69.6% |   51.5% |    4.6% |    1.0% |    8.2% |
+| canadian |   37.2% |   23.3% |   24.2% |   61.9% |   42.7% |    9.7% |    0.0% |   12.2% |
+| metropolitan |   32.7% |   25.0% |   26.1% |   67.5% |   48.0% |    6.6% |    0.0% |   10.2% |
+| proofread |   51.7% |   14.8% |   15.9% |   48.5% |   75.0% |    2.6% |    2.0% |    7.1% |
 
 *Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
 
@@ -268,11 +266,11 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 | Category | n | Retention | Drift |
 | --- | ---: | ---: | ---: |
-| grammar | 6 |    8.3% |   66.7% |
-| terminology | 10 |   50.0% |   25.0% |
-| semantic | 8 |   25.0% |   25.0% |
-| lexical | 14 |   14.3% |   14.3% |
-| register | 6 |   50.0% |    8.3% |
+| grammar | 11 |    4.5% |   40.9% |
+| terminology | 24 |   41.7% |   27.1% |
+| lexical | 32 |   28.1% |   20.3% |
+| semantic | 17 |   17.6% |   17.6% |
+| register | 14 |   46.4% |   10.7% |
 
 ### Worst failures
 
@@ -306,35 +304,35 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 >
 > out: Vous devez télécharger votre pièce d'identité avant de soumettre la demande.
 
-**GRA001** (grammar, baseline, baseline_drift) — à soir → ce soir, nous autres → nous
+**GRA010** (grammar, proofread, false_correction) — pis → puis
 
-> in:  Tu viens-tu avec nous autres à soir ?
+> in:  Il est parti travailler, pis il est revenu tard.
 >
-> out: Vous venez-vous avec nous ce soir ?
+> out: Il est parti travailler, puis il est revenu tard.
 
-**GRA002** (grammar, baseline, baseline_drift) — Y'a → Personne ne
+**GRA011** (grammar, proofread, false_correction) — ou ben → ou bien, à soir → ce soir
 
-> in:  Y'a personne qui m'a averti que la réunion était annulée.
+> in:  On s'en va-tu au restaurant à soir ou ben on reste ici ?
 >
-> out: Personne ne m'a informé que la réunion était annulée.
+> out: On se rend au restaurant ce soir ou bien on reste ici ?
 
-**GRA003** (grammar, baseline, baseline_drift) — à cause que → parce que
+**LEX018** (lexical, proofread, false_correction) — cellulaire → portable
 
-> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+> in:  Veuillez éteindre votre cellulaire pendant la réunion.
 >
-> out: Nous avons visité un restaurant parce que la pluie tombait trop fort pour marcher dehors.
+> out: Veuillez éteindre votre téléphone portable pendant la réunion.
 
-**GRA005** (grammar, baseline, baseline_drift) — Assis-toi → Assieds-toi, conter → raconter
+**LEX019** (lexical, proofread, false_correction) — patates frites → frites
 
-> in:  Assis-toi, je vais te conter ce qui est arrivé hier.
+> in:  Le repas est servi avec des patates frites et une salade.
 >
-> out: Assieds-toi, je vais raconter ce qui s'est passé hier.
+> out: Le repas est servi avec des pommes de terre frites et une salade.
 
-**LEX003** (lexical, baseline, baseline_drift) — fin de semaine → week-end
+**REG014** (register, proofread, false_correction) — rejoindre → atteindre
 
-> in:  L'activité aura lieu la fin de semaine prochaine au centre communautaire.
+> in:  Merci de votre soutien. Vos dons permettent de rejoindre plus de familles chaque année.
 >
-> out: L'activité aura lieu à la fin du week-end prochain au centre communautaire.
+> out: Merci pour votre soutien. Votre don permet d'atteindre plus de familles chaque année.
 
 ## openai:croissant-base
 
@@ -453,6 +451,8 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 ### Scorecard (Quebec-origin items)
 
+> ⚠️ **100% of baseline cells are void** — the model did not perform the rewrite. Retention below is inflated by outputs that echo the prompt back (the input, and so its Quebec forms, are still present), and drift is deflated because nothing was substituted. These numbers describe instruction-following, not French.
+
 | Metric | Value |
 | --- | ---: |
 | Canadian lexical retention — baseline (CLR) |   68.2% |
@@ -490,6 +490,8 @@ QFCR and *untouched* are entangled: a model that declines to edit anything score
 - 88 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
+
+> ⚠️ **73% of baseline cells are void** — the model did not perform the rewrite. Retention below is inflated by outputs that echo the prompt back (the input, and so its Quebec forms, are still present), and drift is deflated because nothing was substituted. These numbers describe instruction-following, not French.
 
 | Metric | Value |
 | --- | ---: |
@@ -542,6 +544,8 @@ QFCR and *untouched* are entangled: a model that declines to edit anything score
 - 352 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
+
+> ⚠️ **100% of baseline cells are void** — the model did not perform the rewrite. Retention below is inflated by outputs that echo the prompt back (the input, and so its Quebec forms, are still present), and drift is deflated because nothing was substituted. These numbers describe instruction-following, not French.
 
 | Metric | Value |
 | --- | ---: |
@@ -652,6 +656,8 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 ### Scorecard (Quebec-origin items)
 
+> ⚠️ **100% of baseline cells are void** — the model did not perform the rewrite. Retention below is inflated by outputs that echo the prompt back (the input, and so its Quebec forms, are still present), and drift is deflated because nothing was substituted. These numbers describe instruction-following, not French.
+
 | Metric | Value |
 | --- | ---: |
 | Canadian lexical retention — baseline (CLR) |    1.1% |
@@ -690,6 +696,8 @@ QFCR and *untouched* are entangled: a model that declines to edit anything score
 
 ### Scorecard (Quebec-origin items)
 
+> ⚠️ **100% of baseline cells are void** — the model did not perform the rewrite. Retention below is inflated by outputs that echo the prompt back (the input, and so its Quebec forms, are still present), and drift is deflated because nothing was substituted. These numbers describe instruction-following, not French.
+
 | Metric | Value |
 | --- | ---: |
 | Canadian lexical retention — baseline (CLR) |   37.5% |
@@ -722,27 +730,27 @@ QFCR and *untouched* are entangled: a model that declines to edit anything score
 
 ## phi4:latest
 
-- run: `2026-09-03T18:31:24+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- run: `2026-09-04T22:00:19+00:00`  ·  dataset `0.3.0`  ·  prompts `1.0`
 - provider ollama, temperature 0.0, seed 42, num_ctx 8192
-- 352 results  ·  judge: none
+- 784 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
 
 | Metric | Value |
 | --- | ---: |
-| Canadian lexical retention — baseline (CLR) |   12.5% |
-| Metropolitan drift — baseline (MDR) |   50.0% |
-| Canadian lexical retention — Quebec prompt |   29.5% |
-| Metropolitan drift — Quebec prompt |   19.3% |
-| Quebec false correction — proofread (QFCR) |   52.3% |
-| — of which the model left the text untouched |   25.0% |
-| Drift recovered by prompting |   30.7% |
+| Canadian lexical retention — baseline (CLR) |   19.9% |
+| Metropolitan drift — baseline (MDR) |   47.1% |
+| Canadian lexical retention — Quebec prompt |   27.0% |
+| Metropolitan drift — Quebec prompt |   24.3% |
+| Quebec false correction — proofread (QFCR) |   51.5% |
+| — of which the model left the text untouched |   25.5% |
+| Drift recovered by prompting |   22.8% |
 
 QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
 
 ### Positive control: **FAILED**
 
-The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 50.0%, France-targeted 46.6% (margin -3.4 pts).
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 47.1%, France-targeted 46.8% (margin -0.3 pts).
 
 > Naming France as the audience bought nothing over naming no audience at all. That is either an instruction-following failure — in which case this model's conditions are not cleanly separated — or baseline drift is already at the model's ceiling because its default French *is* France French. This run cannot distinguish the two.
 
@@ -750,10 +758,10 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 | Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| baseline |   12.5% |   50.0% |   52.6% |   87.2% |   52.3% |   12.5% |    0.0% |   13.6% |
-| canadian |   29.5% |   19.3% |   18.8% |   69.8% |   21.6% |   37.5% |    0.0% |    9.1% |
-| metropolitan |   10.2% |   46.6% |   48.6% |   89.5% |   42.0% |   12.5% |    0.0% |   20.5% |
-| proofread |   52.3% |   26.1% |   26.1% |   52.3% |   85.2% |    4.5% |   25.0% |    0.0% |
+| baseline |   19.9% |   47.1% |   47.8% |   79.4% |   53.4% |    8.7% |    0.0% |   14.3% |
+| canadian |   27.0% |   24.3% |   20.4% |   72.7% |   18.4% |   32.1% |    0.0% |   17.3% |
+| metropolitan |   11.7% |   46.8% |   46.5% |   88.1% |   45.2% |    8.2% |    0.0% |   21.4% |
+| proofread |   49.7% |   34.0% |   34.4% |   51.5% |   87.2% |    3.6% |   25.5% |    1.0% |
 
 *Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
 
@@ -761,11 +769,11 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 | Category | n | Retention | Drift |
 | --- | ---: | ---: | ---: |
-| grammar | 6 |    0.0% |   66.7% |
-| terminology | 10 |   20.0% |   65.0% |
-| register | 6 |    8.3% |   50.0% |
-| lexical | 14 |   14.3% |   46.4% |
-| semantic | 8 |   12.5% |   25.0% |
+| grammar | 11 |    0.0% |   72.7% |
+| terminology | 24 |   20.8% |   56.2% |
+| semantic | 17 |   11.8% |   47.1% |
+| lexical | 32 |   29.7% |   37.5% |
+| register | 14 |   21.4% |   33.3% |
 
 ### Judge scores — illustrative only
 
@@ -840,36 +848,36 @@ A local 8-30B model is a weak authority on Quebec French, and the sample below i
 
 ## qwen2.5:14b-instruct
 
-- run: `2026-09-03T18:21:29+00:00`  ·  dataset `0.1.0`  ·  prompts `1.0`
+- run: `2026-09-04T21:38:07+00:00`  ·  dataset `0.3.0`  ·  prompts `1.0`
 - provider ollama, temperature 0.0, seed 42, num_ctx 8192
-- 352 results  ·  judge: none
+- 784 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
 
 | Metric | Value |
 | --- | ---: |
-| Canadian lexical retention — baseline (CLR) |   43.2% |
-| Metropolitan drift — baseline (MDR) |   45.5% |
-| Canadian lexical retention — Quebec prompt |   52.3% |
-| Metropolitan drift — Quebec prompt |   17.0% |
-| Quebec false correction — proofread (QFCR) |   19.8% |
-| — of which the model left the text untouched |   34.1% |
-| Drift recovered by prompting |   28.4% |
+| Canadian lexical retention — baseline (CLR) |   37.8% |
+| Metropolitan drift — baseline (MDR) |   43.7% |
+| Canadian lexical retention — Quebec prompt |   48.0% |
+| Metropolitan drift — Quebec prompt |   18.7% |
+| Quebec false correction — proofread (QFCR) |   32.0% |
+| — of which the model left the text untouched |   25.5% |
+| Drift recovered by prompting |   25.0% |
 
 QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
 
 ### Positive control: **passed**
 
-The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 45.5%, France-targeted 50.0% (margin +4.5 pts).
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 43.7%, France-targeted 46.3% (margin +2.6 pts).
 
 ### By condition
 
 | Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| baseline |   43.2% |   45.5% |   52.7% |   57.0% |   83.0% |    3.4% |    0.0% |   15.9% |
-| canadian |   52.3% |   17.0% |   14.1% |   44.2% |   36.4% |   22.7% |    0.0% |   11.4% |
-| metropolitan |   14.8% |   50.0% |   51.2% |   86.0% |   48.9% |   11.4% |    0.0% |    9.1% |
-| proofread |   79.5% |   13.6% |   14.6% |   19.8% |   89.8% |    3.4% |   34.1% |    6.8% |
+| baseline |   37.8% |   43.7% |   46.9% |   61.9% |   74.3% |    5.1% |    0.0% |   12.2% |
+| canadian |   48.0% |   18.7% |   18.6% |   49.5% |   35.9% |   18.9% |    0.0% |   10.2% |
+| metropolitan |   20.9% |   46.3% |   47.5% |   79.4% |   48.3% |    7.7% |    0.0% |   12.2% |
+| proofread |   67.0% |   19.9% |   21.4% |   32.0% |   87.8% |    1.5% |   25.5% |    7.1% |
 
 *Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
 
@@ -877,11 +885,11 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 | Category | n | Retention | Drift |
 | --- | ---: | ---: | ---: |
-| grammar | 6 |    0.0% |   75.0% |
-| lexical | 14 |   42.9% |   53.6% |
-| register | 6 |   50.0% |   41.7% |
-| terminology | 10 |   50.0% |   35.0% |
-| semantic | 8 |   62.5% |   25.0% |
+| grammar | 11 |    0.0% |   77.3% |
+| semantic | 17 |   35.3% |   47.1% |
+| lexical | 32 |   45.3% |   39.1% |
+| register | 14 |   39.3% |   38.1% |
+| terminology | 24 |   45.8% |   35.4% |
 
 ### Judge scores — illustrative only
 
@@ -924,68 +932,68 @@ A local 8-30B model is a weak authority on Quebec French, and the sample below i
 >
 > out: Ce site utilise des cookies pour mémoriser vos préférences.
 
-**GRA001** (grammar, baseline, baseline_drift) — à soir → ce soir, nous autres → nous
+**GRA008** (grammar, proofread, false_correction) — attendre à demain → attendre jusqu'à demain
 
-> in:  Tu viens-tu avec nous autres à soir ?
+> in:  Moi je pense qu'on devrait attendre à demain.
 >
-> out: Viens-tu avec nous ce soir ?
+> out: Moi, je pense qu'on devrait attendre jusqu'à demain.
 
-**GRA002** (grammar, baseline, baseline_drift) — Y'a → Personne ne
+**GRA009** (grammar, proofread, false_correction) — J'ai pas → Je n'ai pas
 
-> in:  Y'a personne qui m'a averti que la réunion était annulée.
+> in:  J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.
 >
-> out: Personne ne m'a informé que la réunion avait été annulée.
+> out: Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.
 
-**GRA003** (grammar, baseline, baseline_drift) — à cause que → parce qu
+**GRA011** (grammar, proofread, false_correction) — ou ben → ou bien, à soir → ce soir
 
-> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+> in:  On s'en va-tu au restaurant à soir ou ben on reste ici ?
 >
-> out: On est allés au restaurant parce qu'il pleuvait trop pour marcher.
+> out: On y va-t-on au restaurant ce soir ou bien on reste ici ?
 
-**LEX001** (lexical, baseline, baseline_drift) — courriel → email
+**LEX017** (lexical, proofread, false_correction) — efface → gomme
 
-> in:  Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.
+> in:  Chaque élève doit apporter un crayon, une efface et une règle.
 >
-> out: Vous pouvez consulter votre dossier en ligne et communiquer avec nous par email.
+> out: Chaque élève doit apporter un crayon, une gomme et une règle.
 
-**LEX002** (lexical, baseline, baseline_drift) — stationnement → parking
+**LEX018** (lexical, proofread, false_correction) — cellulaire → portable
 
-> in:  Le stationnement est accessible derrière l'édifice à partir de 7 h.
+> in:  Veuillez éteindre votre cellulaire pendant la réunion.
 >
-> out: Le parking est disponible derrière l'immeuble à partir de 7 heures.
+> out: Veuillez éteindre votre téléphone portable pendant la réunion.
 
 ## qwen2.5:7b-instruct
 
-- run: `2026-09-03T18:45:44+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- run: `2026-09-04T21:28:30+00:00`  ·  dataset `0.3.0`  ·  prompts `1.0`
 - provider ollama, temperature 0.0, seed 42, num_ctx 8192
-- 352 results  ·  judge: none
+- 784 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
 
 | Metric | Value |
 | --- | ---: |
-| Canadian lexical retention — baseline (CLR) |   51.1% |
-| Metropolitan drift — baseline (MDR) |   25.0% |
-| Canadian lexical retention — Quebec prompt |   60.2% |
-| Metropolitan drift — Quebec prompt |   13.6% |
-| Quebec false correction — proofread (QFCR) |   30.2% |
-| — of which the model left the text untouched |   47.7% |
-| Drift recovered by prompting |   11.4% |
+| Canadian lexical retention — baseline (CLR) |   46.6% |
+| Metropolitan drift — baseline (MDR) |   24.8% |
+| Canadian lexical retention — Quebec prompt |   47.6% |
+| Metropolitan drift — Quebec prompt |   17.7% |
+| Quebec false correction — proofread (QFCR) |   38.1% |
+| — of which the model left the text untouched |   36.7% |
+| Drift recovered by prompting |    7.1% |
 
 QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
 
 ### Positive control: **passed**
 
-The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 25.0%, France-targeted 31.8% (margin +6.8 pts).
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 24.8%, France-targeted 29.9% (margin +5.1 pts).
 
 ### By condition
 
 | Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| baseline |   51.1% |   25.0% |   25.0% |   50.0% |   73.9% |    4.5% |    2.3% |    0.0% |
-| canadian |   60.2% |   13.6% |   15.0% |   36.0% |   61.4% |   10.2% |    0.0% |    9.1% |
-| metropolitan |   31.8% |   31.8% |   31.0% |   67.4% |   59.1% |    4.5% |    0.0% |    4.5% |
-| proofread |   71.6% |   14.8% |   14.3% |   30.2% |   94.3% |    0.0% |   47.7% |    4.5% |
+| baseline |   46.6% |   24.8% |   24.6% |   53.1% |   71.9% |    3.6% |    2.0% |    3.1% |
+| canadian |   47.6% |   17.7% |   19.5% |   49.5% |   62.4% |    5.6% |    1.0% |    9.2% |
+| metropolitan |   34.2% |   29.9% |   30.4% |   64.9% |   56.3% |    3.1% |    1.0% |    8.2% |
+| proofread |   62.9% |   17.7% |   17.7% |   38.1% |   91.8% |    1.0% |   36.7% |    3.1% |
 
 *Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
 
@@ -993,11 +1001,11 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 | Category | n | Retention | Drift |
 | --- | ---: | ---: | ---: |
-| grammar | 6 |    0.0% |   75.0% |
-| terminology | 10 |   75.0% |   25.0% |
-| lexical | 14 |   50.0% |   21.4% |
-| register | 6 |   50.0% |   16.7% |
-| semantic | 8 |   62.5% |    0.0% |
+| grammar | 11 |    0.0% |   59.1% |
+| semantic | 17 |   47.1% |   23.5% |
+| terminology | 24 |   60.4% |   22.9% |
+| lexical | 32 |   53.1% |   18.8% |
+| register | 14 |   44.0% |   16.7% |
 
 ### Worst failures
 
@@ -1031,35 +1039,35 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 >
 > out: Ce site utilise des cookies pour mémoriser vos préférences.
 
-**GRA001** (grammar, baseline, baseline_drift) — à soir → ce soir, nous autres → nous
+**GRA009** (grammar, proofread, false_correction) — J'ai pas → Je n'ai pas
 
-> in:  Tu viens-tu avec nous autres à soir ?
+> in:  J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.
 >
-> out: Viens-tu avec nous ce soir ?
+> out: Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.
 
-**GRA002** (grammar, baseline, baseline_drift) — Y'a → Personne ne
+**GRA011** (grammar, proofread, false_correction) — ou ben → ou bien, à soir → ce soir
 
-> in:  Y'a personne qui m'a averti que la réunion était annulée.
+> in:  On s'en va-tu au restaurant à soir ou ben on reste ici ?
 >
-> out: Personne ne m'a informé que la réunion avait été annulée.
+> out: On s'en va-t-on au restaurant ce soir, ou bien on reste ici ?
 
-**GRA003** (grammar, baseline, baseline_drift) — à cause que → car
+**LEX019** (lexical, proofread, false_correction) — patates frites → frites
 
-> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+> in:  Le repas est servi avec des patates frites et une salade.
 >
-> out: Nous sommes allés au restaurant car il pleuvait trop pour sortir marcher.
+> out: Le repas est servi avec des pommes de terre frites et une salade.
 
-**GRA004** (grammar, baseline, baseline_drift) — de la misère → du mal, stationnement → parking
+**LEX029** (lexical, proofread, false_correction) — cabaret → plateau
 
-> in:  On a eu de la misère à trouver un stationnement proche du stade.
+> in:  Le serveur apporte les cafés sur un cabaret.
 >
-> out: Nous avons éprouvé du mal à trouver un parking près du stade.
+> out: Le serveur apporte les cafés sur un plateau.
 
-**LEX009** (lexical, baseline, baseline_drift) — clavardage → chat
+**SEM010** (semantic, proofread, false_correction) — gomme → chewing-gum
 
-> in:  Utilisez le clavardage en direct pour parler à un agent.
+> in:  J'ai acheté de la gomme à la caisse.
 >
-> out: Utilisez le chat en direct pour communiquer avec un agent.
+> out: J'ai acheté du chewing-gum à la caisse.
 
 ## transformers:Mistral-7B-Instruct-v0.3
 
@@ -1284,12 +1292,12 @@ Under the baseline prompt, which names no variety. Symmetric drift means the mod
 | Model | QC→FR drift | FR→QC drift | asymmetry | void cells |
 | --- | ---: | ---: | ---: | ---: |
 | choco-fr |   31.8% |   14.8% |   17.0% |   34.1% |
-| llama3.1:8b |   29.5% |    4.5% |   25.0% |    2.3% |
-| mistral:7b |   25.0% |    6.8% |   18.2% |    6.8% |
+| llama3.1:8b |   24.5% |    4.1% |   20.4% |    8.2% |
+| mistral:7b |   22.4% |    4.6% |   17.9% |    8.2% |
 | openai:croissant-base |   17.0% |    2.3% |   14.8% |   15.9% |
-| phi4:latest |   50.0% |   12.5% |   37.5% |   13.6% |
-| qwen2.5:14b-instruct |   45.5% |    3.4% |   42.0% |   15.9% |
-| qwen2.5:7b-instruct |   25.0% |    4.5% |   20.5% |    0.0% |
+| phi4:latest |   47.1% |    8.7% |   38.4% |   14.3% |
+| qwen2.5:14b-instruct |   43.7% |    5.1% |   38.6% |   12.2% |
+| qwen2.5:7b-instruct |   24.8% |    3.6% |   21.3% |    3.1% |
 | transformers:Mistral-7B-Instruct-v0.3 |   25.0% |    2.3% |   22.7% |    4.5% |
 | transformers:Qwen2.5-7B-Instruct |   17.0% |    4.5% |   12.5% |    0.0% |
 
@@ -1310,13 +1318,13 @@ The table above pools all Quebec items against all France items. Here each contr
 | Model | pairs | QC→FR drift | FR→QC drift | asymmetry | QC higher | FR higher | tied | p (McNemar) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | choco-fr | 24 |   33.3% |   14.6% |   18.7% | 6 | 1 | 17 | 0.125 |
-| llama3.1:8b | 41 |   29.3% |    4.9% |   24.4% | 14 | 2 | 25 | 0.004 |
-| mistral:7b | 41 |   26.8% |    7.3% |   19.5% | 11 | 4 | 26 | 0.118 |
+| llama3.1:8b | 85 |   27.1% |    2.9% |   24.1% | 25 | 3 | 57 | < 0.001 |
+| mistral:7b | 86 |   22.7% |    4.1% |   18.6% | 20 | 5 | 61 | 0.004 |
 | openai:croissant-base | 35 |   18.6% |    2.9% |   15.7% | 8 | 1 | 26 | 0.039 |
 | openai:llama8b-base ⚠️ | 6 |   16.7% |    0.0% |   16.7% | 1 | 0 | 5 | 1.000 |
-| phi4:latest | 36 |   54.2% |    9.7% |   44.4% | 18 | 1 | 17 | < 0.001 |
-| qwen2.5:14b-instruct | 35 |   52.9% |    4.3% |   48.6% | 20 | 2 | 13 | < 0.001 |
-| qwen2.5:7b-instruct | 43 |   24.4% |    4.7% |   19.8% | 10 | 2 | 31 | 0.039 |
+| phi4:latest | 80 |   48.3% |    6.9% |   41.5% | 38 | 3 | 39 | < 0.001 |
+| qwen2.5:14b-instruct | 83 |   47.4% |    6.0% |   41.4% | 42 | 6 | 35 | < 0.001 |
+| qwen2.5:7b-instruct | 92 |   24.8% |    3.8% |   21.0% | 23 | 4 | 65 | < 0.001 |
 | transformers:Mistral-7B-Instruct-v0.3 | 42 |   26.2% |    2.4% |   23.8% | 13 | 1 | 28 | 0.002 |
 | transformers:Qwen2.5-7B-Instruct | 44 |   17.0% |    4.5% |   12.5% | 7 | 2 | 35 | 0.180 |
 

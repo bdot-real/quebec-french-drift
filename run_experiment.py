@@ -24,7 +24,7 @@ from src.metrics import score_output
 from src.models import build_model
 from src.report import build_report, render_markdown
 
-DATASET_VERSION = "0.2.0"
+DATASET_VERSION = "0.3.0"
 PROMPT_VERSION = "1.0"
 RAW_DIR = Path("results/raw")
 

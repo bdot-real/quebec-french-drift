@@ -372,6 +372,36 @@ class TransformersModel:
 PROVIDERS = ("ollama", "openai", "transformers")
 
 
+# Options the CLI offers for *some* provider. Each adapter may ignore the ones
+# that are not its business -- an Ollama run has no use for `adapter`, a
+# transformers run none for `num_ctx` -- but anything outside this set is a
+# misspelling and must not be swallowed.
+_CROSS_PROVIDER_OPTIONS = frozenset({
+    "temperature", "seed", "num_ctx", "base_url", "api_key", "adapter",
+    "load_in_4bit", "device", "max_new_tokens", "dtype", "host", "keep_alive",
+    "timeout", "retries",
+})
+
+
+def _accepted(cls, kwargs):
+    """Route CLI options to the adapter that understands them.
+
+    Drops the known options this adapter does not take, and raises on anything
+    it has never heard of -- so a typo still fails loudly instead of being
+    silently ignored by a catch-all `**kwargs`.
+    """
+    import inspect
+    params = inspect.signature(cls.__init__).parameters
+    takes_all = any(p.kind is inspect.Parameter.VAR_KEYWORD for p in params.values())
+    unknown = [k for k in kwargs
+               if k not in params and k not in _CROSS_PROVIDER_OPTIONS]
+    if unknown:
+        raise TypeError(f"{cls.__name__}: unknown option(s) {sorted(unknown)}")
+    if takes_all:
+        return {k: v for k, v in kwargs.items() if v is not None}
+    return {k: v for k, v in kwargs.items() if k in params and v is not None}
+
+
 def build_model(spec: str, **kwargs):
     """Build a model from a `provider:name` spec. Defaults to ollama.
 
@@ -383,14 +413,11 @@ def build_model(spec: str, **kwargs):
     else:
         provider, name = "ollama", spec
     if provider == "ollama":
-        return OllamaModel(name, **{k: v for k, v in kwargs.items()
-                                    if k not in ("base_url", "api_key")})
+        return OllamaModel(name, **_accepted(OllamaModel, kwargs))
     if provider == "openai":
-        kwargs = {k: v for k, v in kwargs.items() if v is not None}
-        return OpenAICompatibleModel(name, **kwargs)
+        return OpenAICompatibleModel(name, **_accepted(OpenAICompatibleModel, kwargs))
     if provider == "transformers":
-        kwargs = {k: v for k, v in kwargs.items() if v is not None}
-        return TransformersModel(name, **kwargs)
+        return TransformersModel(name, **_accepted(TransformersModel, kwargs))
     raise ValueError(f"unknown provider {provider!r}")
 
 
