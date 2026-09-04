@@ -213,12 +213,21 @@ def _attractor(models):
             continue
         qc_drift = base["qc"]["cross_substitution"]
         fr_drift = base["fr"]["cross_substitution"]
+        # A model that never performs the rewrite substitutes nothing, so it
+        # scores 0% drift -- which reads as perfect preservation. Carry the void
+        # rate alongside so the renderer can refuse to show a meaningless number.
+        qc_void = base["qc"]["noncompliant"]
+        fr_void = base["fr"]["noncompliant"]
         out[m["meta"]["model"]] = {
             "qc_to_fr_drift": qc_drift,
             "fr_to_qc_drift": fr_drift,
             "asymmetry": None if qc_drift is None or fr_drift is None else qc_drift - fr_drift,
             "qc_retention": base["qc"]["source_retention"],
             "fr_retention": base["fr"]["source_retention"],
+            "qc_void": qc_void,
+            "fr_void": fr_void,
+            "measurable": (qc_void is not None and fr_void is not None
+                           and qc_void < 0.5 and fr_void < 0.5),
         }
     return out
 
@@ -333,19 +342,34 @@ def render_markdown(report):
                   "Under the baseline prompt, which names no variety. Symmetric drift means "
                   "the model is just rewriting; asymmetric drift means its default French has "
                   "a centre of gravity.", "",
-                  "| Model | QC→FR drift | FR→QC drift | asymmetry |",
-                  "| --- | ---: | ---: | ---: |"]
+                  "| Model | QC→FR drift | FR→QC drift | asymmetry | void cells |",
+                  "| --- | ---: | ---: | ---: | ---: |"]
+        unmeasurable = []
         for name, a in report["attractor"].items():
+            if not a.get("measurable", True):
+                unmeasurable.append((name, a))
+                continue
             lines.append(f"| {name} | {_pct(a['qc_to_fr_drift'])} | "
-                         f"{_pct(a['fr_to_qc_drift'])} | {_pct(a['asymmetry'])} |")
+                         f"{_pct(a['fr_to_qc_drift'])} | {_pct(a['asymmetry'])} | "
+                         f"{_pct(a['qc_void'])} |")
         lines.append("")
+        if unmeasurable:
+            lines += ["**Not measurable.** These models fail to perform the rewrite on "
+                      "most or all cells, so they substitute nothing and would score 0% "
+                      "drift — which reads as perfect preservation. The number is "
+                      "withheld rather than printed.", "",
+                      "| Model | void cells (QC) | void cells (FR) |",
+                      "| --- | ---: | ---: |"]
+            for name, a in unmeasurable:
+                lines.append(f"| {name} | {_pct(a['qc_void'])} | {_pct(a['fr_void'])} |")
+            lines.append("")
 
     if report.get("matched_attractor"):
         lines += ["### Matched pairs", "",
-                  "The table above compares 44 Quebec items against 14 France items — "
-                  "two different sets. Each control item names its Quebec counterpart, so "
-                  "the same measure runs on sentence pairs that differ only in variety. "
-                  "Void cells are excluded from both arms of a pair.", "",
+                  "The table above pools all Quebec items against all France items. "
+                  "Here each control item is matched to the Quebec counterpart it names, "
+                  "so the measure runs on sentence pairs differing only in variety. A "
+                  "pair is dropped when either arm is a void cell.", "",
                   "| Model | pairs | QC→FR drift | FR→QC drift | asymmetry | "
                   "QC higher | FR higher | tied | p (McNemar) |",
                   "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]
@@ -353,11 +377,15 @@ def render_markdown(report):
             st = a.get("sign_test")
             p_txt = "-" if st is None else (
                 "< 0.001" if st["p_value"] < 0.001 else f"{st['p_value']:.3f}")
-            lines.append(f"| {name} | {a['n_pairs']} | {_pct(a['qc_to_fr_drift'])} | "
+            flag = " ⚠️" if a["n_pairs"] < 15 else ""
+            lines.append(f"| {name}{flag} | {a['n_pairs']} | {_pct(a['qc_to_fr_drift'])} | "
                          f"{_pct(a['fr_to_qc_drift'])} | {_pct(a['asymmetry'])} | "
                          f"{a['pairs_qc_higher']} | {a['pairs_fr_higher']} | "
                          f"{a['pairs_tied']} | {p_txt} |")
         lines += ["",
+                  "⚠️ marks fewer than 15 usable pairs — too few to read as a rate. "
+                  "Pairs are lost when either arm is a void cell, so a model that often "
+                  "fails the task keeps only a handful.", "",
                   "*p* is a two-sided exact McNemar (sign) test on the discordant pairs — "
                   "those where one side drifted more than the other. Tied pairs, including "
                   "pairs where neither side drifted, carry no directional information and "

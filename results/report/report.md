@@ -483,6 +483,58 @@ QFCR and *untouched* are entangled: a model that declines to edit anything score
 | register | 6 |   33.3% |    0.0% |
 | grammar | 6 |   83.3% |    0.0% |
 
+## openai:llama8b-base
+
+- run: `2026-09-04T15:32:22+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- provider openai-compatible, base_url http://127.0.0.1:8085/v1, temperature 0.0, seed 42
+- 88 results  ·  judge: none
+
+### Scorecard (Quebec-origin items)
+
+| Metric | Value |
+| --- | ---: |
+| Canadian lexical retention — baseline (CLR) |   95.5% |
+| Metropolitan drift — baseline (MDR) |    4.5% |
+| Canadian lexical retention — Quebec prompt |      - |
+| Metropolitan drift — Quebec prompt |      - |
+| Quebec false correction — proofread (QFCR) |      - |
+| — of which the model left the text untouched |      - |
+| Drift recovered by prompting |      - |
+
+QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
+
+### By condition
+
+| Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline |   95.5% |    4.5% |   16.7% |    4.7% |   97.7% |    0.0% |   22.7% |   72.7% |
+
+*Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
+
+### Baseline drift by category (Quebec-origin)
+
+| Category | n | Retention | Drift |
+| --- | ---: | ---: | ---: |
+| grammar | 6 |   66.7% |   33.3% |
+| lexical | 14 |  100.0% |    0.0% |
+| terminology | 10 |  100.0% |    0.0% |
+| semantic | 8 |  100.0% |    0.0% |
+| register | 6 |  100.0% |    0.0% |
+
+### Worst failures
+
+**GRA002** (grammar, baseline, baseline_drift) — Y'a → Il n'y a
+
+> in:  Y'a personne qui m'a averti que la réunion était annulée.
+>
+> out: Il n'y a personne qui m'a averti que la réunion était annulée.
+
+**GRA003** (grammar, baseline, baseline_drift) — à cause que → parce que
+
+> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+>
+> out: Nous sommes allés au restaurant parce que la pluie était trop forte pour marcher.
+
 ## openai:qc-croissant
 
 - run: `2026-09-03T20:36:16+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
@@ -629,6 +681,44 @@ QFCR and *untouched* are entangled: a model that declines to edit anything score
 | semantic | 8 |    0.0% |    0.0% |
 | register | 6 |    0.0% |    0.0% |
 | grammar | 6 |    0.0% |    0.0% |
+
+## openai:qc-llama8b
+
+- run: `2026-09-04T14:31:09+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- provider openai-compatible, base_url http://127.0.0.1:8084/v1, temperature 0.0, seed 42
+- 88 results  ·  judge: none
+
+### Scorecard (Quebec-origin items)
+
+| Metric | Value |
+| --- | ---: |
+| Canadian lexical retention — baseline (CLR) |   37.5% |
+| Metropolitan drift — baseline (MDR) |    0.0% |
+| Canadian lexical retention — Quebec prompt |      - |
+| Metropolitan drift — Quebec prompt |      - |
+| Quebec false correction — proofread (QFCR) |      - |
+| — of which the model left the text untouched |      - |
+| Drift recovered by prompting |      - |
+
+QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
+
+### By condition
+
+| Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline |   37.5% |    0.0% |      - |   62.8% |   45.5% |    0.0% |    0.0% |  100.0% |
+
+*Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
+
+### Baseline drift by category (Quebec-origin)
+
+| Category | n | Retention | Drift |
+| --- | ---: | ---: | ---: |
+| lexical | 14 |   14.3% |    0.0% |
+| terminology | 10 |   40.0% |    0.0% |
+| semantic | 8 |   50.0% |    0.0% |
+| register | 6 |   50.0% |    0.0% |
+| grammar | 6 |   58.3% |    0.0% |
 
 ## phi4:latest
 
@@ -975,22 +1065,29 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 Under the baseline prompt, which names no variety. Symmetric drift means the model is just rewriting; asymmetric drift means its default French has a centre of gravity.
 
-| Model | QC→FR drift | FR→QC drift | asymmetry |
-| --- | ---: | ---: | ---: |
-| choco-fr |   31.8% |   14.8% |   17.0% |
-| llama3.1:8b |   29.5% |    4.5% |   25.0% |
-| mistral:7b |   25.0% |    6.8% |   18.2% |
-| openai:croissant-base |   17.0% |    2.3% |   14.8% |
-| openai:llama1b-base |    0.0% |    0.0% |    0.0% |
-| openai:qc-croissant |    0.0% |    0.0% |    0.0% |
-| openai:qc-llama1b |    0.0% |    0.0% |    0.0% |
-| phi4:latest |   50.0% |   12.5% |   37.5% |
-| qwen2.5:14b-instruct |   45.5% |    3.4% |   42.0% |
-| qwen2.5:7b-instruct |   25.0% |    4.5% |   20.5% |
+| Model | QC→FR drift | FR→QC drift | asymmetry | void cells |
+| --- | ---: | ---: | ---: | ---: |
+| choco-fr |   31.8% |   14.8% |   17.0% |   34.1% |
+| llama3.1:8b |   29.5% |    4.5% |   25.0% |    2.3% |
+| mistral:7b |   25.0% |    6.8% |   18.2% |    6.8% |
+| openai:croissant-base |   17.0% |    2.3% |   14.8% |   15.9% |
+| phi4:latest |   50.0% |   12.5% |   37.5% |   13.6% |
+| qwen2.5:14b-instruct |   45.5% |    3.4% |   42.0% |   15.9% |
+| qwen2.5:7b-instruct |   25.0% |    4.5% |   20.5% |    0.0% |
+
+**Not measurable.** These models fail to perform the rewrite on most or all cells, so they substitute nothing and would score 0% drift — which reads as perfect preservation. The number is withheld rather than printed.
+
+| Model | void cells (QC) | void cells (FR) |
+| --- | ---: | ---: |
+| openai:llama1b-base |  100.0% |  100.0% |
+| openai:llama8b-base |   72.7% |   75.0% |
+| openai:qc-croissant |  100.0% |  100.0% |
+| openai:qc-llama1b |  100.0% |  100.0% |
+| openai:qc-llama8b |  100.0% |  100.0% |
 
 ### Matched pairs
 
-The table above compares 44 Quebec items against 14 France items — two different sets. Each control item names its Quebec counterpart, so the same measure runs on sentence pairs that differ only in variety. Void cells are excluded from both arms of a pair.
+The table above pools all Quebec items against all France items. Here each control item is matched to the Quebec counterpart it names, so the measure runs on sentence pairs differing only in variety. A pair is dropped when either arm is a void cell.
 
 | Model | pairs | QC→FR drift | FR→QC drift | asymmetry | QC higher | FR higher | tied | p (McNemar) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -998,8 +1095,11 @@ The table above compares 44 Quebec items against 14 France items — two differe
 | llama3.1:8b | 41 |   29.3% |    4.9% |   24.4% | 14 | 2 | 25 | 0.004 |
 | mistral:7b | 41 |   26.8% |    7.3% |   19.5% | 11 | 4 | 26 | 0.118 |
 | openai:croissant-base | 35 |   18.6% |    2.9% |   15.7% | 8 | 1 | 26 | 0.039 |
+| openai:llama8b-base ⚠️ | 6 |   16.7% |    0.0% |   16.7% | 1 | 0 | 5 | 1.000 |
 | phi4:latest | 36 |   54.2% |    9.7% |   44.4% | 18 | 1 | 17 | < 0.001 |
 | qwen2.5:14b-instruct | 35 |   52.9% |    4.3% |   48.6% | 20 | 2 | 13 | < 0.001 |
 | qwen2.5:7b-instruct | 43 |   24.4% |    4.7% |   19.8% | 10 | 2 | 31 | 0.039 |
+
+⚠️ marks fewer than 15 usable pairs — too few to read as a rate. Pairs are lost when either arm is a void cell, so a model that often fails the task keeps only a handful.
 
 *p* is a two-sided exact McNemar (sign) test on the discordant pairs — those where one side drifted more than the other. Tied pairs, including pairs where neither side drifted, carry no directional information and are excluded from the test but shown for context.

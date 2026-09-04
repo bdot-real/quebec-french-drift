@@ -2897,6 +2897,157 @@
     },
     {
       "meta": {
+        "run_id": "2026-09-04T15:32:22+00:00",
+        "model": "openai:llama8b-base",
+        "model_config": {
+          "provider": "openai-compatible",
+          "model": "llama8b-base",
+          "base_url": "http://127.0.0.1:8085/v1",
+          "temperature": 0.0,
+          "seed": 42
+        },
+        "dataset_version": "0.2.0",
+        "prompt_version": "1.0",
+        "n_tests": 88,
+        "conditions": [
+          "baseline"
+        ]
+      },
+      "by_condition": {
+        "baseline": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 12,
+            "noncompliant": 0.7272727272727273,
+            "source_retention": 0.9545454545454546,
+            "cross_substitution": 0.045454545454545456,
+            "protected_loss": 0.046511627906976744,
+            "unchanged": 0.22727272727272727,
+            "cross_substitution_compliant": 0.16666666666666666,
+            "source_retention_compliant": 0.8333333333333334
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 11,
+            "noncompliant": 0.75,
+            "source_retention": 0.9772727272727273,
+            "cross_substitution": 0.0,
+            "protected_loss": 0.022727272727272728,
+            "unchanged": 0.20454545454545456,
+            "cross_substitution_compliant": 0.0,
+            "source_retention_compliant": 1.0
+          },
+          "judge_qc": null
+        }
+      },
+      "by_category": {
+        "lexical": {
+          "n": 14,
+          "n_compliant": 3,
+          "noncompliant": 0.7857142857142857,
+          "source_retention": 1.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.0,
+          "unchanged": 0.21428571428571427,
+          "cross_substitution_compliant": 0.0,
+          "source_retention_compliant": 1.0
+        },
+        "terminology": {
+          "n": 10,
+          "n_compliant": 2,
+          "noncompliant": 0.8,
+          "source_retention": 1.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.0,
+          "unchanged": 0.2,
+          "cross_substitution_compliant": 0.0,
+          "source_retention_compliant": 1.0
+        },
+        "semantic": {
+          "n": 8,
+          "n_compliant": 3,
+          "noncompliant": 0.625,
+          "source_retention": 1.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.0,
+          "unchanged": 0.375,
+          "cross_substitution_compliant": 0.0,
+          "source_retention_compliant": 1.0
+        },
+        "register": {
+          "n": 6,
+          "n_compliant": 2,
+          "noncompliant": 0.6666666666666666,
+          "source_retention": 1.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.0,
+          "unchanged": 0.3333333333333333,
+          "cross_substitution_compliant": 0.0,
+          "source_retention_compliant": 1.0
+        },
+        "grammar": {
+          "n": 6,
+          "n_compliant": 2,
+          "noncompliant": 0.6666666666666666,
+          "source_retention": 0.6666666666666666,
+          "cross_substitution": 0.3333333333333333,
+          "protected_loss": 0.3333333333333333,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": 1.0,
+          "source_retention_compliant": 0.0
+        }
+      },
+      "failures": [
+        {
+          "test_id": "GRA002",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "Y'a personne qui m'a averti que la réunion était annulée.",
+          "output": "Il n'y a personne qui m'a averti que la réunion était annulée.",
+          "substitutions": [
+            {
+              "from": "Y'a",
+              "to": "Il n'y a",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "GRA003",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "On est allés au restaurant à cause qu'il pleuvait trop pour marcher.",
+          "output": "Nous sommes allés au restaurant parce que la pluie était trop forte pour marcher.",
+          "substitutions": [
+            {
+              "from": "à cause que",
+              "to": "parce que",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        }
+      ],
+      "n_results": 88,
+      "suspect_reasoning_leaks": 0,
+      "scorecard": {
+        "CLR_baseline": 0.9545454545454546,
+        "MDR_baseline": 0.045454545454545456,
+        "CLR_prompted": null,
+        "MDR_prompted": null,
+        "QFCR_proofread": null,
+        "unchanged_proofread": null,
+        "prompt_recovery": null
+      },
+      "positive_control": null
+    },
+    {
+      "meta": {
         "run_id": "2026-09-03T20:36:16+00:00",
         "model": "openai:qc-croissant",
         "model_config": {
@@ -3675,6 +3826,122 @@
       "suspect_reasoning_leaks": 0,
       "scorecard": {
         "CLR_baseline": 0.011363636363636364,
+        "MDR_baseline": 0.0,
+        "CLR_prompted": null,
+        "MDR_prompted": null,
+        "QFCR_proofread": null,
+        "unchanged_proofread": null,
+        "prompt_recovery": null
+      },
+      "positive_control": null
+    },
+    {
+      "meta": {
+        "run_id": "2026-09-04T14:31:09+00:00",
+        "model": "openai:qc-llama8b",
+        "model_config": {
+          "provider": "openai-compatible",
+          "model": "qc-llama8b",
+          "base_url": "http://127.0.0.1:8084/v1",
+          "temperature": 0.0,
+          "seed": 42
+        },
+        "dataset_version": "0.2.0",
+        "prompt_version": "1.0",
+        "n_tests": 88,
+        "conditions": [
+          "baseline"
+        ]
+      },
+      "by_condition": {
+        "baseline": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.375,
+            "cross_substitution": 0.0,
+            "protected_loss": 0.627906976744186,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.45454545454545453,
+            "cross_substitution": 0.0,
+            "protected_loss": 0.5454545454545454,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "judge_qc": null
+        }
+      },
+      "by_category": {
+        "lexical": {
+          "n": 14,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.14285714285714285,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.8571428571428571,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "terminology": {
+          "n": 10,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.4,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.6,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "semantic": {
+          "n": 8,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.5,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.5,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "register": {
+          "n": 6,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.5,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.4,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "grammar": {
+          "n": 6,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.5833333333333334,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.5,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        }
+      },
+      "failures": [],
+      "n_results": 88,
+      "suspect_reasoning_leaks": 0,
+      "scorecard": {
+        "CLR_baseline": 0.375,
         "MDR_baseline": 0.0,
         "CLR_prompted": null,
         "MDR_prompted": null,
@@ -6085,70 +6352,120 @@
       "fr_to_qc_drift": 0.14772727272727273,
       "asymmetry": 0.17045454545454544,
       "qc_retention": 0.10227272727272728,
-      "fr_retention": 0.3181818181818182
+      "fr_retention": 0.3181818181818182,
+      "qc_void": 0.3409090909090909,
+      "fr_void": 0.25,
+      "measurable": true
     },
     "llama3.1:8b": {
       "qc_to_fr_drift": 0.29545454545454547,
       "fr_to_qc_drift": 0.045454545454545456,
       "asymmetry": 0.25,
       "qc_retention": 0.375,
-      "fr_retention": 0.7045454545454546
+      "fr_retention": 0.7045454545454546,
+      "qc_void": 0.022727272727272728,
+      "fr_void": 0.045454545454545456,
+      "measurable": true
     },
     "mistral:7b": {
       "qc_to_fr_drift": 0.25,
       "fr_to_qc_drift": 0.06818181818181818,
       "asymmetry": 0.18181818181818182,
       "qc_retention": 0.2840909090909091,
-      "fr_retention": 0.5795454545454546
+      "fr_retention": 0.5795454545454546,
+      "qc_void": 0.06818181818181818,
+      "fr_void": 0.045454545454545456,
+      "measurable": true
     },
     "openai:croissant-base": {
       "qc_to_fr_drift": 0.17045454545454544,
       "fr_to_qc_drift": 0.022727272727272728,
       "asymmetry": 0.1477272727272727,
       "qc_retention": 0.7045454545454546,
-      "fr_retention": 0.9090909090909091
+      "fr_retention": 0.9090909090909091,
+      "qc_void": 0.1590909090909091,
+      "fr_void": 0.13636363636363635,
+      "measurable": true
     },
     "openai:llama1b-base": {
       "qc_to_fr_drift": 0.0,
       "fr_to_qc_drift": 0.0,
       "asymmetry": 0.0,
       "qc_retention": 0.6818181818181818,
-      "fr_retention": 0.7840909090909091
+      "fr_retention": 0.7840909090909091,
+      "qc_void": 1.0,
+      "fr_void": 1.0,
+      "measurable": false
+    },
+    "openai:llama8b-base": {
+      "qc_to_fr_drift": 0.045454545454545456,
+      "fr_to_qc_drift": 0.0,
+      "asymmetry": 0.045454545454545456,
+      "qc_retention": 0.9545454545454546,
+      "fr_retention": 0.9772727272727273,
+      "qc_void": 0.7272727272727273,
+      "fr_void": 0.75,
+      "measurable": false
     },
     "openai:qc-croissant": {
       "qc_to_fr_drift": 0.0,
       "fr_to_qc_drift": 0.0,
       "asymmetry": 0.0,
       "qc_retention": 0.0,
-      "fr_retention": 0.0
+      "fr_retention": 0.0,
+      "qc_void": 1.0,
+      "fr_void": 1.0,
+      "measurable": false
     },
     "openai:qc-llama1b": {
       "qc_to_fr_drift": 0.0,
       "fr_to_qc_drift": 0.0,
       "asymmetry": 0.0,
       "qc_retention": 0.011363636363636364,
-      "fr_retention": 0.0
+      "fr_retention": 0.0,
+      "qc_void": 1.0,
+      "fr_void": 1.0,
+      "measurable": false
+    },
+    "openai:qc-llama8b": {
+      "qc_to_fr_drift": 0.0,
+      "fr_to_qc_drift": 0.0,
+      "asymmetry": 0.0,
+      "qc_retention": 0.375,
+      "fr_retention": 0.45454545454545453,
+      "qc_void": 1.0,
+      "fr_void": 1.0,
+      "measurable": false
     },
     "phi4:latest": {
       "qc_to_fr_drift": 0.5,
       "fr_to_qc_drift": 0.125,
       "asymmetry": 0.375,
       "qc_retention": 0.125,
-      "fr_retention": 0.5227272727272727
+      "fr_retention": 0.5227272727272727,
+      "qc_void": 0.13636363636363635,
+      "fr_void": 0.09090909090909091,
+      "measurable": true
     },
     "qwen2.5:14b-instruct": {
       "qc_to_fr_drift": 0.45454545454545453,
       "fr_to_qc_drift": 0.03409090909090909,
       "asymmetry": 0.4204545454545454,
       "qc_retention": 0.4318181818181818,
-      "fr_retention": 0.8295454545454546
+      "fr_retention": 0.8295454545454546,
+      "qc_void": 0.1590909090909091,
+      "fr_void": 0.11363636363636363,
+      "measurable": true
     },
     "qwen2.5:7b-instruct": {
       "qc_to_fr_drift": 0.25,
       "fr_to_qc_drift": 0.045454545454545456,
       "asymmetry": 0.20454545454545453,
       "qc_retention": 0.5113636363636364,
-      "fr_retention": 0.7386363636363636
+      "fr_retention": 0.7386363636363636,
+      "qc_void": 0.0,
+      "fr_void": 0.022727272727272728,
+      "measurable": true
     }
   },
   "matched_attractor": {
@@ -6206,6 +6523,20 @@
       "sign_test": {
         "n_discordant": 9,
         "p_value": 0.0390625
+      }
+    },
+    "openai:llama8b-base": {
+      "n_pairs": 6,
+      "n_void_pairs": 38,
+      "qc_to_fr_drift": 0.16666666666666666,
+      "fr_to_qc_drift": 0.0,
+      "asymmetry": 0.16666666666666666,
+      "pairs_qc_higher": 1,
+      "pairs_fr_higher": 0,
+      "pairs_tied": 5,
+      "sign_test": {
+        "n_discordant": 1,
+        "p_value": 1.0
       }
     },
     "phi4:latest": {
