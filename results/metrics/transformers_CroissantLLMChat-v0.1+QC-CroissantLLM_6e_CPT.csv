@@ -1,0 +1,2 @@
+test_id,category,variety,condition,model,input,output,source_retention,cross_substitution_rate,protected_term_loss,unchanged,suspect_reasoning_leak
+LEX001,lexical,qc,baseline,transformers:CroissantLLMChat-v0.1+QC-CroissantLLM_6e_CPT,Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.,Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .,0.0,0.0,1.0,False,False

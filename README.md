@@ -59,15 +59,45 @@ completes, and re-running the same command skips work already recorded.
 
 ## Backends
 
-Two adapters, selected by a `provider:name` spec:
+Three adapters, selected by a `provider:name` spec:
 
 | Spec | Adapter |
 | --- | --- |
 | `llama3.1:8b` | Ollama (the default — bare tags are treated as Ollama) |
 | `openai:<model>` | Anything speaking the OpenAI chat-completions API — llama.cpp's server, LM Studio, vLLM, a hosted API |
+| `transformers:<repo-or-path>` | A HuggingFace causal LM in-process, no server |
 
-The OpenAI-compatible adapter takes `--base-url` and an optional API key
-through the console, or `base_url=` / `api_key=` through `build_model()`.
+The OpenAI-compatible adapter takes `--base-url` and an optional API key. The
+`transformers` adapter takes `--device`, `--load-in-4bit`, `--max-new-tokens`,
+and `--adapter` to merge a PEFT adapter at load time:
+
+```bash
+python3 run_experiment.py run --models transformers:Qwen/Qwen2.5-7B-Instruct \
+    --device cuda --load-in-4bit
+python3 run_experiment.py run --models transformers:croissantllm/CroissantLLMChat-v0.1 \
+    --adapter QuebecLLM/QC-CroissantLLM_6e_CPT
+```
+
+torch, transformers and peft are imported lazily, so the harness core stays
+stdlib-only for the Ollama and OpenAI paths.
+
+## Running on Colab
+
+`notebooks/qfdrift_colab.ipynb` runs the whole thing on a Colab GPU, which is
+worth it when the local machine is the bottleneck — an 8B does a cell in 2-4 s
+on a free T4 against ~50 s on a swap-bound laptop.
+
+Two things in it are not optional if you care about the results:
+
+- **Mount Drive and point `results/` at it.** Colab sessions die after ~90
+  minutes idle. Because the harness records every cell as it completes and skips
+  recorded cells, a disconnect then costs one cell instead of the run.
+- **Use instruction-tuned models.** The four conditions are instructions. A base
+  model scores 100% void cells and tells you nothing about French.
+
+Quantization is a variable, not a detail: a 4-bit run is not comparable with an
+fp16 run of the same model. Hold it constant across anything you intend to
+compare.
 
 ## Testing a HuggingFace model
 
@@ -241,8 +271,11 @@ results/
   human/       blind rater CSV + key
   report/      report.md, report.json
 web/           the console UI (index.html, app.js, styles.css)
+notebooks/     qfdrift_colab.ipynb — GPU runner with Drive-persisted results
 scripts/
   fetch_hf_gguf.sh   size-verified GGUF import from HuggingFace
+  merge_lora.py      merge a PEFT adapter into its base, with guards
+  serve_hf.py        minimal OpenAI-compatible server for a local HF model
   article_numbers.py figures quoted by the write-up, straight from the report
 tests/         self-tests (matching, metrics, judge, dataset integrity)
 run_experiment.py

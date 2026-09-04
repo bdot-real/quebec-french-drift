@@ -237,7 +237,139 @@ class OpenAICompatibleModel:
                   "usage": data.get("usage")})
 
 
-PROVIDERS = ("ollama", "openai")
+def build_chat_prompt(tokenizer, system, user):
+    """Render a turn using the model's own chat template, or a plain transcript.
+
+    Base models ship no template. Falling back silently is right -- the harness
+    should still be able to *ask*, and the resulting void cells are themselves
+    the finding -- but the caller is told which path was taken so a run can be
+    labelled honestly.
+    """
+    messages = [{"role": "system", "content": system},
+                {"role": "user", "content": user}]
+    if getattr(tokenizer, "chat_template", None):
+        return tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True), True
+    return f"system: {system}\nuser: {user}\nassistant:", False
+
+
+def chat_stop_ids(tokenizer, generation_config=None):
+    """Every id that should end a turn.
+
+    A model's generation_config often lists only the pretraining eos while its
+    chat template closes turns with a different token -- CroissantLLM declares
+    eos_token_id 2 but its template emits <|im_end|>. Generation then runs to
+    max_new_tokens and loops, which reads as a rambling model rather than a
+    misconfigured stop condition.
+    """
+    ids = set()
+    candidates = [getattr(tokenizer, "eos_token_id", None)]
+    if generation_config is not None:
+        candidates.append(getattr(generation_config, "eos_token_id", None))
+    for candidate in candidates:
+        if isinstance(candidate, int):
+            ids.add(candidate)
+        elif isinstance(candidate, (list, tuple)):
+            ids.update(i for i in candidate if isinstance(i, int))
+    for token in ("<|im_end|>", "<|eot_id|>", "<|end|>", "<end_of_turn>"):
+        tid = tokenizer.convert_tokens_to_ids(token)
+        if isinstance(tid, int) and tid >= 0 and tid != tokenizer.unk_token_id:
+            ids.add(tid)
+    return sorted(ids)
+
+
+class TransformersModel:
+    """Run a HuggingFace causal LM in-process.
+
+    For notebooks and GPU boxes, where standing up a server is pointless. Torch
+    and transformers are imported lazily so the rest of the harness stays
+    stdlib-only.
+    """
+
+    def __init__(self, model, device=None, dtype="float16", load_in_4bit=False,
+                 max_new_tokens=256, temperature=0.0, seed=42, adapter=None,
+                 **_ignored):
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+
+        self.model_id = model
+        self.adapter = adapter
+        self.temperature = temperature
+        self.seed = seed
+        self.max_new_tokens = max_new_tokens
+        self._torch = torch
+
+        if device is None:
+            device = ("cuda" if torch.cuda.is_available()
+                      else "mps" if torch.backends.mps.is_available() else "cpu")
+        self.device = device
+
+        kwargs = {"low_cpu_mem_usage": True}
+        if load_in_4bit:
+            from transformers import BitsAndBytesConfig
+            kwargs["quantization_config"] = BitsAndBytesConfig(
+                load_in_4bit=True, bnb_4bit_compute_dtype=getattr(torch, dtype))
+            kwargs["device_map"] = "auto"
+        else:
+            kwargs["dtype"] = getattr(torch, dtype)
+
+        self.tokenizer = AutoTokenizer.from_pretrained(model)
+        self._model = AutoModelForCausalLM.from_pretrained(model, **kwargs)
+        if adapter:
+            from peft import PeftModel
+            self._model = PeftModel.from_pretrained(self._model, adapter)
+            self._model = self._model.merge_and_unload()
+        if not load_in_4bit:
+            self._model.to(device)
+        self._model.eval()
+        self.quantized = load_in_4bit
+        self.stop_ids = chat_stop_ids(self.tokenizer, self._model.generation_config)
+        _, self.has_template = build_chat_prompt(self.tokenizer, "x", "y")
+
+    @property
+    def name(self):
+        base = self.model_id.split("/")[-1]
+        return f"transformers:{base}" + (f"+{self.adapter.split('/')[-1]}" if self.adapter else "")
+
+    @property
+    def config(self):
+        return {"provider": "transformers", "model": self.model_id,
+                "adapter": self.adapter, "device": self.device,
+                "quantized_4bit": self.quantized, "temperature": self.temperature,
+                "seed": self.seed, "chat_template": self.has_template}
+
+    def generate(self, system, user) -> ModelResponse:
+        torch = self._torch
+        prompt, _ = build_chat_prompt(self.tokenizer, system, user)
+        inputs = self.tokenizer(prompt, return_tensors="pt").to(self._model.device)
+        torch.manual_seed(self.seed)
+        started = time.time()
+        with torch.no_grad():
+            out = self._model.generate(
+                **inputs, max_new_tokens=self.max_new_tokens,
+                do_sample=self.temperature > 0,
+                temperature=self.temperature if self.temperature > 0 else None,
+                pad_token_id=self.tokenizer.pad_token_id or self.tokenizer.eos_token_id,
+                eos_token_id=self.stop_ids)
+        # Continuation only: echoing the prompt back would be scored as output.
+        raw = self.tokenizer.decode(out[0][inputs["input_ids"].shape[1]:],
+                                    skip_special_tokens=True)
+        clean, stripped = strip_reasoning(raw)
+        clean = _strip_wrappers(clean)
+        return ModelResponse(
+            model=self.name, system=system, user=user, raw=raw, output=clean,
+            reasoning_stripped=stripped,
+            suspect_reasoning_leak=looks_like_untagged_reasoning(clean),
+            latency_s=round(time.time() - started, 2),
+            meta={"new_tokens": int(out.shape[1] - inputs["input_ids"].shape[1])})
+
+    def unload(self):
+        del self._model
+        if self.device == "cuda":
+            self._torch.cuda.empty_cache()
+
+
+PROVIDERS = ("ollama", "openai", "transformers")
 
 
 def build_model(spec: str, **kwargs):
@@ -256,6 +388,9 @@ def build_model(spec: str, **kwargs):
     if provider == "openai":
         kwargs = {k: v for k, v in kwargs.items() if v is not None}
         return OpenAICompatibleModel(name, **kwargs)
+    if provider == "transformers":
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+        return TransformersModel(name, **kwargs)
     raise ValueError(f"unknown provider {provider!r}")
 
 

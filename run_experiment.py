@@ -3,6 +3,7 @@
 
 Usage:
     python3 run_experiment.py run   --models llama3.1:8b qwen2.5:14b-instruct
+    python3 run_experiment.py run   --models transformers:mistralai/Mistral-7B-Instruct-v0.3
     python3 run_experiment.py judge --judge qwen2.5:14b-instruct
     python3 run_experiment.py report
     python3 run_experiment.py human --sample 120
@@ -126,7 +127,9 @@ def cmd_run(args):
         print(f"\n=== {spec} ===", file=sys.stderr)
         model = build_model(spec, temperature=args.temperature, seed=args.seed,
                             num_ctx=args.num_ctx, base_url=args.base_url,
-                            api_key=args.api_key)
+                            api_key=args.api_key, adapter=args.adapter,
+                            load_in_4bit=args.load_in_4bit or None,
+                            device=args.device, max_new_tokens=args.max_new_tokens)
         try:
             run_model(model, tests, prompts, resume=not args.no_resume)
         finally:
@@ -269,6 +272,12 @@ def main():
     run_p.add_argument("--base-url", dest="base_url", default=None,
                        help="OpenAI-compatible endpoint, for openai:<model> specs")
     run_p.add_argument("--api-key", dest="api_key", default=None)
+    run_p.add_argument("--adapter", default=None,
+                       help="PEFT adapter to merge on load, for transformers: specs")
+    run_p.add_argument("--load-in-4bit", dest="load_in_4bit", action="store_true",
+                       help="4-bit quantized load (fits an 8B on a free-tier GPU)")
+    run_p.add_argument("--device", default=None, help="cuda / mps / cpu")
+    run_p.add_argument("--max-new-tokens", dest="max_new_tokens", type=int, default=256)
     run_p.add_argument("--no-resume", action="store_true")
     run_p.set_defaults(func=cmd_run)
 

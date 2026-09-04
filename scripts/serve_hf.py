@@ -16,11 +16,16 @@ weights.
 
 import argparse
 import json
+import sys
 import time
 from http.server import BaseHTTPRequestHandler, HTTPServer
+from pathlib import Path
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from src.models import chat_stop_ids  # noqa: E402  shared with TransformersModel
 
 STATE = {}
 
@@ -32,29 +37,6 @@ def build_prompt(tokenizer, messages):
             messages, tokenize=False, add_generation_prompt=True)
     parts = [f"{m['role']}: {m['content']}" for m in messages]
     return "\n".join(parts) + "\nassistant:"
-
-
-def stop_ids(tokenizer, model):
-    """Every id that should end a turn.
-
-    A model's generation_config often lists only the pretraining eos while its
-    chat template closes turns with a different token -- CroissantLLM says
-    eos_token_id 2 (</s>) but its template emits <|im_end|> (32000). Generation
-    then runs to max_new_tokens and loops, which reads as a rambling model
-    rather than a misconfigured stop condition.
-    """
-    ids = set()
-    for candidate in (tokenizer.eos_token_id,
-                      getattr(model.generation_config, "eos_token_id", None)):
-        if isinstance(candidate, int):
-            ids.add(candidate)
-        elif isinstance(candidate, (list, tuple)):
-            ids.update(i for i in candidate if isinstance(i, int))
-    for token in ("<|im_end|>", "<|eot_id|>", "<|end|>", "<end_of_turn>"):
-        tid = tokenizer.convert_tokens_to_ids(token)
-        if isinstance(tid, int) and tid >= 0 and tid != tokenizer.unk_token_id:
-            ids.add(tid)
-    return sorted(ids)
 
 
 def generate(messages, temperature, max_new_tokens, seed):
@@ -139,7 +121,7 @@ def main():
     model.to(args.device).eval()
     STATE.update(tokenizer=tokenizer, model=model, name=args.name,
                  max_new_tokens=args.max_new_tokens,
-                 stop_ids=stop_ids(tokenizer, model))
+                 stop_ids=chat_stop_ids(tokenizer, model.generation_config))
     print(f"stop ids: {STATE['stop_ids']}", flush=True)
     print(f"chat template: {'yes' if getattr(tokenizer, 'chat_template', None) else 'NO (plain transcript fallback)'}",
           flush=True)
