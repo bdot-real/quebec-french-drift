@@ -11,11 +11,9 @@ The third is the interesting one. A model can be fluent, grammatical and
 completely wrong for the person in front of it — and a generic French benchmark
 will not notice.
 
-Companion documents: [`docs/article.md`](docs/article.md) (the argument and the
-measured results), [`docs/huggingface-survey.md`](docs/huggingface-survey.md)
-(what exists on HuggingFace for Quebec French, and what of it actually runs),
-[`docs/project_purpose.md`](docs/project_purpose.md) (the full design
-programme, of which this repository implements Track B).
+The measured results for every model run so far are in
+[`results/report/report.md`](results/report/report.md), regenerated from the raw
+outputs by `python3 run_experiment.py report`.
 
 ## Quick start
 
@@ -284,8 +282,7 @@ serve.py       local control panel
 
 ## Scope
 
-This implements **Track B** (dialect drift) of `docs/project_purpose.md`.
-Deliberately out of scope for v0.1:
+This implements the **dialect drift** track. Deliberately out of scope:
 
 - **Track A** — QFrBLiMP / QFrCoLA / COLE. These are external datasets under
   CC-BY-NC-SA; check the licences before redistributing any of their content.
