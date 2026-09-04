@@ -2310,7 +2310,7 @@
     },
     {
       "meta": {
-        "run_id": "2026-09-03T20:24:23+00:00",
+        "run_id": "2026-09-03T20:24:49+00:00",
         "model": "openai:croissant-base",
         "model_config": {
           "provider": "openai-compatible",
@@ -2321,7 +2321,7 @@
         },
         "dataset_version": "0.2.0",
         "prompt_version": "1.0",
-        "n_tests": 2,
+        "n_tests": 88,
         "conditions": [
           "baseline",
           "canadian",
@@ -2332,127 +2332,160 @@
       "by_condition": {
         "baseline": {
           "qc": {
-            "n": 2,
-            "n_compliant": 2,
-            "noncompliant": 0.0,
-            "source_retention": 0.5,
-            "cross_substitution": 0.5,
-            "protected_loss": 0.5,
-            "unchanged": 0.5,
-            "cross_substitution_compliant": 0.5,
-            "source_retention_compliant": 0.5
+            "n": 44,
+            "n_compliant": 37,
+            "noncompliant": 0.1590909090909091,
+            "source_retention": 0.7045454545454546,
+            "cross_substitution": 0.17045454545454544,
+            "protected_loss": 0.3023255813953488,
+            "unchanged": 0.45454545454545453,
+            "cross_substitution_compliant": 0.20270270270270271,
+            "source_retention_compliant": 0.6891891891891891
           },
           "fr": {
-            "n": 0,
-            "n_compliant": 0,
-            "noncompliant": null,
-            "source_retention": null,
-            "cross_substitution": null,
-            "protected_loss": null,
-            "unchanged": null,
-            "cross_substitution_compliant": null,
-            "source_retention_compliant": null
+            "n": 44,
+            "n_compliant": 38,
+            "noncompliant": 0.13636363636363635,
+            "source_retention": 0.9090909090909091,
+            "cross_substitution": 0.022727272727272728,
+            "protected_loss": 0.11363636363636363,
+            "unchanged": 0.6363636363636364,
+            "cross_substitution_compliant": 0.02631578947368421,
+            "source_retention_compliant": 0.9736842105263158
           },
           "judge_qc": null
         },
         "canadian": {
           "qc": {
-            "n": 2,
-            "n_compliant": 2,
-            "noncompliant": 0.0,
-            "source_retention": 1.0,
-            "cross_substitution": 0.0,
-            "protected_loss": 0.0,
-            "unchanged": 0.5,
-            "cross_substitution_compliant": 0.0,
-            "source_retention_compliant": 1.0
+            "n": 44,
+            "n_compliant": 35,
+            "noncompliant": 0.20454545454545456,
+            "source_retention": 0.75,
+            "cross_substitution": 0.06818181818181818,
+            "protected_loss": 0.2558139534883721,
+            "unchanged": 0.4772727272727273,
+            "cross_substitution_compliant": 0.08571428571428572,
+            "source_retention_compliant": 0.7857142857142857
           },
           "fr": {
-            "n": 0,
-            "n_compliant": 0,
-            "noncompliant": null,
-            "source_retention": null,
-            "cross_substitution": null,
-            "protected_loss": null,
-            "unchanged": null,
-            "cross_substitution_compliant": null,
-            "source_retention_compliant": null
+            "n": 44,
+            "n_compliant": 38,
+            "noncompliant": 0.13636363636363635,
+            "source_retention": 0.8636363636363636,
+            "cross_substitution": 0.022727272727272728,
+            "protected_loss": 0.18181818181818182,
+            "unchanged": 0.5227272727272727,
+            "cross_substitution_compliant": 0.0,
+            "source_retention_compliant": 0.9210526315789473
           },
           "judge_qc": null
         },
         "metropolitan": {
           "qc": {
-            "n": 2,
-            "n_compliant": 2,
-            "noncompliant": 0.0,
-            "source_retention": 0.5,
-            "cross_substitution": 0.5,
-            "protected_loss": 0.5,
-            "unchanged": 0.5,
-            "cross_substitution_compliant": 0.5,
-            "source_retention_compliant": 0.5
+            "n": 44,
+            "n_compliant": 39,
+            "noncompliant": 0.11363636363636363,
+            "source_retention": 0.6477272727272727,
+            "cross_substitution": 0.13636363636363635,
+            "protected_loss": 0.3488372093023256,
+            "unchanged": 0.38636363636363635,
+            "cross_substitution_compliant": 0.15384615384615385,
+            "source_retention_compliant": 0.6538461538461539
           },
           "fr": {
-            "n": 0,
-            "n_compliant": 0,
-            "noncompliant": null,
-            "source_retention": null,
-            "cross_substitution": null,
-            "protected_loss": null,
-            "unchanged": null,
-            "cross_substitution_compliant": null,
-            "source_retention_compliant": null
+            "n": 44,
+            "n_compliant": 40,
+            "noncompliant": 0.09090909090909091,
+            "source_retention": 0.8863636363636364,
+            "cross_substitution": 0.022727272727272728,
+            "protected_loss": 0.13636363636363635,
+            "unchanged": 0.6590909090909091,
+            "cross_substitution_compliant": 0.025,
+            "source_retention_compliant": 0.875
           },
           "judge_qc": null
         },
         "proofread": {
           "qc": {
-            "n": 2,
-            "n_compliant": 2,
-            "noncompliant": 0.0,
-            "source_retention": 0.5,
-            "cross_substitution": 0.5,
-            "protected_loss": 0.5,
-            "unchanged": 0.5,
-            "cross_substitution_compliant": 0.5,
-            "source_retention_compliant": 0.5
+            "n": 44,
+            "n_compliant": 36,
+            "noncompliant": 0.18181818181818182,
+            "source_retention": 0.8181818181818182,
+            "cross_substitution": 0.11363636363636363,
+            "protected_loss": 0.1744186046511628,
+            "unchanged": 0.5227272727272727,
+            "cross_substitution_compliant": 0.1388888888888889,
+            "source_retention_compliant": 0.7777777777777778
           },
           "fr": {
-            "n": 0,
-            "n_compliant": 0,
-            "noncompliant": null,
-            "source_retention": null,
-            "cross_substitution": null,
-            "protected_loss": null,
-            "unchanged": null,
-            "cross_substitution_compliant": null,
-            "source_retention_compliant": null
+            "n": 44,
+            "n_compliant": 37,
+            "noncompliant": 0.1590909090909091,
+            "source_retention": 0.9659090909090909,
+            "cross_substitution": 0.0,
+            "protected_loss": 0.045454545454545456,
+            "unchanged": 0.7045454545454546,
+            "cross_substitution_compliant": 0.0,
+            "source_retention_compliant": 0.9864864864864865
           },
           "judge_qc": null
         }
       },
       "by_category": {
         "lexical": {
-          "n": 1,
-          "n_compliant": 1,
+          "n": 14,
+          "n_compliant": 14,
           "noncompliant": 0.0,
+          "source_retention": 0.7142857142857143,
+          "cross_substitution": 0.14285714285714285,
+          "protected_loss": 0.2857142857142857,
+          "unchanged": 0.6428571428571429,
+          "cross_substitution_compliant": 0.14285714285714285,
+          "source_retention_compliant": 0.7142857142857143
+        },
+        "terminology": {
+          "n": 10,
+          "n_compliant": 7,
+          "noncompliant": 0.3,
           "source_retention": 1.0,
           "cross_substitution": 0.0,
           "protected_loss": 0.0,
-          "unchanged": 1.0,
+          "unchanged": 0.4,
           "cross_substitution_compliant": 0.0,
           "source_retention_compliant": 1.0
         },
         "semantic": {
-          "n": 1,
-          "n_compliant": 1,
-          "noncompliant": 0.0,
-          "source_retention": 0.0,
-          "cross_substitution": 1.0,
-          "protected_loss": 1.0,
-          "unchanged": 0.0,
-          "cross_substitution_compliant": 1.0,
-          "source_retention_compliant": 0.0
+          "n": 8,
+          "n_compliant": 7,
+          "noncompliant": 0.125,
+          "source_retention": 0.5,
+          "cross_substitution": 0.25,
+          "protected_loss": 0.5,
+          "unchanged": 0.375,
+          "cross_substitution_compliant": 0.2857142857142857,
+          "source_retention_compliant": 0.42857142857142855
+        },
+        "register": {
+          "n": 6,
+          "n_compliant": 5,
+          "noncompliant": 0.16666666666666666,
+          "source_retention": 0.75,
+          "cross_substitution": 0.16666666666666666,
+          "protected_loss": 0.3,
+          "unchanged": 0.5,
+          "cross_substitution_compliant": 0.2,
+          "source_retention_compliant": 0.8
+        },
+        "grammar": {
+          "n": 6,
+          "n_compliant": 4,
+          "noncompliant": 0.3333333333333333,
+          "source_retention": 0.4166666666666667,
+          "cross_substitution": 0.4166666666666667,
+          "protected_loss": 0.5833333333333334,
+          "unchanged": 0.16666666666666666,
+          "cross_substitution_compliant": 0.625,
+          "source_retention_compliant": 0.375
         }
       },
       "failures": [
@@ -2467,6 +2500,57 @@
               "from": "souperons",
               "to": "dînerons",
               "relation": "semantic_diff"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA002",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "Y'a personne qui m'a averti que la réunion était annulée.",
+          "output": "Personne ne m'a prévenu que la réunion était annulée.",
+          "substitutions": [
+            {
+              "from": "Y'a",
+              "to": "Personne ne",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA003",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "On est allés au restaurant à cause qu'il pleuvait trop pour marcher.",
+          "output": "On a été au restaurant parce qu'il pleuvait trop pour marcher.",
+          "substitutions": [
+            {
+              "from": "à cause que",
+              "to": "parce qu",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM006",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "Je vais présentement m'occuper de ton dossier.",
+          "output": "Je suis actuellement en train de traiter ton dossier.",
+          "substitutions": [
+            {
+              "from": "présentement",
+              "to": "actuellement",
+              "relation": "equivalent"
             }
           ],
           "protected_term_loss": 1.0,
@@ -2489,25 +2573,1116 @@
           "protected_term_loss": 1.0,
           "cross_substitution_rate": 1.0,
           "kind": "baseline_drift"
+        },
+        {
+          "test_id": "GRA002",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "Y'a personne qui m'a averti que la réunion était annulée.",
+          "output": "Personne ne m'a prévenu que la réunion était annulée.",
+          "substitutions": [
+            {
+              "from": "Y'a",
+              "to": "Personne ne",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "GRA003",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "On est allés au restaurant à cause qu'il pleuvait trop pour marcher.",
+          "output": "On a mangé au restaurant parce qu'il pleuvait trop pour marcher.",
+          "substitutions": [
+            {
+              "from": "à cause que",
+              "to": "parce qu",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "LEX005",
+          "category": "lexical",
+          "condition": "baseline",
+          "input": "Ce chandail en laine est offert en trois couleurs.",
+          "output": "Ce pull en laine est disponible en trois couleurs.",
+          "substitutions": [
+            {
+              "from": "chandail",
+              "to": "pull",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "LEX012",
+          "category": "lexical",
+          "condition": "baseline",
+          "input": "Consultez le babillard pour connaître les offres d'emploi internes.",
+          "output": "Consultez le tableau d'affichage pour connaître les offres d'emploi internes, sans commentaire.",
+          "substitutions": [
+            {
+              "from": "babillard",
+              "to": "tableau d'affichage",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "SEM006",
+          "category": "semantic",
+          "condition": "baseline",
+          "input": "Je vais présentement m'occuper de ton dossier.",
+          "output": "Je suis actuellement en train de traiter ton dossier.",
+          "substitutions": [
+            {
+              "from": "présentement",
+              "to": "actuellement",
+              "relation": "equivalent"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 1.0,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "REG005",
+          "category": "register",
+          "condition": "baseline",
+          "input": "Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !",
+          "output": "Des réductions à ne pas manquer sur tous nos articles en magasin et en ligne. Dépêchez-vous, les quantités sont limitées !",
+          "substitutions": [
+            {
+              "from": "rabais",
+              "to": "réductions",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.5,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "LEX004",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Profitez de nos rabais pour faire votre magasinage des Fêtes.",
+          "output": "Profitez de nos offres spéciales pour faire vos achats des Fêtes.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX011",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Vous devez téléverser votre pièce d'identité avant de soumettre la demande.",
+          "output": "Vous devez fournir une pièce d'identité valide avant de soumettre votre demande.",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "REG005",
+          "category": "register",
+          "condition": "proofread",
+          "input": "Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !",
+          "output": "Des remises à ne pas manquer sur tous nos articles en magasin et en ligne. Dépêchez-vous, les quantités sont limitées !",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA004",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "On a eu de la misère à trouver un stationnement proche du stade.",
+          "output": "On a eu du mal à trouver un stationnement à proximité du stade.",
+          "substitutions": [
+            {
+              "from": "de la misère",
+              "to": "du mal",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 0.5,
+          "cross_substitution_rate": 0.5,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA004",
+          "category": "grammar",
+          "condition": "baseline",
+          "input": "On a eu de la misère à trouver un stationnement proche du stade.",
+          "output": "On a eu du mal à trouver un stationnement à proximité du stade.",
+          "substitutions": [
+            {
+              "from": "de la misère",
+              "to": "du mal",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 0.5,
+          "cross_substitution_rate": 0.5,
+          "kind": "baseline_drift"
+        },
+        {
+          "test_id": "REG001",
+          "category": "register",
+          "condition": "baseline",
+          "input": "Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.",
+          "output": "Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.",
+          "substitutions": [
+            {
+              "from": "communiqué avec nous",
+              "to": "nous avoir contactés",
+              "relation": "preference"
+            }
+          ],
+          "protected_term_loss": 0.5,
+          "cross_substitution_rate": 0.5,
+          "kind": "baseline_drift"
         }
       ],
-      "n_results": 8,
+      "n_results": 352,
       "suspect_reasoning_leaks": 0,
       "scorecard": {
-        "CLR_baseline": 0.5,
-        "MDR_baseline": 0.5,
-        "CLR_prompted": 1.0,
-        "MDR_prompted": 0.0,
-        "QFCR_proofread": 0.5,
-        "unchanged_proofread": 0.5,
-        "prompt_recovery": 0.5
+        "CLR_baseline": 0.7045454545454546,
+        "MDR_baseline": 0.17045454545454544,
+        "CLR_prompted": 0.75,
+        "MDR_prompted": 0.06818181818181818,
+        "QFCR_proofread": 0.1744186046511628,
+        "unchanged_proofread": 0.5227272727272727,
+        "prompt_recovery": 0.10227272727272727
       },
       "positive_control": {
-        "baseline_drift": 0.5,
-        "metropolitan_drift": 0.5,
+        "baseline_drift": 0.17045454545454544,
+        "metropolitan_drift": 0.13636363636363635,
+        "margin": -0.03409090909090909,
+        "passed": false
+      }
+    },
+    {
+      "meta": {
+        "run_id": "2026-09-04T13:54:34+00:00",
+        "model": "openai:llama1b-base",
+        "model_config": {
+          "provider": "openai-compatible",
+          "model": "llama1b-base",
+          "base_url": "http://127.0.0.1:8083/v1",
+          "temperature": 0.0,
+          "seed": 42
+        },
+        "dataset_version": "0.2.0",
+        "prompt_version": "1.0",
+        "n_tests": 88,
+        "conditions": [
+          "baseline"
+        ]
+      },
+      "by_condition": {
+        "baseline": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.6818181818181818,
+            "cross_substitution": 0.0,
+            "protected_loss": 0.3023255813953488,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.7840909090909091,
+            "cross_substitution": 0.0,
+            "protected_loss": 0.2159090909090909,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "judge_qc": null
+        }
+      },
+      "by_category": {
+        "lexical": {
+          "n": 14,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.6428571428571429,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.35714285714285715,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "terminology": {
+          "n": 10,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.7,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.3,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "semantic": {
+          "n": 8,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.875,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.125,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "register": {
+          "n": 6,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.3333333333333333,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.6,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "grammar": {
+          "n": 6,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.8333333333333334,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.16666666666666666,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        }
+      },
+      "failures": [],
+      "n_results": 88,
+      "suspect_reasoning_leaks": 0,
+      "scorecard": {
+        "CLR_baseline": 0.6818181818181818,
+        "MDR_baseline": 0.0,
+        "CLR_prompted": null,
+        "MDR_prompted": null,
+        "QFCR_proofread": null,
+        "unchanged_proofread": null,
+        "prompt_recovery": null
+      },
+      "positive_control": null
+    },
+    {
+      "meta": {
+        "run_id": "2026-09-03T20:36:16+00:00",
+        "model": "openai:qc-croissant",
+        "model_config": {
+          "provider": "openai-compatible",
+          "model": "qc-croissant",
+          "base_url": "http://127.0.0.1:8080/v1",
+          "temperature": 0.0,
+          "seed": 42
+        },
+        "dataset_version": "0.2.0",
+        "prompt_version": "1.0",
+        "n_tests": 88,
+        "conditions": [
+          "baseline",
+          "canadian",
+          "metropolitan",
+          "proofread"
+        ]
+      },
+      "by_condition": {
+        "baseline": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.0,
+            "cross_substitution": 0.0,
+            "protected_loss": 1.0,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.0,
+            "cross_substitution": 0.0,
+            "protected_loss": 1.0,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "judge_qc": null
+        },
+        "canadian": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.0,
+            "cross_substitution": 0.0,
+            "protected_loss": 1.0,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.0,
+            "cross_substitution": 0.0,
+            "protected_loss": 1.0,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "judge_qc": null
+        },
+        "metropolitan": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.0,
+            "cross_substitution": 0.0,
+            "protected_loss": 1.0,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.0,
+            "cross_substitution": 0.0,
+            "protected_loss": 1.0,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "judge_qc": null
+        },
+        "proofread": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.0,
+            "cross_substitution": 0.0,
+            "protected_loss": 1.0,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.0,
+            "cross_substitution": 0.0,
+            "protected_loss": 1.0,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "judge_qc": null
+        }
+      },
+      "by_category": {
+        "lexical": {
+          "n": 14,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 1.0,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "terminology": {
+          "n": 10,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 1.0,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "semantic": {
+          "n": 8,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 1.0,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "register": {
+          "n": 6,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 1.0,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "grammar": {
+          "n": 6,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 1.0,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        }
+      },
+      "failures": [
+        {
+          "test_id": "GRA001",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "Tu viens-tu avec nous autres à soir ?",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA002",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "Y'a personne qui m'a averti que la réunion était annulée.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA003",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "On est allés au restaurant à cause qu'il pleuvait trop pour marcher.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA004",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "On a eu de la misère à trouver un stationnement proche du stade.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA005",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "Assis-toi, je vais te conter ce qui est arrivé hier.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "GRA006",
+          "category": "grammar",
+          "condition": "proofread",
+          "input": "Je m'en vas au bureau tantôt, on se reparle après.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX001",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX002",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Le stationnement est accessible derrière l'édifice à partir de 7 h.",
+          "output": "Ça fait longtemps que je n'ai pas vu de vidéo de toi .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX003",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "L'activité aura lieu la fin de semaine prochaine au centre communautaire.",
+          "output": "2019 - Prix du gouverneur général du canada pour la traduction en anglais",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX004",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Profitez de nos rabais pour faire votre magasinage des Fêtes.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX005",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Ce chandail en laine est offert en trois couleurs.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX006",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.",
+          "output": "Ça fait longtemps que je n'ai pas vu de vidéo de toi .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX007",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Le traversier relie Québec et Lévis toutes les vingt minutes.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX008",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Notre baladodiffusion hebdomadaire est maintenant offerte sur toutes les plateformes.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX009",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Utilisez le clavardage en direct pour parler à un agent.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX010",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Supprimez les pourriels sans ouvrir les pièces jointes.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX011",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Vous devez téléverser votre pièce d'identité avant de soumettre la demande.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX012",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Consultez le babillard pour connaître les offres d'emploi internes.",
+          "output": "2019 - 2020 Les invincibles série télévisée",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX013",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.",
+          "output": "Ça fait longtemps que je n'ai pas vu de vidéo de toi .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "LEX014",
+          "category": "lexical",
+          "condition": "proofread",
+          "input": "Le poste est à temps plein et l'employeur offre une assurance collective.",
+          "output": "2019 - 2020 Les invincibles série télévisée",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "REG001",
+          "category": "register",
+          "condition": "proofread",
+          "input": "Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "REG002",
+          "category": "register",
+          "condition": "proofread",
+          "input": "Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "REG003",
+          "category": "register",
+          "condition": "proofread",
+          "input": "Salut, je vais être en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je vais te revenir là-dessus.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "REG005",
+          "category": "register",
+          "condition": "proofread",
+          "input": "Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "REG006",
+          "category": "register",
+          "condition": "proofread",
+          "input": "Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM001",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "Le déjeuner sera servi à 8 h dans le hall d'entrée.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM002",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "Après le dîner, nous retournerons au travail vers 13 h.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM003",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "Nous souperons vers 18 h avec les grands-parents.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM004",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "N'oubliez pas de barrer la porte en partant.",
+          "output": "2019 - Prix du gouverneur général du canada pour la traduction de la pièce de théâtre la vie comme elle va",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM005",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "Une liqueur est incluse avec le repas du midi.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM006",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "Je vais présentement m'occuper de ton dossier.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM007",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "La poudrerie réduira la visibilité sur les routes ce soir.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "SEM008",
+          "category": "semantic",
+          "condition": "proofread",
+          "input": "Ma blonde et moi allons déménager le premier juillet.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER001",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.",
+          "output": "2019 - 2020 Les invincibles série télévisée martin",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER002",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER003",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "La migration vers l'infonuagique réduira les coûts d'exploitation.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER004",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Ce site utilise des témoins pour mémoriser vos préférences.",
+          "output": "2019 - Prix du gouverneur général du canada pour la meilleure œuvre de fiction pour la série les aventures de julie",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER005",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "L'attaque par rançongiciel a chiffré les serveurs de l'organisme.",
+          "output": "2019 - Prix du gouverneur général du canada pour la traduction de la pièce de théâtre la vie comme elle va",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER006",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER007",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Ajoutez un égoportrait à votre profil pour personnaliser votre compte.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER008",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Vous pouvez présenter une demande d'assurance-emploi en ligne.",
+          "output": "2019 - 2020 Les invincibles série télévisée",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER009",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.",
+          "output": "Ça fait longtemps que je n'ai pas vu de vidéo de toi .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        },
+        {
+          "test_id": "TER010",
+          "category": "terminology",
+          "condition": "proofread",
+          "input": "Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.",
+          "output": "Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .",
+          "substitutions": [],
+          "protected_term_loss": 1.0,
+          "cross_substitution_rate": 0.0,
+          "kind": "false_correction"
+        }
+      ],
+      "n_results": 352,
+      "suspect_reasoning_leaks": 0,
+      "scorecard": {
+        "CLR_baseline": 0.0,
+        "MDR_baseline": 0.0,
+        "CLR_prompted": 0.0,
+        "MDR_prompted": 0.0,
+        "QFCR_proofread": 1.0,
+        "unchanged_proofread": 0.0,
+        "prompt_recovery": 0.0
+      },
+      "positive_control": {
+        "baseline_drift": 0.0,
+        "metropolitan_drift": 0.0,
         "margin": 0.0,
         "passed": false
       }
+    },
+    {
+      "meta": {
+        "run_id": "2026-09-04T13:41:52+00:00",
+        "model": "openai:qc-llama1b",
+        "model_config": {
+          "provider": "openai-compatible",
+          "model": "qc-llama1b",
+          "base_url": "http://127.0.0.1:8082/v1",
+          "temperature": 0.0,
+          "seed": 42
+        },
+        "dataset_version": "0.2.0",
+        "prompt_version": "1.0",
+        "n_tests": 88,
+        "conditions": [
+          "baseline"
+        ]
+      },
+      "by_condition": {
+        "baseline": {
+          "qc": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.011363636363636364,
+            "cross_substitution": 0.0,
+            "protected_loss": 0.9767441860465116,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "fr": {
+            "n": 44,
+            "n_compliant": 0,
+            "noncompliant": 1.0,
+            "source_retention": 0.0,
+            "cross_substitution": 0.0,
+            "protected_loss": 1.0,
+            "unchanged": 0.0,
+            "cross_substitution_compliant": null,
+            "source_retention_compliant": null
+          },
+          "judge_qc": null
+        }
+      },
+      "by_category": {
+        "lexical": {
+          "n": 14,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.03571428571428571,
+          "cross_substitution": 0.0,
+          "protected_loss": 0.9285714285714286,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "terminology": {
+          "n": 10,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 1.0,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "semantic": {
+          "n": 8,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 1.0,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "register": {
+          "n": 6,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 1.0,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        },
+        "grammar": {
+          "n": 6,
+          "n_compliant": 0,
+          "noncompliant": 1.0,
+          "source_retention": 0.0,
+          "cross_substitution": 0.0,
+          "protected_loss": 1.0,
+          "unchanged": 0.0,
+          "cross_substitution_compliant": null,
+          "source_retention_compliant": null
+        }
+      },
+      "failures": [],
+      "n_results": 88,
+      "suspect_reasoning_leaks": 0,
+      "scorecard": {
+        "CLR_baseline": 0.011363636363636364,
+        "MDR_baseline": 0.0,
+        "CLR_prompted": null,
+        "MDR_prompted": null,
+        "QFCR_proofread": null,
+        "unchanged_proofread": null,
+        "prompt_recovery": null
+      },
+      "positive_control": null
     },
     {
       "meta": {
@@ -4927,11 +6102,32 @@
       "fr_retention": 0.5795454545454546
     },
     "openai:croissant-base": {
-      "qc_to_fr_drift": 0.5,
-      "fr_to_qc_drift": null,
-      "asymmetry": null,
-      "qc_retention": 0.5,
-      "fr_retention": null
+      "qc_to_fr_drift": 0.17045454545454544,
+      "fr_to_qc_drift": 0.022727272727272728,
+      "asymmetry": 0.1477272727272727,
+      "qc_retention": 0.7045454545454546,
+      "fr_retention": 0.9090909090909091
+    },
+    "openai:llama1b-base": {
+      "qc_to_fr_drift": 0.0,
+      "fr_to_qc_drift": 0.0,
+      "asymmetry": 0.0,
+      "qc_retention": 0.6818181818181818,
+      "fr_retention": 0.7840909090909091
+    },
+    "openai:qc-croissant": {
+      "qc_to_fr_drift": 0.0,
+      "fr_to_qc_drift": 0.0,
+      "asymmetry": 0.0,
+      "qc_retention": 0.0,
+      "fr_retention": 0.0
+    },
+    "openai:qc-llama1b": {
+      "qc_to_fr_drift": 0.0,
+      "fr_to_qc_drift": 0.0,
+      "asymmetry": 0.0,
+      "qc_retention": 0.011363636363636364,
+      "fr_retention": 0.0
     },
     "phi4:latest": {
       "qc_to_fr_drift": 0.5,
@@ -4996,6 +6192,20 @@
       "sign_test": {
         "n_discordant": 15,
         "p_value": 0.11846923828125
+      }
+    },
+    "openai:croissant-base": {
+      "n_pairs": 35,
+      "n_void_pairs": 9,
+      "qc_to_fr_drift": 0.18571428571428572,
+      "fr_to_qc_drift": 0.02857142857142857,
+      "asymmetry": 0.15714285714285714,
+      "pairs_qc_higher": 8,
+      "pairs_fr_higher": 1,
+      "pairs_tied": 26,
+      "sign_test": {
+        "n_discordant": 9,
+        "p_value": 0.0390625
       }
     },
     "phi4:latest": {

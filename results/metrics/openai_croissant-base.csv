@@ -7,3 +7,937 @@ SEM003,semantic,qc,baseline,openai:croissant-base,Nous souperons vers 18 h avec 
 SEM003,semantic,qc,canadian,openai:croissant-base,Nous souperons vers 18 h avec les grands-parents.,Nous souperons vers 18 h avec les grands-parents.,1.0,0.0,0.0,True,False
 SEM003,semantic,qc,metropolitan,openai:croissant-base,Nous souperons vers 18 h avec les grands-parents.,Nous dînerons vers 18 h avec les grands-parents.,0.0,1.0,1.0,False,False
 SEM003,semantic,qc,proofread,openai:croissant-base,Nous souperons vers 18 h avec les grands-parents.,Nous dînerons vers 18 h avec les grands-parents.,0.0,1.0,1.0,False,False
+FRC001,lexical,fr,baseline,openai:croissant-base,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,1.0,0.0,0.0,True,False
+FRC001,lexical,fr,canadian,openai:croissant-base,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,1.0,0.0,0.0,True,False
+FRC001,lexical,fr,metropolitan,openai:croissant-base,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,1.0,0.0,0.0,True,False
+FRC001,lexical,fr,proofread,openai:croissant-base,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,1.0,0.0,0.0,True,False
+FRC002,lexical,fr,baseline,openai:croissant-base,Le parking est accessible derrière le bâtiment à partir de 7 h.,Le parking est accessible derrière le bâtiment à partir de 7 heures du matin.,1.0,0.0,0.0,False,False
+FRC002,lexical,fr,canadian,openai:croissant-base,Le parking est accessible derrière le bâtiment à partir de 7 h.,Le parking est accessible derrière le bâtiment à partir de 7 h.,1.0,0.0,0.0,True,False
+FRC002,lexical,fr,metropolitan,openai:croissant-base,Le parking est accessible derrière le bâtiment à partir de 7 h.,Le parking est accessible derrière le bâtiment à partir de 7 heures du matin.,1.0,0.0,0.0,False,False
+FRC002,lexical,fr,proofread,openai:croissant-base,Le parking est accessible derrière le bâtiment à partir de 7 h.,"Le parking est accessible derrière le bâtiment à partir de 7 heures.
+correction : Le parking est accessible derrière le bâtiment à partir de 7 heures.",1.0,0.0,0.0,False,False
+FRC003,lexical,fr,baseline,openai:croissant-base,L'activité aura lieu le week-end prochain au centre social.,L'activité aura lieu le week-end prochain au centre social.,1.0,0.0,0.0,True,False
+FRC003,lexical,fr,canadian,openai:croissant-base,L'activité aura lieu le week-end prochain au centre social.,L'activité aura lieu le week-end prochain au centre social.,1.0,0.0,0.0,True,False
+FRC003,lexical,fr,metropolitan,openai:croissant-base,L'activité aura lieu le week-end prochain au centre social.,L'activité aura lieu le week-end prochain au centre social.,1.0,0.0,0.0,True,False
+FRC003,lexical,fr,proofread,openai:croissant-base,L'activité aura lieu le week-end prochain au centre social.,L'activité aura lieu le week-end prochain au centre social.,1.0,0.0,0.0,True,False
+FRC004,lexical,fr,baseline,openai:croissant-base,Profitez de nos soldes pour faire votre shopping de Noël.,Profitez de nos soldes pour faire votre shopping de Noël.,1.0,0.0,0.0,True,False
+FRC004,lexical,fr,canadian,openai:croissant-base,Profitez de nos soldes pour faire votre shopping de Noël.,Profitez des soldes pour faire vos achats de Noël !,0.0,0.0,1.0,False,False
+FRC004,lexical,fr,metropolitan,openai:croissant-base,Profitez de nos soldes pour faire votre shopping de Noël.,Profitez de nos soldes pour faire votre shopping de Noël.,1.0,0.0,0.0,True,False
+FRC004,lexical,fr,proofread,openai:croissant-base,Profitez de nos soldes pour faire votre shopping de Noël.,Profitez de nos soldes pour faire votre shopping de Noël.,1.0,0.0,0.0,True,False
+FRC005,lexical,fr,baseline,openai:croissant-base,Ce pull en laine est disponible en trois couleurs.,Ce pull en laine est disponible en trois couleurs.,1.0,0.0,0.0,True,False
+FRC005,lexical,fr,canadian,openai:croissant-base,Ce pull en laine est disponible en trois couleurs.,Ce pull en laine est disponible en trois couleurs.,1.0,0.0,0.0,True,False
+FRC005,lexical,fr,metropolitan,openai:croissant-base,Ce pull en laine est disponible en trois couleurs.,Ce pull en laine est disponible en trois couleurs.,1.0,0.0,0.0,True,False
+FRC005,lexical,fr,proofread,openai:croissant-base,Ce pull en laine est disponible en trois couleurs.,"Ce pull en laine est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce pull est disponible en trois couleurs.
+Ce",1.0,0.0,0.0,False,False
+FRC006,lexical,fr,baseline,openai:croissant-base,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,1.0,0.0,0.0,True,False
+FRC006,lexical,fr,canadian,openai:croissant-base,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,Podcast hebdomadaire disponible sur toutes les plateformes !,1.0,0.0,0.0,False,False
+FRC006,lexical,fr,metropolitan,openai:croissant-base,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,1.0,0.0,0.0,True,False
+FRC006,lexical,fr,proofread,openai:croissant-base,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,Notre podcast hebdomadaire est désormais disponible sur toutes les plateformes.,1.0,0.0,0.0,True,False
+FRC007,terminology,fr,baseline,openai:croissant-base,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,1.0,0.0,0.0,True,False
+FRC007,terminology,fr,canadian,openai:croissant-base,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,1.0,0.0,0.0,True,False
+FRC007,terminology,fr,metropolitan,openai:croissant-base,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,1.0,0.0,0.0,True,False
+FRC007,terminology,fr,proofread,openai:croissant-base,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,Votre smartphone peut se connecter au réseau Wi-Fi de la maison.,1.0,0.0,0.0,True,False
+FRC008,terminology,fr,baseline,openai:croissant-base,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,1.0,0.0,0.0,True,False
+FRC008,terminology,fr,canadian,openai:croissant-base,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,1.0,0.0,0.0,True,False
+FRC008,terminology,fr,metropolitan,openai:croissant-base,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,1.0,0.0,0.0,True,False
+FRC008,terminology,fr,proofread,openai:croissant-base,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,Méfiez-vous des tentatives de phishing qui imitent nos e-mails officiels.,1.0,0.0,0.0,True,False
+FRC009,terminology,fr,baseline,openai:croissant-base,Ce site utilise des cookies pour mémoriser vos préférences.,Ce site utilise des cookies pour mémoriser vos préférences. Veuillez consulter notre politique de confidentialité pour en savoir plus.,1.0,0.0,0.0,False,False
+FRC009,terminology,fr,canadian,openai:croissant-base,Ce site utilise des cookies pour mémoriser vos préférences.,"Ce site utilise des cookies pour mémoriser vos préférences. Veuillez consulter notre politique de confidentialité pour en savoir plus. En continuant à utiliser ce site, vous consentez à l'utilisation de cookies.",1.0,0.0,0.0,False,False
+FRC009,terminology,fr,metropolitan,openai:croissant-base,Ce site utilise des cookies pour mémoriser vos préférences.,"Ce site utilise des cookies pour mémoriser vos préférences et améliorer votre expérience. Vous pouvez accepter ces cookies ou choisir de les désactiver. Le fait de désactiver les cookies peut entraîner des limitations dans certaines parties du site. Pour en savoir plus sur les cookies et comment les gérer, cliquez sur ""Paramètres des cookies"". Accepter les cookiesParamètres des cookies",1.0,0.0,0.0,False,False
+FRC009,terminology,fr,proofread,openai:croissant-base,Ce site utilise des cookies pour mémoriser vos préférences.,Ce site utilise des cookies pour mémoriser vos préférences. Veuillez consulter notre politique de confidentialité pour plus d'informations.,1.0,0.0,0.0,False,False
+FRC010,terminology,fr,baseline,openai:croissant-base,La migration vers le cloud réduira les coûts d'exploitation.,La migration vers le cloud réduira les coûts d'exploitation,1.0,0.0,0.0,False,False
+FRC010,terminology,fr,canadian,openai:croissant-base,La migration vers le cloud réduira les coûts d'exploitation.,La migration vers le cloud réduira les coûts d'exploitation,1.0,0.0,0.0,False,False
+FRC010,terminology,fr,metropolitan,openai:croissant-base,La migration vers le cloud réduira les coûts d'exploitation.,La migration vers le cloud réduira les coûts d'exploitation,1.0,0.0,0.0,False,False
+FRC010,terminology,fr,proofread,openai:croissant-base,La migration vers le cloud réduira les coûts d'exploitation.,"La migration vers le cloud réduira les coûts d'exploitation.
+corrected by: La migration vers le cloud réduira les coûts d'exploitation.",1.0,0.0,0.0,False,False
+FRC011,semantic,fr,baseline,openai:croissant-base,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,1.0,0.0,0.0,True,False
+FRC011,semantic,fr,canadian,openai:croissant-base,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,1.0,0.0,0.0,True,False
+FRC011,semantic,fr,metropolitan,openai:croissant-base,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,1.0,0.0,0.0,True,False
+FRC011,semantic,fr,proofread,openai:croissant-base,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,Le petit-déjeuner sera servi à 8 h dans le hall d'entrée.,1.0,0.0,0.0,True,False
+FRC012,semantic,fr,baseline,openai:croissant-base,"Après le déjeuner, nous retournerons au travail vers 13 h.","Après le déjeuner, nous retournerons au travail vers 13 h.",1.0,0.0,0.0,True,False
+FRC012,semantic,fr,canadian,openai:croissant-base,"Après le déjeuner, nous retournerons au travail vers 13 h.","Après le déjeuner, nous retournerons au travail vers 13 h.",1.0,0.0,0.0,True,False
+FRC012,semantic,fr,metropolitan,openai:croissant-base,"Après le déjeuner, nous retournerons au travail vers 13 h.","Après le déjeuner, nous retournerons au travail vers 13 h.",1.0,0.0,0.0,True,False
+FRC012,semantic,fr,proofread,openai:croissant-base,"Après le déjeuner, nous retournerons au travail vers 13 h.","Après le déjeuner, nous retournerons au travail vers 13 h.",1.0,0.0,0.0,True,False
+FRC013,register,fr,baseline,openai:croissant-base,"Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.","Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.",1.0,0.0,0.0,True,False
+FRC013,register,fr,canadian,openai:croissant-base,"Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.","Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.",1.0,0.0,0.0,True,False
+FRC013,register,fr,metropolitan,openai:croissant-base,"Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.","Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.",1.0,0.0,0.0,True,False
+FRC013,register,fr,proofread,openai:croissant-base,"Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.","Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera sous deux jours ouvrés.",1.0,0.0,0.0,True,False
+FRC014,grammar,fr,baseline,openai:croissant-base,"Assieds-toi, je vais te raconter ce qui s'est passé hier.","Assieds-toi, je vais te raconter ce qui s'est passé hier.",1.0,0.0,0.0,True,False
+FRC014,grammar,fr,canadian,openai:croissant-base,"Assieds-toi, je vais te raconter ce qui s'est passé hier.","Assis-toi, je vais te raconter ce qui s'est passé hier. 
+Je me suis réveillé ce matin avec une migraine. J'ai essayé de me calmer, mais rien n'y faisait. Je me sentais comme si j'avais un nuage noir sur la tête. J'ai essayé de me lever et de marcher, mais je ne pouvais pas. J'ai fini par m'asseoir sur mon lit et j'ai attendu que ça passe. 
+J'ai essayé de me concentrer sur autre chose, mais rien ne pouvait m'aider. Je me sentais comme si j'étais dans un brouillard épais. J'ai essayé de me souvenir de ce qui s'était passé, mais je ne pouvais pas. 
+Finalement, j'ai décidé de me lever et de partir. Je ne pouvais pas rester assis là et attendre que ça passe. J'ai pris une grande inspiration et je suis sorti de la chambre. 
+J'ai marché un peu, mais je ne pouvais pas m'en empêcher. Je me sentais comme si j'étais dans un rêve. Je ne pouvais pas m'arrêter de penser. 
+J'ai fini par arriver à la porte et j'ai frappé. J'ai attendu quelques secondes, puis quelqu'un est entré. Il m'a dit qu'il était là pour me parler. 
+Je ne sais pas ce",0.0,1.0,1.0,False,False
+FRC014,grammar,fr,metropolitan,openai:croissant-base,"Assieds-toi, je vais te raconter ce qui s'est passé hier.","Assieds-toi, je vais te raconter ce qui s'est passé hier.",1.0,0.0,0.0,True,False
+FRC014,grammar,fr,proofread,openai:croissant-base,"Assieds-toi, je vais te raconter ce qui s'est passé hier.","Assieds-toi, je vais te raconter ce qui s'est passé hier.",1.0,0.0,0.0,True,False
+FRC015,lexical,fr,baseline,openai:croissant-base,Il y a une supérette ouverte jusqu'à 23 h au coin de la rue.,Il y a une supérette ouverte jusqu'à 23 h au coin de la rue.,1.0,0.0,0.0,True,False
+FRC015,lexical,fr,canadian,openai:croissant-base,Il y a une supérette ouverte jusqu'à 23 h au coin de la rue.,Il y a une supérette ouverte jusqu'à 23 h au coin de la rue.,1.0,0.0,0.0,True,False
+FRC015,lexical,fr,metropolitan,openai:croissant-base,Il y a une supérette ouverte jusqu'à 23 h au coin de la rue.,Il y a une supérette ouverte jusqu'à 23 h au coin de la rue.,1.0,0.0,0.0,True,False
+FRC015,lexical,fr,proofread,openai:croissant-base,Il y a une supérette ouverte jusqu'à 23 h au coin de la rue.,Il y a une supérette ouverte jusqu'à 23 h au coin de la rue.,1.0,0.0,0.0,True,False
+FRC016,lexical,fr,baseline,openai:croissant-base,Le ferry relie Québec et Lévis toutes les vingt minutes.,Le traversier relie Québec et Lévis toutes les vingt minutes.,0.0,1.0,1.0,False,False
+FRC016,lexical,fr,canadian,openai:croissant-base,Le ferry relie Québec et Lévis toutes les vingt minutes.,Le ferry relie Québec et Lévis toutes les vingt minutes.,1.0,0.0,0.0,True,False
+FRC016,lexical,fr,metropolitan,openai:croissant-base,Le ferry relie Québec et Lévis toutes les vingt minutes.,Le traversier relie Québec et Lévis toutes les vingt minutes.,0.0,1.0,1.0,False,False
+FRC016,lexical,fr,proofread,openai:croissant-base,Le ferry relie Québec et Lévis toutes les vingt minutes.,Le ferry relie Québec et Lévis toutes les vingt minutes.,1.0,0.0,0.0,True,False
+FRC017,lexical,fr,baseline,openai:croissant-base,Utilisez le chat en direct pour parler à un conseiller.,Utilisez le chat en direct pour parler à un conseiller.,1.0,0.0,0.0,True,False
+FRC017,lexical,fr,canadian,openai:croissant-base,Utilisez le chat en direct pour parler à un conseiller.,Utilisez le chat en direct pour parler à un conseiller en temps réel.,1.0,0.0,0.0,False,False
+FRC017,lexical,fr,metropolitan,openai:croissant-base,Utilisez le chat en direct pour parler à un conseiller.,Utilisez le chat en direct pour parler à un conseiller.,1.0,0.0,0.0,True,False
+FRC017,lexical,fr,proofread,openai:croissant-base,Utilisez le chat en direct pour parler à un conseiller.,Utilisez le chat en direct pour parler à un conseiller.,1.0,0.0,0.0,True,False
+FRC018,lexical,fr,baseline,openai:croissant-base,Supprimez les spams sans ouvrir les pièces jointes.,Supprimez les spams sans ouvrir les pièces jointes.,1.0,0.0,0.0,True,False
+FRC018,lexical,fr,canadian,openai:croissant-base,Supprimez les spams sans ouvrir les pièces jointes.,Supprimez les spams sans ouvrir les pièces jointes.,1.0,0.0,0.0,True,False
+FRC018,lexical,fr,metropolitan,openai:croissant-base,Supprimez les spams sans ouvrir les pièces jointes.,Supprimez les spams sans ouvrir les pièces jointes.,1.0,0.0,0.0,True,False
+FRC018,lexical,fr,proofread,openai:croissant-base,Supprimez les spams sans ouvrir les pièces jointes.,Supprimez les spams sans ouvrir les pièces jointes.,1.0,0.0,0.0,True,False
+FRC019,lexical,fr,baseline,openai:croissant-base,Vous devez télécharger votre pièce d'identité avant de soumettre la demande.,Vous devez télécharger votre pièce d'identité avant de soumettre la demande.,1.0,0.0,0.0,True,False
+FRC019,lexical,fr,canadian,openai:croissant-base,Vous devez télécharger votre pièce d'identité avant de soumettre la demande.,Téléchargez votre pièce d'identité avant de soumettre votre demande.,0.0,0.0,1.0,False,False
+FRC019,lexical,fr,metropolitan,openai:croissant-base,Vous devez télécharger votre pièce d'identité avant de soumettre la demande.,Vous devez télécharger votre pièce d'identité avant de soumettre la demande.,1.0,0.0,0.0,True,False
+FRC019,lexical,fr,proofread,openai:croissant-base,Vous devez télécharger votre pièce d'identité avant de soumettre la demande.,Vous devez télécharger votre pièce d'identité avant de soumettre la demande.,1.0,0.0,0.0,True,False
+FRC020,lexical,fr,baseline,openai:croissant-base,Consultez le tableau d'affichage pour connaître les offres d'emploi internes.,"Consultez le tableau d'affichage pour connaître les offres d'emploi internes, sans commentaire.",1.0,0.0,0.0,False,False
+FRC020,lexical,fr,canadian,openai:croissant-base,Consultez le tableau d'affichage pour connaître les offres d'emploi internes.,"Consultez le tableau d'affichage pour connaître les offres d'emploi internes, en français et en anglais.",1.0,0.0,0.0,False,False
+FRC020,lexical,fr,metropolitan,openai:croissant-base,Consultez le tableau d'affichage pour connaître les offres d'emploi internes.,"Consultez le tableau d'affichage pour connaître les offres d'emploi internes, sans commentaire.",1.0,0.0,0.0,False,False
+FRC020,lexical,fr,proofread,openai:croissant-base,Consultez le tableau d'affichage pour connaître les offres d'emploi internes.,"Consultez le tableau d'affichage pour connaître les offres d'emploi internes, sans commentaire.",1.0,0.0,0.0,False,False
+FRC021,lexical,fr,baseline,openai:croissant-base,Nous offrons la livraison gratuite sur tout achat de plus de cent euros.,Nous offrons la livraison gratuite sur tout achat de plus de cent euros.,1.0,0.0,0.0,True,False
+FRC021,lexical,fr,canadian,openai:croissant-base,Nous offrons la livraison gratuite sur tout achat de plus de cent euros.,Nous offrons la livraison gratuite sur tout achat de plus de cent euros.,1.0,0.0,0.0,True,False
+FRC021,lexical,fr,metropolitan,openai:croissant-base,Nous offrons la livraison gratuite sur tout achat de plus de cent euros.,Nous offrons la livraison gratuite sur tout achat de plus de cent euros.,1.0,0.0,0.0,True,False
+FRC021,lexical,fr,proofread,openai:croissant-base,Nous offrons la livraison gratuite sur tout achat de plus de cent euros.,Nous offrons la livraison gratuite sur tout achat de plus de cent euros.,1.0,0.0,0.0,True,False
+FRC022,lexical,fr,baseline,openai:croissant-base,Le poste est à temps plein et l'employeur propose une mutuelle.,Le poste est à temps plein et l'employeur propose une mutuelle.,1.0,0.0,0.0,True,False
+FRC022,lexical,fr,canadian,openai:croissant-base,Le poste est à temps plein et l'employeur propose une mutuelle.,Le poste est à temps plein et l'employeur propose une mutuelle.,1.0,0.0,0.0,True,False
+FRC022,lexical,fr,metropolitan,openai:croissant-base,Le poste est à temps plein et l'employeur propose une mutuelle.,Le poste est à temps plein et l'employeur propose une mutuelle.,1.0,0.0,0.0,True,False
+FRC022,lexical,fr,proofread,openai:croissant-base,Le poste est à temps plein et l'employeur propose une mutuelle.,Le poste est à temps plein et l'employeur propose une mutuelle.,1.0,0.0,0.0,True,False
+FRC023,terminology,fr,baseline,openai:croissant-base,L'attaque par ransomware a chiffré les serveurs de l'organisme.,L'organisme a été victime d'une attaque par ransomware.,1.0,0.0,0.0,False,False
+FRC023,terminology,fr,canadian,openai:croissant-base,L'attaque par ransomware a chiffré les serveurs de l'organisme.,L'organisme a été victime d'une attaque par ransomware. Les serveurs ont été chiffrés.,1.0,0.0,0.0,False,False
+FRC023,terminology,fr,metropolitan,openai:croissant-base,L'attaque par ransomware a chiffré les serveurs de l'organisme.,L'attaque par ransomware a chiffré les serveurs de l'organisme.,1.0,0.0,0.0,True,False
+FRC023,terminology,fr,proofread,openai:croissant-base,L'attaque par ransomware a chiffré les serveurs de l'organisme.,L'organisme a été victime d'une attaque par ransomware.,1.0,0.0,0.0,False,False
+FRC024,terminology,fr,baseline,openai:croissant-base,Nos modèles de machine learning sont entraînés sur du big data anonymisé.,Nos modèles de machine learning sont entraînés sur des données anonymisées de big data.,1.0,0.0,0.0,False,False
+FRC024,terminology,fr,canadian,openai:croissant-base,Nos modèles de machine learning sont entraînés sur du big data anonymisé.,Nos modèles de machine learning sont entraînés sur des données anonymisées de big data.,1.0,0.0,0.0,False,False
+FRC024,terminology,fr,metropolitan,openai:croissant-base,Nos modèles de machine learning sont entraînés sur du big data anonymisé.,Nos modèles de machine learning sont entraînés sur des données anonymisées de big data.,1.0,0.0,0.0,False,False
+FRC024,terminology,fr,proofread,openai:croissant-base,Nos modèles de machine learning sont entraînés sur du big data anonymisé.,"Nos modèles de machine learning sont entraînés sur du big data anonyme, ce qui signifie que les données utilisées pour entraîner nos modèles sont anonymisées et ne contiennent aucune information permettant d'identifier les individus.
+... Nos modèles de machine learning sont entraînés sur du big data anonyme, ce qui signifie que les données utilisées pour entraîner nos modèles sont anonymisées et ne contiennent aucune information permettant d'identifier les individus.",1.0,0.0,0.0,False,False
+FRC025,terminology,fr,baseline,openai:croissant-base,Ajoutez un selfie à votre profil pour personnaliser votre compte.,"Ajoutez un selfie à votre profil pour personnaliser votre compte.
+consulté le 2022-01-15 12:00:00
+2022-01-15 12:00:00
+2022-01-15 12:00:00
+2022-01-15 12:00:00
+2022-01-15 12:00:00
+2022-01-15 12:00:00
+2022-01-15 12:00:00
+2022-01-15 12:00:00
+2022-01-15 12:00:00
+2022-01-15 12:00:00
+2022-01-15 12:00:00
+2022-01-15 12:00:00",1.0,0.0,0.0,False,False
+FRC025,terminology,fr,canadian,openai:croissant-base,Ajoutez un selfie à votre profil pour personnaliser votre compte.,"Bien sûr, je peux vous aider à personnaliser votre compte ! Comment puis-je vous aider ?",0.0,0.0,1.0,False,False
+FRC025,terminology,fr,metropolitan,openai:croissant-base,Ajoutez un selfie à votre profil pour personnaliser votre compte.,Ajoutez une photo de profil pour personnaliser votre compte.,0.0,0.0,1.0,False,False
+FRC025,terminology,fr,proofread,openai:croissant-base,Ajoutez un selfie à votre profil pour personnaliser votre compte.,Ajoutez un selfie à votre profil pour personnaliser votre compte.,1.0,0.0,0.0,True,False
+FRC026,terminology,fr,baseline,openai:croissant-base,Vous pouvez déposer une demande d'allocation chômage en ligne.,Vous pouvez déposer une demande d'allocation chômage en ligne sur le site de Pôle emploi.,1.0,0.0,0.0,False,False
+FRC026,terminology,fr,canadian,openai:croissant-base,Vous pouvez déposer une demande d'allocation chômage en ligne.,Vous pouvez déposer une demande d'allocation chômage en ligne sur le site de Pôle emploi.,1.0,0.0,0.0,False,False
+FRC026,terminology,fr,metropolitan,openai:croissant-base,Vous pouvez déposer une demande d'allocation chômage en ligne.,Vous pouvez déposer une demande d'allocation chômage en ligne.,1.0,0.0,0.0,True,False
+FRC026,terminology,fr,proofread,openai:croissant-base,Vous pouvez déposer une demande d'allocation chômage en ligne.,Vous pouvez déposer une demande d'allocation chômage en ligne.,1.0,0.0,0.0,True,False
+FRC027,terminology,fr,baseline,openai:croissant-base,Le pilote de l'imprimante et le plugin du navigateur ont été mis à jour.,Le pilote de l'imprimante et le plugin du navigateur ont été mis à jour.,1.0,0.0,0.0,True,False
+FRC027,terminology,fr,canadian,openai:croissant-base,Le pilote de l'imprimante et le plugin du navigateur ont été mis à jour.,Le pilote de l'imprimante et le plugin du navigateur ont été mis à jour.,1.0,0.0,0.0,True,False
+FRC027,terminology,fr,metropolitan,openai:croissant-base,Le pilote de l'imprimante et le plugin du navigateur ont été mis à jour.,Le pilote de l'imprimante et le plugin du navigateur ont été mis à jour.,1.0,0.0,0.0,True,False
+FRC027,terminology,fr,proofread,openai:croissant-base,Le pilote de l'imprimante et le plugin du navigateur ont été mis à jour.,"Le pilote de l'imprimante et le plugin du navigateur ont été mis à jour.
+corrected.",1.0,0.0,0.0,False,False
+FRC028,terminology,fr,baseline,openai:croissant-base,Présentez-vous à un guichet de la préfecture avec votre permis de conduire.,Présenter mon permis de conduire,0.0,0.0,1.0,False,False
+FRC028,terminology,fr,canadian,openai:croissant-base,Présentez-vous à un guichet de la préfecture avec votre permis de conduire.,Présenter mon permis de conduire à un guichet de la préfecture.,1.0,0.0,0.0,False,False
+FRC028,terminology,fr,metropolitan,openai:croissant-base,Présentez-vous à un guichet de la préfecture avec votre permis de conduire.,Présenter mon permis de conduire au guichet de la préfecture.,1.0,0.0,0.0,False,False
+FRC028,terminology,fr,proofread,openai:croissant-base,Présentez-vous à un guichet de la préfecture avec votre permis de conduire.,Présenting yourself at a prefecture counter with your driving license.,0.0,0.0,1.0,False,False
+FRC029,semantic,fr,baseline,openai:croissant-base,Nous dînerons vers 18 h avec les grands-parents.,Nous dînerons vers 18 h avec les grands-parents.,1.0,0.0,0.0,True,False
+FRC029,semantic,fr,canadian,openai:croissant-base,Nous dînerons vers 18 h avec les grands-parents.,Nous dînerons vers 18 h avec les grands-parents.,1.0,0.0,0.0,True,False
+FRC029,semantic,fr,metropolitan,openai:croissant-base,Nous dînerons vers 18 h avec les grands-parents.,Nous dînerons vers 18 h avec les grands-parents.,1.0,0.0,0.0,True,False
+FRC029,semantic,fr,proofread,openai:croissant-base,Nous dînerons vers 18 h avec les grands-parents.,Nous dînerons vers 18 h avec les grands-parents.,1.0,0.0,0.0,True,False
+FRC030,semantic,fr,baseline,openai:croissant-base,N'oubliez pas de fermer la porte à clé en partant.,"Je suis désolé, mais je ne peux pas fermer la porte à clé en partant.",1.0,0.0,0.0,False,False
+FRC030,semantic,fr,canadian,openai:croissant-base,N'oubliez pas de fermer la porte à clé en partant.,Assurez-vous de verrouiller la porte à clé lorsque vous quittez la maison.,1.0,0.0,1.0,False,False
+FRC030,semantic,fr,metropolitan,openai:croissant-base,N'oubliez pas de fermer la porte à clé en partant.,Fermez la porte à clé lorsque vous quittez la maison.,0.0,0.0,1.0,False,False
+FRC030,semantic,fr,proofread,openai:croissant-base,N'oubliez pas de fermer la porte à clé en partant.,N'oubliez pas de verrouiller la porte à clé lorsque vous quittez.,1.0,0.0,1.0,False,False
+FRC031,semantic,fr,baseline,openai:croissant-base,Un soda est inclus avec le repas du midi.,Un soda est inclus avec le repas du midi.,1.0,0.0,0.0,True,False
+FRC031,semantic,fr,canadian,openai:croissant-base,Un soda est inclus avec le repas du midi.,Un soda est inclus avec le repas du midi.,1.0,0.0,0.0,True,False
+FRC031,semantic,fr,metropolitan,openai:croissant-base,Un soda est inclus avec le repas du midi.,Un soda est inclus avec le repas du midi.,1.0,0.0,0.0,True,False
+FRC031,semantic,fr,proofread,openai:croissant-base,Un soda est inclus avec le repas du midi.,Un soda est inclus avec le repas du midi.,1.0,0.0,0.0,True,False
+FRC032,semantic,fr,baseline,openai:croissant-base,Je m'occupe actuellement de ton dossier.,Je suis en train de t'aider à rédiger ton texte.,0.0,0.0,1.0,False,False
+FRC032,semantic,fr,canadian,openai:croissant-base,Je m'occupe actuellement de ton dossier.,Je suis en train de t'aider à rédiger ton texte.,0.0,0.0,1.0,False,False
+FRC032,semantic,fr,metropolitan,openai:croissant-base,Je m'occupe actuellement de ton dossier.,Je suis en charge de ton dossier.,0.0,0.0,1.0,False,False
+FRC032,semantic,fr,proofread,openai:croissant-base,Je m'occupe actuellement de ton dossier.,Je m'occupe actuellement de ton dossier.,1.0,0.0,0.0,True,False
+FRC033,semantic,fr,baseline,openai:croissant-base,Le blizzard réduira la visibilité sur les routes ce soir.,Le blizzard réduira la visibilité sur les routes ce soir.,1.0,0.0,0.0,True,False
+FRC033,semantic,fr,canadian,openai:croissant-base,Le blizzard réduira la visibilité sur les routes ce soir.,"Bonjour, pouvez-vous me dire si le blizzard va réduire la visibilité sur les routes ce soir ?",1.0,0.0,0.0,False,False
+FRC033,semantic,fr,metropolitan,openai:croissant-base,Le blizzard réduira la visibilité sur les routes ce soir.,Le blizzard réduira la visibilité sur les routes ce soir.,1.0,0.0,0.0,True,False
+FRC033,semantic,fr,proofread,openai:croissant-base,Le blizzard réduira la visibilité sur les routes ce soir.,Le blizzard réduira la visibilité sur les routes ce soir.,1.0,0.0,0.0,True,False
+FRC034,semantic,fr,baseline,openai:croissant-base,Ma copine et moi allons déménager le premier juillet.,Ma copine et moi allons déménager le premier juillet.,1.0,0.0,0.0,True,False
+FRC034,semantic,fr,canadian,openai:croissant-base,Ma copine et moi allons déménager le premier juillet.,Ma copine et moi allons déménager le premier juillet.,1.0,0.0,0.0,True,False
+FRC034,semantic,fr,metropolitan,openai:croissant-base,Ma copine et moi allons déménager le premier juillet.,Ma copine et moi allons déménager le premier juillet.,1.0,0.0,0.0,True,False
+FRC034,semantic,fr,proofread,openai:croissant-base,Ma copine et moi allons déménager le premier juillet.,Ma copine et moi allons déménager le premier juillet.,1.0,0.0,0.0,True,False
+FRC035,register,fr,baseline,openai:croissant-base,Le Ministère invite les citoyens à prendre connaissance du nouveau formulaire avant de le remplir et de le renvoyer par la poste.,Le Ministère invite les citoyens à prendre connaissance du nouveau formulaire avant de le remplir et de le renvoyer par la poste.,1.0,0.0,0.0,True,False
+FRC035,register,fr,canadian,openai:croissant-base,Le Ministère invite les citoyens à prendre connaissance du nouveau formulaire avant de le remplir et de le renvoyer par la poste.,Le Ministère invite les citoyens à prendre connaissance du nouveau formulaire avant de le remplir et de le renvoyer par la poste.,1.0,0.0,0.0,True,False
+FRC035,register,fr,metropolitan,openai:croissant-base,Le Ministère invite les citoyens à prendre connaissance du nouveau formulaire avant de le remplir et de le renvoyer par la poste.,Le Ministère invite les citoyens à prendre connaissance du nouveau formulaire avant de le remplir et de le renvoyer par la poste.,1.0,0.0,0.0,True,False
+FRC035,register,fr,proofread,openai:croissant-base,Le Ministère invite les citoyens à prendre connaissance du nouveau formulaire avant de le remplir et de le renvoyer par la poste.,Le Ministère invite les citoyens à prendre connaissance du nouveau formulaire avant de le remplir et de le renvoyer par la poste.,1.0,0.0,0.0,True,False
+FRC036,register,fr,baseline,openai:croissant-base,"Salut, je serai en congé la semaine prochaine. Si c'est urgent, envoie-moi un e-mail et je reviens vers toi là-dessus.","Bonjour,
+
+Je serai en congé la semaine prochaine. Si c'est urgent, envoie-moi un e-mail et je reviens vers toi là-dessus. Merci d'avance. Cordialement,",1.0,0.0,0.0,False,False
+FRC036,register,fr,canadian,openai:croissant-base,"Salut, je serai en congé la semaine prochaine. Si c'est urgent, envoie-moi un e-mail et je reviens vers toi là-dessus.","Bonjour,
+
+Je serai en congé la semaine prochaine. Si c'est urgent, envoie-moi un e-mail et je reviens vers toi là-dessus.
+
+J'espère que tu vas bien. Je suis désolé, je ne peux pas te répondre maintenant. Je te recontacterai dès que possible.",1.0,0.0,0.0,False,False
+FRC036,register,fr,metropolitan,openai:croissant-base,"Salut, je serai en congé la semaine prochaine. Si c'est urgent, envoie-moi un e-mail et je reviens vers toi là-dessus.","Bonjour,
+
+Je serai en congé la semaine prochaine. Si c'est urgent, envoie-moi un e-mail et je reviens vers toi là-dessus.
+
+Cher/Chère [nom de l'expéditeur],
+
+J'espère que vous allez bien. Je serai en congé la semaine prochaine. Si c'est urgent, je vous envoie un e-mail et je reviens vers vous là-dessus dès que possible.
+
+Cher/Chère [nom de l'expéditeur],
+
+J'espère que vous allez bien. Je serai en congé la semaine prochaine. Si c'est urgent, je vous envoie un e-mail et je reviens vers vous dès que possible.
+
+Cher/Chère [nom de l'expéditeur],
+
+J'espère que vous allez bien. Je serai en congé la semaine prochaine. Si c'est urgent, je vous envoie un e-mail et je reviens vers vous dès que possible.
+
+Cher/Chère [nom de l'expéditeur],
+
+J'espère que vous allez bien. Je serai en congé la semaine prochaine. Si c'est urgent, je vous envoie un e-mail et je reviens vers vous dès que possible.
+
+Cher/Chère [nom de l'expéditeur],
+
+J'espère que vous allez bien. Je serai en congé la semaine",1.0,0.0,0.0,False,False
+FRC036,register,fr,proofread,openai:croissant-base,"Salut, je serai en congé la semaine prochaine. Si c'est urgent, envoie-moi un e-mail et je reviens vers toi là-dessus.","Bonjour, je serai en congé la semaine prochaine. Si c'est urgent, envoie-moi un e-mail et je reviens vers toi là-dessus.",1.0,0.0,0.0,False,False
+FRC037,register,fr,baseline,openai:croissant-base,Bonjour ! Comment allez-vous ? Je vous apporte la carte du midi tout de suite.,Bonjour ! Comment allez-vous ? Je vous apporte la carte du midi tout de suite.,1.0,0.0,0.0,True,False
+FRC037,register,fr,canadian,openai:croissant-base,Bonjour ! Comment allez-vous ? Je vous apporte la carte du midi tout de suite.,Bonjour ! Comment allez-vous ? Je vous apporte la carte du midi tout de suite.,1.0,0.0,0.0,True,False
+FRC037,register,fr,metropolitan,openai:croissant-base,Bonjour ! Comment allez-vous ? Je vous apporte la carte du midi tout de suite.,"Bonjour ! Je vais bien, merci. Je vous apporte la carte du midi tout de suite.",0.0,0.0,1.0,False,False
+FRC037,register,fr,proofread,openai:croissant-base,Bonjour ! Comment allez-vous ? Je vous apporte la carte du midi tout de suite.,Bonjour ! Comment allez-vous ? Je vous apporte la carte du midi tout de suite.,1.0,0.0,0.0,True,False
+FRC038,register,fr,baseline,openai:croissant-base,"Des soldes à ne pas manquer sur tous nos articles en boutique et en ligne. Faites vite, les quantités sont limitées !","Des soldes à ne pas manquer sur tous nos articles en boutique et en ligne. Faites vite, les quantités sont limitées !",1.0,0.0,0.0,True,False
+FRC038,register,fr,canadian,openai:croissant-base,"Des soldes à ne pas manquer sur tous nos articles en boutique et en ligne. Faites vite, les quantités sont limitées !","Des soldes à ne pas manquer sur tous nos articles en boutique et en ligne. Faites vite, les quantités sont limitées !",1.0,0.0,0.0,True,False
+FRC038,register,fr,metropolitan,openai:croissant-base,"Des soldes à ne pas manquer sur tous nos articles en boutique et en ligne. Faites vite, les quantités sont limitées !","Des soldes à ne pas manquer sur tous nos articles en boutique et en ligne. Faites vite, les quantités sont limitées !",1.0,0.0,0.0,True,False
+FRC038,register,fr,proofread,openai:croissant-base,"Des soldes à ne pas manquer sur tous nos articles en boutique et en ligne. Faites vite, les quantités sont limitées !","Des soldes à ne pas manquer sur tous nos articles en boutique et en ligne. Faites vite, les quantités sont limitées !",1.0,0.0,0.0,True,False
+FRC039,register,fr,baseline,openai:croissant-base,Nous vous invitons à remplir votre déclaration de revenus avant la date limite et à conserver vos fiches de paie.,Nous vous invitons à remplir votre déclaration de revenus avant la date limite et à conserver vos fiches de paie.,1.0,0.0,0.0,True,False
+FRC039,register,fr,canadian,openai:croissant-base,Nous vous invitons à remplir votre déclaration de revenus avant la date limite et à conserver vos fiches de paie.,Nous vous invitons à remplir votre déclaration de revenus avant la date limite et à conserver vos fiches de paie.,1.0,0.0,0.0,True,False
+FRC039,register,fr,metropolitan,openai:croissant-base,Nous vous invitons à remplir votre déclaration de revenus avant la date limite et à conserver vos fiches de paie.,Nous vous invitons à remplir votre déclaration de revenus avant la date limite et à conserver vos fiches de paie.,1.0,0.0,0.0,True,False
+FRC039,register,fr,proofread,openai:croissant-base,Nous vous invitons à remplir votre déclaration de revenus avant la date limite et à conserver vos fiches de paie.,Nous vous invitons à remplir votre déclaration de revenus avant la date limite et à conserver vos fiches de paie.,1.0,0.0,0.0,True,False
+FRC040,grammar,fr,baseline,openai:croissant-base,Tu viens avec nous ce soir ?,"Oui, pourquoi pas ? Je suis d'humeur à danser et à chanter. Allons-y.",0.0,0.0,1.0,False,False
+FRC040,grammar,fr,canadian,openai:croissant-base,Tu viens avec nous ce soir ?,"Oui, avec plaisir !",0.0,0.0,1.0,False,False
+FRC040,grammar,fr,metropolitan,openai:croissant-base,Tu viens avec nous ce soir ?,"Oui, avec plaisir ! Nous avons hâte de découvrir ce que tu as préparé pour ce soir. As-tu des idées en tête ?",1.0,0.0,0.0,False,False
+FRC040,grammar,fr,proofread,openai:croissant-base,Tu viens avec nous ce soir ?,"Oui, je suis prêt à venir avec vous ce soir.",0.5,0.0,0.0,False,False
+FRC041,grammar,fr,baseline,openai:croissant-base,Il n'y a personne qui m'a averti que la réunion était annulée.,Personne ne m'a prévenu que la réunion était annulée.,1.0,0.0,1.0,False,False
+FRC041,grammar,fr,canadian,openai:croissant-base,Il n'y a personne qui m'a averti que la réunion était annulée.,Personne ne m'a prévenu que la réunion était annulée.,1.0,0.0,1.0,False,False
+FRC041,grammar,fr,metropolitan,openai:croissant-base,Il n'y a personne qui m'a averti que la réunion était annulée.,Personne ne m'a prévenu que la réunion était annulée.,1.0,0.0,1.0,False,False
+FRC041,grammar,fr,proofread,openai:croissant-base,Il n'y a personne qui m'a averti que la réunion était annulée.,Il n'y a personne qui m'a averti que la réunion était annulée.,1.0,0.0,0.0,True,False
+FRC042,grammar,fr,baseline,openai:croissant-base,Nous sommes allés au restaurant parce qu'il pleuvait trop pour marcher.,Nous sommes allés au restaurant parce qu'il pleuvait trop pour marcher.,1.0,0.0,0.0,True,False
+FRC042,grammar,fr,canadian,openai:croissant-base,Nous sommes allés au restaurant parce qu'il pleuvait trop pour marcher.,Nous sommes allés au restaurant parce qu'il pleuvait trop pour marcher.,1.0,0.0,0.0,True,False
+FRC042,grammar,fr,metropolitan,openai:croissant-base,Nous sommes allés au restaurant parce qu'il pleuvait trop pour marcher.,Nous sommes allés au restaurant parce qu'il pleuvait trop pour marcher.,1.0,0.0,0.0,True,False
+FRC042,grammar,fr,proofread,openai:croissant-base,Nous sommes allés au restaurant parce qu'il pleuvait trop pour marcher.,Nous sommes allés au restaurant parce qu'il pleuvait trop pour marcher.,1.0,0.0,0.0,True,False
+FRC043,grammar,fr,baseline,openai:croissant-base,On a eu du mal à trouver un parking proche du stade.,On a eu du mal à trouver un parking proche du stade.,1.0,0.0,0.0,True,False
+FRC043,grammar,fr,canadian,openai:croissant-base,On a eu du mal à trouver un parking proche du stade.,On a eu du mal à trouver un parking près du stade.,1.0,0.0,0.0,False,False
+FRC043,grammar,fr,metropolitan,openai:croissant-base,On a eu du mal à trouver un parking proche du stade.,On a eu du mal à trouver un parking proche du stade.,1.0,0.0,0.0,True,False
+FRC043,grammar,fr,proofread,openai:croissant-base,On a eu du mal à trouver un parking proche du stade.,On a eu du mal à trouver un parking proche du stade.,1.0,0.0,0.0,True,False
+FRC044,grammar,fr,baseline,openai:croissant-base,"Je vais au bureau tout à l'heure, on se reparle après.","Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je",1.0,0.0,0.0,False,False
+FRC044,grammar,fr,canadian,openai:croissant-base,"Je vais au bureau tout à l'heure, on se reparle après.","Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je",1.0,0.0,0.0,False,False
+FRC044,grammar,fr,metropolitan,openai:croissant-base,"Je vais au bureau tout à l'heure, on se reparle après.","Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je",1.0,0.0,0.0,False,False
+FRC044,grammar,fr,proofread,openai:croissant-base,"Je vais au bureau tout à l'heure, on se reparle après.","Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je vais au bureau tout à l'heure, on se reparle après.
+
+Je",1.0,0.0,0.0,False,False
+GRA001,grammar,qc,baseline,openai:croissant-base,Tu viens-tu avec nous autres à soir ?,"Oui, avec plaisir ! Comment ça va ?",0.0,0.0,1.0,False,False
+GRA001,grammar,qc,canadian,openai:croissant-base,Tu viens-tu avec nous autres à soir ?,"Oui, je vais avec toi !",0.0,0.0,1.0,False,False
+GRA001,grammar,qc,metropolitan,openai:croissant-base,Tu viens-tu avec nous autres à soir ?,"Oui, je vais avec toi ! 
+Tu vas où ? 
+Je vais au cinéma 
+Où ça ? 
+Je vais au restaurant 
+Où ça ? 
+Je vais à la bibliothèque 
+Où ça ? 
+Je vais à la plage 
+Où ça ? 
+Je vais à la piscine 
+Où ça ? 
+Je vais à la patinoire 
+Où ça ? 
+Je vais au parc 
+Où ça ? 
+Je vais à la fête foraine 
+Où ça ? 
+Je vais à la fête 
+Où ça ? 
+Je vais à la fête de la musique 
+Où ça ? 
+Je vais à la fête des voisins 
+Où ça ? 
+Je vais à la fête de la nature 
+Où ça ? 
+Je vais à la fête des pères 
+Où ça ? 
+Je vais à la fête des mères 
+Où ça ? 
+Je vais à la fête de la musique 
+Où ça ? 
+Je vais à la fête des voisins 
+Où ça ? 
+Je vais à la fête de la nature 
+Où ça ? 
+Je vais à la fête des pères 
+Où ça ? 
+Je vais à la fête des mères 
+Où ça ? 
+Je vais à",0.0,0.0,1.0,False,False
+GRA001,grammar,qc,proofread,openai:croissant-base,Tu viens-tu avec nous autres à soir ?,Tu viens-tu avec nous autres à soir ?,1.0,0.0,0.0,True,False
+GRA002,grammar,qc,baseline,openai:croissant-base,Y'a personne qui m'a averti que la réunion était annulée.,Personne ne m'a prévenu que la réunion était annulée.,0.0,1.0,1.0,False,False
+GRA002,grammar,qc,canadian,openai:croissant-base,Y'a personne qui m'a averti que la réunion était annulée.,Personne ne m'a prévenu que la réunion était annulée.,0.0,1.0,1.0,False,False
+GRA002,grammar,qc,metropolitan,openai:croissant-base,Y'a personne qui m'a averti que la réunion était annulée.,Personne ne m'a prévenu que la réunion était annulée.,0.0,1.0,1.0,False,False
+GRA002,grammar,qc,proofread,openai:croissant-base,Y'a personne qui m'a averti que la réunion était annulée.,Personne ne m'a prévenu que la réunion était annulée.,0.0,1.0,1.0,False,False
+GRA003,grammar,qc,baseline,openai:croissant-base,On est allés au restaurant à cause qu'il pleuvait trop pour marcher.,On a mangé au restaurant parce qu'il pleuvait trop pour marcher.,0.0,1.0,1.0,False,False
+GRA003,grammar,qc,canadian,openai:croissant-base,On est allés au restaurant à cause qu'il pleuvait trop pour marcher.,On a décidé d'aller au restaurant parce qu'il pleuvait trop pour marcher.,0.0,1.0,1.0,False,False
+GRA003,grammar,qc,metropolitan,openai:croissant-base,On est allés au restaurant à cause qu'il pleuvait trop pour marcher.,On went to the restaurant because it was raining too much to walk.,0.0,0.0,1.0,False,False
+GRA003,grammar,qc,proofread,openai:croissant-base,On est allés au restaurant à cause qu'il pleuvait trop pour marcher.,On a été au restaurant parce qu'il pleuvait trop pour marcher.,0.0,1.0,1.0,False,False
+GRA004,grammar,qc,baseline,openai:croissant-base,On a eu de la misère à trouver un stationnement proche du stade.,On a eu du mal à trouver un stationnement à proximité du stade.,0.5,0.5,0.5,False,False
+GRA004,grammar,qc,canadian,openai:croissant-base,On a eu de la misère à trouver un stationnement proche du stade.,On a eu du mal à trouver un stationnement à proximité du stade.,0.5,0.5,0.5,False,False
+GRA004,grammar,qc,metropolitan,openai:croissant-base,On a eu de la misère à trouver un stationnement proche du stade.,On a eu du mal à trouver un stationnement à proximité du stade.,0.5,0.5,0.5,False,False
+GRA004,grammar,qc,proofread,openai:croissant-base,On a eu de la misère à trouver un stationnement proche du stade.,On a eu du mal à trouver un stationnement à proximité du stade.,0.5,0.5,0.5,False,False
+GRA005,grammar,qc,baseline,openai:croissant-base,"Assis-toi, je vais te conter ce qui est arrivé hier.","Assis-toi, je vais te conter ce qui est arrivé hier.",1.0,0.0,0.0,True,False
+GRA005,grammar,qc,canadian,openai:croissant-base,"Assis-toi, je vais te conter ce qui est arrivé hier.","Assis-toi, je vais te conter ce qui est arrivé hier. 
+Tu te souviens de cette journée ? 
+Tu te souviens de cette journée ? 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a basculé. 
+Oui, je me souviens de cette journée où tout a",1.0,0.0,0.0,False,False
+GRA005,grammar,qc,metropolitan,openai:croissant-base,"Assis-toi, je vais te conter ce qui est arrivé hier.","Assis-toi, je vais te raconter ce qui s'est passé hier.",0.5,0.5,0.0,False,False
+GRA005,grammar,qc,proofread,openai:croissant-base,"Assis-toi, je vais te conter ce qui est arrivé hier.","Assis-toi, je vais te raconter ce qui s'est passé hier.",0.5,0.5,0.0,False,False
+GRA006,grammar,qc,baseline,openai:croissant-base,"Je m'en vas au bureau tantôt, on se reparle après.","Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je",1.0,0.0,0.0,False,False
+GRA006,grammar,qc,canadian,openai:croissant-base,"Je m'en vas au bureau tantôt, on se reparle après.","Je m'en vais au bureau demain, on se reparle après-demain.",0.0,0.0,1.0,False,False
+GRA006,grammar,qc,metropolitan,openai:croissant-base,"Je m'en vas au bureau tantôt, on se reparle après.","Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je",1.0,0.0,0.0,False,False
+GRA006,grammar,qc,proofread,openai:croissant-base,"Je m'en vas au bureau tantôt, on se reparle après.","Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je m'en vais au bureau tantôt, on se reparle après.
+
+Je",1.0,0.0,0.0,False,False
+LEX002,lexical,qc,baseline,openai:croissant-base,Le stationnement est accessible derrière l'édifice à partir de 7 h.,Le stationnement est accessible derrière l'édifice à partir de 7 h.,1.0,0.0,0.0,True,False
+LEX002,lexical,qc,canadian,openai:croissant-base,Le stationnement est accessible derrière l'édifice à partir de 7 h.,Le stationnement est accessible derrière l'édifice à partir de 7 h.,1.0,0.0,0.0,True,False
+LEX002,lexical,qc,metropolitan,openai:croissant-base,Le stationnement est accessible derrière l'édifice à partir de 7 h.,Le stationnement est accessible derrière l'édifice à partir de 7 heures du matin.,1.0,0.0,0.0,False,False
+LEX002,lexical,qc,proofread,openai:croissant-base,Le stationnement est accessible derrière l'édifice à partir de 7 h.,"Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction automatique
+ Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction grammaticale
+ Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction orthographique
+ Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction syntaxique
+ Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction sémantique
+ Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction sémantique
+ Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction sémantique
+ Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction sémantique
+ Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction sémantique
+ Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction sémantique
+ Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction sémantique
+ Le stationnement est accessible derrière l'édifice à partir de 7 heures.
+correction sémantique
+ Le stationnement est accessible derrière l'édifice",1.0,0.0,0.0,False,False
+LEX003,lexical,qc,baseline,openai:croissant-base,L'activité aura lieu la fin de semaine prochaine au centre communautaire.,L'activité aura lieu la fin de semaine prochaine au centre communautaire.,1.0,0.0,0.0,True,False
+LEX003,lexical,qc,canadian,openai:croissant-base,L'activité aura lieu la fin de semaine prochaine au centre communautaire.,"La fin de semaine prochaine, le centre communautaire accueillera une activité.",1.0,0.0,0.0,False,False
+LEX003,lexical,qc,metropolitan,openai:croissant-base,L'activité aura lieu la fin de semaine prochaine au centre communautaire.,L'activité aura lieu la fin de semaine prochaine au centre communautaire.,1.0,0.0,0.0,True,False
+LEX003,lexical,qc,proofread,openai:croissant-base,L'activité aura lieu la fin de semaine prochaine au centre communautaire.,L'activité aura lieu la fin de semaine prochaine au centre communautaire.,1.0,0.0,0.0,True,False
+LEX004,lexical,qc,baseline,openai:croissant-base,Profitez de nos rabais pour faire votre magasinage des Fêtes.,Profitez de nos offres spéciales pour faire vos achats des Fêtes !,0.0,0.0,1.0,False,False
+LEX004,lexical,qc,canadian,openai:croissant-base,Profitez de nos rabais pour faire votre magasinage des Fêtes.,Profitez de nos rabais pour faire vos achats des Fêtes !,0.5,0.0,1.0,False,False
+LEX004,lexical,qc,metropolitan,openai:croissant-base,Profitez de nos rabais pour faire votre magasinage des Fêtes.,Profitez de nos offres spéciales pour faire vos achats des Fêtes !,0.0,0.0,1.0,False,False
+LEX004,lexical,qc,proofread,openai:croissant-base,Profitez de nos rabais pour faire votre magasinage des Fêtes.,Profitez de nos offres spéciales pour faire vos achats des Fêtes.,0.0,0.0,1.0,False,False
+LEX005,lexical,qc,baseline,openai:croissant-base,Ce chandail en laine est offert en trois couleurs.,Ce pull en laine est disponible en trois couleurs.,0.0,1.0,1.0,False,False
+LEX005,lexical,qc,canadian,openai:croissant-base,Ce chandail en laine est offert en trois couleurs.,Ce chandail en laine est offert en trois couleurs.,1.0,0.0,0.0,True,False
+LEX005,lexical,qc,metropolitan,openai:croissant-base,Ce chandail en laine est offert en trois couleurs.,Ce pull en laine est disponible en trois couleurs.,0.0,1.0,1.0,False,False
+LEX005,lexical,qc,proofread,openai:croissant-base,Ce chandail en laine est offert en trois couleurs.,"Ce chandail en laine est offert en trois couleurs.
+correction: Ce chandail en laine est offert en trois couleurs.",1.0,0.0,0.0,False,False
+LEX006,lexical,qc,baseline,openai:croissant-base,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,1.0,0.0,0.0,True,False
+LEX006,lexical,qc,canadian,openai:croissant-base,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,1.0,0.0,0.0,True,False
+LEX006,lexical,qc,metropolitan,openai:croissant-base,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,1.0,0.0,0.0,True,False
+LEX006,lexical,qc,proofread,openai:croissant-base,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,Il y a un dépanneur ouvert jusqu'à 23 h au coin de la rue.,1.0,0.0,0.0,True,False
+LEX007,lexical,qc,baseline,openai:croissant-base,Le traversier relie Québec et Lévis toutes les vingt minutes.,Le traversier relie Québec et Lévis toutes les vingt minutes.,1.0,0.0,0.0,True,False
+LEX007,lexical,qc,canadian,openai:croissant-base,Le traversier relie Québec et Lévis toutes les vingt minutes.,Le traversier relie Québec et Lévis toutes les vingt minutes.,1.0,0.0,0.0,True,False
+LEX007,lexical,qc,metropolitan,openai:croissant-base,Le traversier relie Québec et Lévis toutes les vingt minutes.,Le traversier relie Québec et Lévis toutes les vingt minutes.,1.0,0.0,0.0,True,False
+LEX007,lexical,qc,proofread,openai:croissant-base,Le traversier relie Québec et Lévis toutes les vingt minutes.,Le traversier relie Québec et Lévis toutes les vingt minutes.,1.0,0.0,0.0,True,False
+LEX008,lexical,qc,baseline,openai:croissant-base,Notre baladodiffusion hebdomadaire est maintenant offerte sur toutes les plateformes.,Notre baladodiffusion hebdomadaire est maintenant disponible sur toutes les plateformes.,1.0,0.0,0.0,False,False
+LEX008,lexical,qc,canadian,openai:croissant-base,Notre baladodiffusion hebdomadaire est maintenant offerte sur toutes les plateformes.,"Bienvenue dans notre baladodiffusion hebdomadaire ! Chaque semaine, nous partageons avec vous des histoires captivantes, des conseils pratiques et des réflexions stimulantes. Que vous soyez un apprenant en français ou que vous cherchiez simplement à améliorer vos compétences linguistiques, notre baladodiffusion est un excellent moyen de rester motivé et de progresser. N'oubliez pas de vous abonner pour ne manquer aucune de nos prochaines émissions !",1.0,0.0,0.0,False,False
+LEX008,lexical,qc,metropolitan,openai:croissant-base,Notre baladodiffusion hebdomadaire est maintenant offerte sur toutes les plateformes.,Notre baladodiffusion hebdomadaire est maintenant disponible sur toutes les plateformes.,1.0,0.0,0.0,False,False
+LEX008,lexical,qc,proofread,openai:croissant-base,Notre baladodiffusion hebdomadaire est maintenant offerte sur toutes les plateformes.,Notre baladodiffusion hebdomadaire est maintenant disponible sur toutes les plateformes.,1.0,0.0,0.0,False,False
+LEX009,lexical,qc,baseline,openai:croissant-base,Utilisez le clavardage en direct pour parler à un agent.,Utilisez le clavardage en direct pour parler à un agent.,1.0,0.0,0.0,True,False
+LEX009,lexical,qc,canadian,openai:croissant-base,Utilisez le clavardage en direct pour parler à un agent.,Utilisez le clavardage en direct pour parler à un agent.,1.0,0.0,0.0,True,False
+LEX009,lexical,qc,metropolitan,openai:croissant-base,Utilisez le clavardage en direct pour parler à un agent.,Utilisez le clavardage en direct pour parler à un agent.,1.0,0.0,0.0,True,False
+LEX009,lexical,qc,proofread,openai:croissant-base,Utilisez le clavardage en direct pour parler à un agent.,Utilisez le clavardage en direct pour parler à un agent.,1.0,0.0,0.0,True,False
+LEX010,lexical,qc,baseline,openai:croissant-base,Supprimez les pourriels sans ouvrir les pièces jointes.,Supprimez les pourriels sans ouvrir les pièces jointes.,1.0,0.0,0.0,True,False
+LEX010,lexical,qc,canadian,openai:croissant-base,Supprimez les pourriels sans ouvrir les pièces jointes.,Supprimez les pourriels sans ouvrir les pièces jointes.,1.0,0.0,0.0,True,False
+LEX010,lexical,qc,metropolitan,openai:croissant-base,Supprimez les pourriels sans ouvrir les pièces jointes.,Supprimez les pourriels sans ouvrir les pièces jointes.,1.0,0.0,0.0,True,False
+LEX010,lexical,qc,proofread,openai:croissant-base,Supprimez les pourriels sans ouvrir les pièces jointes.,Supprimez les pourriels sans ouvrir les pièces jointes.,1.0,0.0,0.0,True,False
+LEX011,lexical,qc,baseline,openai:croissant-base,Vous devez téléverser votre pièce d'identité avant de soumettre la demande.,Vous devez fournir une pièce d'identité valide avant de soumettre votre demande.,0.0,0.0,1.0,False,False
+LEX011,lexical,qc,canadian,openai:croissant-base,Vous devez téléverser votre pièce d'identité avant de soumettre la demande.,Vous devez fournir une pièce d'identité valide avant de soumettre votre demande.,0.0,0.0,1.0,False,False
+LEX011,lexical,qc,metropolitan,openai:croissant-base,Vous devez téléverser votre pièce d'identité avant de soumettre la demande.,Vous devez soumettre votre pièce d'identité avant de soumettre la demande.,0.0,0.0,1.0,False,False
+LEX011,lexical,qc,proofread,openai:croissant-base,Vous devez téléverser votre pièce d'identité avant de soumettre la demande.,Vous devez fournir une pièce d'identité valide avant de soumettre votre demande.,0.0,0.0,1.0,False,False
+LEX012,lexical,qc,baseline,openai:croissant-base,Consultez le babillard pour connaître les offres d'emploi internes.,"Consultez le tableau d'affichage pour connaître les offres d'emploi internes, sans commentaire.",0.0,1.0,1.0,False,False
+LEX012,lexical,qc,canadian,openai:croissant-base,Consultez le babillard pour connaître les offres d'emploi internes.,"Consultez le babillard pour connaître les offres d'emploi internes, sans commentaire.",1.0,0.0,0.0,False,False
+LEX012,lexical,qc,metropolitan,openai:croissant-base,Consultez le babillard pour connaître les offres d'emploi internes.,"Consultez le tableau d'affichage pour connaître les offres d'emploi internes, sans commentaire.",0.0,1.0,1.0,False,False
+LEX012,lexical,qc,proofread,openai:croissant-base,Consultez le babillard pour connaître les offres d'emploi internes.,"Consultez le tableau d'affichage pour connaître les offres d'emploi internes.
+
+Consultez le babillard pour connaître les offres d'emploi internes.",1.0,0.0,0.0,False,False
+LEX013,lexical,qc,baseline,openai:croissant-base,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,1.0,0.0,0.0,True,False
+LEX013,lexical,qc,canadian,openai:croissant-base,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,1.0,0.0,0.0,True,False
+LEX013,lexical,qc,metropolitan,openai:croissant-base,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,1.0,0.0,0.0,True,False
+LEX013,lexical,qc,proofread,openai:croissant-base,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,Nous offrons la livraison gratuite sur tout achat de plus de cent piastres.,1.0,0.0,0.0,True,False
+LEX014,lexical,qc,baseline,openai:croissant-base,Le poste est à temps plein et l'employeur offre une assurance collective.,Le poste est à temps plein et l'employeur offre une assurance collective.,1.0,0.0,0.0,True,False
+LEX014,lexical,qc,canadian,openai:croissant-base,Le poste est à temps plein et l'employeur offre une assurance collective.,Le poste est à temps plein et l'employeur offre une assurance collective.,1.0,0.0,0.0,True,False
+LEX014,lexical,qc,metropolitan,openai:croissant-base,Le poste est à temps plein et l'employeur offre une assurance collective.,Le poste est à temps plein et l'employeur offre une assurance collective.,1.0,0.0,0.0,True,False
+LEX014,lexical,qc,proofread,openai:croissant-base,Le poste est à temps plein et l'employeur offre une assurance collective.,Le poste est à temps plein et l'employeur offre une assurance collective.,1.0,0.0,0.0,True,False
+REG001,register,qc,baseline,openai:croissant-base,"Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.","Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.",0.5,0.5,0.5,False,False
+REG001,register,qc,canadian,openai:croissant-base,"Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.","Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.",0.5,0.5,0.5,False,False
+REG001,register,qc,metropolitan,openai:croissant-base,"Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.","Bonjour, merci de nous avoir contactés. Nous avons bien reçu votre demande et un conseiller vous rappellerons dans deux jours ouvrables.",0.5,0.5,0.5,False,False
+REG001,register,qc,proofread,openai:croissant-base,"Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.","Bonjour, merci d'avoir communiqué avec nous. Nous avons bien reçu votre demande et un conseiller vous rappellera d'ici deux jours ouvrables.",1.0,0.0,0.0,True,False
+REG002,register,qc,baseline,openai:croissant-base,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,1.0,0.0,0.0,True,False
+REG002,register,qc,canadian,openai:croissant-base,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,1.0,0.0,0.0,True,False
+REG002,register,qc,metropolitan,openai:croissant-base,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,1.0,0.0,0.0,True,False
+REG002,register,qc,proofread,openai:croissant-base,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,Le Ministère invite la population à prendre connaissance du nouveau formulaire avant de le remplir et de le retourner par la poste.,1.0,0.0,0.0,True,False
+REG003,register,qc,baseline,openai:croissant-base,"Salut, je vais être en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je vais te revenir là-dessus.","Bonjour,
+
+Je serai en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je te répondrai là-dessus.
+
+Cher/Chère [nom de l'expéditeur],
+
+J'espère que vous allez bien. Je voulais vous informer que je serai en congé la semaine prochaine. Si vous avez besoin de quelque chose d'urgent, n'hésitez pas à m'écrire un courriel et je vous répondrai là-dessus.
+
+Cordialement,
+
+[votre nom]",0.5,0.0,0.0,False,False
+REG003,register,qc,canadian,openai:croissant-base,"Salut, je vais être en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je vais te revenir là-dessus.","Bonjour,
+
+Je serai en congé la semaine prochaine. Si c'est urgent, je peux te répondre par courriel.
+
+Cherchez l'erreur ! Comment peut-on écrire ""urgent"" dans la même phrase ?
+
+Je suis désolé, mais je ne peux pas répondre à votre courriel en raison de mon congé. Je vous remercie de votre compréhension.
+
+Cordialement,
+
+Cherchez l'erreur ! Comment peut-on écrire ""urgent"" dans la même phrase ?
+
+Je suis désolé, mais je ne peux pas répondre à votre courriel en raison de mon congé. Je vous remercie de votre compréhension.
+
+Cordialement,
+
+Cherchez l'erreur ! Comment peut-on écrire ""urgent"" dans la même phrase ?
+
+Je suis désolé, mais je ne peux pas répondre à votre courriel en raison de mon congé. Je vous remercie de votre compréhension.
+
+Cordialement,
+
+Cherchez l'erreur ! Comment peut-on écrire ""urgent"" dans la même phrase ?
+
+Je suis désolé, mais je ne peux pas répondre à votre courriel en raison de mon congé. Je vous remercie de votre compréhension.
+
+Cordialement,
+
+Cherchez l'erreur ! Comment peut-on écrire ""urgent"" dans la même phrase ?
+
+Je suis désolé, mais je",0.5,0.0,0.0,False,False
+REG003,register,qc,metropolitan,openai:croissant-base,"Salut, je vais être en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je vais te revenir là-dessus.","Bonjour,
+
+Je serai en congé la semaine prochaine. Si c'est urgent, peux-tu me faire parvenir un courriel et je te répondrai dès que possible ?
+
+Meilleures salutations,",0.5,0.0,0.0,False,False
+REG003,register,qc,proofread,openai:croissant-base,"Salut, je vais être en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je vais te revenir là-dessus.","Bonjour,
+
+Je serai en congé la semaine prochaine. Si c'est urgent, écris-moi un courriel et je te répondrai là-dessus.
+
+Cordialement,
+[Votre nom]",0.5,0.0,0.0,False,False
+REG004,register,qc,baseline,openai:croissant-base,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,1.0,0.0,,True,False
+REG004,register,qc,canadian,openai:croissant-base,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,1.0,0.0,,True,False
+REG004,register,qc,metropolitan,openai:croissant-base,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,1.0,0.0,,True,False
+REG004,register,qc,proofread,openai:croissant-base,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,Bonjour ! Ça va bien ? Je vous apporte le menu du midi tout de suite.,1.0,0.0,,True,False
+REG005,register,qc,baseline,openai:croissant-base,"Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !","Des réductions à ne pas manquer sur tous nos articles en magasin et en ligne. Dépêchez-vous, les quantités sont limitées !",0.5,0.5,1.0,False,False
+REG005,register,qc,canadian,openai:croissant-base,"Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !","Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !",1.0,0.0,0.0,True,False
+REG005,register,qc,metropolitan,openai:croissant-base,"Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !","Des réductions à ne pas manquer sur tous nos articles en magasin et en ligne. Dépêchez-vous, les quantités sont limitées !",0.5,0.5,1.0,False,False
+REG005,register,qc,proofread,openai:croissant-base,"Des rabais à ne pas manquer sur tous nos articles en magasin et en ligne. Faites vite, les quantités sont limitées !","Des remises à ne pas manquer sur tous nos articles en magasin et en ligne. Dépêchez-vous, les quantités sont limitées !",0.5,0.0,1.0,False,False
+REG006,register,qc,baseline,openai:croissant-base,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,1.0,0.0,0.0,True,False
+REG006,register,qc,canadian,openai:croissant-base,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,1.0,0.0,0.0,True,False
+REG006,register,qc,metropolitan,openai:croissant-base,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,1.0,0.0,0.0,True,False
+REG006,register,qc,proofread,openai:croissant-base,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,Nous vous invitons à remplir votre déclaration d'impôt provinciale avant la date limite et à conserver vos relevés d'emploi.,1.0,0.0,0.0,True,False
+SEM001,semantic,qc,baseline,openai:croissant-base,Le déjeuner sera servi à 8 h dans le hall d'entrée.,"Le déjeuner sera servi à 8 h dans le hall d'entrée.
+ Le déjeuner sera servi à 8 h dans le hall d'entrée.",1.0,0.0,0.0,False,False
+SEM001,semantic,qc,canadian,openai:croissant-base,Le déjeuner sera servi à 8 h dans le hall d'entrée.,Le déjeuner sera servi à 8 h dans le hall d'entrée.,1.0,0.0,0.0,True,False
+SEM001,semantic,qc,metropolitan,openai:croissant-base,Le déjeuner sera servi à 8 h dans le hall d'entrée.,"Le déjeuner sera servi à 8 h dans le hall d'entrée.
+ 
+8 h - Le déjeuner sera servi dans le hall d'entrée.",1.0,0.0,0.0,False,False
+SEM001,semantic,qc,proofread,openai:croissant-base,Le déjeuner sera servi à 8 h dans le hall d'entrée.,"Le déjeuner sera servi à 8 h dans le hall d'entrée.
+correction : Le déjeuner sera servi à 8 h dans le hall d'entrée.",1.0,0.0,0.0,False,False
+SEM002,semantic,qc,baseline,openai:croissant-base,"Après le dîner, nous retournerons au travail vers 13 h.","Après le dîner, nous retournerons au travail vers 13 h.",1.0,0.0,0.0,True,False
+SEM002,semantic,qc,canadian,openai:croissant-base,"Après le dîner, nous retournerons au travail vers 13 h.","Après le dîner, nous retournerons au travail vers 13 h.",1.0,0.0,0.0,True,False
+SEM002,semantic,qc,metropolitan,openai:croissant-base,"Après le dîner, nous retournerons au travail vers 13 h.","Après le dîner, nous retournerons au travail vers 13 h.",1.0,0.0,0.0,True,False
+SEM002,semantic,qc,proofread,openai:croissant-base,"Après le dîner, nous retournerons au travail vers 13 h.","Après le dîner, nous retournerons au travail vers 13 h.",1.0,0.0,0.0,True,False
+SEM004,semantic,qc,baseline,openai:croissant-base,N'oubliez pas de barrer la porte en partant.,"Je m'excuse, mais je ne peux pas partir. La porte est verrouillée.",0.0,0.0,1.0,False,False
+SEM004,semantic,qc,canadian,openai:croissant-base,N'oubliez pas de barrer la porte en partant.,Assurez-vous de bien fermer la porte à clef.,0.0,0.0,1.0,False,False
+SEM004,semantic,qc,metropolitan,openai:croissant-base,N'oubliez pas de barrer la porte en partant.,"Attention, ne laissez pas la porte fermée.",0.0,0.0,1.0,False,False
+SEM004,semantic,qc,proofread,openai:croissant-base,N'oubliez pas de barrer la porte en partant.,N'oubliez pas de barrer la porte en partant.,1.0,0.0,0.0,True,False
+SEM005,semantic,qc,baseline,openai:croissant-base,Une liqueur est incluse avec le repas du midi.,Une liqueur est incluse avec le repas du midi.,1.0,0.0,0.0,True,False
+SEM005,semantic,qc,canadian,openai:croissant-base,Une liqueur est incluse avec le repas du midi.,Une liqueur est incluse avec le repas du midi.,1.0,0.0,0.0,True,False
+SEM005,semantic,qc,metropolitan,openai:croissant-base,Une liqueur est incluse avec le repas du midi.,Une liqueur est incluse avec le repas du midi.,1.0,0.0,0.0,True,False
+SEM005,semantic,qc,proofread,openai:croissant-base,Une liqueur est incluse avec le repas du midi.,Une liqueur est incluse avec le repas du midi.,1.0,0.0,0.0,True,False
+SEM006,semantic,qc,baseline,openai:croissant-base,Je vais présentement m'occuper de ton dossier.,Je suis actuellement en train de traiter ton dossier.,0.0,1.0,1.0,False,False
+SEM006,semantic,qc,canadian,openai:croissant-base,Je vais présentement m'occuper de ton dossier.,"Bien sûr, je serai ravi de vous aider ! Comment puis-je vous aider aujourd'hui ?",0.0,0.0,1.0,False,False
+SEM006,semantic,qc,metropolitan,openai:croissant-base,Je vais présentement m'occuper de ton dossier.,"Je suis désolé, mais je ne peux pas traiter votre demande car elle est incomplète. Veuillez me fournir plus d'informations sur le sujet que vous souhaitez que je traite.",0.0,0.0,1.0,False,False
+SEM006,semantic,qc,proofread,openai:croissant-base,Je vais présentement m'occuper de ton dossier.,Je suis actuellement en train de traiter ton dossier.,0.0,1.0,1.0,False,False
+SEM007,semantic,qc,baseline,openai:croissant-base,La poudrerie réduira la visibilité sur les routes ce soir.,La poudreuse réduira la visibilité sur les routes ce soir.,0.0,0.0,1.0,False,False
+SEM007,semantic,qc,canadian,openai:croissant-base,La poudrerie réduira la visibilité sur les routes ce soir.,La poudreuse réduira la visibilité sur les routes ce soir.,0.0,0.0,1.0,False,False
+SEM007,semantic,qc,metropolitan,openai:croissant-base,La poudrerie réduira la visibilité sur les routes ce soir.,La poudreuse réduira la visibilité sur les routes ce soir.,0.0,0.0,1.0,False,False
+SEM007,semantic,qc,proofread,openai:croissant-base,La poudrerie réduira la visibilité sur les routes ce soir.,La poudrerie réduira la visibilité sur les routes ce soir.,1.0,0.0,0.0,True,False
+SEM008,semantic,qc,baseline,openai:croissant-base,Ma blonde et moi allons déménager le premier juillet.,Ma blonde et moi allons déménager le premier juillet.,1.0,0.0,0.0,True,False
+SEM008,semantic,qc,canadian,openai:croissant-base,Ma blonde et moi allons déménager le premier juillet.,Ma blonde et moi allons déménager le premier juillet.,1.0,0.0,0.0,True,False
+SEM008,semantic,qc,metropolitan,openai:croissant-base,Ma blonde et moi allons déménager le premier juillet.,Ma blonde et moi allons déménager le premier juillet.,1.0,0.0,0.0,True,False
+SEM008,semantic,qc,proofread,openai:croissant-base,Ma blonde et moi allons déménager le premier juillet.,Ma blonde et moi allons déménager le premier juillet.,1.0,0.0,0.0,True,False
+TER001,terminology,qc,baseline,openai:croissant-base,Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.,"Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+V",1.0,0.0,0.0,False,False
+TER001,terminology,qc,canadian,openai:croissant-base,Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.,"Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.
+
+
+V",1.0,0.0,0.0,False,False
+TER001,terminology,qc,metropolitan,openai:croissant-base,Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.,Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.,1.0,0.0,0.0,True,False
+TER001,terminology,qc,proofread,openai:croissant-base,Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.,Votre téléphone intelligent peut se connecter au réseau sans fil de la maison.,1.0,0.0,0.0,True,False
+TER002,terminology,qc,baseline,openai:croissant-base,Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.,Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.,1.0,0.0,0.0,True,False
+TER002,terminology,qc,canadian,openai:croissant-base,Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.,Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.,1.0,0.0,0.0,True,False
+TER002,terminology,qc,metropolitan,openai:croissant-base,Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.,"Attention, les tentatives d'hameçonnage qui imitent nos courriels officiels sont en cours.",1.0,0.0,0.0,False,False
+TER002,terminology,qc,proofread,openai:croissant-base,Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.,Méfiez-vous des tentatives d'hameçonnage qui imitent nos courriels officiels.,1.0,0.0,0.0,True,False
+TER003,terminology,qc,baseline,openai:croissant-base,La migration vers l'infonuagique réduira les coûts d'exploitation.,La migration vers l'infonuagique réduira les coûts d'exploitation,1.0,0.0,0.0,False,False
+TER003,terminology,qc,canadian,openai:croissant-base,La migration vers l'infonuagique réduira les coûts d'exploitation.,"La migration vers l'infonuagique réduira les coûts d'exploitation en éliminant le besoin de serveurs physiques et de maintenance. Les entreprises peuvent ainsi économiser de l'argent en réduisant les coûts de stockage et de refroidissement, ainsi qu'en éliminant les coûts de maintenance et de support. De plus, la migration vers l'infonuagique permet aux entreprises d'accéder à une infrastructure informatique plus flexible et évolutive, ce qui leur permet de mieux répondre aux besoins changeants de leur entreprise.",1.0,0.0,0.0,False,False
+TER003,terminology,qc,metropolitan,openai:croissant-base,La migration vers l'infonuagique réduira les coûts d'exploitation.,La migration vers le nuage informatique réduira les coûts d'exploitation,0.0,0.0,1.0,False,False
+TER003,terminology,qc,proofread,openai:croissant-base,La migration vers l'infonuagique réduira les coûts d'exploitation.,"La migration vers l'infonuagique réduira les coûts d'exploitation.
+correction : La migration vers l'infonuagique réduira les coûts d'exploitation.",1.0,0.0,0.0,False,False
+TER004,terminology,qc,baseline,openai:croissant-base,Ce site utilise des témoins pour mémoriser vos préférences.,Ce site utilise des témoins pour mémoriser vos préférences. Veuillez consulter notre politique de confidentialité pour en savoir plus sur la façon dont nous utilisons les témoins.,1.0,0.0,0.0,False,False
+TER004,terminology,qc,canadian,openai:croissant-base,Ce site utilise des témoins pour mémoriser vos préférences.,Ce site utilise des témoins pour mémoriser vos préférences. Veuillez consulter notre politique de confidentialité pour en savoir plus sur la façon dont nous utilisons les témoins et sur la façon dont vous pouvez les gérer dans votre navigateur.,1.0,0.0,0.0,False,False
+TER004,terminology,qc,metropolitan,openai:croissant-base,Ce site utilise des témoins pour mémoriser vos préférences.,Ce site utilise des témoins pour mémoriser vos préférences. Veuillez consulter notre politique de confidentialité pour en savoir plus sur la façon dont nous utilisons les témoins et sur la façon dont vous pouvez les gérer dans votre navigateur.,1.0,0.0,0.0,False,False
+TER004,terminology,qc,proofread,openai:croissant-base,Ce site utilise des témoins pour mémoriser vos préférences.,"Ce site utilise des témoins pour mémoriser vos préférences.
+Ce site utilise des témoins pour mémoriser vos préférences.
+Ce site utilise des témoins pour mémoriser vos préférences.
+Ce site utilise des témoins pour mémoriser vos préférences.
+Ce site utilise des témoins pour mémoriser vos préférences.",1.0,0.0,0.0,False,False
+TER005,terminology,qc,baseline,openai:croissant-base,L'attaque par rançongiciel a chiffré les serveurs de l'organisme.,L'organisme a subi une attaque par rançongiciel.,1.0,0.0,0.0,False,False
+TER005,terminology,qc,canadian,openai:croissant-base,L'attaque par rançongiciel a chiffré les serveurs de l'organisme.,L'organisme a été victime d'une attaque par rançongiciel. Les serveurs ont été chiffrés.,1.0,0.0,0.0,False,False
+TER005,terminology,qc,metropolitan,openai:croissant-base,L'attaque par rançongiciel a chiffré les serveurs de l'organisme.,L'organisme a été victime d'une attaque par rançongiciel. Les serveurs ont été chiffrés.,1.0,0.0,0.0,False,False
+TER005,terminology,qc,proofread,openai:croissant-base,L'attaque par rançongiciel a chiffré les serveurs de l'organisme.,L'organisme a été victime d'une attaque par rançongiciel.,1.0,0.0,0.0,False,False
+TER006,terminology,qc,baseline,openai:croissant-base,Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.,Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.,1.0,0.0,0.0,True,False
+TER006,terminology,qc,canadian,openai:croissant-base,Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.,Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.,1.0,0.0,0.0,True,False
+TER006,terminology,qc,metropolitan,openai:croissant-base,Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.,Nos modèles d'apprentissage automatique sont alimentés par des mégadonnées anonymisées.,1.0,0.0,0.0,False,False
+TER006,terminology,qc,proofread,openai:croissant-base,Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.,Nos modèles d'apprentissage automatique sont entraînés sur des mégadonnées anonymisées.,1.0,0.0,0.0,True,False
+TER007,terminology,qc,baseline,openai:croissant-base,Ajoutez un égoportrait à votre profil pour personnaliser votre compte.,"Ajoutez un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un égoportrait à votre profil pour personnaliser votre compte.
+ Ajouter un ég",1.0,0.0,0.0,False,False
+TER007,terminology,qc,canadian,openai:croissant-base,Ajoutez un égoportrait à votre profil pour personnaliser votre compte.,"Je suis un assistant de rédaction en français pour un public du Québec. Je suis là pour vous aider à écrire des textes en français québécois et canadien. Je suis là pour vous aider à écrire des textes qui respectent le vocabulaire, la terminologie, le sens et le registre du français québécois et canadien. Je ne convertis pas le français québécois en français de France.",0.0,0.0,1.0,False,False
+TER007,terminology,qc,metropolitan,openai:croissant-base,Ajoutez un égoportrait à votre profil pour personnaliser votre compte.,Ajoutez une photo de profil à votre profil pour personnaliser votre compte.,0.0,0.0,1.0,False,False
+TER007,terminology,qc,proofread,openai:croissant-base,Ajoutez un égoportrait à votre profil pour personnaliser votre compte.,Ajoutez un égoportrait à votre profil pour personnaliser votre compte.,1.0,0.0,0.0,True,False
+TER008,terminology,qc,baseline,openai:croissant-base,Vous pouvez présenter une demande d'assurance-emploi en ligne.,Vous pouvez présenter une demande d'assurance-emploi en ligne.,1.0,0.0,0.0,True,False
+TER008,terminology,qc,canadian,openai:croissant-base,Vous pouvez présenter une demande d'assurance-emploi en ligne.,Vous pouvez présenter une demande d'assurance-emploi en ligne.,1.0,0.0,0.0,True,False
+TER008,terminology,qc,metropolitan,openai:croissant-base,Vous pouvez présenter une demande d'assurance-emploi en ligne.,Vous pouvez présenter une demande d'assurance-emploi en ligne.,1.0,0.0,0.0,True,False
+TER008,terminology,qc,proofread,openai:croissant-base,Vous pouvez présenter une demande d'assurance-emploi en ligne.,Vous pouvez présenter une demande d'assurance-emploi en ligne.,1.0,0.0,0.0,True,False
+TER009,terminology,qc,baseline,openai:croissant-base,Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.,Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.,1.0,0.0,0.0,True,False
+TER009,terminology,qc,canadian,openai:croissant-base,Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.,Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.,1.0,0.0,0.0,True,False
+TER009,terminology,qc,metropolitan,openai:croissant-base,Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.,Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.,1.0,0.0,0.0,True,False
+TER009,terminology,qc,proofread,openai:croissant-base,Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.,"Le pilote de l'imprimante et le module d'extension du navigateur ont été mis à jour.
+corrected.",1.0,0.0,0.0,False,False
+TER010,terminology,qc,baseline,openai:croissant-base,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,Présenter mon permis de conduire à un point de service de la SAAQ.,1.0,0.0,0.0,False,False
+TER010,terminology,qc,canadian,openai:croissant-base,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,Présenter mon permis de conduire à un point de service de la SAAQ.,1.0,0.0,0.0,False,False
+TER010,terminology,qc,metropolitan,openai:croissant-base,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,Présenter mon permis de conduire à un point de service de la SAAQ.,1.0,0.0,0.0,False,False
+TER010,terminology,qc,proofread,openai:croissant-base,Présentez-vous à un point de service de la SAAQ avec votre permis de conduire.,"Présenting yourself at a SAAQ service point with your driver's license.
+
+Vous pouvez vous présenter à un point de service de la SAAQ avec votre permis de conduire.",1.0,0.0,0.0,False,False

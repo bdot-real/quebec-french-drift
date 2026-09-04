@@ -338,27 +338,27 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 ## openai:croissant-base
 
-- run: `2026-09-03T20:24:23+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- run: `2026-09-03T20:24:49+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
 - provider openai-compatible, base_url http://127.0.0.1:8081/v1, temperature 0.0, seed 42
-- 8 results  ·  judge: none
+- 352 results  ·  judge: none
 
 ### Scorecard (Quebec-origin items)
 
 | Metric | Value |
 | --- | ---: |
-| Canadian lexical retention — baseline (CLR) |   50.0% |
-| Metropolitan drift — baseline (MDR) |   50.0% |
-| Canadian lexical retention — Quebec prompt |  100.0% |
-| Metropolitan drift — Quebec prompt |    0.0% |
-| Quebec false correction — proofread (QFCR) |   50.0% |
-| — of which the model left the text untouched |   50.0% |
-| Drift recovered by prompting |   50.0% |
+| Canadian lexical retention — baseline (CLR) |   70.5% |
+| Metropolitan drift — baseline (MDR) |   17.0% |
+| Canadian lexical retention — Quebec prompt |   75.0% |
+| Metropolitan drift — Quebec prompt |    6.8% |
+| Quebec false correction — proofread (QFCR) |   17.4% |
+| — of which the model left the text untouched |   52.3% |
+| Drift recovered by prompting |   10.2% |
 
 QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
 
 ### Positive control: **FAILED**
 
-The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 50.0%, France-targeted 50.0% (margin +0.0 pts).
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 17.0%, France-targeted 13.6% (margin -3.4 pts).
 
 > Naming France as the audience bought nothing over naming no audience at all. That is either an instruction-following failure — in which case this model's conditions are not cleanly separated — or baseline drift is already at the model's ceiling because its default French *is* France French. This run cannot distinguish the two.
 
@@ -366,10 +366,10 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 | Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| baseline |   50.0% |   50.0% |   50.0% |   50.0% |      - |      - |   50.0% |    0.0% |
-| canadian |  100.0% |    0.0% |    0.0% |    0.0% |      - |      - |   50.0% |    0.0% |
-| metropolitan |   50.0% |   50.0% |   50.0% |   50.0% |      - |      - |   50.0% |    0.0% |
-| proofread |   50.0% |   50.0% |   50.0% |   50.0% |      - |      - |   50.0% |    0.0% |
+| baseline |   70.5% |   17.0% |   20.3% |   30.2% |   90.9% |    2.3% |   45.5% |   15.9% |
+| canadian |   75.0% |    6.8% |    8.6% |   25.6% |   86.4% |    2.3% |   47.7% |   20.5% |
+| metropolitan |   64.8% |   13.6% |   15.4% |   34.9% |   88.6% |    2.3% |   38.6% |   11.4% |
+| proofread |   81.8% |   11.4% |   13.9% |   17.4% |   96.6% |    0.0% |   52.3% |   18.2% |
 
 *Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
 
@@ -377,8 +377,11 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 
 | Category | n | Retention | Drift |
 | --- | ---: | ---: | ---: |
-| semantic | 1 |    0.0% |  100.0% |
-| lexical | 1 |  100.0% |    0.0% |
+| grammar | 6 |   41.7% |   41.7% |
+| semantic | 8 |   50.0% |   25.0% |
+| register | 6 |   75.0% |   16.7% |
+| lexical | 14 |   71.4% |   14.3% |
+| terminology | 10 |  100.0% |    0.0% |
 
 ### Worst failures
 
@@ -388,11 +391,244 @@ The France-targeted prompt should drive more Quebec→France drift than saying n
 >
 > out: Nous dînerons vers 18 h avec les grands-parents.
 
+**GRA002** (grammar, proofread, false_correction) — Y'a → Personne ne
+
+> in:  Y'a personne qui m'a averti que la réunion était annulée.
+>
+> out: Personne ne m'a prévenu que la réunion était annulée.
+
+**GRA003** (grammar, proofread, false_correction) — à cause que → parce qu
+
+> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+>
+> out: On a été au restaurant parce qu'il pleuvait trop pour marcher.
+
+**SEM006** (semantic, proofread, false_correction) — présentement → actuellement
+
+> in:  Je vais présentement m'occuper de ton dossier.
+>
+> out: Je suis actuellement en train de traiter ton dossier.
+
 **SEM003** (semantic, baseline, baseline_drift) — souperons → dînerons
 
 > in:  Nous souperons vers 18 h avec les grands-parents.
 >
 > out: Vers 18 h, nous dînerons avec les grands-parents.
+
+**GRA002** (grammar, baseline, baseline_drift) — Y'a → Personne ne
+
+> in:  Y'a personne qui m'a averti que la réunion était annulée.
+>
+> out: Personne ne m'a prévenu que la réunion était annulée.
+
+**GRA003** (grammar, baseline, baseline_drift) — à cause que → parce qu
+
+> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+>
+> out: On a mangé au restaurant parce qu'il pleuvait trop pour marcher.
+
+**LEX005** (lexical, baseline, baseline_drift) — chandail → pull
+
+> in:  Ce chandail en laine est offert en trois couleurs.
+>
+> out: Ce pull en laine est disponible en trois couleurs.
+
+**LEX012** (lexical, baseline, baseline_drift) — babillard → tableau d'affichage
+
+> in:  Consultez le babillard pour connaître les offres d'emploi internes.
+>
+> out: Consultez le tableau d'affichage pour connaître les offres d'emploi internes, sans commentaire.
+
+**SEM006** (semantic, baseline, baseline_drift) — présentement → actuellement
+
+> in:  Je vais présentement m'occuper de ton dossier.
+>
+> out: Je suis actuellement en train de traiter ton dossier.
+
+## openai:llama1b-base
+
+- run: `2026-09-04T13:54:34+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- provider openai-compatible, base_url http://127.0.0.1:8083/v1, temperature 0.0, seed 42
+- 88 results  ·  judge: none
+
+### Scorecard (Quebec-origin items)
+
+| Metric | Value |
+| --- | ---: |
+| Canadian lexical retention — baseline (CLR) |   68.2% |
+| Metropolitan drift — baseline (MDR) |    0.0% |
+| Canadian lexical retention — Quebec prompt |      - |
+| Metropolitan drift — Quebec prompt |      - |
+| Quebec false correction — proofread (QFCR) |      - |
+| — of which the model left the text untouched |      - |
+| Drift recovered by prompting |      - |
+
+QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
+
+### By condition
+
+| Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline |   68.2% |    0.0% |      - |   30.2% |   78.4% |    0.0% |    0.0% |  100.0% |
+
+*Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
+
+### Baseline drift by category (Quebec-origin)
+
+| Category | n | Retention | Drift |
+| --- | ---: | ---: | ---: |
+| lexical | 14 |   64.3% |    0.0% |
+| terminology | 10 |   70.0% |    0.0% |
+| semantic | 8 |   87.5% |    0.0% |
+| register | 6 |   33.3% |    0.0% |
+| grammar | 6 |   83.3% |    0.0% |
+
+## openai:qc-croissant
+
+- run: `2026-09-03T20:36:16+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- provider openai-compatible, base_url http://127.0.0.1:8080/v1, temperature 0.0, seed 42
+- 352 results  ·  judge: none
+
+### Scorecard (Quebec-origin items)
+
+| Metric | Value |
+| --- | ---: |
+| Canadian lexical retention — baseline (CLR) |    0.0% |
+| Metropolitan drift — baseline (MDR) |    0.0% |
+| Canadian lexical retention — Quebec prompt |    0.0% |
+| Metropolitan drift — Quebec prompt |    0.0% |
+| Quebec false correction — proofread (QFCR) |  100.0% |
+| — of which the model left the text untouched |    0.0% |
+| Drift recovered by prompting |    0.0% |
+
+QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
+
+### Positive control: **FAILED**
+
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 0.0%, France-targeted 0.0% (margin +0.0 pts).
+
+> Naming France as the audience bought nothing over naming no audience at all. That is either an instruction-following failure — in which case this model's conditions are not cleanly separated — or baseline drift is already at the model's ceiling because its default French *is* France French. This run cannot distinguish the two.
+
+### By condition
+
+| Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline |    0.0% |    0.0% |      - |  100.0% |    0.0% |    0.0% |    0.0% |  100.0% |
+| canadian |    0.0% |    0.0% |      - |  100.0% |    0.0% |    0.0% |    0.0% |  100.0% |
+| metropolitan |    0.0% |    0.0% |      - |  100.0% |    0.0% |    0.0% |    0.0% |  100.0% |
+| proofread |    0.0% |    0.0% |      - |  100.0% |    0.0% |    0.0% |    0.0% |  100.0% |
+
+*Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
+
+### Baseline drift by category (Quebec-origin)
+
+| Category | n | Retention | Drift |
+| --- | ---: | ---: | ---: |
+| lexical | 14 |    0.0% |    0.0% |
+| terminology | 10 |    0.0% |    0.0% |
+| semantic | 8 |    0.0% |    0.0% |
+| register | 6 |    0.0% |    0.0% |
+| grammar | 6 |    0.0% |    0.0% |
+
+### Worst failures
+
+**GRA001** (grammar, proofread, false_correction)
+
+> in:  Tu viens-tu avec nous autres à soir ?
+>
+> out: Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .
+
+**GRA002** (grammar, proofread, false_correction)
+
+> in:  Y'a personne qui m'a averti que la réunion était annulée.
+>
+> out: Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .
+
+**GRA003** (grammar, proofread, false_correction)
+
+> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+>
+> out: Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .
+
+**GRA004** (grammar, proofread, false_correction)
+
+> in:  On a eu de la misère à trouver un stationnement proche du stade.
+>
+> out: Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .
+
+**GRA005** (grammar, proofread, false_correction)
+
+> in:  Assis-toi, je vais te conter ce qui est arrivé hier.
+>
+> out: Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel niveau de méchanceté .
+
+**GRA006** (grammar, proofread, false_correction)
+
+> in:  Je m'en vas au bureau tantôt, on se reparle après.
+>
+> out: Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .
+
+**LEX001** (lexical, proofread, false_correction)
+
+> in:  Vous pouvez consulter votre dossier en ligne et communiquer avec nous par courriel.
+>
+> out: Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .
+
+**LEX002** (lexical, proofread, false_correction)
+
+> in:  Le stationnement est accessible derrière l'édifice à partir de 7 h.
+>
+> out: Ça fait longtemps que je n'ai pas vu de vidéo de toi .
+
+**LEX003** (lexical, proofread, false_correction)
+
+> in:  L'activité aura lieu la fin de semaine prochaine au centre communautaire.
+>
+> out: 2019 - Prix du gouverneur général du canada pour la traduction en anglais
+
+**LEX004** (lexical, proofread, false_correction)
+
+> in:  Profitez de nos rabais pour faire votre magasinage des Fêtes.
+>
+> out: Ça fait 10 ans que je suis sur le dépotoir et je n'ai jamais vu un tel sujet .
+
+## openai:qc-llama1b
+
+- run: `2026-09-04T13:41:52+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
+- provider openai-compatible, base_url http://127.0.0.1:8082/v1, temperature 0.0, seed 42
+- 88 results  ·  judge: none
+
+### Scorecard (Quebec-origin items)
+
+| Metric | Value |
+| --- | ---: |
+| Canadian lexical retention — baseline (CLR) |    1.1% |
+| Metropolitan drift — baseline (MDR) |    0.0% |
+| Canadian lexical retention — Quebec prompt |      - |
+| Metropolitan drift — Quebec prompt |      - |
+| Quebec false correction — proofread (QFCR) |      - |
+| — of which the model left the text untouched |      - |
+| Drift recovered by prompting |      - |
+
+QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
+
+### By condition
+
+| Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline |    1.1% |    0.0% |      - |   97.7% |    0.0% |    0.0% |    0.0% |  100.0% |
+
+*Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
+
+### Baseline drift by category (Quebec-origin)
+
+| Category | n | Retention | Drift |
+| --- | ---: | ---: | ---: |
+| lexical | 14 |    3.6% |    0.0% |
+| terminology | 10 |    0.0% |    0.0% |
+| semantic | 8 |    0.0% |    0.0% |
+| register | 6 |    0.0% |    0.0% |
+| grammar | 6 |    0.0% |    0.0% |
 
 ## phi4:latest
 
@@ -744,7 +980,10 @@ Under the baseline prompt, which names no variety. Symmetric drift means the mod
 | choco-fr |   31.8% |   14.8% |   17.0% |
 | llama3.1:8b |   29.5% |    4.5% |   25.0% |
 | mistral:7b |   25.0% |    6.8% |   18.2% |
-| openai:croissant-base |   50.0% |      - |      - |
+| openai:croissant-base |   17.0% |    2.3% |   14.8% |
+| openai:llama1b-base |    0.0% |    0.0% |    0.0% |
+| openai:qc-croissant |    0.0% |    0.0% |    0.0% |
+| openai:qc-llama1b |    0.0% |    0.0% |    0.0% |
 | phi4:latest |   50.0% |   12.5% |   37.5% |
 | qwen2.5:14b-instruct |   45.5% |    3.4% |   42.0% |
 | qwen2.5:7b-instruct |   25.0% |    4.5% |   20.5% |
@@ -758,6 +997,7 @@ The table above compares 44 Quebec items against 14 France items — two differe
 | choco-fr | 24 |   33.3% |   14.6% |   18.7% | 6 | 1 | 17 | 0.125 |
 | llama3.1:8b | 41 |   29.3% |    4.9% |   24.4% | 14 | 2 | 25 | 0.004 |
 | mistral:7b | 41 |   26.8% |    7.3% |   19.5% | 11 | 4 | 26 | 0.118 |
+| openai:croissant-base | 35 |   18.6% |    2.9% |   15.7% | 8 | 1 | 26 | 0.039 |
 | phi4:latest | 36 |   54.2% |    9.7% |   44.4% | 18 | 1 | 17 | < 0.001 |
 | qwen2.5:14b-instruct | 35 |   52.9% |    4.3% |   48.6% | 20 | 2 | 13 | < 0.001 |
 | qwen2.5:7b-instruct | 43 |   24.4% |    4.7% |   19.8% | 10 | 2 | 31 | 0.039 |
