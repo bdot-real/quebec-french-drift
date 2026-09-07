@@ -1,0 +1,9 @@
+test_id,category,variety,condition,model,input,output,source_retention,cross_substitution_rate,protected_term_loss,unchanged,suspect_reasoning_leak
+FRC001,lexical,fr,baseline,openai:gemini-2.5-flash,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Vous pouvez accéder à votre dossier sur notre plateforme en ligne et nous joindre par courriel.,0.0,1.0,1.0,False,False
+FRC001,lexical,fr,canadian,openai:gemini-2.5-flash,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Vous pouvez consulter votre dossier en ligne et nous contacter par courriel.,0.0,1.0,1.0,False,False
+FRC001,lexical,fr,metropolitan,openai:gemini-2.5-flash,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Vous avez la possibilité de consulter votre dossier sur internet et de nous écrire un mail.,1.0,0.0,1.0,False,False
+FRC001,lexical,fr,proofread,openai:gemini-2.5-flash,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,Vous pouvez consulter votre dossier en ligne et nous contacter par e-mail.,1.0,0.0,0.0,True,False
+FRC002,lexical,fr,baseline,openai:gemini-2.5-flash,Le parking est accessible derrière le bâtiment à partir de 7 h.,"Le parking, situé à l'arrière du bâtiment, est accessible dès 7 h.",1.0,0.0,0.0,False,False
+FRC002,lexical,fr,canadian,openai:gemini-2.5-flash,Le parking est accessible derrière le bâtiment à partir de 7 h.,Le stationnement est accessible derrière le bâtiment à partir de 7 h.,0.0,1.0,1.0,False,False
+FRC002,lexical,fr,metropolitan,openai:gemini-2.5-flash,Le parking est accessible derrière le bâtiment à partir de 7 h.,"Le parking, c'est derrière le bâtiment, et c'est accessible dès 7h.",1.0,0.0,0.0,False,False
+FRC003,lexical,fr,baseline,openai:gemini-2.5-flash,L'activité aura lieu le week-end prochain au centre social.,L'activité se déroulera le week-end prochain au centre social.,1.0,0.0,0.0,False,False

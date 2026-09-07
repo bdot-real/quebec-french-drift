@@ -121,6 +121,7 @@ def cmd_run(args):
     print(f"{len(tests)} tests x {len(prompts)} conditions x {len(args.models)} models "
           f"= {len(tests)*len(prompts)*len(args.models)} calls", file=sys.stderr)
 
+    failures = []
     # Model-outer, test-inner: concurrent requests across models thrash Ollama's
     # model swapping, so each model is loaded once and drained completely.
     for spec in args.models:
@@ -128,15 +129,28 @@ def cmd_run(args):
         model = build_model(spec, temperature=args.temperature, seed=args.seed,
                             num_ctx=args.num_ctx, base_url=args.base_url,
                             api_key=args.api_key, adapter=args.adapter,
+                            min_interval=args.min_interval,
                             load_in_4bit=args.load_in_4bit or None,
                             device=args.device, max_new_tokens=args.max_new_tokens)
         try:
             run_model(model, tests, prompts, resume=not args.no_resume)
+        except Exception as exc:
+            # One model failing must not take the rest of the list with it. A
+            # hosted API can run out of credit, rate-limit, or retire a model
+            # mid-run; the remaining models are still worth collecting, and the
+            # cells already written for this one are still on disk.
+            failures.append((spec, exc))
+            print(f"  FAILED: {spec}: {exc}", file=sys.stderr)
         finally:
             # Release the weights before loading the next model, so two large
             # models are never resident at once.
             if hasattr(model, "unload"):
                 model.unload()
+
+    if failures:
+        print(f"\n{len(failures)} model(s) failed and were skipped:", file=sys.stderr)
+        for spec, exc in failures:
+            print(f"  {spec}: {exc}", file=sys.stderr)
     cmd_report(args)
 
 
@@ -272,6 +286,8 @@ def main():
     run_p.add_argument("--base-url", dest="base_url", default=None,
                        help="OpenAI-compatible endpoint, for openai:<model> specs")
     run_p.add_argument("--api-key", dest="api_key", default=None)
+    run_p.add_argument("--min-interval", dest="min_interval", type=float, default=None,
+                       help="seconds between requests, to stay under a rate limit")
     run_p.add_argument("--adapter", default=None,
                        help="PEFT adapter to merge on load, for transformers: specs")
     run_p.add_argument("--load-in-4bit", dest="load_in_4bit", action="store_true",

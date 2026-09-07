@@ -537,6 +537,222 @@ QFCR and *untouched* are entangled: a model that declines to edit anything score
 >
 > out: Nous sommes allés au restaurant parce que la pluie était trop forte pour marcher.
 
+## openai:meta-llama/llama-3.3-70b-instruct
+
+- run: `2026-09-07T17:56:41+00:00`  ·  dataset `0.3.0`  ·  prompts `1.0`
+- provider openai-compatible, base_url https://openrouter.ai/api/v1, temperature 0.0, seed 42
+- 784 results  ·  judge: none
+
+### Scorecard (Quebec-origin items)
+
+| Metric | Value |
+| --- | ---: |
+| Canadian lexical retention — baseline (CLR) |   26.5% |
+| Metropolitan drift — baseline (MDR) |   40.6% |
+| Canadian lexical retention — Quebec prompt |   78.2% |
+| Metropolitan drift — Quebec prompt |   11.1% |
+| Quebec false correction — proofread (QFCR) |   19.6% |
+| — of which the model left the text untouched |   64.3% |
+| Drift recovered by prompting |   29.6% |
+
+QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
+
+### Positive control: **FAILED**
+
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 40.6%, France-targeted 40.6% (margin +0.0 pts).
+
+> Naming France as the audience bought nothing over naming no audience at all. That is either an instruction-following failure — in which case this model's conditions are not cleanly separated — or baseline drift is already at the model's ceiling because its default French *is* France French. This run cannot distinguish the two.
+
+### By condition
+
+| Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline |   26.5% |   40.6% |   41.6% |   72.2% |   66.2% |    3.6% |    6.1% |    7.1% |
+| canadian |   78.2% |   11.1% |   11.2% |   18.6% |   49.1% |   31.1% |   45.9% |    1.0% |
+| metropolitan |   21.4% |   40.6% |   40.5% |   78.4% |   53.4% |    8.2% |    0.0% |    7.1% |
+| proofread |   79.6% |    9.7% |    9.7% |   19.6% |   93.4% |    3.1% |   64.3% |    0.0% |
+
+*Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
+
+### Baseline drift by category (Quebec-origin)
+
+| Category | n | Retention | Drift |
+| --- | ---: | ---: | ---: |
+| grammar | 11 |    0.0% |   81.8% |
+| lexical | 32 |   28.1% |   46.9% |
+| semantic | 17 |   23.5% |   41.2% |
+| register | 14 |   32.1% |   23.8% |
+| terminology | 24 |   35.4% |   22.9% |
+
+### Worst failures
+
+**GRA003** (grammar, proofread, false_correction) — à cause que → parce qu
+
+> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+>
+> out: On est allés au restaurant parce qu'il pleuvait trop pour marcher.
+
+**GRA008** (grammar, proofread, false_correction) — attendre à demain → attendre jusqu'à demain
+
+> in:  Moi je pense qu'on devrait attendre à demain.
+>
+> out: Moi, je pense qu'on devrait attendre jusqu'à demain.
+
+**GRA010** (grammar, proofread, false_correction) — pis → puis
+
+> in:  Il est parti travailler, pis il est revenu tard.
+>
+> out: Il est parti travailler, puis il est revenu tard.
+
+**LEX017** (lexical, proofread, false_correction) — efface → gomme
+
+> in:  Chaque élève doit apporter un crayon, une efface et une règle.
+>
+> out: Chaque élève doit apporter un crayon, une gomme et une règle.
+
+**LEX019** (lexical, proofread, false_correction) — patates frites → frites
+
+> in:  Le repas est servi avec des patates frites et une salade.
+>
+> out: Le repas est servi avec des frites et une salade.
+
+**LEX027** (lexical, proofread, false_correction) — balayeuse → aspirateur
+
+> in:  Passe la balayeuse dans le salon avant les invités.
+>
+> out: Passe l'aspirateur dans le salon avant les invités.
+
+**REG011** (register, proofread, false_correction) — sur semaine → en semaine
+
+> in:  Nous cherchons une personne autonome, capable de travailler sur semaine et disponible dès que possible.
+>
+> out: Nous cherchons une personne autonome, capable de travailler en semaine et disponible dès que possible.
+
+**SEM018** (semantic, proofread, false_correction) — Bienvenue → De rien
+
+> in:  — Merci beaucoup ! — Bienvenue !
+>
+> out: — Merci beaucoup! — De rien!
+
+**GRA001** (grammar, baseline, baseline_drift) — à soir → ce soir, nous autres → nous
+
+> in:  Tu viens-tu avec nous autres à soir ?
+>
+> out: Tu vas venir avec nous ce soir ?
+
+**GRA002** (grammar, baseline, baseline_drift) — Y'a → Personne ne
+
+> in:  Y'a personne qui m'a averti que la réunion était annulée.
+>
+> out: Personne ne m'a averti que la réunion était annulée.
+
+## openai:openai/gpt-4o-mini
+
+- run: `2026-09-07T17:42:05+00:00`  ·  dataset `0.3.0`  ·  prompts `1.0`
+- provider openai-compatible, base_url https://openrouter.ai/api/v1, temperature 0.0, seed 42
+- 784 results  ·  judge: none
+
+### Scorecard (Quebec-origin items)
+
+| Metric | Value |
+| --- | ---: |
+| Canadian lexical retention — baseline (CLR) |   28.6% |
+| Metropolitan drift — baseline (MDR) |   51.2% |
+| Canadian lexical retention — Quebec prompt |   56.3% |
+| Metropolitan drift — Quebec prompt |   26.9% |
+| Quebec false correction — proofread (QFCR) |   27.8% |
+| — of which the model left the text untouched |   54.1% |
+| Drift recovered by prompting |   24.3% |
+
+QFCR and *untouched* are entangled: a model that declines to edit anything scores a perfect false-correction rate. Read them together.
+
+### Positive control: **passed**
+
+The France-targeted prompt should drive more Quebec→France drift than saying nothing. Baseline 51.2%, France-targeted 54.3% (margin +3.1 pts).
+
+### By condition
+
+| Condition | QC retention | QC drift | QC drift (valid cells) | QC protected loss | FR retention | FR drift | unchanged | void cells |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline |   28.6% |   51.2% |   52.8% |   70.6% |   71.8% |    4.1% |    0.0% |    3.1% |
+| canadian |   56.3% |   26.9% |   27.1% |   41.2% |   36.1% |   36.2% |    5.1% |    1.0% |
+| metropolitan |   23.5% |   54.3% |   56.1% |   77.3% |   72.3% |    3.1% |    0.0% |    5.1% |
+| proofread |   72.1% |   20.7% |   20.7% |   27.8% |   92.3% |    2.6% |   54.1% |    0.0% |
+
+*Void cells* are outputs where the model did not perform the rewrite at all — it answered the sentence, or replied at a wildly different length. Those score as total drift for the wrong reason, so the *valid cells* column repeats the drift measure with them removed. They are excluded, never silently dropped.
+
+### Baseline drift by category (Quebec-origin)
+
+| Category | n | Retention | Drift |
+| --- | ---: | ---: | ---: |
+| grammar | 11 |    0.0% |   81.8% |
+| semantic | 17 |   32.4% |   61.8% |
+| lexical | 32 |   21.9% |   59.4% |
+| terminology | 24 |   41.7% |   31.2% |
+| register | 14 |   39.3% |   29.8% |
+
+### Worst failures
+
+**GRA002** (grammar, proofread, false_correction) — Y'a → Il n'y a
+
+> in:  Y'a personne qui m'a averti que la réunion était annulée.
+>
+> out: Il n'y a personne qui m'a averti que la réunion était annulée.
+
+**GRA003** (grammar, proofread, false_correction) — à cause que → parce qu
+
+> in:  On est allés au restaurant à cause qu'il pleuvait trop pour marcher.
+>
+> out: On est allés au restaurant parce qu'il pleuvait trop pour marcher.
+
+**GRA008** (grammar, proofread, false_correction) — attendre à demain → attendre jusqu'à demain
+
+> in:  Moi je pense qu'on devrait attendre à demain.
+>
+> out: Moi, je pense qu'on devrait attendre jusqu'à demain.
+
+**GRA009** (grammar, proofread, false_correction) — J'ai pas → Je n'ai pas
+
+> in:  J'ai pas eu le temps de l'appeler, mais je vais le faire à midi.
+>
+> out: Je n'ai pas eu le temps de l'appeler, mais je vais le faire à midi.
+
+**GRA010** (grammar, proofread, false_correction) — pis → puis
+
+> in:  Il est parti travailler, pis il est revenu tard.
+>
+> out: Il est parti travailler, puis il est revenu tard.
+
+**GRA011** (grammar, proofread, false_correction) — ou ben → ou bien, à soir → ce soir
+
+> in:  On s'en va-tu au restaurant à soir ou ben on reste ici ?
+>
+> out: On s'en va au restaurant ce soir ou bien on reste ici ?
+
+**LEX011** (lexical, proofread, false_correction) — téléverser → télécharger
+
+> in:  Vous devez téléverser votre pièce d'identité avant de soumettre la demande.
+>
+> out: Vous devez télécharger votre pièce d'identité avant de soumettre la demande.
+
+**LEX015** (lexical, proofread, false_correction) — char → voiture
+
+> in:  Nous avons loué un char pour visiter la Gaspésie.
+>
+> out: Nous avons loué une voiture pour visiter la Gaspésie.
+
+**LEX016** (lexical, proofread, false_correction) — brocheuse → agrafeuse
+
+> in:  Passe-moi la brocheuse pour assembler le rapport.
+>
+> out: Passe-moi la agrafeuse pour assembler le rapport.
+
+**LEX017** (lexical, proofread, false_correction) — efface → gomme
+
+> in:  Chaque élève doit apporter un crayon, une efface et une règle.
+>
+> out: Chaque élève doit apporter un crayon, une gomme et une règle.
+
 ## openai:qc-croissant
 
 - run: `2026-09-03T20:36:16+00:00`  ·  dataset `0.2.0`  ·  prompts `1.0`
@@ -1295,6 +1511,8 @@ Under the baseline prompt, which names no variety. Symmetric drift means the mod
 | llama3.1:8b |   24.5% |    4.1% |   20.4% |    8.2% |
 | mistral:7b |   22.4% |    4.6% |   17.9% |    8.2% |
 | openai:croissant-base |   17.0% |    2.3% |   14.8% |   15.9% |
+| openai:meta-llama/llama-3.3-70b-instruct |   40.6% |    3.6% |   37.1% |    7.1% |
+| openai:openai/gpt-4o-mini |   51.2% |    4.1% |   47.1% |    3.1% |
 | phi4:latest |   47.1% |    8.7% |   38.4% |   14.3% |
 | qwen2.5:14b-instruct |   43.7% |    5.1% |   38.6% |   12.2% |
 | qwen2.5:7b-instruct |   24.8% |    3.6% |   21.3% |    3.1% |
@@ -1322,6 +1540,8 @@ The table above pools all Quebec items against all France items. Here each contr
 | mistral:7b | 86 |   22.7% |    4.1% |   18.6% | 20 | 5 | 61 | 0.004 |
 | openai:croissant-base | 35 |   18.6% |    2.9% |   15.7% | 8 | 1 | 26 | 0.039 |
 | openai:llama8b-base ⚠️ | 6 |   16.7% |    0.0% |   16.7% | 1 | 0 | 5 | 1.000 |
+| openai:meta-llama/llama-3.3-70b-instruct | 91 |   41.6% |    3.8% |   37.7% | 39 | 3 | 49 | < 0.001 |
+| openai:openai/gpt-4o-mini | 93 |   53.4% |    3.8% |   49.6% | 51 | 1 | 41 | < 0.001 |
 | phi4:latest | 80 |   48.3% |    6.9% |   41.5% | 38 | 3 | 39 | < 0.001 |
 | qwen2.5:14b-instruct | 83 |   47.4% |    6.0% |   41.4% | 42 | 6 | 35 | < 0.001 |
 | qwen2.5:7b-instruct | 92 |   24.8% |    3.8% |   21.0% | 23 | 4 | 65 | < 0.001 |

@@ -177,9 +177,21 @@ class OpenAICompatibleModel:
     whole point of keeping this interface small.
     """
 
+    # Servers differ in which OpenAI fields they accept. Google's
+    # OpenAI-compatible endpoint rejects `seed` outright with a 400 rather than
+    # ignoring it, so unknown fields are dropped and the call retried -- and the
+    # drop is recorded, because a run without a seed is less reproducible and
+    # the report should not imply otherwise.
+    # Quotes in the error body may be backslash-escaped, since the message is
+    # itself nested inside JSON, so match the field name rather than the quoting.
+    _UNKNOWN_FIELD = re.compile(
+        r'(?:unknown name|unrecognized (?:request )?(?:key|field)|unknown field|'
+        r'unsupported (?:parameter|field))[\s:=]*[\\"\']*([A-Za-z_][\w.]*)',
+        re.IGNORECASE)
+
     def __init__(self, model, base_url="http://127.0.0.1:8080/v1", api_key=None,
                  temperature=0.0, seed=42, num_ctx=8192, timeout=600, retries=2,
-                 **_ignored):
+                 min_interval=0.0, rate_limit_retries=6, **_ignored):
         self.model = model
         self.base_url = base_url.rstrip("/")
         self.api_key = api_key
@@ -188,6 +200,15 @@ class OpenAICompatibleModel:
         self.num_ctx = num_ctx
         self.timeout = timeout
         self.retries = retries
+        # Free tiers meter by requests-per-minute, so a generic two-try backoff
+        # is not enough: a 429 is not a transient error but a scheduling
+        # instruction. `min_interval` paces requests ahead of time and
+        # rate-limit retries wait far longer, honouring Retry-After when given.
+        self.min_interval = min_interval
+        self.rate_limit_retries = rate_limit_retries
+        self._last_call = 0.0
+        self.dropped_fields = []
+        self.rate_limit_waits = 0
 
     @property
     def name(self):
@@ -195,32 +216,76 @@ class OpenAICompatibleModel:
 
     @property
     def config(self):
-        return {"provider": "openai-compatible", "model": self.model,
-                "base_url": self.base_url, "temperature": self.temperature,
-                "seed": self.seed}
+        cfg = {"provider": "openai-compatible", "model": self.model,
+               "base_url": self.base_url, "temperature": self.temperature,
+               "seed": self.seed}
+        if self.dropped_fields:
+            cfg["dropped_unsupported_fields"] = sorted(set(self.dropped_fields))
+            if "seed" in self.dropped_fields:
+                cfg["seed"] = None  # not sent; do not claim a seeded run
+        return cfg
 
     def generate(self, system, user) -> ModelResponse:
         payload = {"model": self.model, "temperature": self.temperature,
                    "seed": self.seed, "stream": False,
                    "messages": [{"role": "system", "content": system},
                                 {"role": "user", "content": user}]}
-        body = json.dumps(payload).encode("utf-8")
+        for field in self.dropped_fields:
+            payload.pop(field, None)
         headers = {"Content-Type": "application/json"}
         if self.api_key:
             headers["Authorization"] = f"Bearer {self.api_key}"
 
-        for attempt in range(self.retries + 1):
+        attempt = rl_attempt = 0
+        while True:
+            if self.min_interval:
+                gap = self.min_interval - (time.time() - self._last_call)
+                if gap > 0:
+                    time.sleep(gap)
             started = time.time()
-            req = urllib.request.Request(f"{self.base_url}/chat/completions",
-                                         data=body, headers=headers)
+            self._last_call = started
+            req = urllib.request.Request(
+                f"{self.base_url}/chat/completions",
+                data=json.dumps(payload).encode("utf-8"), headers=headers)
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout) as resp:
                     data = json.loads(resp.read().decode("utf-8"))
                 break
+            except urllib.error.HTTPError as exc:
+                detail = ""
+                try:
+                    detail = exc.read().decode("utf-8", "replace")
+                except Exception:
+                    pass
+                match = self._UNKNOWN_FIELD.search(detail) if exc.code in (400, 422) else None
+                field = next((g for g in match.groups() if g), None) if match else None
+                if field and field in payload:
+                    payload.pop(field)
+                    self.dropped_fields.append(field)
+                    continue          # retry immediately without the bad field
+                if exc.code == 429:
+                    if rl_attempt >= self.rate_limit_retries:
+                        raise RuntimeError(
+                            f"{self.model}: rate limited after "
+                            f"{self.rate_limit_retries} waits: {detail[:160]}") from exc
+                    retry_after = exc.headers.get("Retry-After") if exc.headers else None
+                    try:
+                        wait = float(retry_after)
+                    except (TypeError, ValueError):
+                        wait = min(60.0, 5.0 * (2 ** rl_attempt))
+                    rl_attempt += 1
+                    self.rate_limit_waits += 1
+                    time.sleep(wait)
+                    continue
+                attempt += 1
+                if attempt > self.retries:
+                    raise RuntimeError(f"{self.model}: HTTP {exc.code} {detail[:200]}") from exc
+                time.sleep(2 * attempt)
             except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
-                if attempt == self.retries:
+                attempt += 1
+                if attempt > self.retries:
                     raise RuntimeError(f"{self.model}: {exc}") from exc
-                time.sleep(2 * (attempt + 1))
+                time.sleep(2 * attempt)
 
         choice = (data.get("choices") or [{}])[0]
         message = choice.get("message", {})
@@ -379,7 +444,7 @@ PROVIDERS = ("ollama", "openai", "transformers")
 _CROSS_PROVIDER_OPTIONS = frozenset({
     "temperature", "seed", "num_ctx", "base_url", "api_key", "adapter",
     "load_in_4bit", "device", "max_new_tokens", "dtype", "host", "keep_alive",
-    "timeout", "retries",
+    "timeout", "retries", "min_interval", "rate_limit_retries",
 })
 
 
