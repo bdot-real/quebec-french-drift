@@ -1,0 +1,98 @@
+name: Dialect Regression Testing Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - '**.py'
+      - 'data/**.jsonl'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.py'
+      - 'data/**.jsonl'
+  workflow_dispatch:
+    inputs:
+      mdr_threshold:
+        description: 'Maximum allowable Metropolitan Drift Rate (%)'
+        required: true
+        default: '30.0'
+      qfcr_threshold:
+        description: 'Maximum allowable Quebec False Correction Rate (%)'
+        required: true
+        default: '15.0'
+
+jobs:
+  evaluate-dialect:
+    name: Evaluate Quebec French Dialect Preservation
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v4
+
+    - name: Set up Python Environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'
+
+    - name: Set up Environment Variables
+      run: |
+        # Set default thresholds if not triggered via workflow_dispatch
+        echo "MDR_MAX_THRESHOLD=${{ github.event.inputs.mdr_threshold || '30.0' }}" >> $GITHUB_ENV
+        echo "QFCR_MAX_THRESHOLD=${{ github.event.inputs.qfcr_threshold || '15.0' }}" >> $GITHUB_ENV
+
+    - name: Run Dialect Regression Tests
+      id: dialect_tests
+      run: |
+        echo "Starting Canadian French dialect validation..."
+        # Run the testing suite and redirect output to a report file
+        python dialect-metrics.py > dialect_test_report.txt
+        cat dialect_test_report.txt
+
+    - name: Check Thresholds and Enforce CI Quality Gates
+      run: |
+        # Extract the rates from the output report using grep & sed/awk
+        MDR=$(grep -oE "METROPOLITAN DRIFT RATE \(MDR\):\s*[0-9.]+" dialect_test_report.txt | grep -oE "[0-9.]+")
+        QFCR=$(grep -oE "QUEBEC FALSE CORRECTION RATE \(QFCR\):\s*[0-9.]+" dialect_test_report.txt | grep -oE "[0-9.]+")
+        
+        echo "============================================="
+        echo "Evaluating metrics against Quality Gates:"
+        echo "MDR:  $MDR% (Threshold: $MDR_MAX_THRESHOLD%)"
+        echo "QFCR: $QFCR% (Threshold: $QFCR_MAX_THRESHOLD%)"
+        echo "============================================="
+        
+        # Perform float comparison using awk
+        MDR_FAILED=$(awk -v mdr="$MDR" -v thresh="$MDR_MAX_THRESHOLD" 'BEGIN {print (mdr > thresh)}')
+        QFCR_FAILED=$(awk -v qfcr="$QFCR" -v thresh="$QFCR_MAX_THRESHOLD" 'BEGIN {print (qfcr > thresh)}')
+        
+        FAILED=0
+        if [ "$MDR_FAILED" -eq 1 ]; then
+          echo "❌ ERROR: Metropolitan Drift Rate ($MDR%) exceeds the allowed threshold of $MDR_MAX_THRESHOLD%."
+          FAILED=1
+        else
+          echo "✅ PASS: Metropolitan Drift Rate ($MDR%) is within bounds."
+        fi
+        
+        if [ "$QFCR_FAILED" -eq 1 ]; then
+          echo "❌ ERROR: Quebec False Correction Rate ($QFCR%) exceeds the allowed threshold of $QFCR_MAX_THRESHOLD%."
+          FAILED=1
+        else
+          echo "✅ PASS: Quebec False Correction Rate ($QFCR%) is within bounds."
+        fi
+        
+        if [ "$FAILED" -eq 1 ]; then
+          echo "❌ CI quality gate failed. Blocking deployment to preserve Canadian French dialect integrity."
+          exit 1
+        fi
+        
+        echo "🎉 All dialect regression checks passed successfully!"
+
+    - name: Upload Test Report Artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: dialect-evaluation-report
+        path: dialect_test_report.txt
+        retention-days: 14
